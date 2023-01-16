@@ -1,0 +1,78 @@
+
+\documentclass[11pt,oneside,a4paper]{book}  % article ctexart book
+\input{setup/configuration} % configuration tex file
+\makeindex
+
+
+
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% coverpage && dedication 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Cover page: do not forget to compile independently the latest version
+\includepdf[pages={1}]{coverpage/TORRES_coverpage.pdf}
+
+\input{chapters/misc/dedication}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% abstract && acknowledgments && contents && figures && tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\input{chapters/summary-FR}
+\input{chapters/summary-EN}
+\input{chapters/misc/acknowledgments}
+
+\tableofcontents
+
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+% TO DO:
+%\addcontentsline{toc}{chapter}{List of Symbols}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% chapters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\input{chapters/chapter-1} % Introduction I: theoretical frame
+\input{chapters/chapter-2} % Introduction II: MC simulations
+\input{chapters/chapter-3} % Disk-polymers
+\input{chapters/chapter-4} % Cholesterics: single colloid
+\input{chapters/chapter-5} % Cholesterics: collective effects
+\input{chapters/chapter-6} % Nematic droplets
+\input{chapters/chapter-7} % Conclusions
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% bib && appendices
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+\bibliography{bib/pub}
+\addcontentsline{toc}{part}{Bibliography}
+
+\appendix
+\cleardoublepage
+\addcontentsline{toc}{part}{Appendices}
+\input{chapters/appendix}
+
+
+\includepdf[pages={2}]{coverpage/TORRES_coverpage.pdf}
+\end{document}

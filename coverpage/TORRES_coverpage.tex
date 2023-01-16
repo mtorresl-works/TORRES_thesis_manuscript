@@ -1,0 +1,193 @@
+%%%% Modèle proposé par kira.ribeiro@universite-paris-saclay.fr %%%%
+%%%% màj : 29 octobre 2021 %%%%
+
+\documentclass[french,12pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[default,oldstyle,scale=.95]{opensans} % police Open Sans
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{xcolor} % où color selon l'installation
+\definecolor{Prune}{RGB}{99,0,60} % l14-33 : couleurs de la charte graphique upsaclay
+\usepackage{mdframed}
+\usepackage{multirow} %% Pour mettre un texte sur plusieurs rangées
+\usepackage{multicol} %% Pour mettre un texte sur plusieurs colonnes
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[absolute]{textpos} 
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\hypersetup{ % paramétrage couleur des liens hypertextes, toujours garder colorlinks=true
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=purple}
+
+
+%\pagestyle{plain} % pour ne garder que les n°de page en milieu-bas et supprimer les indications de chapitre en marge haute
+
+\usepackage{lipsum} % à retirer!!!
+
+%*****************************************************
+%******************** DOCUMENT **************************
+%*****************************************************
+\begin{document}
+
+\begin{titlepage}
+
+%\thispagestyle{empty}
+
+\newgeometry{left=6cm,bottom=2cm, top=1cm, right=1cm}
+
+\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (-13mm,-135mm){\includegraphics{Frame-ups.pdf}};
+
+%*****************************************************
+%******** NUMÉRO D'ORDRE DE LA THÈSE À COMPLÉTER *****
+%******** POUR LE SECOND DÉPOT                   *****
+%*****************************************************
+
+\color{white}
+
+\begin{picture}(0,0)
+\put(-152,-743){\rotatebox{90}{\Large \textsc{THÈSE DE DOCTORAT}}} \\
+\put(-120,-743){\rotatebox{90}{NNT : 2020UPASA001}} % À MODIFIER
+\end{picture}
+
+%*****************************************************
+%******************** TITRE **************************
+%*****************************************************
+
+\flushright
+\vspace{10mm} % à régler éventuellement
+\color{Prune}
+\fontfamily{cmss}\fontseries{m}\fontsize{22}{26}\selectfont
+  \Huge \textbf{Modelling self-assembly of \\ patchy virus rods \\}
+
+\normalsize
+\color{black}
+\Large{\textit{Modélisation d'auto-assemblage de bâtonnets viraux}} \\
+%*****************************************************
+
+\fontfamily{fvs}\fontseries{m}\fontsize{8}{12}\selectfont
+
+\vspace{1.5cm}
+
+\normalsize
+\textbf{Thèse de doctorat de l'université Paris-Saclay} \\
+
+\vspace{6mm}
+
+\small École doctorale n$^{\circ}$ 564, physique de l’Ile-de-France (PIF)\\
+\small Spécialité de doctorat: Physique\\
+\small Graduate School : GS Physique. Référent : Faculté des sciences d’Orsay \\
+\vspace{6mm}
+
+\footnotesize Thèse préparée dans l'unité de recherche \textbf{Université Paris-Saclay, CNRS, Laboratoire de Physique des Solides, 91405, Orsay, France}, sous la direction de \textbf{Rik WENSINK}, chargé de recherche CNRS. \\
+\vspace{15mm}
+
+\textbf{Thèse soutenue à Paris-Saclay, le JJ mois AAAA, par}\\
+\bigskip
+\Large {\color{Prune} \textbf{Marina TORRES LÁZARO}} % Changer le Prénom et le NOM
+
+%************************************
+\vspace{\fill} % ALIGNER LE TABLEAU EN BAS DE PAGE
+%************************************
+
+\bigskip
+
+\flushleft
+\small {\color{Prune} \textbf{Composition du jury}}\\
+{\color{Prune} \scriptsize {Membres du jury avec voix délibérative}} \\
+\vspace{2mm}
+\scriptsize
+\begin{tabular}{|p{7cm}l}
+\arrayrulecolor{Prune}
+\textbf{Prénom NOM} &   Président ou Présidente\\ 
+Titre, Affiliation & \\
+\textbf{Prénom NOM} &  Rapporteur \& Examinateur / trice \\ 
+Titre, Affiliation   &   \\ 
+\textbf{Prénom NOM} &  Rapporteur \& Examinateur / trice \\ 
+Titre, Affiliation  &   \\ 
+\textbf{Prénom NOM} &  Examinateur ou Examinatrice \\ 
+Titre, Affiliation   &   \\ 
+\textbf{Prénom NOM} &  Examinateur ou Examinatrice \\ 
+Titre, Affiliation   &   \\ 
+ 
+
+\end{tabular} 
+
+\end{titlepage}
+
+
+% page des résumés à garder en 2ème page. Si les résumés sont trop longs pour tenir sur une seule et même page, on peut mettre un résumé par page
+\thispagestyle{empty}
+\newgeometry{top=1.5cm, bottom=1.25cm, left=2cm, right=2cm}
+\fontfamily{rm}\selectfont
+
+\lhead{}
+\rhead{}
+\rfoot{}
+\cfoot{}
+\lfoot{}
+
+\noindent 
+%*****************************************************
+%***** LOGO DE L'ED À CHANGER IMPÉRATIVEMENT *********
+%*****************************************************
+\includegraphics[height=2.45cm]{logo_usp_PIF.png}
+\vspace{1cm}
+%*****************************************************
+\fontfamily{cmss}\fontseries{m}\selectfont
+
+\small
+
+\begin{mdframed}[linecolor=Prune,linewidth=1]
+
+\textbf{Titre:} titre (en français)..................................................................................................................
+
+\noindent \textbf{Mots clés:} 3 à 6 mots clefs (version en français)
+
+\vspace{-.5cm}
+\begin{multicols}{2}
+\noindent \textbf{Résumé:}\lipsum[1-2] 
+\end{multicols}
+
+\end{mdframed}
+
+\vspace{8mm}
+
+\begin{mdframed}[linecolor=Prune,linewidth=1]
+
+\textbf{Title:} titre (en anglais)..................................................................................................................
+
+\noindent \textbf{Keywords:} 3 à 6 mots clefs (version en anglais)
+
+\begin{multicols}{2}
+\noindent \textbf{Abstract:} \lipsum[1-2]
+\end{multicols}
+\end{mdframed}
+
+\titleformat{\chapter}[hang]{\bfseries\Large\color{Prune}}{\thechapter\ -}{.1ex}
+{\vspace{0.1ex}
+}
+[\vspace{1ex}]
+\titlespacing{\chapter}{0pc}{0ex}{0.5pc}
+
+\titleformat{\section}[hang]{\bfseries\normalsize}{\thesection\ .}{0.5pt}
+{\vspace{0.1ex}
+}
+[\vspace{0.1ex}]
+\titlespacing{\section}{1.5pc}{4ex plus .1ex minus .2ex}{.8pc}
+
+\titleformat{\subsection}[hang]{\bfseries\small}{\thesubsection\ .}{1pt}
+{\vspace{0.1ex}
+}
+[\vspace{0.1ex}]
+\titlespacing{\subsection}{3pc}{2ex plus .1ex minus .2ex}{.1pc}
+
+\end{document}
