@@ -3,7 +3,6 @@
 %                  1. Package
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \usepackage{ctex} % chinese
-\usepackage{subfiles} % import independent document
 \usepackage{geometry}
 \usepackage{fancyhdr} % header and footer
 \usepackage{graphicx} % insert fig
@@ -11,7 +10,6 @@
 \usepackage{multicol} % muti-column
 \usepackage{multirow} 
 \usepackage{setspace} % line spacing
-\usepackage{makeidx} % index
 \usepackage{tikz} % plot env
 \usepackage{indentfirst} % \chapter、\section indentation for the first line
 \usepackage{caption,subcaption}  % title and subtitle
@@ -27,19 +25,18 @@
 \usepackage[shortlabels]{enumitem} % list env
 \usepackage{xcolor} % font color
 \usepackage{graphbox} % figure position
-\usepackage{minted} % code style
+%\usepackage{minted} % code style
 % \usepackage{listings} % code style (not recommended)
 \usepackage{environ}
 \usepackage{mdframed}
+\usepackage{bm}
 
 \usepackage{natbib}
 \bibliographystyle{unsrt} %  abbrv
 
-\usepackage{pdfpages} % include pages from external pdf file
 
-% \usepackage{titlesec}    % Remove the text 'Chapter' from each chapter.
+%\usepackage{titlesec}    % Remove the text 'Chapter' from each chapter.
 % \titleformat{\chapter}{\normalfont\huge\bf}{\thechapter}{20pt}{\huge\bf}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -98,108 +95,15 @@
 
 \newenvironment{solution}{\textbf{Solution}}
 
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     5. Code Env || use 'minted' and 'pygments'
+%                  4. Abstract Env
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usemintedstyle{vs}  % minted code style refer to https://pygments.org/styles/
+\newenvironment{abstract}
+    {\begin{quote}{\small \centering
+    \textbf{Abstract
 
-\newminted{python}{
-    mathescape,
-    linenos=true, 
-    breaklines=true,
-    bgcolor=gray!10,
-    numbersep=5pt,
-    frame=lines,
-    framesep=2mm,
-}
-
-\newmintedfile{python}{
-    mathescape,
-    linenos=true, 
-    breaklines=true,
-    bgcolor=gray!10,
-    numbersep=5pt,
-    frame=lines,
-    framesep=2mm,
-}
-
-\newminted{julia}{
-    mathescape,
-    linenos=true, 
-    breaklines=true,
-    bgcolor=gray!10,
-    numbersep=5pt,
-    frame=lines,
-    framesep=2mm,
-}
-
-\newmintedfile{julia}{
-    mathescape,
-    linenos=true, 
-    breaklines=true,
-    bgcolor=gray!10,
-    numbersep=5pt,
-    frame=lines,
-    framesep=2mm,
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% listing package is not recommended now, showing below
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \lstset{
-%     basicstyle          =   {\small\ttfamily},
-%     keywordstyle        =   \bfseries,
-%     commentstyle        =   \rmfamily\itshape,
-%     stringstyle         =   \ttfamily,
-%     flexiblecolumns,
-%     numbers             =   none,
-%     showspaces          =   false,
-%     numberstyle         =   \small\ttfamily,
-%     showstringspaces    =   false,
-%     captionpos          =   t,
-%     frame               =   tb,
-% }
-
-% \lstdefinestyle{Python}{
-%     language        =   Python,
-%     keywordstyle    =   \color{blue},
-%     keywordstyle    =   [2] \color{teal},
-%     stringstyle     =   \color{magenta},
-%     commentstyle    =   \color{gray}\ttfamily,
-%     breaklines      =   true,
-%     columns         =   fixed,
-%     basewidth       =   0.5em,
-% }
-
-% \lstdefinelanguage{Julia}%
-%   {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
-%       end,export,false,for,function,immutable,import,importall,if,in,%
-%       macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
-%       using,while},%
-%    sensitive=true,%
-%    alsoother={$},%
-%    morecomment=[l]\#,%
-%    morecomment=[n]{\#=}{=\#},%
-%    morestring=[s]{"}{"},%
-%    morestring=[m]{'}{'},%
-% }[keywords,comments,strings]%
-
-% \lstdefinestyle{Julia}{
-%     language        =   Julia,
-%     keywordstyle    =   \color{blue},
-%     keywordstyle    =   [2] \color{teal},
-%     stringstyle     =   \color{magenta},
-%     commentstyle    =   \color{gray}\ttfamily,
-%     breaklines      =   true,
-%     columns         =   fixed,
-%     basewidth       =   0.5em,
-% }
-
+    }\small\itshape } }
+    {\end{quote}}
 
 
 
