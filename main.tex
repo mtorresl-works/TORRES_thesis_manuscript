@@ -1,6 +1,7 @@
 
 \documentclass[11pt,oneside,a4paper]{book}  % article ctexart book
 \input{setup/configuration} % configuration tex file
+\makeindex
 
 
 
@@ -64,13 +65,14 @@
 % bib && appendices
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
-\bibliography{bib/pub}
-\addcontentsline{toc}{part}{Bibliography}
-
 \appendix
 \cleardoublepage
 \addcontentsline{toc}{part}{Appendices}
 \input{chapters/appendix}
+
+\bibliography{bib/pub}
+\addcontentsline{toc}{part}{Bibliography}
+
 
 
 \includepdf[pages={2}]{coverpage/TORRES_coverpage.pdf}

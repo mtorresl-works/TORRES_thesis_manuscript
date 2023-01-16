@@ -10,6 +10,7 @@
 \usepackage{multicol} % muti-column
 \usepackage{multirow} 
 \usepackage{setspace} % line spacing
+\usepackage{makeidx} % index
 \usepackage{tikz} % plot env
 \usepackage{indentfirst} % \chapter、\section indentation for the first line
 \usepackage{caption,subcaption}  % title and subtitle
@@ -98,12 +99,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                  4. Abstract Env
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{abstract}
-    {\begin{quote}{\small \centering
-    \textbf{Abstract
-
-    }\small\itshape } }
-    {\end{quote}}
+%\newenvironment{abstract}
+%    {\begin{quote}{\small \centering
+%    \textbf{Abstract
+%
+%    }\small\itshape } \\}
+%    {\end{quote}}
+\newenvironment{abstract}{%
+    \small
+    \begin{center}%
+        {\bfseries Abstract}%
+    \end{center}%
+    \quotation\itshape}
+    {\endquotation}
 
 
 
