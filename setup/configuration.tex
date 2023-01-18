@@ -123,9 +123,15 @@
 \captionsetup[figure]{
   labelfont={bf},
   labelformat={default},
-  name={Figure.},
+  name={Figure},
   labelsep=colon
 }
+
+% Centering the figures
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
 
 
 
@@ -166,14 +172,6 @@
 \newcommand{\avg}[1]{ {\langle #1 \rangle} }
 \newcommand{\sect}[1]{Section~\ref{#1}}
 
-\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
-
-\newcommand{\eeq}{ \end{equation} }
-\newcommand{\beq}{ \begin{equation} }
-
-\newcommand{\eea}{ \end{align} }
-\newcommand{\bea}{ \begin{align} }
-
 
 \newcommand{\oma}{{\bf \hat{u}}}
 \newcommand{\omb}{{\bf \hat{u}^{\prime}} }
@@ -181,13 +179,24 @@
 
 \newcommand{\bs}{ {\bf s }}
 
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\sech}{sech}
+
+
  \newcommand{\sgn}{\operatorname{sgn}}
+
+
+% lowers subscript when necessary
+
+\def\ds{\rule{0pt}{1.5ex}}
+
 
 
 \newcommand{\bhua}{ {\bf \hat{u}}_{1} }
 \newcommand{\bhub}{ {\bf \hat{u}}_{2} }
 \newcommand{\bhui}{ {\bf \hat{u}}_{i} }
 \newcommand{\bhu}{ {\bf \hat{u}} }
+\newcommand{\bhup}{\bf \hat{u}^{\prime}}
 \newcommand{\bhe}{ {\bf \hat{e}} }
 \newcommand{\az}{  \psi}
 \newcommand{\aza}{  \psi_{1} }
@@ -200,32 +209,41 @@
 \newcommand{\kpa}{k_{\parallel}}
 \newcommand{\pp}{{\mathcal P}_{2}}
 
-\DeclareMathOperator{\sech}{sech}
-
 
 \newcommand{\lang} {\left \langle \left \langle }
 \newcommand{\rang} {\right \rangle \right \rangle}
 \newcommand{\bu}{ {\bf u} }
-\newcommand{\bra}{ {\bYf r}_1 }
+\newcommand{\bra}{ {\bf r}_1 }
 \newcommand{\brb}{ {\bf r}_2 }
 \newcommand{\bhr}{ {\bf \hat{r}} }
 \newcommand{\bfr}{ {\bf r} }
+\newcommand{\bfrp}{ {\bf r ^{\prime}}}
+
+\newcommand{\bfrpe}{ {\bf r}_{\perp} }
+\newcommand{\bfrpeb}{ {\bf r_{\perp} ^{\prime}} }
 \newcommand{\bk}{ {\bf k} }
 \newcommand{\bz}{ {\bf \hat{z}} }
 \newcommand{\bes}{ {\bf s} }
+\newcommand{\bn}{ {\bf \hat{n}} }
 \newcommand{\bx}{ {\bf \hat{x}} }
 \newcommand{\by}{ {\bf \hat{y}} }
 \newcommand{\bv}{ {\bf \hat{v}} }
 \newcommand{\bw}{ {\bf \hat{w}} }
-\newcommand{\bn}{ {\bf \hat{n}} }
-\newcommand{\kbt}{k_{B}T}
+\newcommand{\kbt}{k_{\rm B}T}
 \newcommand{\ellp}{\ell^{\prime}}
 \newcommand{\ellpp}{\ell^{\prime \prime}}
 \newcommand{\ellb}{\bar{\ell}}
 \newcommand{\ellbp}{\bar{\ell}^{\prime}}
 \newcommand{\nab}{  {\bf \nabla }}
+\newcommand{\Nab}{  {\bf \partial }}
 \newcommand{\red}[1]{ { \color{red} #1 } }
 \newcommand{\blue}[1]{ { \color{blue} #1 } }
 \newcommand{\amber}[1]{ { \color{amber} #1 } }
+
+\newcommand{\eeq}{ \end{equation} }
+\newcommand{\beq}{ \begin{equation} }
+
+\newcommand{\eea}{ \end{align} }
+\newcommand{\bea}{ \begin{align} }
 
 \newcommand{\talpha}{\tilde{\alpha}}
