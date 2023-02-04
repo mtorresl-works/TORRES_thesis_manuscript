@@ -14,7 +14,7 @@ We study these systems (both in bulk and under narrow confinement) by means of M
 
 \section{Model}
 
-We consider a system of $N$ rigid spherocylinders of length $L$, thickness $D$ and aspect ratio \red{$L/D= 20$}. The spherocylinders are a simplified representation of {\em fd} rods that are much thinner ($L/D > 100$) and carry a small degree of backbone flexibility with persistence length $\ell_{p} \gg L$. Since the large particle aspect ratio in combination with backbone flexibility poses considerable limitations on the numerical efficiency of our simulations  we  only consider rigid rods with a relatively short length assuming that the key features of the mesoscopic structures evaluated in this work do not  critically depend on the rod aspect ratio or flexibility.
+We consider a system of $N$ rigid spherocylinders of length $L$, thickness $D$ and aspect ratio \red{$L/D = 10$ or $20$}. The spherocylinders are a simplified representation of {\em fd} rods that are much thinner ($L/D > 100$) and carry a small degree of backbone flexibility with persistence length $\ell_{p} \gg L$. Since the large particle aspect ratio in combination with backbone flexibility poses considerable limitations on the numerical efficiency of our simulations  we  only consider rigid rods with a relatively short length assuming that the key features of the mesoscopic structures evaluated in this work do not  critically depend on the rod aspect ratio or flexibility.
 
 The spherocylinders are mixed with non-adsorbing polymers that in our model act as non-penetrable hard spheres with diameter $\sigma$ equalling once or twice that of the spherocylinder ($\sigma = D$ or $2D$). Polymer-polymer interactions are zero, while the interaction between a polymer and a spherocylinder are treated as being strictly hard;  the potential energy is infinitely large when a  sphere and spherocylinder overlap and zero otherwise.
 
@@ -27,6 +27,7 @@ The spherocylinders are mixed with non-adsorbing polymers that in our model act 
 \end{figure}
 
 
+\subsection{Chiral interactions}
 
 The pair interaction $U_{r}$ between two spherocylinders with solid angles $\oma$ and $\omb$ and centre-of-mass distance $\Delta \bfr$ follows from a combination of short-range steric forces (treated as strictly hard) and electrostatic forces at larger distance. The  interaction potential between a pair rods depends on centre-of-mass distance vector $\Delta {\bf r}$ and orientation vector $\oma$ of both rods. In our model, the interactions are encapsulated in the following core-shell potential:
 \beq
@@ -37,7 +38,7 @@ U_{\rm twist} & \textrm{otherwise} \\
 \end{cases}
 \label{urod}
 \eeq
-The electrostatic interactions between {\em fd} rods gives rise to so-called electrostatic twist which is intimately linked to the chirality surface architecture of {\em fd} virus rods. The chiral  potential is commonly expressed in terms of a pseudoscalar form initially put forward by Goossens:
+The electrostatic interactions between {\em fd} rods gives rise to so-called electrostatic twist which is intimately linked to the chirality surface architecture of {\em fd} virus rods. The chiral  potential is commonly expressed in terms of a pseudoscalar form initially put forward by Goossens: % TODO: reference Goossens
 \beq
 U_{\rm twist} (\Delta {\bf r}, \oma , \omb )=
 -\varepsilon_{c} \left ( \frac{D}{\Delta r} \right )^{7}(\oma \cdot \omb)(\oma \times \omb \cdot \Delta \hat{\bf r})
@@ -47,12 +48,13 @@ where  $\Delta \hat{\bf r} $ denotes a unit vector for the centre-of-mass distan
 
  %For simplicity, we assume that the twisting forces are sufficiently short-ranged (which should be the case at sufficient ionic strength) and do not  continuously vary with the centre-of-mass distance between the spherocylinders, but are only operative if the coronae between the rods overlap (see \fig{sketch}).
 
+\subsection{Estimation of the depletion strength for two parallel spherocylinders}
 
  The typical attraction energy between two rods due to polymer depletion can be estimated from free-volume theory \cite{lekkerkerker2011depletion} and reads:
  \beq
  U_{\rm r,dep} \sim -\Pi_{P} V_{\rm r, ov}
  \eeq
-with $ \Pi_{P} = k_{B} T N_{P}/V$ the (van 't Hoff) osmotic pressure of the polymer reservoir and $V_{\rm r, ov}$ the overlap volume  of the depletion layers surrounding each rod which depends on the orientation of each rod. In case the rods are perfectly parallel and at hard-core contact we find a simple analytical result. Ignoring  finite rod size effects we have:
+with $ \Pi_{P} = k_{B} T N_{P}/V$ the (van't Hoff) osmotic pressure of the polymer reservoir and $V_{\rm r, ov}$ the overlap volume  of the depletion layers surrounding each rod which depends on the orientation of each rod. In case the rods are perfectly parallel and at hard-core contact we find a simple analytical result. Ignoring  finite rod size effects we have:
 \beq
 V_{\rm r, ov} = LD^{2} \left [  2 r^{2} \cos^{-1} \left ( \tfrac{1}{2r} \right )  - \tfrac{1}{2} \sqrt{4 r^{2} -1}  \right ]
 \eeq
@@ -62,8 +64,9 @@ with $r = \tfrac{1}{2}(1 + \tfrac{\sigma}{D})$. Rescaling in terms of the polyme
  \eeq
 For a typical set-up ($\phi_{P} =3$, $\sigma = 2D$ and $L/D=10$) this gives about 15 $k_{B}T$ \red{Please verify this}. It is important to keep in mind that the typical energy due to chiral twist should be small ($ | \varepsilon_{c} | \ll U_{\rm r,dep} $) in order to ensure that the cohesive forces among the rods residing in a droplet are dominated by polymer depletion, with chiral twist playing only a perturbative role.
 
+\subsection{Rod-wall interactions}
 
-The rods and polymers are confined in a thin slab of width $h = L$ (see \fig{sketch}). The wall-spherocylinder interactions  are strictly hard, that is, infinite repulsion when the spherocylinder core overlaps with the wall and zero repulsion otherwise. More specifically:
+One possible variation of our model is to confine the rods and polymers in a thin slab of width $h = L$ (see \fig{sketch}). The wall-spherocylinder interactions  are strictly hard, that is, infinite repulsion when the spherocylinder core overlaps with the wall and zero repulsion otherwise. More specifically:
 \beq
 U_{\rm w} (\Delta {\bf r}, \oma) =
 \begin{cases}
@@ -74,7 +77,12 @@ U_{\rm w} (\Delta {\bf r}, \oma) =
 \label{urodwall}
 \eeq
 with ${\bf \hat{n} }$ denoting the wall normal.
-The polymers do not have any interaction with the wall, but their centres-of-mass are constrained  to reside within the slab.
+
+Polymers are not allowed to overlap with the wall. However, another parameter of the system is the wall depletion range $\sigma_W$ that will take values typically lower than $\sigma$. This strategy is aimed to tune the amount of wetting felt by the tactoids close to the wall, allowing equilibration of partial wetting scenarios. A physical argument for this reduction of the wall depletion range (that in principle would only depend on the size of the depletants), is the variation of the electrostatic forces affecting superficial charges both around the rods and the wall, that may change the effective size of the depletion regions unfavorable for the non-adsorbing polymers. % TODO: cite, verify!!
+%The polymers do not have any interaction with the wall, but their centres-of-mass are constrained  to reside within the slab.
+
+\subsection{Semi-grand canonical ensemble}
+% TODO: change this section to add Glaser's Algorithm
 
 The simulations are carried out in the semi-grand ensemble, with a fixed number of rods but the polymer content in the system fluctuating against a virtual reservoir consisting of an ideal gas of polymer spheres with a prescribed chemical potential  $\mu_{p}$ which is trivially connected to the polymer packing fraction via:
 \beq
@@ -82,8 +90,15 @@ The simulations are carried out in the semi-grand ensemble, with a fixed number 
 \eeq
 where $\Lambda_{P}$ denotes the thermal (de Broglie) wavelength.
 
+\subsubsection{Version I: Explicit depletants}
 
-Each MC cycle consists of $N + N_{P}$ randomly chosen rod translations, rotations, polymer insertions or removals. The step size for the spherocylinder translations and rotations are chosen adaptively such as to maintain an average acceptance ratio of about 30 \%. The MC code is optimized using cell-linked list routines that significantly reduce the number of overlap checks between rod-rod and rod-polymer pairs involved in  each MC step. \red{Here we need to specify Glaser's cluster move optimization algorithm that we used \cite{glaser2015parallel}.}  We keep a rectangular box shape with $L_{x} = L_{y}$ and $L_{z} = L$ and periodic boundary conditions (PBC) in both lateral directions.
+Each MC cycle consists of $N + N_{P}$ randomly chosen rod translations, rotations, polymer insertions or removals.
+
+\subsubsection{Version II: Implicit depletants}
+
+\subsection{Other simulation details} % TODO: change this title??
+
+The step size for the spherocylinder translations and rotations are chosen adaptively such as to maintain an average acceptance ratio of about 30 \%. The MC code is optimized using cell-linked list routines that significantly reduce the number of overlap checks between rod-rod and rod-polymer pairs involved in  each MC step. \red{Here we need to specify Glaser's cluster move optimization algorithm that we used \cite{glaser2015parallel}.}  We keep a rectangular box shape with $L_{x} = L_{y}$ and $L_{z} = L$ and periodic boundary conditions (PBC) in both lateral directions.
 
 Besides the planar confinement $h$, a further key parameter is the relative strength of chiral twist versus depletion attraction. These can be combined into a dimensionless parameter $\chi_{T}$ balancing the energy scales associated with twist and depletion as previously discussed:
 \beq
@@ -101,9 +116,6 @@ We plan to focus on two different systems:
 \item ii) Large polymers with $\sigma = 2 D$ imparting long-ranged attractions. We start from the same monolayer crystal which will equilibrate into a liquid tactoid in bulk \cite{kuhnhold2022structure}. Gradually increasing the confinement (at $R_{2} > h$ with $R_{2}$ the minor curvature radius of an unconfined tactoid \cite{kuhnhold2022structure})  will lead to squeezed tactoids which  develop a distinct biaxial shape. Introducing twist may lead to further morphological changes. We may correlate droplet size ($N$) with droplet aspect ratio for the strongly confined case compared to the 3D case studied in \cite{kuhnhold2022structure}.
 
 \end{itemize}
-
-
-\section{Glaser's Algorithm}
 
 \section{Results}
 
