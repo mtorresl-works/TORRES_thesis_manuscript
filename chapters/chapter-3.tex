@@ -1,586 +1,620 @@
 
-\chapter{Second-virial theory for shape-persistent living polymers templated by discs}
-\chaptermark{Living polymers templated by discs}
+\chapter{Hybrid colloid-molecular chiral nematics I: Single colloid approach}
+\chaptermark{Hybrid chiral nematics I: Single colloid approach}
+
 
 \begin{abstract}
-
-    Living polymers composed of non-covalently bonded  building blocks with weak backbone flexibility may self-assemble into thermoresponsive lyotropic liquid crystals. We demonstrate that the reversible polymer assembly and phase behavior  can be  controlled by the addition of (non-adsorbing) rigid colloidal discs which act as an entropic reorienting ``template"  onto the supramolecular polymers. Using a particle-based second-virial theory that correlates the various entropies associated with the polymers and discs, we demonstrate that small fractions of discotic additives promote the formation of a polymer nematic phase. At larger disc concentrations, however, the phase is disrupted by collective disc alignment in favor of a discotic nematic fluid in which the polymers are dispersed anti-nematically. We show that the anti-nematic arrangement of the polymers generates a non-exponential molecular-weight distribution and stimulates the formation of oligomeric species. At sufficient concentrations the discs  facilitate a liquid-liquid phase separation which can be brought into simultaneously coexistence with the two fractionated nematic phases, providing evidence for a four-fluid coexistence in reversible shape-dissimilar hard-core mixtures without cohesive interparticle forces.  We  stipulate the conditions under which such a phenomenon could be found in experiment.
+Cholesteric liquid crystals (LCs) are classic examples of complex chiral mesophases with long-ranged periodicity but lack positional order at large length scales. Doping molecular cholesterics LCs with thin colloidal rods with a large  length-to-width ratio adds a further a further level of complexity due to the interplay between weak surface anchoring forces and elastic distortions around the rod-LC interface. We demonstrate that the rods have a strong tendency to orient perpendicular to the helix axis and local director, thus imparting strong local biaxiality on the hybrid cholesteric structure. We theoretically argue that the splay-bend elastic anisotropy plays a key role in stabilizing orthorhombic order. Reducing the elastic anisotropy of the host should open up ways to realizing hybrid cholesteric LCs with local tetragonal symmetry.    We also briefly review the case of discs.
 
 \end{abstract}
 
-\section{Introduction}
+% TODO: write introduction (inspired by Smalyukh's?)
+
+\section[Surface anchoring of a cylindrical rod]{Surface anchoring of a cylindrical rod immersed in a cholesteric host}
 
 
- Supramolecular ``living'' polymers are composed of  aggregating building blocks that are joined together via non-covalent bonds.  The polymers can break and recombine reversibly as the typical attraction energy between monomers is comparable to the thermal energy \cite{cates87,cates88}.  Elementary (Boltzmann) statistical mechanics then tells us that the polymers must be in equilibrium with their molecular weight distribution which emerges from a balance between the association energy and mixing entropy of the polymers. This results in a wide range of different polymeric species with an exponential size distribution whose shape is governed primarily by temperature and  monomer concentration. Reversible polymers are thus distinctly different from usual ``quenched" polymers whose molecular weight distribution is fixed  by the conditions present during the synthesis process.
- 
-  Reversible association is ubiquitous in soft matter. Examples include the formation of various types of micellar structures from block-copolymers \cite{riess2003,blanazs2009}, hierarchical self-assembly of  short-fragment DNA  \cite{demichele2012,demichele2016}, chromonic mesophases  \cite{lydon2010,tamchang2008}  composed of non-covalently stacked sheetlike macromolecules, and the assembly of amyloid fibrils from individual proteins \cite{knowles2011}. Microtubules, actin and other biofilaments provide essential mechanical functions in the cell and consist of dynamically organizing molecular units that self-organize into highly interconnected structures \cite{fuchs1998}.
- 
- 
- 
-A particularly interesting case arises when the monomers associate into shape-persistent, directed polymers \cite{gittes1993}. Interpolymer correlations then become strongly orientation-dependent and may drive the formation of liquid crystals.  Spontaneous  formation of lyotropic liquid crystals has been observed, for example, in long worm-like micelles under shear  \cite{berret1994}, oligomeric DNA \cite{nakata2007} and chromonics \cite{lydon2010}. When the monomer concentration exceeds a critical value, the polymers grow into strongly elongated aggregates  and an (isotropic) fluid of randomly oriented polymers may spontaneously align into, for instance, a nematic liquid crystal characterized by long-range orientational correlations without structural periodicity \cite{gennes-prost}.  While aggregation-driven nematization has been contemplated also for thermotropic systems  \cite{matsuyama1998}, our current focus  is  on lyotropic systems composed of rigid polymers suspended in a fluid host medium, where the isotropic-nematic phase transition can be rationalized on purely entropic grounds in terms of a gain of volume-exclusion entropy upon alignment at the expense of orientational entropy \cite{Onsager, odijkoverview,Vroege92}. However, this argument becomes more convoluted in the case  of directed, reversible polymers where the trade-off between these two entropic contributions is compromized by a simultaneous maximisation of the mixing entropy and the number of monomer-monomer linkages. In particular, the  coupling between orientational order and polymer growth turns out to be a very important one; collective alignment leads to longer polymers, which tend to align even more strongly thus stimulating even further growth \cite{vdschoot1994la}.  Recent simulation studies have basically corroborated this scenario \cite{kindt2001,kuriabova2010,nguyen2014}.  
-
-\begin{figure*}
-  \includegraphics[width=\textwidth]{figures/chapter-3/FIG1}
-  \caption{Schematic representation of the various liquid crystal phases emerging for discs mixed with polymerizing rods: (a) - and (b) - Principal angles describing the orientation $\bhu$ of a single rod monomer - and disc - with respect to the molecular director $\bn$  with $\theta$ denoting the polar angle, $\varphi$ the azimuthal angle and $\psi = \frac{\pi}{2} - \theta $ the meridional angle.  (c) Isotropic phase. (d) polymer uniaxial nematic phase $N^+$. (e) discotic uniaxial nematic phase $N^-$ in which the reversibly polymerizing rods are dispersed {\em anti-nematically}.}
-  \label{fig:cartoon}
-\end{figure*}
-
-An intriguing question in relation to the above is the following:  Can the hierarchical organization of reversible polymers be controlled by the addition of non-adsorbing shape-dissimilar components that affect the way they align? Indeed, for chromonics it is known that the presence of additives can bring about condensation or reorientation of the reversible stacks, thereby changing their phase behavior through subtle modifications of the system entropy \cite{tortora2010}.  Recent experiments on  clay nanosheets mixed with reversibly polymerizing tubuline rods have demonstrated that these mixtures remain stable against flocculation and provide a testbed for exploring entropy-driven phase behavior of biopolymer-platelet mixtures \cite{kato2018}.
-Furthermore, it is well established that mixing prolate (rod-shaped) colloids with their  oblate  counterparts  generates a strong coupling between the  orientations of both components leading to organizations with mixed nematic and anti-nematic symmetries. Numerous theoretical studies starting with the early work of Alben \cite{alben1973} have attempted to rationalize the intricate isotropic-nematic  phase behavior of these mixtures  placing particular emphasis on stabilizing the highly sought-after biaxial nematic phase in which both components are aligned along mutually perpendicular directions thus generating a fluid with an orthorhombic ($D_{2h}$) symmetry  \cite{stroobants1984,campallenbolhuisfrenkel,sokolova1997,vanakaras1998,vanakaras2001, matsuda2003,jacksonbiaxrev,varga2002,galindo2,wensinkrodplate,wensinkbiaxial}. Similar kinds of  anti-nematic or biaxial symmetries could arise when dispersing rod-shaped colloids in a thermotropic liquid crystal under appropriate anchoring conditions \cite{matsuyama2010,mundoor2018}. Anti-nematic order has been shown to naturally emerge in porous smectic structures of  shape-persistent nanorings \cite{avendano2016,wensinkavendano2016} or may be realized with the help of external electromagnetic fields as was demonstrated for clay nanosheets \cite{dozov2011} and for discs in the presence of associating magnetic beads \cite{perouklapp2020}.  In this study we wish to build upon the preceding concepts and explore hierarchical self-organization of reversible polymers in the presence of disc-shaped particles. An example of colloidal discs that could be envisaged are clay nanosheets that consist of nanometer-thick discotic particles with a very high diameter-to-thickness ratio. These particles find widespread use in industrial soft matter and are at the basis of many colloidal-polymer composite materials \cite{balazs1998,ginzburg2000}. The clay sheets on their own, provided they do no gelate in crowded conditions,  have a natural tendency to align and form various types of liquid crystals, including nematic phases \cite{kooij1998,gabriel2005,michot2006,paineau_jpcb2009}. When mixed with  reversibly polymerizing components in the absence of strong disc-polymer attractions,  the discs not only induce orientational "templating" of the supramolecular polymers \cite{asdonk2017}, they also influence the mixing entropy of the system which must have  consequences for polymer growth and  phase behavior \cite{taylorherzfeld1991,vdschoot1994epl}. It is precisely these combined entropic effects that we wish to examine more closely in this work. To this end, we formulate a simple model (Section II) that we subsequently cast into  a  particle-based theory (Section III) that features reversible association and accounts for all relevant entropic contributions on the approximate second-virial level. The orientation degrees of freedom of the species are treated using a number of simplified variational approaches that render our theory algebraically manageable.    We stress that our primary attention in this work goes to mixed-shape nematic phases and we do not consider partially crystallized states that may become stable at elevated packing conditions where our theoretical approach is no longer applicable.
-
-
-Our study broadly falls into two parts. In the first part (Section IV) we explore the molecular weight  distribution in mixtures in which the polymers are organized either nematically or {\em anti-nematically}. The latter state can be realized at elevated disc concentrations where  correlations between the discs are strong enough to generate nematic order of the discotic subsystem which in turn, enforces the supramolecular rods to align perpendicular to the discotic director in such a way that the overall system retains its  uniaxial $D_{\infty  h}$ point group symmetry (\fig{fig:cartoon}(e)). Whereas reversible polymers in a conventional nematic organization are distributed along a near-exponential form with minor non-exponential corrections at short lengths \cite{kuriabova2010},  we argue that {\em anti-nematic} living polymers may, under certain conditions, exhibit a strong non-exponential weight distribution with the most-probable polymer size being oligomeric rather than monomeric. 
-
-In the second part of the manuscript (Section V and VI) we explore the isotropic-nematic phase behavior of the mixed systems by focusing on the uniaxial nematic phases, which seems to be the prevailing nematic symmetry for strongly shape-dissimilar mixtures \cite{wensinkrodplate,campallenbolhuisfrenkel,varga2002,matsuda2003,jacksonbiax}. Our theoretical model is generic and should be applicable to a wide range of different monomer-disc size ratios and temperatures. We discuss the key features for a few exemplary mixtures. One of them is a distinct azeotrope that develops for the isotropic-polymer nematic coexistence, suggesting a strong orientational templating effect imparted by volume-excluded interactions between the polymers and the discs.  Furthermore,  under certain disc-monomer size constraints,  a remarkable four-phase equilibria appears involving a simultaneous coexistence of isotropic gas and liquid phases along with two fractionated uniaxial nematic phases. In Section VII we discuss our findings in relation to recent colloid-polymer models where similar multiphase equilibria have been reported. We end this work with formulating the main conclusions along with some perspectives for further research in Section VIII. 
-
-
-\section{Model}
-
-
-In this study, we focus on mixtures of tip-associating rod-shaped monomers with limited backbone flexibility  mixed with rigid discs. An overview of the basic particle shapes is given in \fig{fig:cartoon}. We assume that each rod monomer is equipped with identical attractive patches at either tip such that each rod end can only form a single bond  with an adjacent rod tip producing a linear polymer. The rods do not associate into multi-armed or ring-shaped polymers. We further assume that all species retain their basic fluid order such that the respective density distributions remain uniform in positional space (but not necessarily in orientational phase space). We do not account for the possibility of hexagonal columnar phases formed by (pure) polymers at high monomer concentration and low temperature combined with elevated polymer backbone flexibility  \cite{taylorherzfeld1991,schoot1996}. In fact, discs too may form columnar structures at packing fraction exceeding typically 40 \% \cite{frenkelcol1989,veerman1992,kooij_nature2000} which goes beyond the concentration range we consider relevant here.  Interactions between the polymer segments and the discs are assumed to be purely hard with the only energy scale featuring in the model being the non-covalent bond energy $\varepsilon_{b}$ between the monomers.
-
- Contrary to previous modelling studies of rod-discs mixture we focus here solely on uniaxial nematic phases and ignore the possibility of biaxial order in which both components align along mutually perpendicular directors. Our focus is motivated by the strong expectation that excluded-volume interactions between the polymers and the discs, which are the principal entropic forces behind generating nematic order \cite{Onsager}, are too disparate to guarantee such orthorhombic nematic symmetry to be stable. Previous theoretical studies \cite{jacksonbiaxrev,varga2002,jacksonbiax,wensinkrodplate,wensinkbiaxial} as well as experiments \cite{kooijlangmuir2000,kooijprl2000,woolston2015} and simulations \cite{campallenbolhuisfrenkel,galindo1,galindo2} on mixed-shape colloids  suggest that strongly unequal excluded volumes indeed favour demixing into strongly fractionated uniaxial nematic phases.  In view of the basic symmetry difference  between the linear polymer and disc, we  then anticipate a rod-based uniaxial phase (denoted $N^{+}$,  \fig{fig:cartoon}(d)) in which the discs are distributed  anti-nematically throughout the uniaxial matrix. Conversely, when the discs outnumber the polymers,  a disc-based uniaxial nematic ($N^{-}$,   \fig{fig:cartoon}(e)) is formed in which the aggregating rods adopt anti-nematic order. The onset of biaxial order emerging from these uniaxial reference phases can be estimated from a simple bifurcation analysis discussed in Appendix B. 
- 
- 
-\section[Second-virial Theory]{Second-virial Theory for Reversible Polymers mixed with rigid discs}
-
-
-We start with formulating the free energy per unit volume $V$ of a mixture of discs with density $\rho_{d}(\oma) $ and reversibly polymerizing rods. We define $\rho_{r}(\ell, \oma)$ as the number density of monomer segments  aggregated into a polymeric rod with contour length $\ell L$  and orientation described by unit vector $\oma$.  The aggregation number or polymerization degree is specified by the index $\ell =1,2,3,...$.  Let us write the free energy per unit volume of the mixture as follows \cite{kuriabova2010,wensink_mm2019}:
- \begin{align}
-& \frac{  F}{ V}  \sim  \sum_{\ell} \int  d \oma   \left [ \ln \left (4 \pi \Lambda_{r} \rho_{r} (\ell, \oma) \ell^{-1}  \right ) - 1 \right ] \ell^{-1} \rho_{r} (\ell, \oma) \nonumber \\ 
-& +     \int  d \oma   \left [ \ln \left ( 4 \pi \Lambda_{d} \rho_{d} ( \oma)   \right ) - 1 \right ]  \rho_{d} (\oma)  + \frac{F_{as}}{V} +  \frac{F_{wlc}}{V} + \frac{F_{ex}}{V} \nonumber \\ 
- \label{free}
-\end{align}
-Without loss of generality,  all energies are implicitly expressed in units of thermal energy $k_{B}T$ (with $k_{B}$ Boltzmann's constant and $T$ temperature). Furthermore, $\Lambda_{r/d}$ are the thermal volumes of the species  which are immaterial for the thermodynamic properties we are about to explore. The factor $4 \pi$ is included for convenience and equals the unit sphere surface representing the orientational phase space. 
-The total rod monomer concentration $\rho_{r0}$ is a conserved quantity so that $\rho_{r0} = \sum_{\ell} \int  d \oma \rho_{r}(\ell, \oma )$. Likewise, $\rho_{d0} = \int d \oma \rho_{d} (\oma)$ represents the number  density of discs.
-The first two terms are related to the ideal gas or mixing entropy and describe the ideal translation and orientational entropy of each polymer  and disc, respectively.
-The third contribution in \eq{free} represents an association energy that drives end-to-end aggregation of the  monomer segments. It reads: 
- \beq
-\frac{F_{as}}{V}  =  \varepsilon_{b}  \sum_{\ell} \int d \oma \ell^{-1} \rho_{r}(\ell, \oma) (\ell -1 ) 
- \label{fas} 
- \eeq
- The free energy per unit volume arising from the polymerized rod segments follows  from the bond potential $\varepsilon_{b}$ between two adjacent rod segments and the number density  $\rho_{a}(\ell, \oma) = (1/\ell) \rho_{r}(\ell, \oma)$ of polymers with aggregation number $\ell  $  each containing  $\ell -1$ bonds. Being normalized to the thermal energy the potential $\varepsilon_{b}$ serves as an {\em effective} temperature scale. At strongly reduced temperature ($\varepsilon_{b} \ll 0$) the association energy is minimised when all monomers  join together into a single long  polymer, while at high temperature ($\varepsilon_{b} \gg 0$) polymerization is strongly suppressed. If $-\varepsilon_{b}$ is of the order of the thermal energy $k_{B}T$, the single chain configuration is highly unfavorable in view of the mixing entropy that favors a broad distribution of aggregates with strongly disperse contour lengths. This we will explore more systematically in Section IV.  
-
-\subsection{Backbone flexibility}
-
-The second last term in \eq{free} represents the effect of polymer flexibility through a correction to the  original orientational entropy (first term in \eq{free}) that accounts for the internal configurations of a so-called worm-like chain \cite{Vroege92}. This leads to a  strongly non-linear term with respect to the segment density \cite{khokhlov82,kuriabova2010}: 
+Let us consider a low-molecular-weight chiral liquid crystal (such as 5CB with chiral dopants) with a director field $\bn(z)$ twisted along $Z$-axis of a Cartesian laboratory frame. The director field of the cholesteric solvent, denoted by ``$s$",  may be parameterized as:
 \beq
-  \frac{F_{wlc}}{V} = - \frac{2L_{r}}{3\ell_{p}} \sum_{\ell} \int d \oma [ \rho_{r}(\ell, \oma)]^{1/2} \nabla^{2}  [ \rho_{r}(\ell, \oma)]^{1/2}
-  \label{wlc}
+\bn_{s}(z) = \bx \cos q Z  + \by \sin q Z
+\label{ns}
 \eeq
-where $\nabla^{2} $ denotes the Laplace operator on the unit sphere. 
-The persistence length $\ell_{p}$ measures the  typical length scale over which local orientational fluctuations of the segments are correlated.  In our model we assume that the rod segments are only slightly flexible \cite{khokhlov82}  so that $\ell_{p} \gg \ell$ suggesting that the main orientational entropy stems from the rigid body contribution that is subsumed into the ideal gas term in \eq{free}. The worm-like chain correction   
-vanishes in the somewhat unnatural situation where all polymers, irrespective of their contour length, are perfectly rigid and the persistence length tends to infinity ($\ell_p \rightarrow \infty$).  
-
-
-\subsection{Excluded-volume entropy}
-
-The last contribution in \eq{free} is the excess free energy that incorporates all excluded-volume driven interactions between the stiff polymers and discs. Assuming all interactions to be strictly hard, we write following Ref. \cite{stroobants1984}:
-\begin{align}
-& \frac{F_{ex}}{ V}  =  \frac{1}{2}   \sum_{\ell, \ell^{\prime}}  \iint d  \oma  d \oma^{\prime} \rho_{r}(\ell, \oma)  \rho_{r}(\ell^{\prime}, \oma^{\prime})  2  L_{r}^{2} D_{r}  | \sin \gamma |  \nonumber \\
-& +    \sum_{\ell}  \iint d  \oma  d \oma^{\prime} \rho_{r}(\ell, \oma) \rho_{d}( \oma^{\prime})  \frac{\pi}{4}  L_{r} D_{d}^{2}  | \cos \gamma |  \nonumber \\
-& +  \frac{1}{2} \iint d  \oma  d \oma^{\prime} \rho_{d}( \oma) \rho_{d}( \oma^{\prime})  \frac{\pi}{2} D_{d}^{3}  | \sin \gamma |  
-\label{fex}
-\end{align}
-where $L_{r,d}$ and $D_{r,d}$ denote the length and diameter of the cylindrical building blocks (see \fig{fig:cartoon}(b)).  We assume all polymers and discs to be sufficiently slender, i.e., $L_{r}/D_{r} \gg 1$ and $D_{d}/L_{d} \gg 1$ so that finite-thickness corrections to the excluded volume terms above can be neglected.   Next we formally minimize the free energy with respect to the polymer segment distribution
+in terms of the pitch  $\lambda = 2 \pi/q$ and handedness $q>0$ that we assume right-handed without loss of generality.
+Next, we immerse a infinitely thin cylindrical rod with aspect ratio $L/D \rightarrow \infty$ into the chiral nematic  phase. The main axis of each rod can be parameterized as $\bhu = \bx \sin \theta \sin \varphi + \by \sin \theta \cos \varphi + \bz \cos \theta $ in terms of a polar $\theta$ and azimuthal angle $\varphi$ with respect to the helical axis $\bz$. The presence of the rod will generate elastic distortions of the uniform director field $\bn_{s}(\bfr)$ due to the specific anchoring of the molecules at the surface of the rod, quantified by  the surface anchoring energy  $W_{0}>0$ (units energy surface area). The extent of elastic deformation around the colloid surface ratio is commonly indicated by the surface extrapolation length $\ell_{s} = K/W_{0}$ where $K$ designates the typical elastic constant of the thermotropic liquid crystal.   In this project we focus on  the regime of large surface extrapolation length $ ( \ell_{s} \rightarrow \infty )$, in which case the elastic distortions are infinitesimally weak and the main energetic contribution imparted by the rod inclusions stems from the surface anchoring energy. Elastic corrections will be accounted for later on.   If we assume the molecular director field  $\bn$ to remain completely undistorted,  the surface anchoring free energy can be obtain from a simple Rapini-Papoular integral of \eq{ns} over the colloid surface denoted by ${\mathcal S}$:
 \beq
-\frac{\delta}{\delta \rho_{r} ( \ell , \oma )} \left ( \frac{ F}{V} - \lambda_{r} \sum_{  \ell} \int d \oma \rho_{r}( \ell, \oma ) \right ) =0
-\label{el1}
+F_{s} = -\frac{1}{2} W_{0} \oint d{\mathcal S}  (\bn_{s} \cdot \bn_{0}({\mathcal S}))^{2}
+\label{rapo}
 \eeq
-and to the one-body density of the discs
+with $\bn_{0}$ represent a unit vector normal to the colloid surface in case of {\em homeotropic} anchoring and tangential to the surface if the anchoring is {\em planar}.
+
+
+For the particular case of a thin cylinder, we shall neglect small contributions associated with the ends of the cylinder so we only need to parameterize the cylindrical surface of magnitude $\pi LD$ following the principal contour $\bfr_{{\mathcal S}}(t) = \bfr_{0} +  \frac{L}{2}t\bhu $
+with $-1<t<1$ of a cylinder with centre-of-mass $\bfr_{0}$. The surface anchoring free energy then becomes:
 \beq
-\frac{\delta}{\delta \rho_{d} ( \oma )} \left ( \frac{ F}{V} - \lambda_{d}  \int d \oma \rho_{d}(  \oma ) \right ) =0
-\label{el2}
+F_{s} = -\frac{1}{8} LDW_{0} \int_{0}^{2 \pi} d \phi  \int_{-1}^{1} dt  [ \bn_{s}( \bfr_{{\mathcal S}} \cdot {\bf \hat{z}}  ) \cdot \bn_{0} ]^{2}
+\label{usurf}
 \eeq
-The Lagrange multipliers $\lambda_{r,d}$ ensure that the total concentration of each species (monomers and discs) be preserved.  The coupled Euler-Lagrange (EL) equations can be rendered tractable by expanding the orientation-dependent kernels that depend on the enclosed angle $\gamma$ between the main particle orientation axes, as we will show next.
-
-
-\section[Molecular weight distribution]{Molecular weight distribution from second-polynomial approximation}
-
-A commonly employed method to cast the free energy in a more tractable form is to express the trigonometric functions featuring in the excluded-volume \eq{fex} in terms of a bilinear expansion in Legendre polynomials \cite{lakatos,kayser,lekkerkerker84}. Truncating this expansion after the second-order contribution leads to a simplified theory that has been explored previously for rod-plate mixtures \cite{stroobants1984,jacksonbiax} as well as in the context of  rods with fixed length polydispersity \cite{sollichonsagerP2}. For the present mixture, the approximation should be adequate if the nematic order of either component is not too strong. We  write:
+In order to describe various anchoring situations  we define two unit vectors $\bhe_{1,2}$ orthogonal to $\bhu$ and parameterize [Brochard-DeGennes]:
+\beq
+\bn_{0} = \begin{cases}
+      \bhe_{1} \cos \phi + \bhe_{2} \sin \phi &  \textrm{H} \\
+         -\bhe_{1} \sin \phi + \bhe_{2} \cos \phi &  \textrm{T} \\
+      \bhu & \textrm{SP}
+   \end{cases}
+      \label{plahom}
+\eeq
+In the case of homeotropic (H) anchoring  the molecular director favors perpendicular alignment to the cylindrical surface, whereas  for tangential (T)  anchoring the easy axis follows the circular perimeter of the cylindrical cross section.
+ The simple planar (SP) case corresponds to the easy axis $\bn_{0}$ pointing along main rod direction.    We obtain the following generic expression:
 \begin{align}
-| \sin \gamma | &= \frac{\pi}{4} - \frac{5 \pi }{32} \pp(\cos \theta) \pp(\cos \theta^{\prime}) + \cdots \nonumber \\
-| \cos \gamma | &= \frac{1}{2} + \frac{5 }{8} \pp(\cos \theta) \pp(\cos \theta^{\prime}) + \cdots
-\label{p2expansion}
- \end{align}
-in terms of the second Legendre polynomials $\pp(x) = \frac{3}{2} x^{2} - \frac{1}{2}$. The  orientation of each particle is described by a polar angle $\theta$ and azimuthal angle $\varphi$ defined with respect to the nematic director $\bn$ (see \fig{fig:cartoon}a and b). Let us define a set of  {\em size-specific} nematic order parameters for the polymer:
-\begin{align}
-S_{r \ell} = \rho_{r \ell}^{-1} \int d \oma \rho_{r}(\ell, \oma) \pp (\oma \cdot \bn) 
-\label{sr} 
+ F_{s} = -\frac{\pi}{8} LDW_{0} \left ( w_{1} + w_{2} \cos (2 \delta )  \frac{\sin (qL \cos \theta)}{qL} \right )
+ \label{us}
 \end{align}
-with $\rho_{r \ell } = \int d \oma \rho_{r} (\ell, \oma)$ a partial number density of rod segments belonging to polymers of length $\ell L$. Likewise we find for the discs:
-\begin{align}
-S_{d} = \rho_{d0}^{-1} \int d \oma \rho_{d}( \oma) \pp (\oma \cdot \bn) 
-\end{align}
-These order parameters allow us to distinguish between an isotropic fluid ($S_{r \ell}=S_{d}=0$), a polymer-dominated uniaxial nematic fluid ($N^{+}$: $S_{r \ell} > 0$, $S_{d} <0$) and a discotic one ($N^{-}$: $S_{r} < 0$, $S_{d} >0$), as sketched in \fig{fig:cartoon}d and e, respectively.  With the aid of these expansions, the excess free energy can be written in terms of a simple bilinear dependence on the nematic order parameter:
-\begin{align}
- \frac{F_{ex}}{ V}   \sim & \rho_{r0}^{2}   \left ( 1 - \frac{5}{8}  \bar{S}_{r }^{2} \right ) +  2 q \rho_{r 0} \rho_{d}   \left ( 1 + \frac{5}{4} \bar{S}_{r} S_{d}   \right ) \nonumber \\
-& + z \rho_{d}^{2}  \left ( 1 - \frac{5}{8} S_{d}^{2}  \right ) 
-\label{fexsim}
- \end{align}
- Here, we have implicitly renormalized the free energy and species densities in terms of the isotropic excluded volume of the monomeric rods  $v_{rr} = \frac{\pi}{4} L_{r}^{2} D_{r}$. The excess free energy thus only depends on the excluded-volume {\em ratios}    $q= v_{rd}/v_{rr}$ and $z =v_{dd}/v_{rr}$  with $v_{rd} = \frac{\pi}{16} L_{r} D_{d}^{2} $ and $v_{dd} = \frac{\pi^{2}}{16} D_{d}^{3}$ denoting the isotropized  monomer-disc and disc-disc excluded volumes, respectively.
-Furthermore, the bar denotes a molecular-weight average of the nematic order parameter associated with the polymers:
-\begin{align}
-\bar{S}_{r} &= \rho_{r0}^{-1}  \sum_{\ell} \rho_{r\ell} S_{r \ell} 
-\label{srav}
-\end{align}
-Similarly, the coupled EL equations may be cast as follows: 
-\begin{align}
-& \ell^{-1} \ln [ 4 \pi \rho_{r} (\ell, \oma ) \ell^{-1} ]   = \lambda_{r}  + \varepsilon_{b} \ell^{-1} +  a_{r} \pp(\oma \cdot \bn) \nonumber \\ 
-&  +\frac{L_{r}}{3\ell_{p}} \frac{\nabla^{2} [ \rho_{r} (\ell , \oma)]^{1/2}}{ [ \rho_{r} (\ell , \oma)]^{1/2} }
-\label{lnrhor}
-\end{align}
+with $\delta = \varphi - q Z$ the azimuthal angle along a particle frame co-rotating with the  helical director so that $ \int d \bhu = \int_{0}^{2 \pi} d \delta \int_{-1}^{1}  d ( \cos \theta )$  and $w_{1}$ and $w_{2}$ are angle-dependent coefficients that depend on the particular anchoring situation:
+\beq
+w_{1} = \begin{cases}
+      (1+ \cos^{2} \theta)  &  \textrm{H/T} \\
+    2   \sin ^{2} \theta  & \textrm{SP}
+   \end{cases}
+      \label{w1}
+\eeq
 and
-\begin{align}
-\ln [ 4 \pi  \rho_{d} (\oma )] & = \lambda_{d}  + a_{d} \pp(\oma \cdot \bn)  
-\label{lnd}
-\end{align}
-The uniaxial order parameters that feature in the EL equations are specified as follows:
-\begin{align}
-a_{r} &=    \frac{5 }{4}  ( \rho_{r0}  \bar{S}_{r} -   2  q\rho_{d0}  S_{d} )  \nonumber \\
-a_{d} &=   \frac{5}{4} (  z \rho_{d0}   S_{d}  -  2q  \rho_{r0} \bar{S}_{r} )  
-\label{alphabeta}
-\end{align}
-We  are now equipped to explore the equilibrium polymer length distribution  $\rho_{r \ell} =  \int d \oma \rho_{r} (\ell, \oma)$ corresponding to the basic fluid symmetries we consider (cf. \fig{fig:cartoon}).
+\beq
+w_{2} = \begin{cases}
+    -  \sin \theta \tan \theta    &  \textrm{H/T} \\
+    2  \sin \theta \tan \theta   & \textrm{SP}
+   \end{cases}
+      \label{w2}
+\eeq
+in terms of the polar $\theta$ and azimuthal rod angle $\varphi$ with respect to the  helical axis. Note that the surface anchoring free energy is the same for the homeotropic and tangential anchoring scenarios.
 
-\subsection{Isotropic fluid}
 
-In the isotropic phase, all nematic order parameters are strictly zero. Applying conservation of monomers to \eq{lnrhor} and performing some algebraic rearrangements we find a geometric distribution (i.e., the discrete analog of the exponential distribution):
-\begin{align}
-\rho_{r \ell } & =   \ell e^{ \varepsilon_{b} + \lambda_{r} \ell }  \nonumber \\
-&= \ell e^{ \varepsilon_{b}} \left ( 1 - m_{I}^{-1} \right ) ^{\ell} \label{disi}
-\end{align}
-in terms of the mean aggregation number:
-\beq
-m_{I} =  \frac{\sum_{\ell} \rho_{a}(\ell) \ell  }{\sum_{\ell} \rho_{a}(\ell) } = \frac{1}{2} \left ( 1+ \sqrt{1+ 4 \rho_{r0} e^{-\varepsilon_{b}} }\right ) 
-\label{miso}
-\eeq
-which, as expected, goes up monotonically with increasing monomer concentration  $\rho_{r0} $ and also increases when the effective temperatures  $\varepsilon_{b}$ grows more negative.  Since there is no global particle alignment whatsoever, the presence of the discs does not influence the polymerization process, and the polymer molecular-weight distribution is independent from the disc concentration.  
+For the homeotropic (H) case the free energy is minimal when  $\theta^{\ast} = 0$  (with the azimuthal angle $\varphi$ randomly distributed) which corresponds to the rod being  aligned along the helical axis. However, there is a second, degenerate minimum at $\theta^{\ast} = \pi/2$ and $\delta^{\ast} = \pi/2$, that describes a  rod pointing perpendicular both to the helical axis {\em  and} the local director.  The minimum surface anchoring energy is $F_{s} = -(\pi/4) LD W_{0}$ for both cases.  The energy barrier between the two minima is only about 0.2 $k_{B}T$ per rod so thermal fluctuations should easily make  the colloids switch from one state to the other.
+ For simple planar (SP) anchoring we only find a single minimum at $\theta^{\ast} = \pi/2$ and $\delta^{\ast} = 0 $, i.e., the rod preferentially aligns along the revolving local nematic director.
 
-\subsection{Uniaxial nematic fluid}
 
-The decoupling of polymeric rods and discs  is no longer  valid  for a nematic fluid where the alignment direction of one component is strongly affected by the amount of orientational ``templating" it experiences from the other component.
-The polymer density  follows  from  \eq{lnrhor} and can be written in an exponential form:
-\begin{align}
-4 \pi \rho_{r} (\ell , \oma) &= \ell \exp [\varepsilon_{b} + \ell \lambda_{r} +  \tilde{a}_{r} \ell \pp(t) ] 
-\label{rhorfull}
-\end{align}
-with $t = \cos \theta $. The three basic contributions affecting the polymer molecular weight  distribution  in a (uniaxial) nematic fluid are easily identified in the argument; the first denotes  monomer-monomer bonding while the second term  enforces monomeric mass conservation. The third one is the most interesting one; it encapsulates the templating effect associated with nematization of the discs as per \eq{alphabeta}. Here,  we have introduced $a_{r}$ as a renormalized version of the one in \eq{alphabeta}:
-\beq
-\tilde{a}_{r} =  a_{r} + \xi 
-\eeq
-The factor $\xi$ depends on both $a_{r}$ itself and on the polymer persistence length $\ell_{p}$. It accounts for the finite polymer flexibility and vanishes for strictly rigid polymers ($\ell_{p} \rightarrow \infty$). The corresponding expressions are given in the Appendix. As noted previously, the multiplier $\lambda_{r}$ featuring in \eq{rhorfull}  follows from monomer mass conservation:
-\beq
-  \sum_{\ell=1}^{\infty}  \int d \oma \rho_{r}(\ell, \oma)  = \rho_{r0}
- \label{como}
-\eeq
-The summation can be resolved analytically and we find:
-\beq
-\rho_{r0} = e^{\varepsilon_{b}} \frac{1}{2} \int_{-1}^{1} dt \frac{ e^{W(t) }}{ ( e^{W(t)} -1)^{2}}
-\eeq
-The molecular-weight averaged  nematic order parameter \eq{srav} is then given by:
-\beq
-\bar{S}_{r} = \rho_{r0}^{-1} e^{\varepsilon_{b}} \frac{1}{2} \int_{-1}^{1} dt  \frac{ \pp(t) e^{ W(t) }}{ (  e^{ W(t)} -1)^{2}}
-\eeq
-The two conditions above are intricately coupled given that $\tilde{a}_{r}$ depends on both $\bar{S}_{r}$  and $S_{d}$ via \eq{alphabeta}. Convergence of the summation \eq{como}  requires that the argument be negative:
- \beq
- W(t) = \lambda_{r} + \tilde{a}_{r} \pp(t) < 0, \hspace{0.3cm} \textrm{all} \hspace{0.1cm}  t
- \eeq
- Noticing that $ -1/2 \leq|| \pp || \leq 1$ one then finds that $\lambda_{r}$ should satisfy:
- \begin{align}
-- \lambda_{r} & <  |\tilde{a}_{r} | \hspace{0.3cm} (N^{+}) \nonumber \\
-- \lambda_{r} & <  |\tilde{a}_{r}/2 |\hspace{0.3cm}  (N^{-}) 
- \end{align}
-and it is tempting to introduce a rescaled  normalization constant $\lambda_{r}^{\prime}$ that is strictly positive ($\lambda_{r}^{\prime} > 0$) for both phases. With this, we recast:
-  \begin{align}
-W(t) =  
-\begin{cases}
-\frac{3}{2} \tilde{a}_{r} (t^{2} -1) - \lambda_{r}^{\prime} \hspace{0.5cm}  (N^{+})   \\
-\frac{3}{2} \tilde{a}_{r} t^{2}  - \lambda_{r}^{\prime} \hspace{1.2cm}  (N^{-}) 
-\end{cases}
- \end{align}
- Unlike for the isotropic phase, the normalization constant $\lambda_{r}^{\prime}$ can not be resolved in closed form. The  molecular-weight distribution of the polymer follows from integrating \eq{rhorfull} over all orientations $\oma$:
- \beq
- \rho_{r \ell} = \ell e^{\varepsilon_{b}} \frac{1}{2} \int_{-1}^{1} dt e^{\ell W(t)}
- \eeq
-The uniaxial nematic order parameter $S_{r \ell}$ associated with a  polymer of length $\ell$ is easily found from:
-\beq
-S_{r \ell} = -\frac{1}{2} \left \{ 1 + \frac{1}{\tilde{a}_{r} \ell}  - \frac{1}{      F  \left (  \sqrt{3 \tilde{a}_{r} \ell/2}   \right ) \sqrt{    \tilde{a}_{r} \ell /3 }  }  \right \}  
-\label{spol}
-\eeq
-in terms of Dawson's integral $F(x) = e^{-x^{2}} \int_{0}^{x}e^{y^{2}}dy$ \cite{abram}. The discotic nematic order parameter $S_{d}$  easily follows from the above expression upon substituting $\tilde{a}_{r} \ell \rightarrow a_{d}$.   A little reflection of \eq{spol} tells us the following; since $a_{r}$ does not depend explicitly on the aggregation number $\ell$, the nematic order parameter $S_{r \ell}$ must be a monotonically increasing function of the polymerization degree $\ell $; the longer the polymers the stronger their nematic ($ a_{r} >0$) or anti-nematic ($ a_{r} <0$) alignment in the mixed nematic fluid. This effect becomes systematically weaker for increasingly flexible polymers as can easily be inferred from the above expression by comparing  $S_{r \ell}$ versus $\ell$ for rigid polymers $(\xi =0)$ versus the case of slightly flexible ones ($\xi $ nonzero but small) for any given value for $a_{r}$. 
 
-% TODO: reshape to fit in single column text
-\begin{figure}
-  \includegraphics[width=\linewidth]{figures/chapter-3/FIG2}
-  \caption{Polymer molecular-weight distributions $\rho_{r \ell}$ and corresponding  uniaxial nematic order parameter $S_{r \ell}$ as a function of the polymer length $\ell$ for (a) a typical polymer nematic $N^{+}$ and (b) discotic nematic phase $N^{-}$. The effective temperature $\varepsilon_{b}$ is color-coded.   
-  (c) Most Probable Length (MPL) in terms of the effective temperature $\varepsilon_{b}$. Fixed parameters: persistence length $\ell_{p} = 3$, disc mole fraction $x = 0.5$, overall concentration $\rho = 3$, excluded-volume {\em ratios} $q = \frac{1}{4}\frac{L_{r}}{D_{r}}$ and $z=\pi q$ with monomer aspect ratio $L_{r}/D_{r} =10$.  }
-  \label{fig:distributions}
+\subsection{Non-interacting rods}
+
+By balancing the surface anchoring free energy with the orientational entropy of the individual rods we easily establish the orientational probability through the Boltzmann distribution:
+  \beq
+  f( \bhu ) = \mathcal{N} \exp (- \beta F_{s} (\delta, \theta)  )
+  \label{fsingle}
+  \eeq
+ with $\beta^{-1} = k_{B}T$ the thermal energy in terms of temperature $T$ and Boltzmann's constant $k_{B}$ and $\mathcal{N}$ a normalization constant ensuring that $\int d \bhu f(\bhu) = 1$.  The surface anchoring strength is expressed  in dimensionless form by $\bar{W} = \beta LDW_{0}$.  The distributions are visualized in \fig{frod}.
+It is easy to infer from \eq{us} that the polar and azimuthal angles are strongly coupled. This indicates that the local distribution of rod orientations around the principal alignment directions (blue, red or white arrow in \fig{frod}) is rendered {\em biaxial} by the chiral twist, as expected.  The most interesting situation arises for the H/T case where there is a subpopulation of  rods aligned along the helical axis ($qL=1$). In order to gain further insight into the orientational symmetry of those rods, we perform a small-angle expansion around   $\theta_{e} = 0$ and retain the leading order coupling term between the two principal angles $\theta$ and $\delta$. The angular fluctuations about the helical axis (blue) are then described by the following free energy
+\beq
+F_{s} \approx \frac{\pi}{8} LDW_{0}  j_{0}(qL) \cos (2 \delta) \theta^{2}
+\label{ht_fluc_new}
+\eeq
+with $j_{0}(x) = \sin (x)/x$. It suggests that the subpopulation of rods aligned along the helical axis in fact adopt a {\em twist-bend}-type organization with a pitch $q$ identical to that of the molecular host. Contrary to cholesterics, these phases are characterized by a nematic director co-aligning with the helical axis. However, the situation here is more subtle given that  chirality is only manifested at the level of orientational fluctuations around a mean director ``backbone" that itself is not chiral.   We  identify a further interesting feature; depending on the sign of $j_{0}(qL)$ the twist-bend helix may be either in phase with the molecular helix ($\delta^{\ast} =0$ for  $qL=4$) or out-of-phase ($\delta^{\ast} = \pi/2$ for $qL=2$).
+
+
+  \begin{figure}
+	\includegraphics[width = 0.8\columnwidth]{figures/chapter-3/frod}
+	\caption{ Unit-sphere projections of the local orientational probability of a rod immersed in a low molecular-weight cholesteric phase at different surface anchoring strengths $\bar{W} = \beta W_{0}LD$. Zones of high orientational probability are in red.  A bistable distribution is found for the homeotropic/tangential (H/T) anchoring case at elevated anchoring strength. For all distributions, the rod-length-to-pitch is $qL=1$. }
+	\label{frod}
 \end{figure}
- 
-Let us now examine a concrete example by picking a dense uniaxial discotic nematic  doped with polymerizing rods. The polymers are dispersed anti-nematically within the discotic fluid as indicated in \fig{fig:cartoon}(e).   In specifying the shape of the rods and discs, we can distinguish between  so-called {\em symmetric} mixtures \cite{stroobants1984}, in which the excluded-volume  between two monomers, a monomer and a disc and two discs are all equal, so that $q = 1$ and $z = 1$ and {\em asymmetric mixtures} composed of species with  strongly disparate excluded volumes.   Our principal attention goes to the latter systems which arise more naturally in an experimental context when mixing, for instance, tip-associating colloidal rods such as {\em fd} \cite{fraden-tmv-baus,dogic-fraden_fil} with clay platelets \cite{davidson-overview}. The molecular-weight distributions of some mixtures of this nature are shown in \fig{fig:distributions}.
-
- \fig{fig:distributions}(a) relates to the uniaxial polymer-dominated nematic phase ($N^+$) and demonstrates an exponential probability distribution  whose shape can be tuned by changing the effective temperature of the system. As expected, the tail of the distribution grows upon decreasing the temperature, which would give longer polymers. A more interesting scenario shows up for the discotic nematic phase ($N^-$) in \fig{fig:distributions}(b), where the distributions are no longer monotonically decreasing. The maximum of the distributions corresponds to the most probable length of the polymers for each system, which depends quite sensitively on the effective temperature as we  observe in \fig{fig:distributions}(c). Reversible polymerization within an anti-nematically organization  thus leads to a strong manifestation of oligomeric polymers at the expense of its monomeric counterparts. We  note that the orientational order associated with the anti-nematic oligomers remains relatively mild (particularly at larger temperature $\varepsilon_{b}$) so that the second-polynomial truncation should not be too severe.
 
 
-As we will see during the incoming sections of this manuscript, the overall particle concentration and disc molar fraction  associated with \fig{fig:distributions} may correspond to  regions of the phase diagram where the uniform nematic system is in fact thermodynamically unstable with respect to some kind of phase separation. The molecular-weight distributions should therefore be interpreted under the caveat that monophasic nematic fluidity is preserved and that any demixing process is somehow suppressed. We wish to add that the non-monotonic features of the anti-nematic polymer molecular-weight distribution are also present at conditions where monophasic anti-nematic order is found to be stable.  Next we address the  thermodynamic stability of the mixtures  within the context of a Gaussian variational theory. 
 
-\section{Isotropic-nematic phase behavior}
 
-At conditions where (anti-)nematic order is strong, the previously used polynomial-based expansion truncated after ${\mathcal P}_{2}$ [\eq{p2expansion}] is no longer appropriate and  a cumbersome inclusion of multiple higher-order terms becomes necessary \cite{lekkerkerker84,wensinkbiaxial}. A more technically expedient route towards exploring the thermodynamics of strongly ordered nematic fluids is to use a simple Gaussian parameterization of the orientational probability \cite{odijkoverview,Vroege92}.  Following \cite{wensink_mm2019} we express the polymer molecular-weight distribution in a factorized form:
+\subsection{Order parameters}
+
+In order to facilitate comparison with experimental results, we define orientational order  with respect to  $\bn_{s}$ which defines the principal direction of molecular alignment along the cholesteric helix. Taking $\bn_{s}$ as a reference we define a uniaxial order parameter:
 \beq
-\rho_{r} (\ell , \oma ) = \rho_{r \ell} f_{G} (\oma) 
-\label{pfac}
+S = \langle {\mathcal P}_{2} (\bhu \cdot \bn_{s})\rangle_{f_{q}}
+\label{s2}
 \eeq
-where $f_{G}$ is a normalized Gaussian distribution with a variational parameter that is proportional to either the degree  nematic  order ($\alpha^{(1)} > 0$) or anti-nematic order  ($\alpha^{(2)} > 0$).  The corresponding Gaussian distributions for the polar angles corresponding to these different nematic symmetries are given by \cite{wensinkrodplate}:
+A biaxial nematic order parameter measures the relative orientational order with respect to the principal directions orthogonal to $\bn_{s}$:
 \beq
-f_{G} (\oma) \sim  
-\begin{cases}
-\frac{\alpha^{(1)}}{4 \pi } \exp (-\frac{1}{2}\alpha^{(1)} \theta^{2} ) , \\
-\sqrt{ \frac{ \alpha^{(2)} }{ (2 \pi )^{3} } } \exp (-\frac{1}{2} \alpha^{(2)} \psi^{2} )
-\end{cases}
-\label{gaussians}
+\Delta = \langle a^{2} - b^{2} \rangle_{f_{q}}
+\label{d2}
 \eeq
-where $\psi = \frac{\pi}{2} - \theta$ ($-\pi/2 < \psi < \pi/2$) denotes a meridional angle (see \fig{fig:cartoon}a). The Gaussians operates on the domain $0 < \theta < \pi/2$ and must be complemented by their mirror $f_{G} (\pi - \theta )$ for $\pi/2 < \theta < \pi$  given that all nematic phases are required to be strictly apolar. The Gaussian representations are appropriate only for strong nematic order ($\alpha \gg 1$). They are clearly inadequate for isotropic systems since the probabilities reduce to zero when $\alpha \rightarrow 0$ instead of reaching a constant.  Obviously,  we  apply the same distributions to the discs with $\alpha_{d}^{(1)}$ and $\alpha_{d}^{(2)}$ denoting the variational parameters quantifying the amount of (anti)nematic order of the discs. The disc probability density is then equivalent to \eq{pfac}:
-\beq
-\rho_{d} (\oma ) = \rho_{d0} f_{G} (\oma) 
-\eeq
-A major advantage of using  Gaussian trial functions is that we may apply  asymptotic expansion of the various free energy contributions \cite{odijkoverview} which are valid in the limit $\alpha \rightarrow \infty$. In particular, it can be shown that the double orientational averages over the sine and cosine in \eq{fex} up to leading order in $\alpha$ take a simple analytic form \cite{wensinkrodplate}.  In the general case in which particles with equal nematic signature (nematic or anti-nematic) do not necessarily have the same degree of alignment the asymptotic averages read:
-\begin{align}
-\langle \langle | \sin \gamma | \rangle \rangle_{11} & \sim \sqrt{ \frac{\pi}{2} \left ( \frac{1}{\alpha^{(1)}} + \frac{1}{\alpha^{(1\prime)}} \right ) } \nonumber \\  
-    \langle \langle | \cos \gamma | \rangle \rangle_{12} & \sim  \sqrt{ \frac{2}{\pi} \left ( \frac{1}{\alpha^{(1)}} + \frac{1}{\alpha^{(2)}} \right ) } \nonumber \\ 
-    \langle \langle | \sin \gamma | \rangle \rangle_{22} & \sim \mathcal{F} (\alpha^{(2)}, \alpha^{(2\prime)})
-    \label{sinav}
-\end{align}
-Here,  the double brackets denote the orientational averages featuring in the excess free energy \eq{fex} with $ \langle \cdot \rangle = \int d \oma f_{G} (\oma) $. The symmetry of nematic order clearly matters since the anti-nematic case features a distinct logarithmic dependence. The function ${\mathcal F}$ reads in explicit form:
+in terms of the projections $a= \bhu \cdot (\bn_{s} \times \bz)$ and $b = \bhu \cdot \bz$.
+We stress that this convention is by no means unique and one could also define orientational order from the tensor ${\bf Q} =  \frac{3}{2} \langle \bhu \otimes \bhu  \rangle_{f_{q}} - \frac{{\bf I}}{2} $ which measures orientational order with respect to the principal colloidal alignment direction $\bn$, independent from the chosen reference frame.
 
+Finally, we may probe the possibility of {\em tetragonal} nematic order ($D_{4h}$) with four-fold symmetry across the plane perpendicular to the cholesteric director ${\bf \hat{n}}_{s}$. We propose the following order parameter:
 \beq
- {\mathcal F}(\alpha^{(2)},\alpha^{(2 \prime)} ) = \frac{4 \alpha^{(2)} Q -2 (1+Q) \textrm{arctanh} \sqrt{Q}  - (1+Q) \ln (1-Q) +(1+Q) \ln ( 4 \alpha^{(2)} Q) } {2 \pi \alpha^{(2)} Q}
+\Delta_{4} = \langle (a^{2} - b^{2})^{2} - a^{2}b^{2} \rangle_{f_{q}}
 \eeq
-
-in terms of the ratio $Q=  \alpha^{(2\prime)}/ \alpha^{(2)}$ with $\alpha^{(2)}$ and $\alpha^{(2\prime)}$ quantifying the anti-nematic order parameters of two polymeric species differing in length. Note that generally, $\alpha^{(2)} \neq \alpha^{(2\prime)}$. The expression becomes a lot more manageable if all polymers are assumed to exhibit an equal degree of alignment, irrespective of their length. Then, $Q=1$ and \cite{wensink2001}:
-\beq
-{\mathcal F}(\alpha^{(2)})  =  \frac{2}{\pi} \left ( 1 + \frac{\ln \alpha^{(2)}}{2 \alpha^{(2)}} \right )
-\eeq
-Similar asymptotic expressions may be obtained for the orientational entropy featuring in the ideal free energy \eq{free}. For strong nematic or anti-nematic order we find, respectively \cite{wensinkrodplate}:
-\begin{align}
-\sigma_{1} = \langle \ln 4 \pi f_{G} (\oma) \rangle_{1} &\sim \ln \alpha^{(1)} -1  \nonumber \\
-\sigma_{2} =\langle \ln 4 \pi f_{G} (\oma) \rangle_{2}   &\sim \frac{1}{2} \left ( \ln \alpha^{(2)} + \ln \frac{2}{\pi} -1 \right )  
-\label{sigma12}
-\end{align}
-The worm-like chain entropy \eq{wlc} too can be quantified within in the Gaussian limit which leads to:
-\begin{align}
-\langle  f_{G}^{1/2} (\oma) \nabla^{2} f_{G}^{1/2} (\oma)  \rangle_{1} & \sim -\frac{\alpha^{(1)}}{2} \nonumber \\ 
-\langle  f_{G}^{1/2} (\oma) \nabla^{2}  f_{G}^{1/2} (\oma)  \rangle_{2} & \sim  
--\frac{\alpha^{(2)}}{4} 
-\end{align}
-We infer that the loss of conformational entropy of an {\em anti-nematic} polymer is half that of a nematic polymer. This suggests that a worm-like chain is able to retain more of its internal configurations when aligned anti-nematically than in a nematic organization of equal strength. With all the orientational averages specified, we  now turn to computing the free energy and its derivatives. 
+We may thus identify the local nematic symmetry of the colloids, namely  uniaxial  ($S \neq 0, \Delta = 0, \Delta_{4} =0$),  orthorhombic biaxial ($S \neq 0, \Delta \neq 0, \Delta_{4} \neq 0$) or tetragonal  ($S \neq 0, \Delta = 0, \Delta_{4} \neq 0$).
 
 
 
-\subsection{Polymer nematic phase ($N^{+}$)}
+\subsection{Non-interacting discs}
 
-We first focus on the case of the polymer-dominated nematic phase which is expected to be stable at elevated monomer concentration and low disc mole fraction.  Inserting the asymptotic orientational averages formulated above into the corresponding entropic contributions in \eq{free} we obtain the following algebraic expression for the free energy density (in units thermal energy $k_{B}T$ per randomized monomer excluded volume $v_{rr}$):
-\begin{align}
-   & \frac{F^{N^{+}}}{V}  \sim  \sum_{\ell }  \rho_{r \ell} \ell^{-1}  \left [ \ln \rho_{r \ell} \ell^{-1}  -1 - \varepsilon_{b}  + \sigma_{1}(\alpha_{r \ell}) \right ] \nonumber \\
-   & + \rho_{d0} \left [ \ln \rho_{d0} -1 + \sigma_{2}(\alpha_{d}) \right ]  \nonumber \\ 
-    & + \frac{1}{3\ell_{p}} \sum_{\ell } \rho_{r \ell} \alpha_{r \ell} + \sum_{\ell,\ell^{\prime}} \rho_{r \ell} \rho_{r \ell^{\prime}} h_{r\ell r\ellp} \nonumber \\
-    & + 2 q \rho_{d0} \sum_{\ell} \rho_{r \ell} h_{r\ell d} + z \rho_{d0}^{2} \frac{8}{\pi^{2}} \left ( 1+ \frac{\ln \alpha_{d}}{2 \alpha_{d}}   \right ) 
-\end{align}
-with $h_{ij}$ is short-hand notation for:
+We may now explore the case of a  thin disc with $L \ll D$ immersed in a cholesteric LC. Let us denote its normal by $\bhu$ and ignore anchoring at the rim. Similar to the case of rods we  consider homeotropic (H) and planar (P)  anchoring symmetries that we may express as follows:
 \beq
-h_{ij} = \sqrt{ \frac{8}{\pi}   \left ( \frac{1}{\alpha_{i}} + \frac{1}{\alpha_{j}} \right )} 
+\bn_{0} = \begin{cases}
+      \bhu & \textrm{H} \\
+      \bhe_{1} \cos \xi + \bhe_{2} \sin \xi &  \textrm{P} \\
+       \end{cases}
+      \label{plahomm}
 \eeq
-where $\alpha_{i}$ and $\alpha_{j}$ should be considered dummy variables for the species-dependent nematic order parameters as specified by the indices $i$ and $j$. 
-For later reference we also define:
+The angle $0 < \xi < 2 \pi$ must be chosen randomly in the case when  planar anchoring is degenerate across all direction on the disc surface.
+Ignoring finite-thickness effects for $L \ll D$ we parameterize the face of the disc  as follows:
 \beq
-g_{ij} = \left (  \frac{8}{\pi} \right)^{1/2}  \left ( 1+ \frac{\alpha_{i} }{\alpha_{j }} \right )^{-1/2}
+\bfr_{{\mathcal S}} = \bfr_{0} + \frac{D}{2} t [\bhe_{1} \sin \phi + \bhe_{2}\cos \phi ]
 \eeq
-At equilibrium, the species-dependent nematic order parameters $\alpha_{r\ell}$ and $\alpha_{d}$ follow from the minimum conditions:
+with $0< t <1 $ and $0 < \phi < 2 \pi$.
+The surface anchoring energy per disc face is expressed analogous to \eq{usurf}:
 \begin{align}
-    \frac{\partial F/V}{\partial \alpha_{r \ell,d}} &=0 
-    \label{dalpha}
+F_{s} &= -\frac{1}{4}  W_{0} D^{2} \int_{0}^{2 \pi} d \phi   \int_{0}^{1} dt t \int_{0}^{2 \pi} \frac{d \xi}{2 \pi} [ \bn_{s}( \bfr_{{\mathcal S}} \cdot {\bf z} ) \cdot \bn_{0} ]^{2}
+\label{usurf2}
 \end{align}
-The expressions above can be simplified considerably by noting that a small amount  of backbone flexibility causes the nematic alignment to fully decorrelate from the polymer contour length. We then approximate $\alpha_{r \ell} \approx \alpha_{r \ell^{\prime}} = \alpha_{r}$, independent from $\ell$.   Applying \eq{dalpha} we obtain a set of simple algebraic equations:
+Leading to the following generic expression:
 \begin{align}
-      m_{N^{+}}^{-1} \alpha_{r}^{1/2}  &= - \frac{1}{3\ell_{p}} \alpha_{r}^{3/2} + \frac{2}{\sqrt{\pi}}  \rho_{r0} + q \rho_{d0}  g_{rd} \nonumber \\
-         \alpha_{d}^{1/2} &=  z \rho_{d0} \frac{8}{\pi^{2}}\left (  \frac{ \ln \alpha_{d} -1}{\alpha_{d}^{1/2}} \right ) 
-  + 4 q \rho_{r0} g_{dr} 
-  \label{alphaplus}
+ F_{s} = -\frac{\pi}{4}  W_{0}D^{2} \left ( w_{1} + w_{2} \cos (2 \delta ) \frac{J_{1}(qD | \sin \theta|)}{qD | \sin \theta| } \right )
+ \label{usp}
 \end{align}
-with $m_{N^{+}}$ the mean aggregation number in the polymer nematic phase.
-The  molecular-weight distribution  now becomes strictly exponential, as for the isotropic phase. We write:
-\begin{align}
-\rho_{r \ell } & = \ell e^{ \tilde{\varepsilon}_{b}} \left ( 1 - m_{N^{+}}^{-1} \right ) ^{\ell} \label{disn}
-\end{align}
-with an {\em effective} potential $\tilde{\varepsilon}_{b}$ that depends on the orientational entropy:
+with $J_{1}(x)$ a Bessel function of the first kind, $\delta = \varphi  - q z$ the  azimuthal angle with respect to the local cholesteric director, and coefficients:
 \beq
-\tilde{\varepsilon}_{b} = \varepsilon_{b} - \sigma_{1}(\alpha_{r}) 
-\label{tempnplus}
+w_{1} = \begin{cases}
+    \frac{1}{2}  \sin ^{2} \theta    &  \textrm{H} \\
+      \frac{1}{8}( 3 + \cos ( 2 \theta ))   & \textrm{P}
+   \end{cases}
+      \label{w1p}
 \eeq
-Given that $\sigma_{1} >0$, the effective temperature is {\em lower} than the bare one, so that polymerization in the nematic phase is stronger than in the isotropic fluid, as is well established \cite{vdschoot1994epl,vdschoot1994la}. The mean aggregation number in the nematic phase  has an analogous form to \eq{miso}):
+and
 \beq
-m_{N^{+}}  = \frac{1}{2} \left ( 1+ \sqrt{1+ 4 \rho_{r0} e^{-\tilde{\varepsilon}_{b}} }\right ) 
+w_{2} = \begin{cases}
+      \sin^{2} \theta    &  \textrm{H} \\
+    -\frac{1}{2}  \sin^{2} \theta    & \textrm{P}
+   \end{cases}
+      \label{w2p}
 \eeq
-The chemical potentials are obtained from the standard thermodynamic relations $\mu_{r,d}  = \partial (F/V) /\partial \rho_{r0,d0}$. The contribution from the polymers reads:
-\begin{align}
-\mu_{r}^{N^{+}}  \sim & \ln ( 1 - m_{N^{+}}^{-1}) + \frac{1}{3 \ell_{p}}  +  m_{N^{+}}^{-1} \sigma_{1}(\alpha_{r})  \nonumber \\
-& + 2  \rho_{r0}   \frac{4}{\sqrt{\pi \alpha_{r}}}  +   2 q \rho_{d0} h_{rd}
-+ \varepsilon_{b} 
-\end{align}
-while for the discs we find:
-\begin{align}
-\mu_{d}^{N^{+}}  \sim  & \ln \rho_{d0}  + \sigma_{2}(\alpha_{d})  +   2 q \rho_{r0}  
-h_{rd} + 2 z \rho_{d0} 
-\frac{8}{\pi^{2}} \left ( 1+ \frac{\ln \alpha_{d}}{2 \alpha_{d}} \right )
-\end{align}
-The osmotic pressure follows from  the thermodynamic relation $-P = (F - N \mu)/V$ leading to:
-\begin{align}
-P^{N^{+}} \sim & e^{\tilde{\varepsilon}_{b}} (m_{N^{+}} -1) 
-+ \rho_{d0}  +  \rho_{r0}^{2}  \frac{4}{\sqrt{\pi \alpha_{r}}}
- \nonumber \\ 
-& +   2 q \rho_{r0}  \rho_{d0} h_{rd}
- + z \rho_{d0}^{2} 
-  \frac{8}{\pi^{2}} \left ( 1+ \frac{\ln \alpha_{d}}{2 \alpha_{d}}   \right )
-\label{pressurenp}
-\end{align}
-Note that all pressures are implicitly renormalized in units of the thermal energy $k_{B}T$ per monomer excluded volume  $v_{rr}$.
+Similar to the rods the surface anchoring strength is expressed  in dimensionless form by $\bar{W} = \beta W_{0}D^{2}$. Taking discs with diameter $D \approx 2 \mu m$ and $W_{0} \approx 10^{-6} - 10^{-5} J/m^{2}$ we find an even higher value than for  the rods, namely  $\bar{W} \sim 10^{3}-10^{4}$ indicating that surface anchoring realignment is robust against thermal fluctuations.
 
 
-\subsection{Discotic nematic phase ($N^{-}$)}
+   \begin{figure}
+	\includegraphics[width = 0.8\columnwidth]{figures/chapter-3/fdisc}
+	\caption{ Unit-sphere projections of the local orientational probability of a disc immersed in a low molecular-weight cholesteric phase at different surface anchoring strengths $\bar{W} = \beta W_{0}D^2$. For all distributions, the disc-diameter-to-pitch is $qD=1$. }
+	\label{fd}
+\end{figure}
 
-Repeating the previous steps for the discotic nematic through simple bookkeeping we write for the free energy of the discotic phase:
+\subsection{Conically degenerate surface anchoring}
+
+The presented surface anchoring model is suitable for a vast selection of geometrical junctions between the cholesteric solvent and the particles. Another experimentally relevant scenario, and as a generalization of the previously evaluated situations, would consist of a preferred anchoring direction $\bn_{0}$ forming an angle $\alpha$ (and thus drawing a degenerate conical surface with apex angle $\alpha/2$) with respect to the vector normal to the colloid surface. Let $\xi$ be the integration angle around such a cone.
+
+For rod-like particles, the anchoring free energy is expressed analogous to \eq{usurf}:
 \begin{align}
-   & \frac{F^{N^{-}}}{V}  \sim  \sum_{\ell }  \rho_{r \ell} \ell^{-1}  \left [ \ln \rho_{r \ell} \ell^{-1}  -1 - \varepsilon_{b}  +\sigma_{2} (\alpha_{r \ell})  \right ] \nonumber \\
-   & + \rho_{d0} [ \ln \rho_{d0} -1 + \sigma_{1}(\alpha_{d})  ] + \frac{1}{6\ell_{p}} \sum_{\ell } \rho_{r \ell} \alpha_{r \ell} \nonumber \\ 
-   & + \sum_{\ell,\ell^{\prime}} \rho_{r \ell} \rho_{r \ell^{\prime}} 
-    \frac{4}{\pi} {\mathcal F} (\alpha_{r \ell}, \alpha_{r \ell^{\prime}}) \nonumber \\
-    & + 2 q \rho_{d0} \sum_{\ell} \rho_{r \ell}  h_{r\ell d} + z \rho_{d0}^{2} \frac{4} {\sqrt{ \pi \alpha_{d}}}
+F_{s} &= -\frac{1}{8} LDW_{0} \int_{0}^{2 \pi} d \phi   \int_{-1}^{1} dt \int_{0}^{2 \pi} \frac{d \xi}{2 \pi} [ \bn_{s}( \bfr_{{\mathcal S}} \cdot {\bf z} ) \cdot \bn_{0} ]^{2}
 \end{align}
-The corresponding minimum conditions for the variational parameters under the assumption that all polymer species experience the same degree of orientational order ($\alpha_{r \ell} = \alpha_{r \ell \prime} = \alpha_{r}$) are as follows: 
-\begin{align}
-     \frac{1}{2} m_{N^{-}}^{-1}  \alpha_{r }^{1/2} &=  - \frac{1}{6\ell_{p}} \alpha_{r }^{3/2} +  \rho_{r0}  \frac{8}{\pi^{2}} 
-    \left ( \frac{\ln  \alpha_{r} - 1}{\alpha_{r}^{1/2}} \right )   + q \rho_{d0}  g_{rd} \nonumber \\
- \alpha_{d}^{1/2} &=  z \rho_{d0} \frac{2}{\pi^{1/2}}  + 2 q \rho_{r0} g_{dr}
- \label{alphamin}
-\end{align}
-The molecular-weight distribution is  analogous to \eq{disn} but with the effective temperature now reading:
+We may express $\bn_{0}$ in terms of the angles $\alpha$, $\phi$ and $\xi$:
+ \begin{align}
+\bn_{0} & = \bhe_{1}( \cos \phi \cos \alpha - \sin \phi \sin \alpha \cos \xi) \nonumber \\
+       & + \bhe_{2} (\sin \phi \cos \alpha + \cos \phi \sin \alpha \cos \xi) \nonumber \\
+       & + \bhu \sin \alpha \sin \xi
+      \label{plahommm}
+ \end{align}
+Leading to an expression equivalent to \eq{us} with coefficients:
 \beq
-\tilde{\varepsilon}_{b} = \varepsilon_{b} - \sigma_{2}(\alpha_{r}) 
-\label{tempnmin}
+w_{1} =\frac{1}{2}(3 - \cos ^{2} \alpha + ( 3\cos ^{2} \alpha - 1 ) \cos ^{2} \theta )
 \eeq
-which, as for the case of the polymer nematic phase suggests that particle alignment facilitates polymer growth, although less so for anti-nematic polymers since generally $\sigma_{2}  < \sigma_{1}$ (\eq{sigma12}).  The chemical potential of the polymers and the discs are given by, respectively:
+and
+\beq
+w_{2} = - \frac{1}{2}( 3\cos ^{2} \alpha - 1 ) \sin \theta \tan \theta
+\eeq
+We can similarly take \eq{usurf2} for discs. In this case we define $\bn_{0}$ as follows:
+\beq
+\bn_{0} = (\bhe_{1} \cos \xi + \bhe_{2} \sin \xi) \sin \alpha + \bhu \cos \alpha
+      \label{plahommmm}
+\eeq
+Leading to an expression equivalent to \eq{usp} with coefficients:
+\beq
+w_{1} =\frac{1}{4}(2 - 2\cos ^{2} \alpha + ( 3\cos ^{2} \alpha - 1 ) \sin ^{2} \theta )
+\eeq
+and
+\beq
+w_{2} =\frac{1}{2}( 3\cos ^{2} \alpha - 1 ) \sin ^{2} \theta
+\eeq
+The corresponding distributions are given in \fig{fc}.
+
+
+\begin{figure}
+	\includegraphics[width = \columnwidth]{figures/chapter-3/heliconical}
+	\caption{ (a) (and (b)) Schemes to illustrate the conically degenerate surface anchoring with a fixed anchoring angle $\alpha$ on rods (and discs). (c-h) Unit-sphere projections of the local orientational probability of a rod (top panels c, e, g) or a disc (bottom panels d, f, h) immersed in a low molecular-weight cholesteric phase at different anchoring angles. For all distributions, the particle-length-to-pitch is $qL(D)=1$ and the surface anchoring strength is $\bar w = 100$. }
+	\label{heliconical}
+\end{figure}
+
+\section[Role of elastic distortions]{Comparison with experiments: role of elastic distortions}
+
+The experiments involve rods with length $L\approx 1.6 \mu m$, thickness $D \approx 25 nm$ and {\em homeotropic} (H) surface anchoring with amplitude $W_{0} \approx 10^{-5} J/m^{2}$. From this we find that $\bar{W} \approx 97$ indicating that the realigning forces generated by surface anchoring strongly exceed thermal fluctuation forces. The pitch of the cholesteric host is about $\lambda \approx 30 \mu m $ so that $qL  \approx 0.335 $.
+
+
+So far we have completely ignored elastic deformations of the host director ($\ell_{s} = K/W_{0} \rightarrow \infty$) so that rod realignment is dominated entirely by surface anchoring. The latter dictates that rods should point along the blue and red axis with equal probability (see \fig{frod}). The experimental reality, however, is that the surface anchoring extrapolation length is large but finite ($\ell_{s} \approx 600 nm \gg D$). Observations point at a scenario in which  rods  orienting along the red axis is largely preferred over the helical axis (blue). The reason why the latter is unfavorable  is that it involves a twisting of the surface disclination that runs along the rod contour which presumably costs energy. No such twisting is necessary if the rod points along the red axis.     Clearly, the discrepancy between experiment and theory must be attributed to the  elastic distortions running along the rod surface (and their subsequent twisting) which was ignored in our model considerations thus far. In principle, weak director distortions may also lead to a minute decrease  of the bulk nematic order parameter,  in particular in regions where the director curvature is strong.  In our analysis, we will assume that the scalar order parameter of the host is preserved even close to the rod surface where director distortions are expected to be the strongest.
+
+\subsection{Elastic distortions around a rod aligned perpendicular to the helical axis}
+
+We will now atttempt to quantify the twisted disclination effect by introducing an angular deviation $\Phi(\bfr)$ and express the helical host director as follows:
+\beq
+\bn_{s}(\bfr) = \bx \cos( q z + \Phi(\bfr_{\perp}))  + \by \sin (q z + \Phi(\bfr_{\perp}))
+\label{nsebluee}
+\eeq
+with $\bfr$ denoting a 3D distance vector and $\bfr_{\perp}$  the lateral distance perpendicular to the helical axis $\bz$.  The total free energy of a colloidal rod inclusion aligned along the helical axis is given by the Rapini-Papoular surface anchoring term \eq{rapo} combined with the Frank elastic free energy in the presence of chirality:
 \begin{align}
- \mu_{r}^{N^{-}}   \sim  
-& \ln ( 1 - m_{N^{-}}^{-1}) + \frac{1}{6 \ell_{p}}  +  m_{N^{-}}^{-1} \sigma_{2}(\alpha_{r})  \nonumber \\
-& + 2  \rho_{r0} 
-\frac{8}{\pi^{2}} \left ( 1+ \frac{\ln \alpha_{r}}{2 \alpha_{r}} \right )
-+   2 q \rho_{d0}  h_{rd}
-+ \varepsilon_{b} \nonumber \\
- \mu_{d}^{N^{-}}  \sim  & \ln \rho_{d0}  + \sigma_{1}(\alpha_{d})  +   2 q \rho_{r0}  
-h_{rd} + 2 z \rho_{d0}  \frac{4} {\sqrt{ \pi \alpha_{d}}}
+F &= \frac{1}{2} \int d \bfr \left [ K_{1} (\nabla \cdot \bn_{s})^{2}  + K_{2} (\bn_{s} \cdot \nabla \times \bn_{s} + q)^{2} \right . \nonumber \\
+& \left . +   K_{3} (\bn_{s} \times \nabla \times \bn_{s})^{2} \right ]
+-\frac{1}{2} W_{0} \oint d{\mathcal S}  (\bn_{s} \cdot \bn_{0}({\mathcal S}))^{2}
 \end{align}
-Finally, the pressure of the $N^{-}$ phase reads:
+with $K_{1}$, $K_{2}$ and $K_{3}$ respectively denoting the splay, twist and bend elastic modulus.  The saddle-splay term surface elasticity reads:
+\beq
+F_{se} = -\frac{K_{24}}{2} \oint d{\mathcal S} \cdot \left ( \bn_{s} \nabla \cdot \bn_{s} +  \bn_{s} \times \nabla \times \bn_{s}\right )
+\eeq
+and is expected to have very little impact in the current geometry (cf. spherical colloidal inclusion).
+The director twist is very weak on the typical range of the director deformations which should be comparable to the rod diameter $D$ rather than the rod length $L \gg D$. For simplicity, we assume the rod to be infinitely long and elastic distortions to occur only along the radial direction $\bfr_{\perp}$ Employing cylindrical coordinates $\Phi(\bfr_{\perp}) = \Phi (r, \vartheta ) $, expanding up to second order in $q$ and integration over the  we obtain for the  free energy  $ F_{el}$ per unit rod length:
 \begin{align}
-P^{N^{-}} \sim & e^{\tilde{\varepsilon}_{b}} (m_{N^{-}} -1) + \rho_{d0} +  \rho_{r0}^{2}  \frac{8}{\pi^{2}} \left ( 1+ \frac{\ln \alpha_{r}}{2 \alpha_{r}}   \right )
- \nonumber \\ 
-& +   2 q \rho_{r0}  \rho_{d0}  h_{rd}
- + z \rho_{d0}^{2}  \frac{4}{\sqrt{\pi \alpha_{d}}}
-\label{pressurenm} 
-\end{align}
-The thermodynamics of the isotropic phase is easily established from the original free energy \eq{free} because the randomized excluded volumes becomes simple constants, namely  $\langle \langle | \sin \gamma | \rangle \rangle = \pi/4$ and $\langle \langle  | \cos \gamma | \rangle \rangle  = 1/2$. We thus obtain the following expressions for the chemical potentials in the isotropic fluid \cite{wensink_mm2019}:
-\begin{align}
-  \mu_{r}^{\textrm I} & \sim  \ln ( 1- m_{I}^{-1} )  + 2  \rho_{r0}  +   2 q \rho_{d0}  + \varepsilon_{b} \nonumber \\
-   \mu_{d}^{\textrm I} & \sim \ln \rho_{d0}  +   2 z \rho_{d0} + 2 q \rho_{r0} 
+ \frac{F_{el}}{L} &=  \frac{1}{2} \int d  \bfr_{\perp} \left \{ \frac{K_{1}}{r^{2}} (1+ \partial_{\vartheta} \Phi)^{2} + K_{3} (\partial_{r} \Phi)^{2} \right . \nonumber \\
+  & \left . + \frac{(qL)^{2}}{12} \Delta K  \left  [ \frac{1}{r^{2}} (1+ \partial_{\vartheta} \Phi)^{2} - (\partial_{r} \Phi)^{2} \right ] \right \}
+  \label{felo}
   \end{align}
-The osmotic pressure  combines the ideal gas and excluded volume contributions and reads:
+  where $\Delta K = K_{3} - K_{1} >0 $ denotes the difference between the bend and splay moduli. The elastic anisotropy turns out to be of crucial importance since the twist correction $\mathcal{O}(q^{2})$  vanishes in case of the one-constant approximation $K_{1} = K_{3} = K_{2} = K$.
+Similarly, the surface anchoring free energy reads up to quadratic order in $qL \ll 1$:
+\beq
+  \frac{F_{s}}{L} =  -\frac{W_{0}}{2} \oint_{\mathcal{C}} d %
+\vartheta \left \{ \cos^{2}(\vartheta - \Phi)  - \frac{(qL)^{2}}{12} \cos [2 ( \vartheta - \Phi)]  \right \}   \eeq
+where $\mathcal{C}$ denotes the circular contour of the rod cross section with diameter $D$.
+For weak distortions $\Phi \ll 1$ we linearize for $\Phi$ and obtain:
+\beq
+  \frac{F_{s}}{L} \approx \frac{F_{s}^{(0)}}{L} -\frac{W_{0}}{2} (1- \tfrac{1}{6} (qL)^{2}) \oint_{\mathcal{C}} d  \vartheta   \sin 2 \vartheta  \Phi
+  \label{fsdist}
+\eeq
+The first term is the contribution for the {\em undistorted} director field previously analysed:
 \begin{align}
-   P^{\textrm I}  &\sim  e^{\varepsilon_{b}} (m_{I} -1) + \rho_{d0}  +  \rho_{r0}^{2}
-+   2 q \rho_{r0}  \rho_{d0}  + z \rho_{d0}^{2} 
+  F_{s}^{(0)} &=  -\frac{LW_{0}}{2} \oint_{\mathcal{C}} d %
+\vartheta \left \{ \cos^{2}\vartheta - \frac{(qL)^{2}}{12} \cos 2  \vartheta \right \} \nonumber \\
+& \sim -\frac{\pi}{4} W_{0} LD
+\label{sabasis}
 \end{align}
-Binodals denoting coexistence between phases of any symmetry may be established from equating chemical potentials and pressures in conjunction with the minimum conditions for the nematic variational parameters, where relevant.  Phase diagrams can be represented in a pressure-composition  ($P-x$) plane or, alternatively, in a density-density representation using $\rho_{r0} = c (1-x)$ and $\rho_{d0}  = cx$ in terms of the overall particle concentration $c$ and disc mole fraction ($0<x<1$). In order to remain consistent with the Gaussian approximation adopted in our analysis, we will focus on {\em asymmetric} mixtures characterized by both monomer-disc and disc-disc excluded volumes being much larger than the monomer-monomer one. The considerable excluded-volume disparity thus ensures that the nematic order of all components be sufficiently strong. Concretely, we impose that $\alpha_{r,d} >5$  for all numerical results to be self-consistent. 
+which corresponds to \eq{usurf} for a homeotropic rod aligned perpendicular to the helical axis ($\theta = \delta = \pi/2$) in the large pitch limit $qL \ll 1$. The second term in \eq{fsdist} accounts for the change of surface anchoring free energy generated by the elastic distortions.
+The change of elastic free energy induced by the twist follows from:
+\begin{align}
+ \Delta F_{\rm twist}^{(el)}  &\approx  \frac{1}{24} (qL)^{2} L \Delta K   \mathcal{F} [ \Phi_{0} ]
+\end{align}
+where $\Phi_{0}$ denotes the distortion angle for the {\em untwisted} system, and:
+\beq
+ \mathcal{F} [ \Phi_{0} ]  = \int d \bfr_{\perp}  \left [ \frac{1}{r^{2}} (1+ \partial_{\vartheta} \Phi_{0})^{2} - (\partial_{r} \Phi_{0})^{2} \right ]
+ \label{fmans}
+\eeq
+is a dimensionless quantity measuring the extent of the surface disclination surrounding the cylinder. Applying the one-constant approximation which does not lead to qualitative changes in this context, we determine $\Phi_{0}$ from minimizing:
+\begin{align}
+ \frac{F_{el}(q=0)}{KL} &=  \frac{1}{2} \int d \bfr_{\perp}  \left \{ \frac{1}{r^{2}} (1+ \partial_{\vartheta} \Phi)^{2} + (\partial_{r} \Phi)^{2} \right \}
+\end{align}
+so that $(\delta F_{el} / \delta \Phi )_{\Phi = \Phi_{0}} = 0$ and $\ell_{s}  = K/W_{0}$ defines the (finite) surface anchoring extrapolation length.  Functional minimization of the free energy we obtain the Laplace equation in polar coordinates:
+\beq
+\partial_{r}^{2} \Phi_{0} + \frac{1}{r} \partial_{r} \Phi_{0}  + \frac{1}{r^{2}} \partial_{\vartheta}^{2}\Phi_{0} =0
+\label{lapo}
+\eeq
+subject to the boundary conditions:
+\begin{align}
+\Phi_{0}( \infty, \vartheta ) &= 0 \nonumber \\
+ \ell_{s} \partial_{r} \Phi_{0}(D/2, \vartheta) &= \tfrac{1}{2} \sin 2 \vartheta
+\label{phioo}
+\end{align}
+with the latter denoting a Neumann boundary condition at the colloid surface imparted by surface anchoring contribution  \eq{fsdist}.
+The result is a simple dipolar field:
+\beq
+\Phi_{0}(r , \vartheta ) = -\frac{D}{16 \ell_{s}} \left ( \frac{D}{2r}   \right )^{2} \sin 2 \vartheta
+\eeq
+Plugging this back into \eq{fmans} and integrating we find that the difference in elastic energy between the twisted (blue) and untwisted (red) case in independent of the surface anchoring extrapolation length $\ell_{s}$ and increases logarithmically with system size $\ell_{\rm max}$:
+\beq
+ \Delta F_{\rm twist}^{(el)} \sim  \frac{2 \pi }{24} (qL)^{2} L \Delta K  \ln \left ( \frac{2 \ell_{\rm max}}{ D} \right )
+ \label{twidi}
+ \eeq
+ Taking $\ell_{\rm max} = L$ as typical size cut-off, $\Delta K \approx 6 pN$ we find that $\Delta F_{\rm twist}  \approx 332 k_{B}T$.
+ %For the total elastic free energy for a rod with untwisted distortions we find:
+%\beq
+%F_{el}(q=0) = \pi K L \left \{ \frac{D^{2}}{256\ell_{s}^{2}} + %\ln \left ( \frac{2 \ell_{\rm max}}{ D} \right ) \right \}
+%\eeq
+%which is about $3.5 \times 10^{4}$ $k_{B}T$.
+The change in surface anchoring free energy associated with a twist of the director distortions reads:
+\begin{align}
+  \Delta F_{\rm twist}^{(s)} &
+  \sim - \frac{\pi W_{0}LD}{92} \frac{D}{ \ell_{s}}  (qL)^{2}
+\end{align}
+which is  negligible compared to the elastic contribution above so that the total distortion-induced free energy change reads $\Delta F_{\rm twist} \approx \Delta F_{\rm twist}^{(el)}$.
 
 
-\section{Phase diagrams}
+\subsection{Elastic distortions around a rod tilted away from the host director}
 
-\begin{figure*}[ht]
-  \includegraphics[width=\textwidth]{figures/chapter-3/FIG3}
-  \caption{Overview of the isotropic $I$ (white) -  polymer nematic $N^+$ (red) - discotic nematic $N^-$ (blue) phase diagrams for a mixture of discs and reversibly polymerizing weakly flexible rods at various effective temperatures $\varepsilon_{b}$. Two types of phase diagrams are represented: osmotic pressure $P$ versus disc mole fraction $x$ (top panels) and concentration of discs $\rho_{d0}$ versus concentration of rods $\rho_{r0}$ (bottom panels). Fixed parameters: persistence length $\ell_{p} = 3$, excluded-volume {\em ratios} $q = \frac{1}{4}\frac{L_{r}}{D_{r}}$ and $z=\pi q$ where $L_{r}/D_{r} =10$. The presence of a negative {\em azeotrope} is indicated in panels (e) and (f) as a bold black line, which is shown to be parallel to the dilution line (grey diagonal shown in (e) and (f)).}
-  \label{fig:L10}
-\end{figure*}
+In order to complete our understanding of the strength of the elastic distortions surrounding the main section of the rod we now look at the case where a rod is aligned at an oblique angle with respect to the host director. Ignoring chiral twist we parameterize the host director field case within a Cartesian reference frame with the rod aligned along $\bz$:
+\begin{align}
+\bn_{s}(\bfr) = & \begin{pmatrix}
+\cos \Phi(\bfr)  \cos \chi(\bfr)\\
+\sin  \Phi(\bfr) \cos \chi(\bfr) \\
+ \sin \chi(\bfr)
+ \end{pmatrix}
+\label{nseblueee}
+\end{align}
+ As before,  we ignore end effects and and express the spatial variation of the distortion angles in polar coordinates, i.e. $\Phi(r , \vartheta)$ and $\chi(r, \theta )$. In principle, the  Euler-Lagrange expressions emerging from minimizing the elastic free energy are strongly coupled and cannot be solved analytically even in the case of weak surface anchoring. We expect, however, that a tilted rod will mostly experience distortions along its main axis $\bz$, expressed by a non-zero $\chi$, while the director deviations $\Phi$ surrounding the lateral cross-section of the rod remain far less affected by the rotation. Then, we can pursue a hybrid route by `constraining $\Phi = \Phi_{0}$ to its solution for the perpendicular case \eq{phioo} and minimize the free energy only with respect to $\chi$.
+Working out the one-constant elastic free energy and taking the functional derivative we find that $\chi$ satisfies the following non-linear partial differential equation:
+\begin{align}
+\partial_{r}^{2} \chi + \frac{1}{r} \partial_{r} \chi  + \frac{1}{r^{2}} \partial_{\vartheta}^{2} \chi & = -\frac{\sin 2 \chi }{2r^{2}}
+\label{nlpde}
+\end{align}
+Corrections to the right-hand term are of order $\mathcal{O}(1/r\ell_{s})$ and can be neglected for weak surface anchoring $\ell_{s} \gg D$.
+In order to accommodate a rotation of the rod axis with respect to the far field host director we define a rotation matrix:
+\beq
+\mathcal{R}(\delta)  = \begin{pmatrix}
+\sin \delta  & 0 & - \cos \delta \\
+0 & 1 & 0 \\
+\cos \delta & 0 & \sin \delta \\
+\end{pmatrix}
+\eeq
+such that $\delta = \pi/2$ reverts to the case where the far-field host  director is perpendicular to the rod axis. The boundary conditions then follow from the Rapini-Papoular surface anchoring energy where the surface normal $\bn_{0}$ is subject to rotation:
+\begin{align}
+F_{s} &= -\frac{W_{0}}{2} \oint d{\mathcal S}  [\bn_{s} \cdot  (\mathcal{R} ( \delta ) \cdot  \bn_{0}({\mathcal S}))]^{2} \nonumber \\
+& = -\frac{  W_{0} L}{2 } \oint d \vartheta \cos^{2} \vartheta \sin^{2}(\delta - \chi(D/2, \vartheta))
+\label{raporot}
+\end{align}
+from which we infer that at $\delta = \pi/2$ (red arrow) optimal surface anchoring is achieved  when the  distortion angle $\chi $ is zero, which leads back to \eq{sabasis}. For oblique orientations $0<\delta < \pi/2$, severe distortions are generated since the optimal anchoring angle at the rod surface $\chi_{\rm surf} \sim \delta - \pi/2$ is incompatible with the far-field condition $\chi(r \rightarrow \infty) =0$.
+The boundary condition for $\chi$ are the following:
+\begin{align}
+\chi(  \infty, \vartheta ) = & 0 \nonumber \\
+\ell_{s} \partial_{r} \chi(D/2, \vartheta ) = & - \frac{1}{2 } \cos^{2} \vartheta \sin [2(\delta - \chi(D/2, \vartheta))] \nonumber \\
+& + D^{-1} \sin 2 \chi(D/2, \vartheta)
+\end{align}
+The latter condition tells us that the distortions will be independent of the tilt angle $\delta$ at infinitely weak surface anchoring ($\ell_{s} \rightarrow \infty$), as we expect.
+Clearly, the non-linear nature of the above differential equation and the complicated boundary conditions do not allow for an analytical solution of the problem.
+
+\subsubsection{Curvature-free rod cross-section}
+
+A more tractable  way forward is to transform the above expressions into a Cartesian coordinate system, so that $\chi(x,y)$ with the far-field host director pointing along the $x$-axis. Basically, we  assume that the rod cross-section along which the director distortions are expected to occur can be described by a strip of length $L$ and $D \ll L$. Further, we define a tilt angle $\gamma = \delta - \frac{\pi}{2}$ (with $0<\gamma <\pi/2$) so that $\gamma =0$ corresponds to the most favorable case where the rod points perpendicular to the (far-field) host director.  All distances are normalized in terms of $D$. The distortions are then described by the 2D Laplacian:
+\beq
+(\partial_{x}^{2} + \partial_{y}^{2}) \chi  = 0
+\eeq
+of which the general solution reads:
+\beq
+\chi(x,y) = \sum_{n=1}^{\infty} e^{-n \pi x } [ a_{n} \cos(n \pi y) + b_{n} \sin( n \pi y ) ]
+\label{seriesxy}
+\eeq
+which vanishes in the far-field limit $\chi(x \rightarrow \infty) = 0$. The (Rapini-Papoular) surface anchoring free energy reads:
+\begin{align}
+\frac{F_{s}}{KL} = - \frac{1}{2 \ell_{s}} \int_{0}^{1} dy \cos^{2} (\gamma - \chi(0,y))
+\end{align}
+which translates into the following boundary condition at the surface of the strip located at $x=0$:
+\beq
+\ell_{s} \partial_{x} \chi(0,y) = \frac{1}{2 } \sin [ 2 (\gamma - \chi(0,y)) ]
+\label{bcweak}
+\eeq
+Further, for symmetry reasons we require the distortion angle to be vanishing at both sides of the strip:
+\beq
+\chi(0, 0 ) = \chi(0, 1)  =0
+\eeq
+which implies that $a_{n} =0$. The coefficients $b_{n}$ need to be  resolved from:
+\beq
+n \pi b_{n} = \frac{1}{ \ell_{s}} \int_{0}^{1} dy \sin (n \pi y) \sin \left [ 2 \left (\gamma - \sum_{k=1}^{\infty} b_{k} \sin (k \pi y) \right ) \right ]
+\label{bcnum}
+\eeq
+For small tilt angles $\gamma  \ll 1$  distortions are expected to be weak $\chi \ll 1$ so that we linearize $\sin 2 (\gamma - \chi ) \approx 2( \gamma  - \chi)$.
+This enables us to resolve the coefficients analytically:
+\beq
+b_{n} =  \left ( \frac{1 - (-1)^{n}}{(n \pi)^{2}}\right ) \frac{\gamma}{\ell_{s}}
+\eeq
+The free energy increase induced by the elastic distortions is given by:
+\begin{align}
+\Delta F_{el} &= \frac{ \pi KL}{4} \sum_{n=1}^{\infty} n b_{n}^{2}
+\label{dfelseries}
+\end{align}
+which in the linearized regime for small $\gamma$ gives a simple analytical result:
+\begin{align}
+\Delta F_{el} = \frac{7 KL}{8 \pi^{3}} \zeta(3) \left ( \frac{\gamma }{\ell_{s}} \right )^{2}
+\label{felgg}
+\end{align}
+with $\zeta(3) \approx 1.2 $ a constant from the Riemann-Zeta function $\zeta(x)$. The surface anchoring free energy reads:
+\begin{align}
+F_{s} = - LDW_{0} \int_{0}^{1} dy \cos^{2} (\gamma - \chi(0,y))
+\end{align}
+Then, in the absence of elastic distortions and no tilt ($\gamma = 0$) the surface anchoring free energy would simply be $F_{s} = -LDW_{0}$ which only marginally differs from the result for the cylindrical case $F_{s} = -(\pi/4)LDW_{0}$.
+Within the linearized regime for small tilt angles $\gamma \ll 1$  the change in surface anchoring free energy imparted by the elastic distortions is given by:
+\begin{align}
+\Delta F_{s} &\approx LDW_{0}  \int_{0}^{1} dy  (\gamma - \chi(0,y))^{2}  \nonumber \\
+& \approx W_{0} LD  \left ( 1 + \frac{1}{48 \ell_{s}^{2}} - \frac{7  \zeta(3)}{ \pi^{3} \ell_{S}} \right) \gamma^{2}
+\end{align}
+This expression along with \eq{felgg} clearly reflects the basic trade-off between surface anchoring and elasticity in which the cost in elastic free energy is in part compensated by a reduction of the surface anchoring free energy (last term). The total free energy change for small tilt angles now reads:
+\beq
+\Delta  F_{\rm tot} \sim  W_{0} LD \left ( 1  - \frac{49 \zeta(3)}{8\pi^{3} \ell_{s}}  \right ) \gamma^{2} + \mathcal{O}(\gamma^{2}/\ell_{s}^{2})
+\label{ftiltcorr}
+\eeq
+Let us now compare our results with the simple Rapini-Papoular expression \eq{usurf} in the {\em absence} of elastic distortions. Taking $\theta=\pi/2$ and expanding for small $\gamma $ we find:
+ \beq
+ \Delta  F_{\rm tot}^{(RP)} \sim \frac{\pi}{4} W_{0}LD \gamma^{2}
+\eeq
+Disregarding the trivial curvature prefactor $\pi/4$ in the last expression, we find that the impact of the elastic distortions is rather marginal, since the correction term in  \eq{ftiltcorr} is less than 1 $k_{B}T$. Numerical resolution of \eq{bcnum} reveals that weak elastic distortions  occur mostly when the rod is at an oblique angle $\gamma = \pi/4$.
+This is illustrated in \fig{fel} for a number of different anchoring strengths expressed by the extrapolation length $\ell_{s}$.
+
+Now that we have established that distortions remain weak at any angle $\gamma$ for large enough extrapolation length $\ell_{s}  \gg 1$ we may explore an alternative route to quantifying $\chi$ by linearizing the boundary condition \eq{bcweak} for $\chi \ll 1$:
+\beq
+\ell_{s} \partial_{x} \chi(0,y)\approx \frac{1}{2 } \sin ( 2 \gamma) - \chi(0,y) \cos (2 \gamma )
+\label{bcweak}
+\eeq
+From which the coefficients are easily established:
+\beq
+b_{n}  = \frac{\sin ( 2 \gamma )}{\cos(2 \gamma) - n \pi \ell_{s}} \left ( \frac{1-(-1)^{n}}{n \pi}\right )
+\eeq
+The corresponding elastic free energy then follows from the summation in \eq{dfelseries} and the results agree with the ones shown in \fig{fel}.
 
 
-\fig{fig:L10} presents an overview of the isotropic-nematic phase diagram for a mixture of reversibly polymerizing rods and discs at three different temperatures.  The choice of excluded-volume parameter $q$ and $z$ is inspired by the typical dimensions of experimentally realizable anisotropic colloids, where the  monomeric rods and discs usually have {\em equal} largest dimensions ($L_{r} = D_{d}$). The monomer aspect ratio $L_{r}/D_{r}$ can be chosen freely but we fix it here at  $L_{r}/D_{r} = 10$. The disc aspect ratio is not constrained as long as the discs are sufficiently thin ($D_{d}/L_{d} \gg 1$). In this study we keep the persistence length fixed at $\ell_{p} =3$. We found that variations up to $\ell_{p} =10$ (corresponding to stiffer monomers) did not lead to major changes in the phase behavior.  For practical reasons we refrained from exploring the near-rigid rod limit ($\ell_{p} \rightarrow \infty$) which is known to cause the polymers to grow to unphysically large lengths \cite{vdschoot1994la}.
 
-Several key trends in the phase diagrams can be discerned. First of all, \fig{fig:L10}(a) correspond to high-temperature scenario in which reversible polymerization happens on a very limited scale. The shape-dissimilar nature of the mixture translates into a phase diagram that is highly asymmetric about the equimolar point $x=0.5$. Second, demixing is  prominent given the large range of monomer-disc compositions where the mixture fractionates into strongly segregated uniaxial nematic phases [\fig{fig:L10}(a)]. Only at very low osmotic pressures, where particle exclusion effects are relatively weak, does the mixture remain miscible throughout the entire composition range. We further observe that the discotic nematic $N^{-}$ can be stabilized over a relatively broad pressure range, while the polymer nematic ($N^{+}$)  only features at elevated pressures, where polymerization is strong enough for the long polymers to align into a conventional nematic organization with the discs interspersed anti-nematically. The phase diagram also features a triple $I-N^{+}-N^{-}$ equilibrium in agreement with previous predictions  \cite{galindo2,wensinkrodplate} and experiment \cite{kooijlangmuir2000,woolston2015} for discs mixed with {\em non-}polymerizing rods. 
 
-Reducing the temperature stimulates polymer growth and, consequently, enhances the stability window for the polymer-dominated nematic  [\fig{fig:L10}(b) and (c)]. Reversible polymerization thus renders the phase diagrams less asymmetric.  At the same time, the osmotic pressure (and concomitantly the particle concentrations) at which nematic order occurs drops significantly as polymerization becomes more prominent. Furthermore, the $I-N^{+}$ binodals develop a remarkable (negative) {\em azeotrope} which in \fig{fig:L10}(b) coincides with the triple pressure. Under these conditions,  coexistence occurs between a discotic nematic,  a polymer nematic and an isotropic fluid with the latter two having the same monomer-disc composition. At lower temperature the azeotrope comes out more prominently at $x\approx 0.2$ (\fig{fig:L10}(c)). In the density-density representations shown in the bottom panels, the azeotrope manifests itself at the point where the tie line connecting the monomer and discs concentrations of the coexisting $I$ and $N^{+}$ phases coincides with the dilution line. The latter are straight lines emanating from the origin along which the overall particle concentration changes but the monomer-disc composition is preserved.  It can  be gleaned that upon following a dilution line at, for instance, $x=0.2$  the sequence of phase transitions encountered depends strongly on temperature. At high temperature [\fig{fig:L10}(a)] the isotropic fluid first transforms into $N^{-}$, then develops a triphasic $I-N^{+}-N^{-}$ equilibrium. At low temperature, however, a polymer nematic is formed first, followed by a binematic $N^{+}-N^{-}$ coexistence while the triphasic equilibrium does not show up at all unless the monomer concentration is significantly increased.   \fig{fig:azeotrope} provides insight into the change of nematic order of the polymers and discs as well as the mean aggregation number of the $N^{+}$ across the azeotrope. In view of their considerable excluded volume, the discs are way more ordered than the polymers ($\alpha_{d} >\alpha_{r}$).  Increasing the  mole fraction of discs  reduces the nematic order of both components, though the decrease is much more significant for the discs than the change of $\alpha_{r}$ for the polymers which in fact develops a minimum at the azeotrope.
 
 \begin{figure}
-  \includegraphics[width= .6\linewidth]{figures/chapter-3/FIG4}
-\caption{Nematic order of the polymers ($\alpha_{r}$) and discs ($\alpha_{d}$) and polymer mean aggregation number ($m$) of  the nematic $N^{+}$ phase in coexistence with the isotropic phase $I$  across the azeotropic region. The corresponding binodal in \fig{fig:L10}(c) has been indicated in red. } 
-  \label{fig:azeotrope}
+	\includegraphics[width = .7\columnwidth]{figures/chapter-3/fel}
+	\caption{Free energy associated with elastic distortions around a rod tilted at an angle $\gamma$ from the nematic director at different surface anchoring extrapolation lengths $\ell_{s}$ (in units of the rod diameter $D$). }
+	\label{fel}
 \end{figure}
 
-\begin{figure*}[ht]
-  \includegraphics[width= \linewidth]{figures/chapter-3/FIG5}
-\caption{Phase diagram in the osmotic pressure-composition ($P-x$) representation with the following parameters: persistence length $\ell_{p} = 3$, effective temperature $\varepsilon_{b} = -1$, excluded-volume {\em ratios} $q = \frac{1}{4}\frac{L_{r}}{D_{r}}$ and $z=\pi q$ corresponding to a monomer aspect ratio $L_{r}/D_{r} =25$. The disc mole fraction $x$ is plotted on a linear scale (a) and on a logarithmic scale (b) to highlight the behavior close to single-component systems (pure polymers $x=0$, and pure discs $x=1$). Note the presence of a coexistence between an isotropic gas and fluid  phase ($I_1$ and $I_2$) with different discs compositions (grey region). (c) Comparison of mean aggregation numbers $m_{I}$ between $I_{1}$ and $I_{2}$ for a given pressure. $I_{1}$ corresponds to the phase at the lowest disc mole fraction $x$. }
-  \label{fig:coexistence}
-\end{figure*}
 
-We move on to explore a similar mixture featuring more slender rod monomers, namely $L_{r}/D_{r} = 25$. The resulting phase diagram is shown in \fig{fig:coexistence}. The asymmetry of the mixture is now very strong with the monophasic  $N^{+}$ and $N^{-}$ regions being largely unstable except for strongly purified systems  ($x$ close to $0$ or $1$)  [\fig{fig:coexistence}(b)]. Qualitatively, the phase diagram resembles the one in \fig{fig:L10}(a), but the isotropic fluid  undergoes a gas-liquid-type phase separation producing two phases differing in composition. The $I_{1}$-phase may be associated with a discotic colloidal gas, and  $I_{2}$  with its liquid counterpart.   The demixing is driven by the extreme excluded-volume difference between the rod monomers and the discs. This phenomenon has been reported for (non-polymerizing) rod-disc mixtures in Ref. \cite{varga2002}, where the effect was ascribed to a {\em depletion} of discs by the much smaller rods. Isotropic-isotropic demixing has  been more generally observed when mixing different shapes dominated by hard-core repulsion \cite{dijkstra1994}, including thin and thick rods \cite{vanRoij97}, spheres and discs   \cite{chen2015,aliabadi2016} and discs  differing in diameter \cite{phillips_pre2010}. It has also been observed in thermotropic LC-solvent mixtures where the effect is primarily of enthalpic origin and is caused by specific interactions between the LC forming molecules and the solvent \cite{matsuyama1996,reyes2019}.  It is well known that mixing colloids with non-adsorbing polymer depletants creates an effective attraction between the colloids which is entirely of entropic origin and may drive various types of demixing mechanisms \cite{LekkerkerkerTuinier2011}. In our case, the depletion effect is however less clear-cut given that the ``depletants"   reversibly polymerize into a wide array of different sizes \cite{peters2021} and experience  orientation-dependent volume-exclusion interactions which are usually ignored in colloid-polymer models. Moreover the average polymer size depends, via \eq{miso}, on the monomer concentration which is different in the gas and liquid phases. \fig{fig:coexistence}(c) demonstrates that the difference in mean aggregation number between the two isotropic phases is in fact quite small, with the disc-rich fraction harboring slightly longer polymers.   Note that the presence of isotropic-isotropic demixing gives rise to a low-pressure triple equilibrium where both phases coexist with a discotic nematic $N^{-}$.  
 
-\section{Quadruple fluid coexistence}
+\subsection{Effective orientational potential of a LC rod}
 
-\begin{figure*}[ht]
-  \includegraphics[width=0.9 \linewidth]{figures/chapter-3/FIG6}
-\caption{(a) Phase diagram in the osmotic pressure-composition ($P-x$) representation showing an $I_{1}$-$I_{2}$-$N^{+}$-$N^{-}$ quadruple point at $P = 4.29$. For this particular case, $\ell_{p} = 3$, $\varepsilon_{b} = -1.2$, $L_{r}/D_{r} =25$ and $D_{d}/L_{r} = 0.7$. (b) Visualization of combinations of rod-disc excluded-volume ratio ($q$ and $z$) and temperature $\varepsilon_{b}$ where  an $I_{1}-I_{2}-N^{+}-N^{-}$ quadruple coexistence is possible.  }
-\label{fig:qp}
-\end{figure*}
-
-At this stage, one might wonder whether a mixtures could be designed in which  the two separate triple equilibria  in \fig{fig:coexistence} were to join into a  {\em quadruple} coexistence featuring all fluid phases. In \fig{fig:qp}(a) we demonstrate that this scenario is indeed possible. For the particular mixture shown there, the rod monomers and discs no longer have equal largest dimensions ($L_{r}= D_{d}$) but the disc diameter is somewhat smaller than the rod length, namely $D_{d} =0.7 L_{r}$ while the rods are kept sufficiently slender ($L_{r}/D_{r} = 25$). The  excluded-volume asymmetry is then sufficiently reduced to make the two triple points coincide and generate a simultaneous coexistence between two isotropic and two nematic phases, each differing in monomer-disc composition and overall particle concentration. This mixture is by no means  unique and belongs to a family of monomer-disc size ratios where a remarkable $I_{1}$-$I_{2}$-$N^{+}$-$N^{-}$ quadruple point could be encountered, as illustrated by the colored manifold in \fig{fig:qp}(b). This result provides important guidance if one wishes to explore these intricate multi-phase equilibria in real-life mixtures featuring reversibly polymerizing rods mixed with colloidal platelets.
-
- At this point we wish to draw a connection with recent theoretical explorations of polymer depletion on purely monomeric colloidal rods which have revealed similar multi-phase equilibria involving one-dimensional periodic smectic structures as well as fully crystalline states \cite{peters_prl2020}. Similar phenomena involving isotropic-nematic-columnar quadruple points had been reported previously for disc-polymer mixtures \cite{gonzalez2017}. In those studies, the multiphase equilibria emerge from an effective one-component theory based on free-volume theory where   polymeric depletants, envisaged as fixed-shape spherical particles that do not interact with one another, are depleted from the surface of the colloidal rod due to volume exclusion as per the original Asakura-Oosawa model \cite{ASAKURA54,ASAKURA58,Vrijdepletie}. In our work, the depletion effect is strongly convoluted since all components (polymer species and discs alike) are explicitly correlated, albeit on the simplified second-virial level. Furthermore, high-density crystal phases with long-ranged positional order are not considered in the present study since their stability requires strong uniformity in particle shape \cite{mederos_overview2014}, which is not the case in our mixtures. In fact, even for basic mixtures of non-associating hard rods mixed with hard discs the full phase behavior at conditions of elevated particle packing  remains largely elusive to this day. Large-scale  numerical simulations or density-functional computations are needed  to overcome the limitations of the simple second-virial approach taken here, but these are technically challenging to implement for dense multi-component systems. 
- 
- The results gathered in \fig{fig:qp}  illustrates the possibility of generating four different fluid textures emerging from reversibly changing excluded-volume-driven interactions alone, without the need to invoke attractive interparticle forces. This could bear some relevance on the emergence of functionality through liquid-liquid type phase separation in biological cells which are composed of biomolecules possessing a multitude of different shapes, some of them  controlled by reversible association \cite{hyman2014,shin2017}.
- 
- % TODO: transfer to general conclusions??
-\section{Conclusions}
-
-We have explored the phase behaviour of a simple model for thermoresponsive supramolecular rods mixed with discotic particles. Possessing attractive tips the rod monomers reversibly associate into polymers that retain their basic slender rod shape and experience only a limited degree of backbone flexibility. The interaction between the species is assumed to be  of steric origin such that basic shape differences between the constituents, more specifically the excluded-volume disparity, plays a key role in determining the prevailing liquid crystal symmetry. The principal ones are a   polymer nematic ($N^{+}$) composed of nematic polymer interspersed with an anti-nematic organization of discs and a discotic nematic  ($N^{-}$) in which the polymers are dispersed anti-nematically.   Lowering   temperature stimulates  polymer growth which  enlarges the stability window for the $N^{+}$ phase.  The phase diagram  develops a marked {\em azeotrope} upon increasing the mole fraction of added discs which indicated that the  polymer nematic is stabilized by the addition of non-adsorbing rigid discs provided their mole fraction remains small. 
-The polymer-dominated nematic phase eventually becomes destabilized at larger mole fractions where mutual disc alignment disrupts  the nematic  order of the polymers in favour of the formation of a discotic nematic phase in which the polymers self-organize into an anti-nematic structure. The corresponding molecular weight distribution functions strongly deviates from the usual exponential form and becomes non-monotonic with a maximum probability associated with oligomeric aggregates. Enhancing the shape-asymmetry between the rod monomers and discs we observe a depletion-driven demixing of the isotropic fluid which opens up the possibility of a quadruple existence featuring two isotropic phase along with the fractionated polymer and discotic nematic phases. Such quadruple points occur in a wide range of mixed-shape nematics involving supramolecular rods templated by discs and highlight the possibility of multiple liquid symmetries (both isotropic and anisotropic) coexisting in  mixtures of anisotropic colloids with reversible and thermoresponsive shape-asymmetry without cohesive interparticle forces.   Future explorations should aim at a more careful assessment of biaxial nematic order, ignored in the present study,  which could develop in near-equimolar rod-disc mixtures provided they are stable against global demixing (see Appendix B for tentative discussion). Polymerizing rods and discs with finite particle thickness and low shape asymmetry may favor the emergence of liquid crystals possessing lamellar, columnar or fully crystalline signatures  \cite{peroukidis2010} which may be addressed using  computer simulation models along the lines of Refs. \cite{kuriabova2010,nguyen2014,perouklapp2020}. Inspiration for such mixed-shape  lamellar structures  could be drawn from bio-inspired supramolecular liquid crystals \cite{safinya2013} such as, for example, the `sliding columnar phase' and similar stacked architectures  observed in cationic lyposome-DNA complexes \cite{wong2000,ohern1998} which are essentially made up of mixed planar and rod-shaped architectures. 
-
-% TODO: transfer to general appendices
-\section*{Appendix A: Renormalized ${\mathcal P}_{2}$ approximation for slightly flexible polymers}
-
-We seek a simple perturbation theory for the one-body density   \eq{lnrhor}  of near-rigid polymers characterized by a finite persistence length $\ell_{p}$. Let us attempt the following generalization of the probability density distribution for the polymers: 
+Gathering the findings of the previous paragraphs we revisit the realigning potential acting on each rod. The total external potential is given by the bare Rapini-Papoular contribution \eq{usurf} for the undistorted host director plus the free energy contributions from elastic distortions:
 \beq
- \rho_{r} (\ell , \oma) =  \ell e^{\varepsilon_{b} + \lambda_{r} \ell} e^{ \ell (a_{r}+ \xi) \pp(\oma) }
+U_{\rm rod} (\theta, \delta) \sim  F_{s}(\theta, \delta)  + \Delta F_{\rm dist}(\theta, \delta)
 \eeq
-with $\xi$ representing a correction induced by the {\em internal} orientational entropy of the polymer due to a small degree of worm-like chain flexibility. 
-Inserting this expression into the worm-like chain contribution (last term) in the EL equation  \eq{lnrhor},  substituting $\nabla^{2} = \partial_{t} (1-t^{2}) \partial_{t}$ and $t= \cos \theta$,  we find that for the uniaxial symmetry:
+Since the distortion term cannot be resolved for any rod orientation but only for cases when the rod is aligned along the principal Cartesian axes of the host frame we use the following interpolation form:
 \begin{align}
-\frac{\nabla^{2}  \rho_{r}^{1/2}}{  \rho_{r} ^{1/2} }  = & \frac{3}{4} \tilde{a}_{r}^{2} + \left  ( \frac{3}{2}  \tilde{a}_{r} ^{2}  - 3 \tilde{a}_{r} \right ) \pp(t) + {\mathcal O}(t^{4})
-\label{roro1}
+\Delta F_{\rm dist} (\theta, \delta)  \sim & \Delta F_{\rm twist} \cos^{2} \theta  + \Delta F_{\rm tilt} \sin^{2} \theta \cos^{2} \delta
 \end{align}
-where $\tilde{a}_{r} = a_{r}  + \xi$ denotes a rescaled alignment amplitude for the polymer. 
+in terms of the two principal elastic  contributions;  $\Delta F_{\rm tilt} = F(\textrm{grey}) - F(\textrm{red})$ associated with tilting  the rod away from the red arrow and $\Delta F_{\rm twist}$ [\eq{twidi}] the energy cost associated with twisting of the surface disclination wrapped along the main part of the cylinder. From the analysis in the previous paragraphs we have found that $\Delta F_{\rm twist} \approx 332 k_{B}T$ whereas elastic distortions due to tilting are very weak $\Delta F_{\rm tilt} < k_{B}T$ and may, in fact, be neglected all together for the weak anchoring regime.  The  elastic energy is minimal (zero) when the rods align along the red arrow ($\theta = \pi/2$ and $ \delta= \pi/2 $) as observed in experiment.
 
-\subsection*{Anti-nematic polymers}
-We expect that neglecting the fourth-order term will be fairly harmless in a strongly anti-nematic state  where $t $ is generally very small (since $\theta \sim \pi/2 $ for most polymers). This situation is naturally encountered in the  $N^{-}$ phase where $a_{r} \ell \ll 0 $ in particular for the long polymers.  The constant  in \eq{roro1} is unimportant for the EL equation where it can be subsumed into the normalization factor $\lambda$, but must be retained when computing the worm-like chain free energy. Then, consistency requires that
+At infinitely low rod concentrations, the order parameters $S$ and $\Delta$ defined within the frame of the  molecular host (\eq{s2} and \eq{d2}) are readily computed from the Boltzmann factor
+  $f( \bhu ) = \mathcal{N} \exp ( - \beta  U_{\rm rod} (\delta, \theta)   ) $.
+An overview of the results as a function of the anchoring strength $\bar{W} = \beta W_{0} LD$ is given in \fig{ww}. The best correspondence with experimental data ($S \sim -0.33 -0.43$ and $\Delta = 0.6 - 0.8$) is found for $ \bar{W} \sim 6 k_{B}T$ which corresponds to a surface anchoring  amplitude of about $W_{0}\sim 6 \times 10^{-7} J/m^{2}$.
+
+
+\begin{figure}
+	\includegraphics[width = .8\columnwidth]{figures/chapter-3/wwmans}
+	\caption{ Colloidal nematic order parameters measured within the molecular frame as a function of
+the surface anchoring amplitude $\bar{W} = W_{0}LD$. The experimentally relevant region is indicated in grey. }
+	\label{ww}
+\end{figure}
+
+\subsection{Elastic distortions around a disc}
+
+Ignoring elastic distortions we find that discs with homeotropic surface anchoring tend to orient along the grey axis, as observed in experiment. This is the obvious optimal situation that incurs the least amount of elastic distortions, compared to the other principal directions in which cases the disc surface would experience strongly unfavorable tangential surface ordering. However, even when the disc normal is aligned along the local nematic director  there are, however, local mismatches between the far-field and preferred surface director due to the weak twisting of the host director perpendicular to the disc normal (which occurs along the red axis) and when the rod normal fluctuates away from this axis. The elastic distortions are expected to be weak but they will become more outspoken at shorter pitches.  It is instructive to compute the extent of these distortions along the lines of our previous analysis for rods. Let us consider an infinitely thin disc with its normal restricted to lie in the $xy$-plane at an angle $\delta$ with the grey axis ($x$-axis). We assume weak elastic distortions $\chi$  developing in the $xy$-plane.  Defining a host director $\bn_{s} = (\cos \Phi(x,y),
+\sin \Phi(x,y) , 0)$ we find,  assuming  elastic isotropy,  that the distortions are described by the Laplace equation:
 \beq
-\xi \approx  \frac{1}{3 \ell_{p}}  \left  ( \frac{3}{2}  \tilde{a}_{r} ^{2}  - 3 \tilde{a}_{r}  \right )
-\eeq 
-where the chain persistence length $\ell_{p}$ should be interpreted in units of the segment length $L_{r}$.  From the above the dependence of $\xi$ on the bare alignment amplitude $a_{r}$ is easily resolved and we find:
- \beq
- \xi \approx 1+ \ell_{p} +   |a_{r} |  -\sqrt{(1 +  \ell_{p})^{2} + 2 | a_{r} |  \ell_{p} }, \hspace{0.3cm} (a_{r} \ll 0 )
- \label{xi1}
- \eeq 
-The correction factor vanishes in the rigid rod limit, $\lim_{\ell_{p} \rightarrow \infty} \xi = 0$, as it should.
-
-\subsection*{Nematic polymers}
-
-We may repeat the analysis for the case of conventional nematic polymers as encountered in the polymer-dominated $N^{+}$  phase using a slightly different route. For $a_{r} \gg 1$ the average polar deflection angle will be small and we may expand the worm-like chain term up to quadratic order in $\theta$. Using the asymptotic relation $\pp(t) \sim 1- 3\theta^{2}/2 $ and ignoring any constant factors we find a simple approximation valid for $|t|$ close to unity (strong alignment): 
-\begin{align}
-\frac{\nabla^{2}  \rho_{r}^{1/2}}{  \rho_{r} ^{1/2} }  \sim - \frac{3}{2} (  \tilde{a}_{r} ^{2}  + 2  \tilde{a}_{r} ) \pp(t) 
-\label{roro2}
-\end{align}
-Then, in analogy with the preceding case we find an expression identical to \eq{xi1} except for a minus sign:
-\beq
- -\xi \approx 1 + \ell_{p} + |a_{r}|  - \sqrt{(1 +  \ell_{p})^{2} + 2 |a_{r}|  \ell_{p}}, \hspace{0.3cm} (a_{r}  \gg 0)
-\label{xi2}
+(\partial_{x}^{2} + \partial_{y}^{2}) \Phi  = 0
 \eeq
- This simple scaling result confirms our expectation, namely that a small degree of backbone flexibility leads to a reduction of the alignment propensity of the polymers, since $| a_{r} + \xi | $ is always smaller than $| a_{r}  |$. For strongly aligned systems, this effect turns out to be of equal strength for both nematic and anti-nematically ordered polymers.
- 
-
-
-
-% TODO: transfer to general appendices
-\section*{Appendix B: Stability of biaxial nematic order}
-
-\begin{figure*}[ht]
-  \includegraphics[width=.9 \textwidth]{figures/chapter-3/FIG7}
-\caption{(a) Schematic representation of the biaxial nematic phase $BX$ with orthorhombic ($D_{2h}$) point-group  symmetry, characterized by mutually perpendicular nematic directors for each species ($\bm{\hat{\textnormal{\bfseries n}}_r}$ for the polymers and $\bm{\hat{\textnormal{\bfseries n}}_d}$ for discs). (b) Bifurcation curves locating the transition from uniaxial (U) order at low osmotic pressure $P$ to biaxial (BX) nematic order at high pressure for a number of relevant cases studied in the main text. Here, $x$ denotes the disc mole fraction.  }
-\label{fig:bx}
-\end{figure*}
-
-
-
-So far, we have overlook the possibility of biaxial nematic order in which both polymers and discs order along mutually perpendicular directors (see \fig{fig:bx}(a)).
-In order to tentatively locate the transition toward biaxial ($BX$) nematic order, we  apply a simple bifurcation analysis in which we probe the stability a uniaxial ($U$) fluid against weakly biaxial fluctuations \cite{kayser,stroobants1984}. If the $U$-$BX$ transition is second-order, the bifurcation point at which biaxial solution emerge from the EL equations should pinpoint the actual phase transition.  We begin by generalizing the second-polynomial expansion \eq{p2expansion} to include biaxial nematic order using the addition theorem for spherical harmonics:
+The effect of a twisting host director is accounted for in the surface anchoring free energy:
 \begin{align}
-\pp( \cos \gamma ) &= \pp(\cos \theta) \pp(\cos \theta^{\prime})  \nonumber \\ 
-& + \frac{1}{12} \pp^{2}(\cos \theta) \pp^{2}(\cos \theta^{\prime}) \cos 2 (\varphi - \varphi^{\prime})
+F_{s} &=  -\frac{W_{0}}{2} \oint d{\mathcal S}  [\bn_{s} \cdot  (\mathcal{R} (qz + \psi) \cdot  \bn_{0}({\mathcal S}))]^{2}
+\label{raporotdisc}
 \end{align}
-where $\varphi$ is the azimuthal angle describing the particle orientation  with respect a secondary director $\bn_{\perp} \perp \bn$. The coupled EL equations then attain an additional term that accounts for biaxiality: 
-\begin{align}
-&  \ell^{-1} \ln [  \rho_{r} (\ell, \oma ) \ell^{-1} ]   = \lambda_{r}    + \varepsilon_{b}  +  \alpha_{r}  \pp(\oma ) \nonumber \\ 
-& +  \beta_{r } D(\oma)   +  \frac{L_{r}}{3\ell_{p}} \frac{\nabla^{2} [ \rho_{r} (\ell , \oma)]^{1/2}}{ [ \rho_{r} (\ell , \oma)]^{1/2} }
-\label{lnrhorbiax}
-\end{align}
-and
-\begin{align}
-\ln [  \rho_{d} (\oma )] & = \lambda_{d}  + \alpha_{d} \pp(\oma)  + \beta_{d} D(\oma )  
-\label{lndbiax}
-\end{align}
-in terms of the  weight function $D(\oma) = \sin^{2} \theta  \cos 2 \varphi $ and amplitudes: 
-\begin{align}
-\beta_{r} &=  \frac{15 }{16}  ( \rho_{r0} \bar{\Delta}_{r}  - 2q  \rho_{d0}  \Delta_{d} )  \nonumber \\
-\beta_{d} &=   \frac{15 }{16}  (z \rho_{d0}  \Delta_{d}  - 2 q \rho_{r0}  \bar{\Delta}_{r} )
-\label{alphabetabiax}
-\end{align}
-which feature the biaxial nematic order parameter of each species:
-\begin{align}
-\Delta_{r \ell} &= \rho_{r \ell}^{-1} \int d \oma \rho_{r}(\ell, \oma) D (\oma) \nonumber \\
-\Delta_{d} &= \rho_{d0}^{-1} \int d \oma \rho_{d}( \oma) D (\oma ) 
-\label{dr}
-\end{align}
-Similar to the uniaxial case the bar denotes a molecular-weight average according to $ \bar{\Delta}_{r} = \rho_{r0}^{-1}  \sum_{\ell} \rho_{r\ell} \Delta_{r \ell}$. 
-Substituting the EL equations  into the  biaxial nematic order parameters and linearize for weakly biaxial amplitudes $|\beta| \ll 1$ we establish the condition under which a biaxial solution for the orientation distribution bifurcates from the uniaxial  one:
-\begin{align}
-\Delta_{r \ell} &= \rho_{r \ell}^{-1} \ell \beta_{r} \int d \oma \rho_{r }^{(U)} ( \ell, \oma) D^{2} (\oma) \nonumber \\
-\Delta_{d} &= \rho_{d0}^{-1}  \beta_{d} \int d \oma \rho_{d }^{(U)} (\oma) D^{2} (\oma)
-\label{brod}
-\end{align} 
-This linear criterion basically stipulates the conditions (overall particle concentration, composition and effective temperature) at which the  uniaxial nematic state is no longer guaranteed to be a local minimum in the free energy. Within the factorization Ansatz \eq{pfac} for the uniaxial molecular-weight distributions the condition simplifies into:
-\begin{align}
-\bar{\Delta}_{r} &=  \beta_{r} (2 m-1)  \langle D^{2}  (\oma) \rangle_{f_{G}} \nonumber \\
-\Delta_{d} &=   \beta_{d}  \langle D^{2}  (\oma) \rangle_{f_{G}}
-\label{brodgauss}
-\end{align} 
-The brackets denote an average according to the nematic or anti-nematic Gaussians  $f_{G}$ specified in \eq{gaussians}. Similarly, $m$ denotes the mean aggregation number of either the $N^{+}$ or the $N^{-}$ phase.
-The averages are easily obtained in the asymptotic angular limits ($\theta \ll 1$ or $\psi \ll 1$) and the leading order contributions read:
+where ${\mathcal S} $ parameterizes the face of the disc (as previously we ignore finite thickness effects for discs with $D \gg L$) and $\bn_{0} = (1,0,0)$ indicating homeotropic anchoring along the surface normal. The rotation matrix reads:
 \beq
-\langle D^{2}  (\oma) \rangle_{f_{G}}  \sim 
- \begin{cases}
- 4 /[ \alpha^{(1)}]^{2} \hspace{0.5cm}  \textrm{nematic}  \\
-1/2 \hspace{1.2cm}   \textrm{anti-nematic} 
-\end{cases}
-\eeq 
- The $U$-$BX$ bifurcation condition \eq{brodgauss} is equivalent to the matrix equation ${\bf M} \cdot {\bf \Delta}  = \lambda_{e} {\bf \Delta} $ with ${\bf \Delta} = ( \bar{\Delta}_{r} , \Delta_{d}) $ and ${\bf M}$ given by the prefactors.  The eigenvalues $\lambda_{e} $ of the matrix ${\bf M}$ are required to be unity $(\lambda_{e} =1)$. The solution is:
- \begin{align}
- 1 &= -\frac{15}{32} c w_{1} \left[ (1-x) + xzW - \right . \nonumber \\ 
- & \left . \sqrt{(1-x)^{2} + 2Wx(1-x)(8 q^{2} -z) +W^{2} x^{2}z^{2} }  \right]
+\mathcal{R}( qz )  = \begin{pmatrix}
+\cos qz  & -\sin qz  & 0 \\
+\sin qz & \cos qz & 0 \\
+0 & 0 & 1 \\
+\end{pmatrix}
+\eeq
+A key distinction with the rod case is that the distortions are not uniform across the disc surface but depend on the location of the surface element with respect to the helical axis.  It is convenient to divide the disc surface into infinitely thin strips, with each surface element on the strip being equidistant from the centre-of-mass along the twist direction ($z$-axis) thus experiencing the same degree of elastic distortions.
+
+For notational brevity, we implicitly normalize all lengths in units of the disc diameter $D$ and parameterize the disc surface in terms of $y = \tfrac{1}{2} \cos \alpha$ and $z = \tfrac{1}{2} \sin \alpha$ with $-\pi < \alpha <  \pi$. Each strip then has length $L_{s} = \cos \alpha$ and thickness $D_{s} = \tfrac{1}{2} \cos \alpha d \alpha$ and surface $ds = L_{s}D_{s} $. The surface anchoring free energy of an arbitrary strip with surface $ds$ and centre-of-mass distance $z$ then reads:
+\begin{align}
+F_{s}^{\rm strip}  &= -W_{0} [\cos (\Phi(0,y) - qz -\delta )]^{2} ds
+\label{sadisc}
 \end{align}
-with
+The boundary condition at the strip the disc equator ($\alpha=0)$ reads:
+\begin{align}
+\Phi(  \infty, 0 ) & =  0 \nonumber \\
+\ell_{s} \partial_{x} \Phi(0, y ) & =   -\frac{1}{2 }   \sin [2 ( \Phi(0,y) - qz - \delta ) ] \nonumber \\
+& \approx \frac{1}{2} \sin [2(qz + \delta)]  - \cos [2 (qz + \delta)] \Phi(0,y)
+\label{bcdisc1}
+\end{align}
+where we take $0<y<1$ for convenience. The distortions should be symmetric at the edges ($\Phi (0,0)  = \Phi (0, 1)$)
+and the solution of the Laplace equation is the same as for the rod considered in II-B.1:
 \beq
-w_{1} = 
- \begin{cases}
- (2m_{N^{+}}-1) 4/\alpha_{r}^{2}  \hspace{0.5cm}  N^{+}-BX  \\
- (2m_{N^{-}}-1)/2 \hspace{0.7cm}  N^{-}-BX
-\end{cases}
-\eeq 
-and
+\Phi(x,y) = \sum_{n=1}^{\infty} e^{-n \pi x }  b_{n} \sin(n \pi y)
+\label{seriesxy}
+\eeq
+Fortunately, the boundary condition \eq{bcdisc1} is the same as the linearized one  for the rod (\eq{bcweak}) upon replacing $\gamma \rightarrow qz + \psi $. The same goes for the coefficients which now read:
 \beq
-W = 
- \begin{cases}
- (2m_{N^{+}}-1)^{-1} \alpha_{r}^{2}/8  \hspace{0.5cm}  N^{+}-BX  \\
- (2m_{N^{-}}-1)^{-1} 8/\alpha_{d}^{2} \hspace{0.5cm}  N^{-}-BX
-\end{cases}
-\eeq 
+b_{n}  = \frac{\sin [ 2 (qz+ \delta)  ]}{\cos[2 (qz + \delta)] - n \pi \ell_{s}} \left ( \frac{1-(-1)^{n}}{n \pi}\right )
+\label{bnscenario1}
+\eeq
+Given that  $q$ and $-q$ do not give equivalent results we conclude that the distortions created near the disc surface carry a distinct chiral signature imparted by the chirality of the host LC. The nature of the imprint depends on the twist angle $\psi$ between the disc normal and the grey axis.
+We further deduce that the distortions vanish at infinitely weak surface anchoring ($\ell_{s} \rightarrow \infty$) and in the absence of twist and tilting ($q=0$ and $\psi=0$), as we expect. The elastic free energy for the total disc is given by:
+\beq
+\Delta F_{el} = \frac{\pi KD}{4}  \int_{-\pi/2}^{\pi/2} d \alpha \cos \alpha \sum_{n} n b^{2}_{n}
+\eeq
+which may be evaluated as a function of the angle $\psi$ between the disc normal and the grey axis taking the surface anchoring extrapolation length (in units $D$) to be about $\ell_{s} \approx 3$.
+The change in surface anchoring free energy induced by the distortions follows from linearizing \eq{sadisc} and integrating over all strips:
+\begin{align}
+\Delta F_{s}  &= \frac{W_{0}D^{2}}{2} \int_{-\pi/2}^{\pi/2} d \alpha \cos^{2} \alpha \sin[2(qz + \delta)] \nonumber \\
+&\times \sum_{n} b_{n}  \left ( \frac{1-(-1)^{n}}{n \pi}\right )
+\label{sadiscseries}
+\end{align}
+We reiterate that $z$ depends on the angle $\alpha$ via $z = \tfrac{D}{2} \sin \alpha$.
 
-The numerical solutions are shown in \fig{fig:bx}(b).  The $N^{-}$-$BX$ solutions ceases to be internally consistent with the Gaussian approximation at  $x< 0.8$ given that the nematic order parameter $\alpha_{d}$ of the discs tends to get too low. No such inconsistency occurs for the $N^{+}$-$BX$ branches. In general, we find that the transition occurs at pressures that are beyond the ranges explored in the phase diagrams of the main text. The only exceptions are \fig{fig:L10}(c) and \fig{fig:qp} where the $N^{+}$ phase remains stable up to fairly large disc mole fractions and the $N^{+}$-$BX$ bifurcations are located within the monophasic $N^{+}$ regions (in red). The tentative conclusion from this analysis is in line with previous reports in literature \cite{mederos_overview2014}, namely that the stability of $BX$ nematic order is intimately linked to the excluded-volume asymmetry of the constituents which, in our case, is temperature-controlled.  Lowering the temperature reduces the typical asymmetry which then stabilizes well-mixed rod-disc nematics that subsequently may develop $BX$ order. We further note that disc-rich $BX$ phases seem much harder to stabilize than polymer-dominated ones as the $N^{-}$-$BX$ branches  generally do not intersect the small monophasic $N^{-}$ domains in the phase diagrams shown in the main text. 
+\begin{figure}
+	\includegraphics[width = 0.5 \columnwidth]{figures/chapter-3/discelastic}
+	\caption{ Distortion free energies (in units $k_{B}T$) around a disc immersed at an angle $\delta$ or $\zeta$ with the local host director. The distortion free energies remain relatively weak for all $\delta$, but are most pronounced at oblique angles $\delta \sim \pi/4$. Parameters are based on the experimentally relevant situation: $qD =0.4$ and $\ell_{s}/D = 3$ ($W_{0} = 10^{-6} J/m^{2}$). }
+	\label{discel}
+\end{figure}
 
- 
+
+
+We  finish our analysis by considering the case where the disc normal rotates within the $xz$-plane over an angle $\zeta = \tfrac{\pi}{2} - \theta$. In this situation, the tilting will generate additional weak distortions  across the $z$-direction that we denote by the angle $\chi$. The spatially-dependent host director now reads:
+\begin{align}
+\bn_{s}(\bfr) = & \begin{pmatrix}
+\cos \Phi(\bfr)  \cos \chi(\bfr)\\
+\sin  \Phi(\bfr) \cos \chi(\bfr) \\
+ \sin \chi(\bfr)
+ \end{pmatrix}
+\label{nseblue}
+\end{align}
+with $\bfr = ( x,y )$. As before each distortion angles obeys the Laplace equation in the $xy$-plane:
+\begin{align}
+(\partial_{x}^{2} + \partial_{y}^{2}) \Phi  &= 0 \nonumber \\
+(\partial_{x}^{2} + \partial_{y}^{2}) \chi  &= 0
+\end{align}
+The surface anchoring free energy now takes the following form:
+\begin{align}
+F_{s} &=  -\frac{W_{0}}{2} \oint d{\mathcal S}  [\bn_{s} \cdot  (  \mathcal{R}_{\zeta} \mathcal{R} (qz) \cdot  \bn_{0}({\mathcal S}))]^{2}
+\label{raporotdisc2}
+\end{align}
+where the matrix $\mathcal{R}_{\zeta}$ describes a rotation of the disc normal within the $xz$-plane:
+\beq
+\mathcal{R}_{\zeta}=
+\begin{pmatrix}
+\cos \zeta & 0 & \sin \zeta \\
+0 & 1 & 0 \\
+-\sin \zeta & 0 &  \cos \zeta \\
+\end{pmatrix}
+\eeq
+Analogous to the previous case, we may derive boundary conditions from linearizing $F_{s}$ for weak distortions $\Phi \ll 1$ and $\chi \ll1$. Plugging in the general solution [\eq{seriesxy}] and defining $b_{n}$ as the distortion modes pertaining to $\Phi(x,y)$ and $d_{n}$ as those for $\chi(x,y)$ we find that both distortion angles are intricately coupled, as expected:
+\begin{align}
+b_{n} &=  c_{n} \cos \zeta \sin (2 q z) \nonumber \\
+d_{n} & = c_{n} \sin (2 \zeta) \cos^{2} (q z)
+\end{align}
+From these we immediately assert  the most basic scenarios; both distortions vanish for a disc in an achiral host ($q=0$) at zero tilt ($\zeta=0$), whereas at nonzero tilt angle only $\chi(d_{n}) $ is nonzero. For a disc immersed in a chiral host ($q \neq$) at zero tilt ($\zeta =0$) we recover the previous scenario with $\Phi(b_{n})$ given by \eq{bnscenario1} and $\chi(d_{n}) =0$]. Both distortion angles are expected to be nonzero in case the disc normal is tilted away from the local director of the chiral host. The common prefactor reads:
+\beq
+c_{n} = \frac{ 2\left ( \frac{1-(-1)^{n}}{n \pi}\right )}{1 + 2\ell_{s} n \pi  -\cos( 2 \zeta) - 2 \cos^{2} \zeta \cos (2 q z)}
+\eeq
+The change in elastic free energy is a simple superposition of amplitudes:
+\beq
+\Delta F_{el} = \frac{\pi KD}{4}  \int_{-\pi/2}^{\pi/2} d \alpha \cos \alpha \sum_{n} n \left ( b^{2}_{n} + d_{n}^{2} \right )
+\eeq
+The contribution arising from the host chirality turns out zero for symmetry reasons:
+\begin{align}
+ \Delta F_{\rm chiral} &=  K q \int d \bfr \partial_{y} \chi (x,y) =0
+\end{align}
+which is easily inferred from inserting the expansion \eq{seriesxy} and integrating over $y$.
+The reduction in surface anchoring free energy caused by the distortions  $\Phi$ is as follows:
+\begin{align}
+\Delta F_{s, \Phi} = W_{0}D^{2} \cos \zeta  \int_{-\pi/2}^{\pi/2} d \alpha \cos^{2} \alpha \sin (2 qz) \nonumber \\
+\times \sum_{n} b_{n} \left ( \frac{1-(-1)^{n}}{n \pi}\right )
+\end{align}
+supplemented with a similar contribution accounting for the distortions $\chi$:
+\begin{align}
+\Delta F_{s, \chi} = W_{0}D^{2} \sin( 2 \zeta ) \int_{-\pi/2}^{\pi/2} d \alpha \cos^{2} \alpha  \cos^{2} (qz) \nonumber \\
+\times \sum_{n} d_{n} \left ( \frac{1-(-1)^{n}}{n \pi}\right )
+\end{align}
+Note the surface anchoring is always negative and should outweigh the cost in elastic free energy. The results in \fig{discel} demonstrate that elastic distortions are most developed at oblique orientations, and do not strongly depend on the direction along which the disc is tilted.
+
+\begin{figure}
+	\includegraphics[width = \columnwidth]{figures/chapter-3/udisc}
+	\caption{Free energy of a colloidal disc with weakly homeotropic surface anchoring immersed in a cholesteric host with pitch $qD$ as a function of its orientation with respect to the local cholesteric director.  Solid lines correspond to surface anchoring only  [\eq{usp}], while the symbols denote the surface anchoring free energy including weak elastic distortions around the disc.  }
+	\label{udisc}
+\end{figure}
+
+ If we now reconsider the {\em total} alignment potential for discs accounting for corrections derived above we conclude that the ordering of the discs is hardly affected by the distortions. The free energy changes are typically several tens of $k_{B}T$ which is about two orders of magnitude smaller than the typical Rapini-Papoular surface anchoring free energy $ W_{0} D^{2} $ which is about 1500 $k_{B}T$. Discs experiencing weak surface anchoring with  a cholesteric host with large pitch ($qD <1$)  will therefore simply follow the local molecular director with thermal fluctuations around the optimum angle being strongly suppressed. The considerable penalty incurred  by angular fluctuations away from the local cholesteric director is demonstrated in \fig{udisc} for a number of different host pitches. The elastic distortions around the disc surface lead to a systematic reduction of the free energy, as expected, but their effect on the realigning properties is rather marginal.
+
+
+ \subsection{Short-pitch cholesteric hosts}
+
+
+ At much short pitches,  comparable to the disc diameter, fluctuations in $\delta$ are greatly facilitated and the local minimum of $U_{\rm disc}$ eventually switches over to $\delta = \pi/2$ suggesting  discs  preferentially aligning perpendicular to the director and helical axis.  Taking the Rapini-Papoular contribution \eq{usp} as the main contribution for the weak surface anchoring regimes considered here we can extract  nematic order parameters associated with such a crossover.  The results, shown in \fig{disop}, clearly exhibit a sharp transition from uniaxial to biaxial order at a critical pitch of about $qD \approx 3.8$ which, taking $D =2 \mu m$ would correspond to cholesteric pitch of about $\lambda \approx 3.3 \mu m$.
+
+
+
+\begin{figure}
+	\includegraphics[width =  .8\columnwidth]{figures/chapter-3/discubx}
+	\caption{Nematic order parameters of discs with weakly homeotropic surface anchoring immersed in a cholesteric host with variable pitch $qD$. A crossover from uniaxial to orthorhombic biaxial local order occurs at around $qD \approx 3.8$.  }
+	\label{disop}
+\end{figure}
 
 
 
