@@ -1,16 +1,51 @@
 
-\chapter{Hybrid colloid-molecular chiral nematics I: Single colloid approach}
-\chaptermark{Hybrid chiral nematics I: Single colloid approach}
+\chapter{Emergent biaxial order in hybrid chiral LCs}
+\chaptermark{Hybrid LCs: emergent biaxiality}
 
 
 \begin{abstract}
-Cholesteric liquid crystals (LCs) are classic examples of complex chiral mesophases with long-ranged periodicity but lack positional order at large length scales. Doping molecular cholesterics LCs with thin colloidal rods with a large  length-to-width ratio adds a further a further level of complexity due to the interplay between weak surface anchoring forces and elastic distortions around the rod-LC interface. We demonstrate that the rods have a strong tendency to orient perpendicular to the helix axis and local director, thus imparting strong local biaxiality on the hybrid cholesteric structure. We theoretically argue that the splay-bend elastic anisotropy plays a key role in stabilizing orthorhombic order. Reducing the elastic anisotropy of the host should open up ways to realizing hybrid cholesteric LCs with local tetragonal symmetry.    We also briefly review the case of discs.
+Cholesteric liquid crystals (LCs) are classic examples of complex chiral mesophases with long-ranged periodicity but lack positional order at large length scales. Doping molecular cholesterics LCs with thin colloidal rods or disks with a large  length-to-width ratio adds a further a further level of complexity due to the interplay between weak surface anchoring forces and elastic distortions around the rod-LC interface. We demonstrate that the rods have a strong tendency to orient perpendicular to the helix axis and local director, thus imparting strong local biaxiality on the hybrid cholesteric structure. We theoretically argue that the splay-bend elastic anisotropy plays a key role in stabilizing local orthorhombic order along the helix.  Our predictions are corroborated by experimental results obtained in the group of I. Smalyukh (University of Colorado, USA) that we briefly review. We also discuss the case of discs and find a similar scenario of anomalous biaxial order along the helical director for discs with homeotropic anchoring immersed in short-pitch cholesteric hosts LCs. 
+
 
 \end{abstract}
 
+
+
+\section{Introduction}
+
 % TODO: write introduction (inspired by Smalyukh's?)
 
+
+Since the experimental discovery of chiral nematic liquid crystals (LCs) over 150 years ago \cite{planer1861notiz,reinitzer1888beitrage}, LC mesophases featuring chirality and long-range orientational order have been the focus of many research studies. The fundamental studies of geometry and topology of chiral nematic LCs as model systems provide extensive insights into physics principles associated with experimentally less accessible systems like particle physics or cosmology \cite{wu2022hopfions}, in addition to their technological application in electro-optics and displays. On the other hand, biaxial nematic mesophases have been highly sought-after in soft matter systems since their first theoretical consideration in 1970 \cite{freiser1970ordered}. However, even in a soft-matter system with strongly biaxial building blocks such as brick-shaped molecules, biaxiality was experimentally elusive and hard to unambiguously demonstrate in equilibrium states. Recent reports of the experimental discovery of biaxial nematic order include observations in micellar and molecular LCs formed by amphiphilic and bent-core molecules, respectively \cite{yu1980observation,tschierske2010biaxial}, and also colloidal dispersion of highly anisotropic particles immersed in molecular LC hosts, so-called hybrid nematics \cite{liu2016,mundoor2021,mundoor2018}.
+The interplay between chirality and biaxiality in orientational order has been intensively studied for LC systems \cite{priest1974biaxial,kroin1989chirality,bunning1986effect,harris1997microscopic,dussi2016entropy,dhakal2011chirality,longa1994biaxiality,canevari2015biaxiality}. It has been concluded that cholesteric twisted alignment and biaxial order of LC molecules amplify each other and that a chiral twist configuration cannot be observed without building blocks featuring a certain degree of biaxiality in their orientational distributions at the molecular level. However, for purely molecular systems, the chirality-enhanced biaxiality of the molecular distribution was predicted and experimentally found to be rather weak \cite{priest1974biaxial,kroin1989chirality,bunning1986effect,harris1997microscopic,dussi2016entropy,dhakal2011chirality,longa1994biaxiality,canevari2015biaxiality}, scaling as $\ (qL_{\rm m})^2$ according to the prediction by Priest and Lubensky for single-component molecular LCs \cite{priest1974biaxial} (here $q=2\pi/p$, $p$ is the pitch of the chiral nematic and $L_m$ the molecular length). To date, to the best of our knowledge, there are no experimental or theoretical considerations of how the biaxiality of the orientational distribution of anisotropic colloidal particles could interplay with the chirality of the nematic host in hybrid molecular-colloidal LC systems.  
+
+
+
+\begin{figure}
+	\includegraphics[width = 0.6 \columnwidth]{figures/chapter-3/tripod}
+	\caption{ Illustration of alignment opportunities for an anisotropic colloidal particles immersed in a cholesteric host LC. Depending on the surface anchoring properties of the colloid  and pitch of the cholesteric host, the colloid may  preferentially  align along either of the three main directions of the tripod.   Alignment along the red arrow leads to strong emergent local biaxial order of a hybrid colloidal-molecular LC.  }
+	\label{tripod}
+\end{figure}
+
+
+
+In this chapter we present a theoretical survey of ordering properties of colloidal particles immersed in a low-molecular weight liquid crystal. Based on a simple mean-field theory that accounts for the surface anchoring energy of a single colloid we explore the alignment properties of thin elongated rods and flat discs with respect to the helical director field of the molecular host fluid 
+(see \fig{twisdis}).  A key element is the preferred surface anchoring  properties of the molecular LC at the colloid surface which opens op several distinctly different ordering scenarios. Specific symmetries  that we explore  here are homeotropic, planar (see \fig{surfancho}) as well as conically degenerate surface anchoring for the case of discs.   Comparing with recent experimental results obtained in the group of I. Smalyukh (University of  Colorado, USA) we conclude that our theory accounts for most of the experimental observations, but for one case. We demonstrate that the alignment of rodlike colloid with homeotropic anchoring is not  driven by weak surface anchoring forces, but rather by a twisted surface disclination effects.  We address the weak elastic deformations around the colloids and demonstrate the twisted disclination wrapped around a thin rod  is the main driving forces between hometropic rods aligning perpendicular to the local host director and helical axis, thus imparting strong biaxial order onto the hybrid LC. A similar scenarios is envisaged for homeotropic discs, bit only in strongly cholesteric hosts with a pitch comparable to the disc diameter.
+
+
+
+
 \section[Surface anchoring of a cylindrical rod]{Surface anchoring of a cylindrical rod immersed in a cholesteric host}
+
+
+\begin{figure}
+	\includegraphics[width = 0.6 \columnwidth]{figures/chapter-3/surfanchoring}
+	\caption{ Illustration of the different surface anchoring scenarios for a colloid rod with length $L$ (top) and disc with diameter $D$ (bottom).  }
+	\label{surfancho}
+\end{figure}
+
+
+
 
 
 Let us consider a low-molecular-weight chiral liquid crystal (such as 5CB with chiral dopants) with a director field $\bn(z)$ twisted along $Z$-axis of a Cartesian laboratory frame. The director field of the cholesteric solvent, denoted by ``$s$",  may be parameterized as:
@@ -18,7 +53,7 @@ Let us consider a low-molecular-weight chiral liquid crystal (such as 5CB with c
 \bn_{s}(z) = \bx \cos q Z  + \by \sin q Z
 \label{ns}
 \eeq
-in terms of the pitch  $\lambda = 2 \pi/q$ and handedness $q>0$ that we assume right-handed without loss of generality.
+in terms of the pitch  $p = 2 \pi/q$ and handedness $q>0$ that we assume right-handed without loss of generality.
 Next, we immerse a infinitely thin cylindrical rod with aspect ratio $L/D \rightarrow \infty$ into the chiral nematic  phase. The main axis of each rod can be parameterized as $\bhu = \bx \sin \theta \sin \varphi + \by \sin \theta \cos \varphi + \bz \cos \theta $ in terms of a polar $\theta$ and azimuthal angle $\varphi$ with respect to the helical axis $\bz$. The presence of the rod will generate elastic distortions of the uniform director field $\bn_{s}(\bfr)$ due to the specific anchoring of the molecules at the surface of the rod, quantified by  the surface anchoring energy  $W_{0}>0$ (units energy surface area). The extent of elastic deformation around the colloid surface ratio is commonly indicated by the surface extrapolation length $\ell_{s} = K/W_{0}$ where $K$ designates the typical elastic constant of the thermotropic liquid crystal.   In this project we focus on  the regime of large surface extrapolation length $ ( \ell_{s} \rightarrow \infty )$, in which case the elastic distortions are infinitesimally weak and the main energetic contribution imparted by the rod inclusions stems from the surface anchoring energy. Elastic corrections will be accounted for later on.   If we assume the molecular director field  $\bn$ to remain completely undistorted,  the surface anchoring free energy can be obtain from a simple Rapini-Papoular integral of \eq{ns} over the colloid surface denoted by ${\mathcal S}$:
 \beq
 F_{s} = -\frac{1}{2} W_{0} \oint d{\mathcal S}  (\bn_{s} \cdot \bn_{0}({\mathcal S}))^{2}
@@ -74,12 +109,12 @@ For the homeotropic (H) case the free energy is minimal when  $\theta^{\ast} = 0
 
 \subsection{Non-interacting rods}
 
-By balancing the surface anchoring free energy with the orientational entropy of the individual rods we easily establish the orientational probability through the Boltzmann distribution:
+By balancing the surface anchoring free energy with the orientational entropy of the individual rods we easily establish the angular probability through the Boltzmann distribution:
   \beq
   f( \bhu ) = \mathcal{N} \exp (- \beta F_{s} (\delta, \theta)  )
   \label{fsingle}
   \eeq
- with $\beta^{-1} = k_{B}T$ the thermal energy in terms of temperature $T$ and Boltzmann's constant $k_{B}$ and $\mathcal{N}$ a normalization constant ensuring that $\int d \bhu f(\bhu) = 1$.  The surface anchoring strength is expressed  in dimensionless form by $\bar{W} = \beta LDW_{0}$.  The distributions are visualized in \fig{frod}.
+ with $\beta^{-1} = k_{B}T$ the thermal energy in terms of temperature $T$ and Boltzmann's constant $k_{B}$ and $\mathcal{N}$ a normalization constant ensuring that $\int d \bhu f(\bhu) = 1$.  The surface anchoring strength is expressed  in dimensionless form by $\bar{w} = \beta LDW_{0}$.  The distributions are visualized in \fig{frod}.
 It is easy to infer from \eq{us} that the polar and azimuthal angles are strongly coupled. This indicates that the local distribution of rod orientations around the principal alignment directions (blue, red or white arrow in \fig{frod}) is rendered {\em biaxial} by the chiral twist, as expected.  The most interesting situation arises for the H/T case where there is a subpopulation of  rods aligned along the helical axis ($qL=1$). In order to gain further insight into the orientational symmetry of those rods, we perform a small-angle expansion around   $\theta_{e} = 0$ and retain the leading order coupling term between the two principal angles $\theta$ and $\delta$. The angular fluctuations about the helical axis (blue) are then described by the following free energy
 \beq
 F_{s} \approx \frac{\pi}{8} LDW_{0}  j_{0}(qL) \cos (2 \delta) \theta^{2}
@@ -90,34 +125,17 @@ with $j_{0}(x) = \sin (x)/x$. It suggests that the subpopulation of rods aligned
 
   \begin{figure}
 	\includegraphics[width = 0.8\columnwidth]{figures/chapter-3/frod}
-	\caption{ Unit-sphere projections of the local orientational probability of a rod immersed in a low molecular-weight cholesteric phase at different surface anchoring strengths $\bar{W} = \beta W_{0}LD$. Zones of high orientational probability are in red.  A bistable distribution is found for the homeotropic/tangential (H/T) anchoring case at elevated anchoring strength. For all distributions, the rod-length-to-pitch is $qL=1$. }
+	\caption{ Unit-sphere projections of the local orientational probability of a rod immersed in a low molecular-weight cholesteric phase at different surface anchoring strengths $\bar{w} = \beta W_{0}LD$. Zones of high orientational probability are in red.  A bistable distribution is found for the homeotropic/tangential (H/T) anchoring case at elevated anchoring strength. For all distributions, the rod-length-to-pitch is $qL=1$. }
 	\label{frod}
 \end{figure}
 
 
-
-
-\subsection{Order parameters}
-
-In order to facilitate comparison with experimental results, we define orientational order  with respect to  $\bn_{s}$ which defines the principal direction of molecular alignment along the cholesteric helix. Taking $\bn_{s}$ as a reference we define a uniaxial order parameter:
-\beq
-S = \langle {\mathcal P}_{2} (\bhu \cdot \bn_{s})\rangle_{f_{q}}
-\label{s2}
-\eeq
-A biaxial nematic order parameter measures the relative orientational order with respect to the principal directions orthogonal to $\bn_{s}$:
-\beq
-\Delta = \langle a^{2} - b^{2} \rangle_{f_{q}}
-\label{d2}
-\eeq
-in terms of the projections $a= \bhu \cdot (\bn_{s} \times \bz)$ and $b = \bhu \cdot \bz$.
-We stress that this convention is by no means unique and one could also define orientational order from the tensor ${\bf Q} =  \frac{3}{2} \langle \bhu \otimes \bhu  \rangle_{f_{q}} - \frac{{\bf I}}{2} $ which measures orientational order with respect to the principal colloidal alignment direction $\bn$, independent from the chosen reference frame.
-
-Finally, we may probe the possibility of {\em tetragonal} nematic order ($D_{4h}$) with four-fold symmetry across the plane perpendicular to the cholesteric director ${\bf \hat{n}}_{s}$. We propose the following order parameter:
-\beq
-\Delta_{4} = \langle (a^{2} - b^{2})^{2} - a^{2}b^{2} \rangle_{f_{q}}
-\eeq
-We may thus identify the local nematic symmetry of the colloids, namely  uniaxial  ($S \neq 0, \Delta = 0, \Delta_{4} =0$),  orthorhombic biaxial ($S \neq 0, \Delta \neq 0, \Delta_{4} \neq 0$) or tetragonal  ($S \neq 0, \Delta = 0, \Delta_{4} \neq 0$).
-
+%Finally, we may probe the possibility of {\em tetragonal} nematic order ($D_{4h}$) with four-fold symmetry across the plane perpendicular to the cholesteric director ${\bf \hat{n}}_{s}$. We propose the following order parameter:
+%\beq
+%\Delta_{4} = \langle (a^{2} - b^{2})^{2} - a^{2}b^{2} \rangle_{f_{q}}
+%\eeq
+%We may thus identify the local nematic symmetry of the colloids, namely  uniaxial  ($S \neq 0, \Delta = 0, \Delta_{4} =0$),  orthorhombic biaxial ($S \neq 0, \Delta \neq 0, \Delta_{4} \neq 0$) or tetragonal  ($S \neq 0, \Delta = 0, \Delta_{4} \neq 0$).
+%}
 
 
 \subsection{Non-interacting discs}
@@ -162,12 +180,12 @@ w_{2} = \begin{cases}
    \end{cases}
       \label{w2p}
 \eeq
-Similar to the rods the surface anchoring strength is expressed  in dimensionless form by $\bar{W} = \beta W_{0}D^{2}$. Taking discs with diameter $D \approx 2 \mu m$ and $W_{0} \approx 10^{-6} - 10^{-5} J/m^{2}$ we find an even higher value than for  the rods, namely  $\bar{W} \sim 10^{3}-10^{4}$ indicating that surface anchoring realignment is robust against thermal fluctuations.
+Similar to the rods the surface anchoring strength is expressed  in dimensionless form by $\bar{w} = \beta W_{0}D^{2}$. Taking discs with diameter $D \approx 2 \mu m$ and $W_{0} \approx 10^{-6} - 10^{-5} J/m^{2}$ we find an even higher value than for  the rods, namely  $\bar{w} \sim 10^{3}-10^{4}$ indicating that surface anchoring realignment is robust against thermal fluctuations.
 
 
    \begin{figure}
 	\includegraphics[width = 0.8\columnwidth]{figures/chapter-3/fdisc}
-	\caption{ Unit-sphere projections of the local orientational probability of a disc immersed in a low molecular-weight cholesteric phase at different surface anchoring strengths $\bar{W} = \beta W_{0}D^2$. For all distributions, the disc-diameter-to-pitch is $qD=1$. }
+	\caption{ Unit-sphere projections of the local orientational probability of a disc immersed in a low molecular-weight cholesteric phase at different surface anchoring strengths $\bar{w} = \beta W_{0}D^2$. For all distributions, the disc-diameter-to-pitch is $qD=1$. }
 	\label{fd}
 \end{figure}
 
@@ -209,6 +227,7 @@ w_{2} =\frac{1}{2}( 3\cos ^{2} \alpha - 1 ) \sin ^{2} \theta
 \eeq
 The corresponding distributions are given in \fig{fc}.
 
+\red{TO BE INCLUDED}
 
 \begin{figure}
 	\includegraphics[width = \columnwidth]{figures/chapter-3/heliconical}
@@ -216,16 +235,77 @@ The corresponding distributions are given in \fig{fc}.
 	\label{heliconical}
 \end{figure}
 
+
+
+\subsection{Order parameters}
+
+In order to facilitate comparison with experimental results, we define orientational order  with respect to  $\bn_{s}$ which defines the principal direction of molecular alignment along the cholesteric helix. Taking the local host director $\bn_{s}$ as a reference we define a uniaxial order parameter:
+\beq
+S = \langle {\mathcal P}_{2} (\bhu \cdot \bn_{s})\rangle_{f_{q}}
+\label{s2}
+\eeq
+A biaxial nematic order parameter measures the relative orientational order with respect to the principal directions orthogonal to $\bn_{s}$:
+\beq
+\Delta = \langle a^{2} - b^{2} \rangle_{f_{q}}
+\label{d2}
+\eeq
+in terms of the projections $a= \bhu \cdot (\bn_{s} \times \bz)$ and $b = \bhu \cdot \bz$. We stress that this convention is by no means unique and one could also define orientational order from the tensor ${\bf Q}_{c} =  \frac{3}{2} \langle \bhu \otimes \bhu  \rangle_{f_{q}} - \frac{{\bf I}}{2} $ which measures the orientational order parameters ($S_{\rm c}$ and $\Delta_{\rm c}$) with respect to the principal colloidal alignment direction $\bn$, independent from the chosen reference frame.
+
+
+\section[Model system]{Experimental model system}
+
+
+The experiments performed in the group of I. Smalyukh are based on disk or rod-shaped $\beta- {\rm NaYF4:Yb/Er}$ particles are synthesized following the hydrothermal synthesis methods described in detail in Refs. \cite{mundoor2018,mundoor2021}. Homeotropic anchoring with 5CB (pentyl-cyanobiphenyl or 4-cyano-4'-pentylbiphenyl) molecules
+on the $\beta-{\rm NaYF4:Yb/Er}$ disk surfaces is controlled
+through surface-functionalization with a thin layer of
+silica and polyethylene glycol.
+
+The colloidal rods have length $L\approx 1.6 \mu m$, thickness $D \approx 25 nm$ and {\em homeotropic} (H) surface anchoring with amplitude $W_{0} \approx 10^{-5} J/m^{2}$. From this we find that $\bar{w} \approx 97$ indicating that the realigning forces generated by surface anchoring strongly exceed thermal fluctuation forces. The pitch of the cholesteric host is about $p \approx 30 \mu m $ so that $qL  \approx 0.335 $. The discs have a diameter of about $D \sim 2 \mu m $ and thickness of $L \sim 20 nm$. In view of their large diameter the surface anchoring amplitude $\bar{w} \sim 10^{3}-10^{4}$ each disk experiences strongly exceeds the thermal energy.  The results of the experiments are summarized in the table below. In additions, simulations have been performed based on numerically minmizing the Landau-DeGennes free energy around a colloidal particle immersed. The simulations fully account for the elastic anisotropy of the cholesteric host with input parameters based on the experimentally measured elastic moduli for 5CB. The surface anchoring amplitude and symmetry was varied in similar ways as in our theoretical approach.   Full details of the experiments and simulations will be disclosed in an upcoming joint publication with the group of I. Smalyukh. 
+
+
+
+\begin{table}[h!]
+\centering
+    \begin{tabular}{|c||c c c c|} 
+    \hline
+    & $S$ & $\Delta$ & $S_{\rm{c}}$ & $\Delta_{\rm{c}}$ \\  
+    \hline\hline
+    homeotropic  disk &  0.6564 & 0.0673 & 0.6564 & 0.0673  \\ 
+    \hline
+    planar rod & 0.9360 & 0.0140 & 0.9360 & 0.0140   \\
+    \hline
+    homeotropic rod ($L = 1.7 \mu m$) &  -0.2561 & 0.7594 &  0.6976 & 0.1236  \\
+    \hline
+    homeotropic rod ($L = 3 \mu m$) & -0.3818 & 0.8935 & 0.8610 & 0.0650  \\
+    \hline
+    \end{tabular}
+    \caption{Colloidal order parameters measured in the local molecular frame  and colloidal frame (with subscript `c') for each set of experiments. }
+    \label{table_OPs}
+\end{table}
+From the measured order parameters  we infer that both  planar rods and hometropic discs both tend to align along the cholesteric director, whereas homeotropic rods strongly prefer to orient towards the perpendicular axis indicated in red in \fig{twisdis}. These obervations are in line with the distributions depicted in \fig{frod} for the rods and \fig{fd} for the discs. However, \fig{frod} suggests that hometropic rods with strong surface-anchoring coupling  $\bar{w} = 100 $ should  have an equal probability to the red and and blue arrows. This degeneracy is not observed in experiment where the subpopulation of rods pointing along the helix axis (blue) is estimated to be negligble. Clearly, the Rapini-Papoular surface anchoring energy does not suffice to explain the experimental observation which suggests that  elastic deformations incurred by the weak surface anchoring forces must play a subtle role.   This we will analyze next.
+
+
 \section[Role of elastic distortions]{Comparison with experiments: role of elastic distortions}
 
-The experiments involve rods with length $L\approx 1.6 \mu m$, thickness $D \approx 25 nm$ and {\em homeotropic} (H) surface anchoring with amplitude $W_{0} \approx 10^{-5} J/m^{2}$. From this we find that $\bar{W} \approx 97$ indicating that the realigning forces generated by surface anchoring strongly exceed thermal fluctuation forces. The pitch of the cholesteric host is about $\lambda \approx 30 \mu m $ so that $qL  \approx 0.335 $.
+In our analysis so far we have completely ignored elastic deformations of the host director ($\ell_{s} = K/W_{0} \rightarrow \infty$) so that rod realignment is dominated entirely by surface anchoring. The latter dictates that rods should point along the blue and red axis with equal probability (see \fig{frod}). The experimental reality, however, is that the surface anchoring extrapolation length is large but finite ($\ell_{s} \approx 600 nm \gg D$). Observations point at a scenario in which  rods  orienting along the red axis is largely preferred over the helical axis (blue). The reason why the latter is unfavorable  is that it involves a twisting of the surface disclination that runs along the rod contour which presumably costs energy. This is illustrated in \fig{twisdis}. No such twisting is necessary if the rod points along the red axis.   Clearly, the discrepancy between experiment and theory must be attributed to the  elastic distortions running along the rod surface (and their subsequent twisting) which was ignored in our model considerations thus far. In principle, weak director distortions may also lead to a minute decrease  of the bulk nematic order parameter,  in particular in regions where the director curvature is strong.  In our analysis, we will assume that the scalar order parameter of the host is preserved even close to the rod surface where director distortions are expected to be the strongest.
 
 
-So far we have completely ignored elastic deformations of the host director ($\ell_{s} = K/W_{0} \rightarrow \infty$) so that rod realignment is dominated entirely by surface anchoring. The latter dictates that rods should point along the blue and red axis with equal probability (see \fig{frod}). The experimental reality, however, is that the surface anchoring extrapolation length is large but finite ($\ell_{s} \approx 600 nm \gg D$). Observations point at a scenario in which  rods  orienting along the red axis is largely preferred over the helical axis (blue). The reason why the latter is unfavorable  is that it involves a twisting of the surface disclination that runs along the rod contour which presumably costs energy. No such twisting is necessary if the rod points along the red axis.     Clearly, the discrepancy between experiment and theory must be attributed to the  elastic distortions running along the rod surface (and their subsequent twisting) which was ignored in our model considerations thus far. In principle, weak director distortions may also lead to a minute decrease  of the bulk nematic order parameter,  in particular in regions where the director curvature is strong.  In our analysis, we will assume that the scalar order parameter of the host is preserved even close to the rod surface where director distortions are expected to be the strongest.
 
-\subsection{Elastic distortions around a rod aligned perpendicular to the helical axis}
+\subsection{Elastic energy of a twisted disclination wrapped around a thin rod}
 
-We will now atttempt to quantify the twisted disclination effect by introducing an angular deviation $\Phi(\bfr)$ and express the helical host director as follows:
+
+
+
+\begin{figure}
+	\includegraphics[width = \columnwidth]{figures/chapter-3/twisted_disclination}
+	\caption{ (a) Local tripod of directions along the molecular helix. (b) Illustrations of a helical surface defect emerging around a colloidal cylinder at various orientations along the tripod, indicated by the colored dots. When the rod align along the blue helix axis a helically twisted disclination occurs. It is absent when the rod points along the red arrow. Picture courtesy of Jason Wu (University of Colorado, USA). }
+	\label{twisdis}
+\end{figure}
+
+
+
+
+We will now attempt to quantify the twisted disclination effect by introducing an angular deviation $\Phi(\bfr)$ and express the helical host director as follows:
 \beq
 \bn_{s}(\bfr) = \bx \cos( q z + \Phi(\bfr_{\perp}))  + \by \sin (q z + \Phi(\bfr_{\perp}))
 \label{nsebluee}
@@ -300,7 +380,7 @@ Plugging this back into \eq{fmans} and integrating we find that the difference i
  \Delta F_{\rm twist}^{(el)} \sim  \frac{2 \pi }{24} (qL)^{2} L \Delta K  \ln \left ( \frac{2 \ell_{\rm max}}{ D} \right )
  \label{twidi}
  \eeq
- Taking $\ell_{\rm max} = L$ as typical size cut-off, $\Delta K \approx 6 pN$ we find that $\Delta F_{\rm twist}  \approx 332 k_{B}T$.
+ Taking $\ell_{\rm max} = L$ as typical size cut-off, $\Delta K \approx 4 pN$ we find that $\Delta F_{\rm twist}  \approx 280 k_{B}T$.
  %For the total elastic free energy for a rod with untwisted distortions we find:
 %\beq
 %F_{el}(q=0) = \pi K L \left \{ \frac{D^{2}}{256\ell_{s}^{2}} + %\ln \left ( \frac{2 \ell_{\rm max}}{ D} \right ) \right \}
@@ -314,9 +394,13 @@ The change in surface anchoring free energy associated with a twist of the direc
 which is  negligible compared to the elastic contribution above so that the total distortion-induced free energy change reads $\Delta F_{\rm twist} \approx \Delta F_{\rm twist}^{(el)}$.
 
 
+
+
+
+
 \subsection{Elastic distortions around a rod tilted away from the host director}
 
-In order to complete our understanding of the strength of the elastic distortions surrounding the main section of the rod we now look at the case where a rod is aligned at an oblique angle with respect to the host director. Ignoring chiral twist we parameterize the host director field case within a Cartesian reference frame with the rod aligned along $\bz$:
+In order to complete our understanding of the strength of the elastic distortions surrounding the main section of the rod we now look at the case where the rod remains perpendicular to the helix axis but makes an oblique angle with respect to the host director (see \fig{fel}). Ignoring chiral twist we parameterize the host director field case within a Cartesian reference frame with the rod aligned along $\bz$:
 \begin{align}
 \bn_{s}(\bfr) = & \begin{pmatrix}
 \cos \Phi(\bfr)  \cos \chi(\bfr)\\
@@ -356,9 +440,20 @@ The boundary condition for $\chi$ are the following:
 The latter condition tells us that the distortions will be independent of the tilt angle $\delta$ at infinitely weak surface anchoring ($\ell_{s} \rightarrow \infty$), as we expect.
 Clearly, the non-linear nature of the above differential equation and the complicated boundary conditions do not allow for an analytical solution of the problem.
 
+
+\begin{figure}
+	\includegraphics[width = .3\columnwidth]{figures/chapter-3/gamrods}
+ \includegraphics[width = .6\columnwidth]{figures/chapter-3/fel}
+	\caption{Free energy associated with elastic distortions around a homeotropic rod tilted at an angle $\gamma$ away from the red arrow towards the molecular director (grey) at different surface anchoring extrapolation lengths $\ell_{s}$ (expressed in units of the rod diameter $D$).   }
+	\label{fel}
+\end{figure}
+
+
+
+
 \subsubsection{Curvature-free rod cross-section}
 
-A more tractable  way forward is to transform the above expressions into a Cartesian coordinate system, so that $\chi(x,y)$ with the far-field host director pointing along the $x$-axis. Basically, we  assume that the rod cross-section along which the director distortions are expected to occur can be described by a strip of length $L$ and $D \ll L$. Further, we define a tilt angle $\gamma = \delta - \frac{\pi}{2}$ (with $0<\gamma <\pi/2$) so that $\gamma =0$ corresponds to the most favorable case where the rod points perpendicular to the (far-field) host director.  All distances are normalized in terms of $D$. The distortions are then described by the 2D Laplacian:
+A more tractable  way forward is to transform the above expressions into a Cartesian coordinate system, so that $\chi(x,y)$ with the far-field host director pointing along the $x$-axis. Basically, we  assume that the rod cross-section along which the director distortions are expected to occur can be described by a strip of length $L$ and $D \ll L$. Further, we define a tilt angle $\gamma = \delta - \frac{\pi}{2}$ (with $0<\gamma <\pi/2$) so that $\gamma =0$ corresponds to the most favorable case where the rod points perpendicular along the red arrow.  All distances are normalized in terms of $D$. The distortions are then described by the 2D Laplacian:
 \beq
 (\partial_{x}^{2} + \partial_{y}^{2}) \chi  = 0
 \eeq
@@ -437,12 +532,6 @@ The corresponding elastic free energy then follows from the summation in \eq{dfe
 
 
 
-\begin{figure}
-	\includegraphics[width = .7\columnwidth]{figures/chapter-3/fel}
-	\caption{Free energy associated with elastic distortions around a rod tilted at an angle $\gamma$ from the nematic director at different surface anchoring extrapolation lengths $\ell_{s}$ (in units of the rod diameter $D$). }
-	\label{fel}
-\end{figure}
-
 
 
 \subsection{Effective orientational potential of a LC rod}
@@ -455,23 +544,49 @@ Since the distortion term cannot be resolved for any rod orientation but only fo
 \begin{align}
 \Delta F_{\rm dist} (\theta, \delta)  \sim & \Delta F_{\rm twist} \cos^{2} \theta  + \Delta F_{\rm tilt} \sin^{2} \theta \cos^{2} \delta
 \end{align}
-in terms of the two principal elastic  contributions;  $\Delta F_{\rm tilt} = F(\textrm{grey}) - F(\textrm{red})$ associated with tilting  the rod away from the red arrow and $\Delta F_{\rm twist}$ [\eq{twidi}] the energy cost associated with twisting of the surface disclination wrapped along the main part of the cylinder. From the analysis in the previous paragraphs we have found that $\Delta F_{\rm twist} \approx 332 k_{B}T$ whereas elastic distortions due to tilting are very weak $\Delta F_{\rm tilt} < k_{B}T$ and may, in fact, be neglected all together for the weak anchoring regime.  The  elastic energy is minimal (zero) when the rods align along the red arrow ($\theta = \pi/2$ and $ \delta= \pi/2 $) as observed in experiment.
+in terms of the two principal elastic  contributions;  $\Delta F_{\rm tilt} = F(\textrm{grey}) - F(\textrm{red})$ associated with tilting  the rod away from the red arrow and $\Delta F_{\rm twist}$ [\eq{twidi}] the energy cost associated with twisting of the surface disclination wrapped along the main part of the cylinder. From the analysis in the previous paragraphs we  found that $\Delta F_{\rm twist} = \mathcal{O}(10^{2} k_{B}T)$ whereas elastic distortions due to tilting are very weak $\Delta F_{\rm tilt} < k_{B}T$ and may, in fact, be neglected all together for the weak anchoring regime.  The  elastic energy is minimal (zero) when the rods align along the red arrow ($\theta = \pi/2$ and $ \delta= \pi/2 $) as observed in experiment.
 
 At infinitely low rod concentrations, the order parameters $S$ and $\Delta$ defined within the frame of the  molecular host (\eq{s2} and \eq{d2}) are readily computed from the Boltzmann factor
   $f( \bhu ) = \mathcal{N} \exp ( - \beta  U_{\rm rod} (\delta, \theta)   ) $.
-An overview of the results as a function of the anchoring strength $\bar{W} = \beta W_{0} LD$ is given in \fig{ww}. The best correspondence with experimental data ($S \sim -0.33 -0.43$ and $\Delta = 0.6 - 0.8$) is found for $ \bar{W} \sim 6 k_{B}T$ which corresponds to a surface anchoring  amplitude of about $W_{0}\sim 6 \times 10^{-7} J/m^{2}$.
+An overview of the results as a function of the anchoring strength $\bar{w} = \beta W_{0} LD$ is given in \fig{ww}. The best correspondence with experimental data for homeotropic rods listed in Table 3.1 is found for $ \bar{w} \sim 6 k_{B}T$ which corresponds to a surface anchoring  amplitude of about $W_{0}\sim 6 \times 10^{-7} J/m^{2}$.
 
 
 \begin{figure}
 	\includegraphics[width = .8\columnwidth]{figures/chapter-3/wwmans}
 	\caption{ Colloidal nematic order parameters measured within the molecular frame as a function of
-the surface anchoring amplitude $\bar{W} = W_{0}LD$. The experimentally relevant region is indicated in grey. }
+the surface anchoring amplitude $\bar{w} = W_{0}LD$. The experimentally relevant region is indicated in grey. }
 	\label{ww}
 \end{figure}
 
+
+
+The typical energy scale related to the twisted disclination effect can be gleaned from the the orientational distribution of the colloidal particles that have been measured in experiment.  From these, we can identify a standard Gaussian ${\rm FWHM} =2.355/\sqrt{2 \Delta F_{\rm twist}}$. This subsequently gives $\Delta F_{\rm twist} \approx 22 k_{B}T$ for homeotropic rods with  $L  = 1.7 \mu m $  and $\Delta F_{\rm twist} \approx 76 k_{B}T$  for the longer rods  with $L  = 3 \mu m $ suggesting that, in both cases, the thermal motion of the rods is assuredly insufficient to overcome the energy barrier between the $\tau$ and $\chi$ alignment directions. The values are in qualitative agreement with the prediction from our analytical model \eq{twidi} where $\Delta F_{\rm twist} \propto L^{3}$ suggests the energy to indeed be quite sensitive to the colloidal rod length. The actual values from  \eq{twidi}, however, should be considered as an upper bound for $\Delta F_{\rm twist}$ mainly because in our model the local nematic order parameter of the host is constrained at its far-field bulk value and is not allowed to relax in regions where director distortions are the largest, as observed in the experiment and simulations. 
+
+
+
+
+
+
+
+
+\subsection{Short-pitch cholesteric hosts}
+
+
+ At much short pitches,  comparable to the disc diameter, fluctuations in $\delta$ are greatly facilitated and the local minimum of $U_{\rm disc}$ eventually switches over to $\delta = \pi/2$ suggesting  discs  preferentially aligning perpendicular to the director and helical axis.  Taking the Rapini-Papoular contribution \eq{usp} as the main contribution for the weak surface anchoring regimes considered here we can extract  nematic order parameters associated with such a crossover.  The results, shown in \fig{disop}, clearly exhibit a sharp transition from uniaxial to biaxial order at a critical pitch of about $qD \approx 3.8$ which, taking $D =2 \mu m$ would correspond to cholesteric pitch of about $p \approx 3.3 \mu m$.
+
+
+
+\begin{figure}
+	\includegraphics[width =  .8\columnwidth]{figures/chapter-3/discubx}
+	\caption{Nematic order parameters of discs with weakly homeotropic surface anchoring immersed in a cholesteric host with variable pitch $qD$. A crossover from uniaxial to orthorhombic biaxial local order occurs at around $qD \approx 3.8$.  }
+	\label{disop}
+\end{figure}
+
+
+
 \subsection{Elastic distortions around a disc}
 
-Ignoring elastic distortions we find that discs with homeotropic surface anchoring tend to orient along the grey axis, as observed in experiment. This is the obvious optimal situation that incurs the least amount of elastic distortions, compared to the other principal directions in which cases the disc surface would experience strongly unfavorable tangential surface ordering. However, even when the disc normal is aligned along the local nematic director  there are, however, local mismatches between the far-field and preferred surface director due to the weak twisting of the host director perpendicular to the disc normal (which occurs along the red axis) and when the rod normal fluctuates away from this axis. The elastic distortions are expected to be weak but they will become more outspoken at shorter pitches.  It is instructive to compute the extent of these distortions along the lines of our previous analysis for rods. Let us consider an infinitely thin disc with its normal restricted to lie in the $xy$-plane at an angle $\delta$ with the grey axis ($x$-axis). We assume weak elastic distortions $\chi$  developing in the $xy$-plane.  Defining a host director $\bn_{s} = (\cos \Phi(x,y),
+Ignoring elastic distortions we find that discs with homeotropic surface anchoring tend to orient along the grey axis, as observed in experiment (see Table 3.1). This is the obvious optimal situation that incurs the least amount of elastic distortions, compared to the other principal directions in which cases the disc surface would experience strongly unfavorable tangential surface ordering. However, even when the disc normal is aligned along the local nematic director  there are, however, local mismatches between the far-field and preferred surface director due to the weak twisting of the host director perpendicular to the disc normal (which occurs along the red axis) and when the rod normal fluctuates away from this axis. The elastic distortions are expected to be weak but they will become more outspoken at shorter pitches.  It is instructive to compute the extent of these distortions along the lines of our previous analysis for rods. Let us consider an infinitely thin disc with its normal restricted to lie in the $xy$-plane at an angle $\delta$ away from the optimal direction indicated by the grey arrow ($x$-axis). The principal directions are indicated by the tripod in \fig{discel} with the $xy$-plane corresponding to the one spanned by the red and grey arrows. We assume weak elastic distortions $\chi$  developing in the $xy$-plane.  Defining a host director $\bn_{s} = (\cos \Phi(x,y),
 \sin \Phi(x,y) , 0)$ we find,  assuming  elastic isotropy,  that the distortions are described by the Laplace equation:
 \beq
 (\partial_{x}^{2} + \partial_{y}^{2}) \Phi  = 0
@@ -504,7 +619,7 @@ The boundary condition at the strip the disc equator ($\alpha=0)$ reads:
 \label{bcdisc1}
 \end{align}
 where we take $0<y<1$ for convenience. The distortions should be symmetric at the edges ($\Phi (0,0)  = \Phi (0, 1)$)
-and the solution of the Laplace equation is the same as for the rod considered in II-B.1:
+and the solution of the Laplace equation is the same as for the rod considered in Section 3.4.2:
 \beq
 \Phi(x,y) = \sum_{n=1}^{\infty} e^{-n \pi x }  b_{n} \sin(n \pi y)
 \label{seriesxy}
@@ -514,7 +629,7 @@ Fortunately, the boundary condition \eq{bcdisc1} is the same as the linearized o
 b_{n}  = \frac{\sin [ 2 (qz+ \delta)  ]}{\cos[2 (qz + \delta)] - n \pi \ell_{s}} \left ( \frac{1-(-1)^{n}}{n \pi}\right )
 \label{bnscenario1}
 \eeq
-Given that  $q$ and $-q$ do not give equivalent results we conclude that the distortions created near the disc surface carry a distinct chiral signature imparted by the chirality of the host LC. The nature of the imprint depends on the twist angle $\psi$ between the disc normal and the grey axis.
+Given that  $q$ and $-q$ do not give equivalent results we conclude that the distortions created near the disc surface carry a distinct {\em chiral signature} imparted by the chirality of the host LC, in agreement with simulations results from the group of I. Smalyukh depicted in \fig{chirdisc}. The nature of the imprint depends on the twist angle $\psi$ between the disc normal and the grey axis.
 We further deduce that the distortions vanish at infinitely weak surface anchoring ($\ell_{s} \rightarrow \infty$) and in the absence of twist and tilting ($q=0$ and $\psi=0$), as we expect. The elastic free energy for the total disc is given by:
 \beq
 \Delta F_{el} = \frac{\pi KD}{4}  \int_{-\pi/2}^{\pi/2} d \alpha \cos \alpha \sum_{n} n b^{2}_{n}
@@ -527,8 +642,8 @@ The change in surface anchoring free energy induced by the distortions follows f
 \label{sadiscseries}
 \end{align}
 We reiterate that $z$ depends on the angle $\alpha$ via $z = \tfrac{D}{2} \sin \alpha$.
-
 \begin{figure}
+\includegraphics[width = 0.4 \columnwidth]{figures/chapter-3/deldisc}
 	\includegraphics[width = 0.5 \columnwidth]{figures/chapter-3/discelastic}
 	\caption{ Distortion free energies (in units $k_{B}T$) around a disc immersed at an angle $\delta$ or $\zeta$ with the local host director. The distortion free energies remain relatively weak for all $\delta$, but are most pronounced at oblique angles $\delta \sim \pi/4$. Parameters are based on the experimentally relevant situation: $qD =0.4$ and $\ell_{s}/D = 3$ ($W_{0} = 10^{-6} J/m^{2}$). }
 	\label{discel}
@@ -536,7 +651,21 @@ We reiterate that $z$ depends on the angle $\alpha$ via $z = \tfrac{D}{2} \sin \
 
 
 
-We  finish our analysis by considering the case where the disc normal rotates within the $xz$-plane over an angle $\zeta = \tfrac{\pi}{2} - \theta$. In this situation, the tilting will generate additional weak distortions  across the $z$-direction that we denote by the angle $\chi$. The spatially-dependent host director now reads:
+
+
+
+\begin{figure}
+	\includegraphics[width =  .7\columnwidth]{figures/chapter-3/chiraldisc}
+	\caption{Computer simulation snapshot demonstrating the chiral defect structure (colored in green) around a disc with hometropic surface anchoring immersed in a molecular cholesteric host LC. Picture courtesy of Jason Wu (University of Colorado, USA). }
+	\label{chirdisc}
+\end{figure}
+
+
+
+
+
+
+We  finish our analysis by considering the case where the disc normal rotates within the $xz$-plane over an angle $\zeta = \tfrac{\pi}{2} - \theta$ away from the molecular director (grey) as indicated in \fig{discel}. In this situation, the tilting will generate additional weak distortions  across the $z$-direction that we denote by the angle $\chi$. The spatially-dependent host director now reads:
 \begin{align}
 \bn_{s}(\bfr) = & \begin{pmatrix}
 \cos \Phi(\bfr)  \cos \chi(\bfr)\\
@@ -595,27 +724,25 @@ supplemented with a similar contribution accounting for the distortions $\chi$:
 Note the surface anchoring is always negative and should outweigh the cost in elastic free energy. The results in \fig{discel} demonstrate that elastic distortions are most developed at oblique orientations, and do not strongly depend on the direction along which the disc is tilted.
 
 \begin{figure}
-	\includegraphics[width = \columnwidth]{figures/chapter-3/udisc}
+\includegraphics[width = 0.25 \columnwidth]{figures/chapter-3/deldisc}
+	\includegraphics[width = 0.7 \columnwidth]{figures/chapter-3/udisc}
 	\caption{Free energy of a colloidal disc with weakly homeotropic surface anchoring immersed in a cholesteric host with pitch $qD$ as a function of its orientation with respect to the local cholesteric director.  Solid lines correspond to surface anchoring only  [\eq{usp}], while the symbols denote the surface anchoring free energy including weak elastic distortions around the disc.  }
 	\label{udisc}
 \end{figure}
 
- If we now reconsider the {\em total} alignment potential for discs accounting for corrections derived above we conclude that the ordering of the discs is hardly affected by the distortions. The free energy changes are typically several tens of $k_{B}T$ which is about two orders of magnitude smaller than the typical Rapini-Papoular surface anchoring free energy $ W_{0} D^{2} $ which is about 1500 $k_{B}T$. Discs experiencing weak surface anchoring with  a cholesteric host with large pitch ($qD <1$)  will therefore simply follow the local molecular director with thermal fluctuations around the optimum angle being strongly suppressed. The considerable penalty incurred  by angular fluctuations away from the local cholesteric director is demonstrated in \fig{udisc} for a number of different host pitches. The elastic distortions around the disc surface lead to a systematic reduction of the free energy, as expected, but their effect on the realigning properties is rather marginal.
+ If we now reconsider the {\em total} alignment potential for discs accounting for corrections derived above we conclude that the ordering of the discs is hardly affected by the distortions. The free energy changes are typically several tens of $k_{B}T$ which is about two orders of magnitude smaller than the typical Rapini-Papoular surface anchoring free energy $ W_{0} D^{2} $ which is about 1500 $k_{B}T$. Discs experiencing weak surface anchoring with  a cholesteric host with large pitch ($qD <1$)  will therefore simply follow the local molecular director with thermal fluctuations around the optimum angle being strongly suppressed. The considerable penalty incurred  by angular fluctuations away from the local cholesteric director is demonstrated in \fig{udisc} for a number of different host pitches. The elastic distortions around the disc surface lead to a systematic reduction of the free energy, as expected, but their effect on the realigning properties is rather marginal. At short pitches, the disc takes ona preferred angle $\delta = \pi/2$ and aligns along the red arrow, leading to pronounced local biaxial order as highlighted in \fig{disop}. 
 
 
- \subsection{Short-pitch cholesteric hosts}
+ 
 
 
- At much short pitches,  comparable to the disc diameter, fluctuations in $\delta$ are greatly facilitated and the local minimum of $U_{\rm disc}$ eventually switches over to $\delta = \pi/2$ suggesting  discs  preferentially aligning perpendicular to the director and helical axis.  Taking the Rapini-Papoular contribution \eq{usp} as the main contribution for the weak surface anchoring regimes considered here we can extract  nematic order parameters associated with such a crossover.  The results, shown in \fig{disop}, clearly exhibit a sharp transition from uniaxial to biaxial order at a critical pitch of about $qD \approx 3.8$ which, taking $D =2 \mu m$ would correspond to cholesteric pitch of about $\lambda \approx 3.3 \mu m$.
+\section{Conclusions}
 
 
+We have  demonstrated that immersing uniaxial, non-chiral colloidal rods and disks into a low-molecular-weight cholesteric liquid crystal host leads to emergent biaxial order that we identify by combining experiment with numerical simulation and analytical theory. Unlike the previously studied case of hybrid molecular-colloidal biaxial phases \cite{liu2016,mundoor2021,mundoor2018}, we observe multi-level biaxial symmetry-breaking at ultralow colloidal content where colloid-colloid interactions are negligible. By exploring a variety of colloidal shapes and surface anchoring symmetries we report biaxial order emerging at three distinct levels. First, molecular director distortions develop around each colloid which, although being of marginal extent because of weak surface anchoring conditions, display a distinct two-fold signature imparted by the cholesteric host. Second, the orientational distribution of the colloids around the local cholesteric director is demonstrated to adopt a clear biaxial signature, and the response of the corresponding biaxial order parameter is found to depend non-trivially upon the surface anchoring strength as well as the ratio of the cholesteric pitch and the principal colloidal dimension (rod length or disk diameter). 
 
-\begin{figure}
-	\includegraphics[width =  .8\columnwidth]{figures/chapter-3/discubx}
-	\caption{Nematic order parameters of discs with weakly homeotropic surface anchoring immersed in a cholesteric host with variable pitch $qD$. A crossover from uniaxial to orthorhombic biaxial local order occurs at around $qD \approx 3.8$.  }
-	\label{disop}
-\end{figure}
-
+A particularly striking manifestation of biaxial symmetry-breaking is encountered for thermotropic cholesterics doped with colloidal rods with homeotropic surface anchoring. Driven by a combination of surface anchoring forces and an energy penalty incurred by twisting a weakly developed surface disclination along the rod main axis, these rods have a strong tendency to align perpendicular to both the helical axis and the local cholesteric director, thus imparting a two-fold $D_{2h}$ orientational symmetry onto the hybrid system at each point along the cholesteric helix.
+By means of a simple mean-field theory based on the Rapini-Papoular surface anchoring energy combined with an analytical elasticity theory addressing the corresponding elastic distortions incurred by the presence of the colloids, we have revealed that the multi-level expression of emergent biaxiality in our systems is essentially a single-colloid effect that can be achieved in a wide variety of cholesteric systems doped with non-isotropic colloids. The next chapter will deal with possible scenarios that could arise when the colloid concentration is no longer negligible, and direct correlations between the colloids interfere with the surface anchoring effects discussed in this chapter. 
 
 
 

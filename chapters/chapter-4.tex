@@ -1,12 +1,26 @@
 
-\chapter{Hybrid colloid-molecular chiral nematics II: Collective effects}
-\chaptermark{Hybrid chiral nematics I: Collective effects}
+\chapter{Collective phenomena in hybrid chiral LCs}
+\chaptermark{Hybrid LCs: collective effects}
 \label{col_cholesterics}
+
+
+\begin{abstract}
+
+We extend Onsager's theory to the case of hybrid molecular liquid crystals (LC) composed of colloidal particles immersed in thermotropic host. This framework enables us to explore colloid concentrations that are no longer infinitely small. Correlations between the colloids cause additional entropic and elastic contributions that interfere with surface anchoring effects explored in the previous chapter.  We consider two distinct regimes, namely weak coupling where surface anchoring only marginally impacts the colloid orientations and strong coupling where the typical realignments energy strongly exceeds the thermal energy. We demonstrate at weak coupling that collective colloidal effects driven by steric colloid-colloid interaction may lead to liquid-liquid phase separation between two biaxial fluid phases. In the strong coupling regime, we argue that elastic force may facilitate the formation bi-helical states where the helical organization of the colloidal and molecular components is unequal in pitch and even in handedness. 
+
+\end{abstract}
+
+
+
+\section{Introduction}
+
+In the previous chapter we have studied  ordering of colloidal particles in so-called hybrid chiral liquid crystals composed of colloidal particles immersed in a low-molecular-weight cholesteric LC. Inspired by experimental work of we restricted our attention to the regime of low colloidal content where the principal ordering effect stem from single colloid properties related to surface anchoring and elastic distortions formed around the colloid surface. In this regime,  the average interparticle distance remains sufficiently large to guarantee that direct interactions between colloids, mediated by steric collisions or guided by some interference of surface defects, is unimportant. Raising the concentrations of colloids, which has not  been pursued in experiment thus far, offers interesting perspectives to explore the interplay between surface anchoring and alignment driven by colloid-colloid interactions as well as the role of (twist) elastic forces imparted by steric correlations between the colloids. In this chapter we generalize Onsager's theory suitably adapted to treat spatially non-uniform director field such as in a cholesteric, to explore the ordering of colloids at large concentrations where entropic and elastic contributions imparted by the colloids play a role. In doing so we consider two extreme cases, namely weak coupling where colloid realignemt cause by surface anchoring forces is weak, and strong coupling where such realignment is strong compared to the typical thermal fluctuations the colloid experience.  We highlight two main effects (i) surface-anchoring-driven  phase separation between two orthorhombic liquids at weak surface anchoring coupling and (ii) the formation of bi-helical chiral hybrid liquid crystals at large coupling strength.  Since the latter case should occur for both rods and discs alike exploring mixed molecular-colloidal LCs with inherent chirality opens up ways to create chiral fluids composed of discotic mesogens \cite{bisoyi2010discotic,bushby2002discotic}.   
+
 
 
 \section{Second-virial density functional }
 
- With the single-colloid properties fully specified, we now proceed towards describing the many-particle system by invoking a simple Onsager-type density functional theory. The grand potential $\Omega$ of an assembly of colloids in the presence of an external  potential  reads in general form:
+ With the single-colloid properties fully specified in the previous chapter, we now proceed towards describing the many-particle system by invoking a simple Onsager-type density functional theory \cite{Onsager}. The grand potential $\Omega$ of an assembly of colloids in the presence of an external  potential  reads in general form \cite{allenevans}:
  \begin{align}
  &  \Omega[\rho ]  = \int d \bfr d \bhu  \rho(\bfr, \bhu) \left [k_{B}T \ln {\mathcal V}   \rho(\bfr, \bhu)  +   U_{\rm ext}(\bfr, \bhu) - \mu  \right ] \nonumber \\
  & -\frac{k_{B}T}{2} \int d \bfr d \bhu \int d \bfr^{\prime} d \bhu^{\prime}  \rho(\bfr, \bhu)  \rho(\bfr^{\prime}, \bhu^{\prime}) \Phi(|\bfr - \bfr^{\prime}|, \bhu, \bhu^{\prime} )
@@ -58,7 +72,7 @@ This clearly represents a highly convoluted object that we were only able to ana
 \beq
  {\mathcal K}_{q}(\bhu, \bhu^{\prime}) \approx {\mathcal K}_{0}(\bhu, \bhu^{\prime}) =  v_{0}| \sin \gamma|
 \eeq
-which corresponds to the conventional excluded volume between two (infinitely) thin hard rods ($v_{0} = 2 L^{2}D$) or discs ($v_{0} = \tfrac{\pi}{2}D^{3}$), as per Onsager's original theory [Onsager]. This approximation ignores any twist elastic resistance imparted by the colloids and should hold only for low to moderate colloid concentrations and weak director twist ($\lambda \gg L$ or $D$).  The effect of finite twist elasticity will be considered in an upcoming Section.
+which corresponds to the conventional excluded volume between two (infinitely) thin hard rods ($v_{0} = 2 L^{2}D$) or discs ($v_{0} = \tfrac{\pi}{2}D^{3}$), as per Onsager's original theory \cite{Onsager}. This approximation ignores any twist elastic resistance imparted by the colloids and should hold only for low to moderate colloid concentrations and weak director twist ($\lambda \gg L$ or $D$).  The effect of finite twist elasticity will be considered in an upcoming Section.
 
 
 \begin{figure}
@@ -85,7 +99,7 @@ Combining all free energy contributions and formally minimizing the Helmholtz fr
   The  brackets are shorthand for an orientational average $ \langle  \cdot  \rangle_{f_{q}} = \int d \bhu   f_{q}(\bhu )(\cdot)$ measured with respect to the local director.
 
 
-   \subsection{Weak coupling regime: orthorhombic-orthorhombic phase separation}
+   \section{Orthorhombic liquid-liquid phase separation}
 
 In the absence of surface anchoring realignment ($\bar{W} = 0$) the colloids undergo a conventional isotropic-uniaxial nematic transition. This is the classic Onsager scenario where an isotropic (I) phase  ($c_{I} = 4.19$, $S_{I} =0$) coexists with a (uniaxial) nematic phase  ($c_{N} = 5.34$, $S_{N} =0.792$). For $\bar{W} >0$ the $O(3)$ symmetry of the isotropic phase and the uniaxial $D_{\infty h}$ symmetry of the nematic will both be broken in favour of a biaxial, orthorhombic symmetry ($D_{2h}$), and a coexistence between two orthorhombic phases with different overall colloidal concentrations is expected. Resolving the coexistence conditions by imposing equality of chemical potential $\mu$ and pressure $\Pi$ in both phases we may explore phase diagrams in the surface anchoring amplitude - colloid concentration ($\bar{W} - c$) plane. The results are shown in \fig{phdiag} and demonstrate that a phase coexistence between two orthorhombic nematic phases is indeed possible in the weak coupling regime ($\bar{W} <1$). A critical point beyond which no phase transition is possible is located at a surface anchoring energy equivalent to a few times the thermal energy.
 
@@ -112,9 +126,9 @@ In the absence of surface anchoring realignment ($\bar{W} = 0$) the colloids und
 
 
 
-\section{Effect of twist elastic resistance}
+\section{Effect of colloid-induced elasticity}
 
-At certain conditions such as large colloid concentration $\rho$ and short cholesteric pitches the twist elastic resistance generated by the anisotropic colloid-colloid repulsions will prevent the colloidal director from keeping pace with the rotation of the cholesteric director. This  may give rise to hybrid systems in which the colloidal director locally deviates from the the cholesteric helix. Let us attempt to explore this scenario in more detail starting from the cholesteric director field \eq{ns} that we keep fixed in the laboratory frame. In doing so, we rely on three further basic assumptions; (i) the colloids remain uniformly distributed throughout the system and do not affect the cholesteric helix whose  pitch $q$ remains unaffected, (ii)  the colloids are perfectly aligned and exhibit negligible thermal fluctuations around their main orientation, and (iii) the colloidal director remains perpendicular to the helical axis $\bz$ but we allow the degree of local twist to be non-uniform along the $z$-direction. We then parameterize the colloidal director as follows:
+At certain conditions such as strong surface-anchoring coupling and large colloid concentration $\rho$ and short cholesteric pitches the twist elastic resistance generated by the anisotropic colloid-colloid repulsions will prevent the colloidal director from keeping pace with the rotation of the cholesteric director. This  may give rise to hybrid systems in which the colloidal director locally deviates from the the cholesteric helix. Let us attempt to explore this scenario in more detail starting from the cholesteric director field \eq{ns} that we keep fixed in the laboratory frame. In doing so, we rely on three further basic assumptions; (i) the colloids remain uniformly distributed throughout the system and do not affect the cholesteric helix whose  pitch $q$ remains unaffected, (ii)  the colloids are perfectly aligned and exhibit negligible thermal fluctuations around their main orientation, and (iii) the colloidal director remains perpendicular to the helical axis $\bz$ but we allow the degree of local twist to be non-uniform along the $z$-direction. We then parameterize the colloidal director as follows:
 \beq
 \bn(z) = \bx \cos \phi(z)   + \by \sin \phi(z)
 \label{npara}
@@ -150,7 +164,7 @@ in terms of surface anchoring energy density $\sigma_{\ds \rm HT} = \tfrac{\pi}{
  K_{2}\phi^{\prime \prime}(z) - \sigma \sin[2 ( \phi(z)- qz)]&=0
  \label{nlde}
  \end{align}
-subject to the boundary conditions $\phi(0) = 0$ and $\phi^{\prime}(0) = 0$, i.e., the colloids are kept non-chiral. The effect of chirality will be considered in a subsequent paragraph..
+subject to the boundary conditions $\phi(0) = 0$ and $\phi^{\prime}(0) = 0$, i.e., the colloids are kept non-chiral. The effect of chirality will be considered in a subsequent paragraph.
 It is convenient to introduce a non-linear twist angle $\varepsilon(z) = \phi(z) - qz$ which measures the local deviation of the colloidal director from the cholesteric one. Both anchoring situations can then be described by a sine-Gordon equation:
 \beq
  \xi^{2} \varepsilon^{\prime \prime}(z) = \sin[2\varepsilon(z) ]
@@ -173,21 +187,20 @@ with $\textrm{am}(x,k)$ denoting the Jacobi amplitude function which has the kno
 in terms of an amplitude $\delta \phi$ and periodicity $q_{b}$. The amplitude slowly decays as $q \xi \rightarrow \infty $ while the breathing periodicity attains a constant value $q_{b}/q \rightarrow 2$.
 
 
-
    \begin{figure*}
-	\includegraphics[width = \columnwidth]{figures/chapter-4/ripplediagram}
-	\caption{ (a) Twist angle $\phi(z)$ of the colloidal director along the helical direction for different strengths of the twist elasticity of the colloids. At weak twist elasticity  ($q \xi <1$) the colloidal director remains co-helical with the cholesteric helix.  At $q \xi >1$ unwinding of the colloidal helix occurs with  ``breathing" instabilities. (b) Evolution of the pitch $q_{c}$ of the colloidal helix with respect to the cholesteric pitch $q$. Note that in the bi-helical regime the cholesteric and colloidal helices have opposite handedness.  }
+	\includegraphics[width =  \columnwidth]{figures/chapter-4/bihelical}
+	\caption{ (a) Twist angle $\phi(z)$ of the colloidal director along the helical direction for different strengths of the twist elasticity of the colloids. At weak twist elasticity  ($q \xi <1$) the colloidal director remains co-helical with the cholesteric helix.  At $q \xi >1$ unwinding of the colloidal helix occurs with  ``breathing" instabilities.   (b) Evolution of the pitch $q_{c}$ of the colloidal helix with respect to the cholesteric pitch $q$. Note that in the bi-helical regime the cholesteric and colloidal helices have opposite handedness. The colloidal helix is shown in red, the molecular one in blue.   Colored dots indicate the  state-point corresponding to the breathing profiles in (a). }
 	\label{unwind}
 \end{figure*}
 
 
  \begin{figure}
-	\includegraphics[width = .8\columnwidth]{figures/chapter-4/fluctuations}
+	\includegraphics[width = .6\columnwidth]{figures/chapter-4/fluctuations}
 	\caption{ Amplitude $\delta \phi$ and periodicity $q_{b}$ of the ``breathing" instabilities encountered in the bi-helical state in \fig{unwind}b as a function of the twist elastic strength $q \xi$. }
 	\label{fluc}
 \end{figure}
 
-Another common solution that is associated with the sine-Gordon equation is the soliton. Taking the boundary conditions $\varepsilon^{\prime}(\pm \infty) = 0$ and $\varepsilon(\infty) - \varepsilon(-\infty)  = \pi$. The solution for the single soliton can be obtained in analytical form  [Kamien \& Selinger2001]:
+Another common solution that is associated with the sine-Gordon equation is the soliton. Taking the boundary conditions $\varepsilon^{\prime}(\pm \infty) = 0$ and $\varepsilon(\infty) - \varepsilon(-\infty)  = \pi$. The solution for the single soliton can be obtained in analytical form  \cite{kamien2001order}:
 \beq
 \phi(z) =  qz \pm \frac{\pi}{2} \pm 2 \arctan \left [ \tanh \left ( \frac{z - z_{0}}{R_{s}} \right ) \right ]
 \eeq
@@ -198,15 +211,15 @@ From the scaling expression \eq{k2odijk} for the twist elastic constant of rods 
 
 \subsection{Effect of rod chirality}
 
-It is well known that conventional (non-hybrid) chiral liquid crystal subject to a uniform electromagnetic field perpendicular to the helical axis may form stable solitons provided that the nematogens are sufficiently chiral.  In fact, our rods must have some intrinsic chirality in view of the decoration of helical disclinations imparted by the cholesteric environment. The effect of chirality is easily accounted for by an additional free energy:
+It is well known that conventional (non-hybrid) chiral liquid crystal subject to a uniform electromagnetic field perpendicular to the helical axis may form stable solitons provided that the nematogens are sufficiently chiral \cite{lam2012solitons,ackerman2014two,wu2022hopfions}.  In fact, our rods must have some intrinsic chirality in view of the decoration of helical disclinations imparted by the cholesteric environment, as demonstrated in the previous chapter. The effect of chirality is easily accounted for by an additional free energy \cite{gennes-prost}:
 \begin{align}
 \frac{F_{\rm chiral}}{A} &= K_{t} \int d z  (\bn(z) \cdot \partial \times \bn(z) )=  K_{t} \int d z (\partial \phi(z) )
 \end{align}
 with $K_{t}$ denoting the strength of the chiral interactions between the rods. It is customary to identify $K_{t} =q_{r} K_{2}$ where $q_{r}$ would be the pitch of a chiral nematic formed by the rods {\em alone}. In general, $q_{r}$ differs from the pitch $q$ of the cholesteric helix $q$ although a subtle coupling between the two is expected. We stress that $q_{r}$  is a purely hypothetical variable since the rods would not be chiral in the absence of surface anchoring effects imparted by the cholesteric solvent.
-Since the chiral contribution is linear in the gradient of $\phi$, the Euler-Lagrange equation \eq{nlde} associated with the total free energy remains unchanged. The boundary conditions now read $\phi(0) = 0$ and $\phi^{\prime}(0) = q_{r}$. If we assume the handedness of the rods to be the same as that of the cholesteric environment, then the main effect of colloid chirality is that the co- to bi-helical transition shifts towards larger $q \xi$. This is a natural consequence of the fact that chirality favors the twisted co-elical state over the (partially) untwisted bi-helical one. Of course, the reverse effect occurs if the rods adopt a handedness that is opposite to that of the cholesteric state ($q_{r} <0$). Then, the transition to the bi-helical state in \fig{unwind}b systematically shifts to smaller $q\xi$ upon increasing the chiral strength $|q_{r}|$.
+Since the chiral contribution is linear in the gradient of $\phi$, the Euler-Lagrange equation \eq{nlde} associated with the total free energy remains unchanged. The boundary conditions now read $\phi(0) = 0$ and $\phi^{\prime}(0) = q_{r}$. If we assume the handedness of the rods to be the same as that of the cholesteric environment, then the main effect of colloid chirality is that the co- to bi-helical transition shifts towards larger $q \xi$. This is a natural consequence of the fact that chirality favors the twisted co-helical state over the (partially) untwisted bi-helical one. Of course, the reverse effect occurs if the rods adopt a handedness that is opposite to that of the cholesteric state ($q_{r} <0$). Then, the transition to the bi-helical state in \fig{unwind}b systematically shifts to smaller $q\xi$ upon increasing the chiral strength $|q_{r}|$.
 
 
-The free energy between the soliton and the  co-helical state now reads $ \tfrac{\Delta Fq}{ A \sigma} = q \xi [ 2^{3/2}+  \pi q \xi (1-\tfrac{q_{r}}{q})]$. This means that solitons may eventually become stable within the ch-helical regime if $\tfrac{q_{r}}{q} > 1 + \tfrac{2^{3/2}}{\pi q \xi}$ which implies that the rods must be very strongly chiral indeed. However, the soliton width is not affected by chirality and remains of the order of the colloid thickness which means that the solitons remain a purely hypothetical scenario, at least within our simple coarse-grained model.
+The free energy between the soliton and the  co-helical state now reads $ \tfrac{\Delta Fq}{ A \sigma} = q \xi [ 2^{3/2}+  \pi q \xi (1-\tfrac{q_{r}}{q})]$. This means that solitons may eventually become stable within the co-helical regime if $\tfrac{q_{r}}{q} > 1 + \tfrac{2^{3/2}}{\pi q \xi}$ which implies that the rods must be very strongly chiral indeed. However, the soliton width is not affected by chirality and remains of the order of the colloid thickness which means that the solitons remain a purely hypothetical scenario, at least within our simple coarse-grained model.
 
 \subsection{Discs}
 
@@ -222,14 +235,16 @@ with $\sigma_{\rm \ds H} = \frac{\pi}{4}\rho W_{0}D^{2}\tfrac{J_{1}(qD)}{qD}$ an
 \beq
 \xi \sim 0.87 c  \sqrt{  \frac{|q|D}{J_{1}(|q|D)}} \sqrt{\frac{k_{B}T}{W_{0}}}
 \eeq
-which yields about $\xi \approx 80 nm $ for $D = 3 \mu m$ sized discs at a concentration $c = \rho D^{3} =3$, $W_{0} = 10^{-5} J/m^{2}$ and a cholesteric pitch length of $30 \mu m$ corresponding to $qD \approx 0.6$.
+which yields about $\xi \approx 80 nm $ for $D = 2 \mu m$ sized discs studied experimentally at a concentration $c = \rho D^{3} =3$, $W_{0} = 10^{-5} J/m^{2}$ and a cholesteric pitch length of $30 \mu m$ corresponding to $qD \approx 0.6$.
 
 For certain values of $qD$ the surface anchoring amplitude $\sigma $may become negative ($\sigma< 0$). In those cases, the phase angles associated with the two anchoring scenarios are simply swapped so that  $\phi = \tfrac{\pi}{2}$ (P) and $\phi_{0} = 0$ (P). By rescaling $\phi(z) \rightarrow \phi(z) - \phi_{0}$ we obtain the  same Euler-Lagrange equation \eq{nlde} with $\sigma \rightarrow | \sigma |$.
 
 
+\section{Conclusions and outlook}
 
+In this chapter we have theoretically addressed the implications of finite colloid concentration in self-organization of hybrid colloidal-molecular liquid crystals. While at low colloid content the orientation of each colloid is mainly driven my single-particle effect related to surface anchoring and possible surface defects, the phenomenology becomes richer and exciting when colloid-colloid interactions are taken into account. We argue that steric combined with weakly aligning surface anchioring forces may drive liquid-liquid phase separation between two orthorhombic fluid, each with a different colloid concentration and orientational order parameters. In the strong coupling regime, when surface-anchoring-mediated  particle realignement is strong, the colloids impart non-negligible twist elasticity that may stabilize a variety of different bi-helical hybrid LCs in which both molecular and colloidal self-organize along distinctly different helical mesostructures. We also predict the typical colloidal concentration needed to stabilize these structures in experiment. 
 
-
+At elevated colloid concentration additional interactions could becomes more prominent, for instance those imparted by surface defects and long-range electrostatic forces owing to surface charges residing on the colloids, which will have an impact on the elastic properties generated by the colloids. In fact, one could naively argue  that these could give rise to a significant stiffening of the elastic moduli of the colloidal subcomponent which could lead to a stabilization of bi-helical structures at much lower colloid concentrations than anticipated here.   Clearly, any further quantitative prediction requires a considerable refinement of our analysis beyond the simple steric model considered here.  
 
 
 
@@ -261,9 +276,9 @@ For certain values of $qD$ the surface anchoring amplitude $\sigma $may become n
 
 
 % TODO: transfer this appendix to general appendices
-\section*{Appendix: twist elastic resistance of thin hard needles}
+\section*{Appendix: twist elastic resistance of thin hard needles and discs}
 
-For   hard rods  a tractable analytical expression for the $z-$resolved excluded area is available in the needle limit $L/D \rightarrow \infty$ [Poniewierski, Shundyak]:
+For   hard rods  a tractable analytical expression for the $z-$resolved excluded area is available in the needle limit $L/D \rightarrow \infty$ \cite{poniewierski1988nematic,shundyak2001isotropic}:
 \begin{align}
  & {\mathcal A}(|  \Delta z | , \bhu, \bhu^{\prime} ) = -\int d  \Delta \bfr_{\perp} \Phi(|\Delta \bfr |, \bhu, \bhu^{\prime} ) \nonumber \\
  & = 2 L^{2} D |\sin \gamma | \begin{cases}
@@ -297,12 +312,12 @@ for most conventional cholesteric phases the director twist is weak on the scale
 \beq
 K_{2}  =K_{2}^{(2)}=  k_{B}T \rho^{2} L^{4}D \langle \langle a_{2}(\bhu, \bhu^{\prime}) \rangle \rangle_{f_{0}}
 \eeq
-For conventional uniaxial nematic order scaling results exist that relate  $K_{2}$ to the total  rod concentration. Using Gaussian theory Odijk [Ref] found that for asymptotically strong nematic alignment:
+For conventional uniaxial nematic order scaling results exist that relate  $K_{2}$ to the total  rod concentration. Using Gaussian theory Odijk \cite{odijkelastic} found that for asymptotically strong nematic alignment:
 \begin{align}
 \beta K_{2}D \sim \frac{7}{96} c
 \label{k2odijk}
 \end{align}
-For infinitely thin hard discs a much steeper increase with colloid concentration was found [Ref]:
+For infinitely thin hard discs a much steeper increase with colloid concentration was found \cite{wensink2018}:
 \beq
 \beta K_{2}D  \sim 0.606 c^{3}
 \eeq
