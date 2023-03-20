@@ -37,6 +37,7 @@
 \usepackage[toc,page,title,titletoc]{appendix} % appendix
 
 \usepackage{bookmark}
+\usepackage{afterpage} % blank pages
 
 
 %\usepackage{titlesec}    % Remove the text 'Chapter' from each chapter.
@@ -287,4 +288,11 @@
 \newcommand{\bwba}{   \omega_{2\alpha} }
 \newcommand{\bwi}{   \hat{\omega}_{i} }
 \newcommand{\bwj}{   \hat{\omega}_{j} }
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
 

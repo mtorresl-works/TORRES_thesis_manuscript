@@ -15,6 +15,7 @@
 
 % Cover page: do not forget to compile independently the latest version
 \includepdf[pages={1}]{coverpage/TORRES_coverpage.pdf}
+\blankpage
 
 \input{chapters/misc/dedication}
 
@@ -66,7 +67,6 @@
 % bib && appendices
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \backmatter
-\appendix
 \cleardoublepage
 
 % TODO: remove unused references
@@ -74,6 +74,8 @@
 \addcontentsline{toc}{part}{Bibliography}
 
 
+\clearpage
+\blankpage
 
 \includepdf[pages={2}]{coverpage/TORRES_coverpage.pdf}
 \end{document}
