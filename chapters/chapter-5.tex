@@ -1,7 +1,16 @@
 
-\chapter{Morphology of strongly confined tactoids of colloidal rods stabilized by \\
-polymer depletion}
-\chaptermark{Morphology of strongly confined tactoids}
+\chapter{Double twisted membranes versus ribbons in colloidal rods stabilized by polymer depletion}
+\chaptermark{Tactoid morphology}
+
+
+
+\begin{abstract}
+
+At the mesoscopic level, rigid rodlike colloids with chiral features such as {\rm fd} virus rods mixed with non-adsorbing polymer form a variety of different liquiod crystalline droplets with varying shape and internal twisted structure. Inspired by recent experiment work on the droplet morphology of these rod-polymer mixtures, we use extensive Monte Carlo simulations supplemented with theory to explore two prominent shapes, namely the double twisted membrane and the twisted ribbon. In epxeriment, the latter  is found to dominate at elevated chiral strength. 
+
+\end{abstract}
+
+
 
 \section{Introduction}
 
@@ -15,9 +24,11 @@ Mixing rodlike colloids with non-adsorbing polymers or other small depletant par
 
 
  The size and concentration of the added polymer can be exploited to  tune the morphology and internal structure of the droplets. Tactoids with nematic-type order have been observed experimentally in mixtures of rods and big depletants (typically bigger than the diameter of the colloidal rods), as well as smectic-like single layer droplets, named colloidal membranes, when significantly increasing polymer concentration. The morphology of these membranes is further controlled by strong electrostatic and chiral twist interactions between the individual rods. Though these interactions are not well understood yet, it has been empirically observed that, in close contact with one another, {\em fd} rods tend to twist preferentially clockwise, instead of arrange following a global nematic direction. When both depletion effect and chirality are strong, double-twisted colloidal membranes tend to destabilize to give way to twisted ribbons. The additional effect of intrinsic particle chirality
-strongly impinges  onto the self-assembled mesostructure and drives a vast range of different twisted or chiral structures ranging from smectic membranes to chiral ribbons  \cite{Gibaud2014} and hexagonal nanocrystals displaying screw-dislocations \cite{grelet1}. These twisted structures have been observed experimentally, but not in simulations. % TODO: verify this
+strongly impinges  onto the self-assembled mesostructure and drives a vast range of different twisted or chiral structures ranging from smectic membranes to chiral ribbons  \cite{Gibaud2014} and hexagonal nanocrystals displaying screw-dislocations \cite{grelet1}. These twisted structures have been observed experimentally, but reproducing these structures in computer simulation has been elusive so far. 
 
-Further complexity can be achieved by the presence of strong geometric confinement.  In our study we consider a slab geometry with width comparable to the rod length. The confinement is expected to generate tactoids with a strongly non-uniform rod density whose morphology is further controlled by a surface tension that strongly depends on the average rod orientation with respect to the surface normal. In fact, the presence of the wall imparts a wall-liquid surface tension which is likely to be different from the liquid-gas surface tension which would dominate in the bulk case.
+
+
+Further complexity can be achieved by the presence of strong geometric confinement.  In this study we will consider a slab geometry with width comparable to the rod length. The confinement is expected to generate tactoids with a strongly non-uniform rod density whose morphology is further controlled by a surface tension that strongly depends on the average rod orientation with respect to the surface normal. In fact, the presence of the wall imparts a wall-liquid surface tension which is likely to be different from the liquid-gas surface tension which would dominate in the bulk case.
 
 We study these systems (both in bulk and under narrow confinement) by means of Monte Carlo simulations in the semi-grand canonical ensemble ($N,V,\mu_{p},T$) consisting of a system of $N$ rods in a volume $V$ at constant temperature $T$ in osmotic equilibrium with a polymer reservoir at constant chemical potential $\mu_{p}$. The number of polymers  $N_{p}$ in the system is then a fluctuating quantity with the average polymer concentration controlled by $\mu_{p}$.
 
