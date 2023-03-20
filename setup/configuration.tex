@@ -34,6 +34,9 @@
 
 \usepackage{natbib}
 \bibliographystyle{unsrt} %  abbrv
+\usepackage[toc,page,title,titletoc]{appendix} % appendix
+
+\usepackage{bookmark}
 
 
 %\usepackage{titlesec}    % Remove the text 'Chapter' from each chapter.
@@ -159,6 +162,25 @@
    \vspace{\stretch{3}} % space at bottom is three times that at the top
    \clearpage           % finish off the page
   }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 8. Appendix Env
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AtBeginEnvironment{subappendices}{%
+\chapter*{Appendices}
+%\addcontentsline{toc}{section}{Appendices}
+\pdfbookmark[section]{Appendices}{toc}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+
+\hypersetup{bookmarksdepth=-1}
+}
+
+\AtEndEnvironment{subappendices}{%
+\hypersetup{bookmarksdepth}
+}
 
   
 %%%%%%%%%%%%%%%%%%%%
