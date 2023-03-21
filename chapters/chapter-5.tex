@@ -242,11 +242,15 @@ From this, we may compute the so-called torque-field constant exerted by the chi
 \beq
 K_{t}   \sim -\rho_{0}^{2}  \bar{\varepsilon}_{c} 
 \eeq
-in terms of an integrated chiral amplitude  $\bar{\varepsilon}_{c}$ which is distinctly different from that of a  3D cholesteric system as it implicitly encodes the geometric confinement since $\bdr$ is a 2D vector:
+in terms of an integrated chiral amplitude  $\bar{\varepsilon}_{c}$ which is  {\em different} from that of a  3D cholesteric system as it implicitly encodes the geometric confinement given that $\bdr$ is a 2D vector:
 \beq
  \bar{\varepsilon}_{c}  =  \varepsilon_{c} \int d \bdr ( \bdr \cdot \bx)   g( r)
  \eeq
-The chiral potential drives the twisting of the membrane and $K_{t}$  provides an explicit link between the effective torque-field and the range and amplitude  of the chiral pair potential between a pair of  rods. We remark that the above mean-field treatment will be less adequate for strongly chiral amplitudes $\varepsilon_{c} \gg k_{B}T$. A common choice for $g(r)$ is a short-ranged power law $g(r) = 1/r^{7}$ but other forms such as the Yukawa potential $g(r) = e^{-\kappa r}/r$ (with $\kappa^{-1}$ the Debye screening length) could be conceivable as well. 
+ which has units energy times volume ($k_{B}T \times D^{3}$). From this we find an expression for the typical equilibrium  pitch of the membrane $q_{0} = K_{t}/K_{2}$ that further depends on the in-plane rod density $\rho_{0}$ and rod aspect ratio $\ell = L/D$:
+ \beq
+ q_{0} \sim \frac{\rho_{0} \bar{\varepsilon_{c}}}{12 \ell^{2}}
+ \eeq
+The chiral potential drives the twisting of the membrane and $K_{t}$  provides an explicit link between the effective torque-field and the range and amplitude  of the chiral pair potential between a pair of  rods. We remark that the above mean-field treatment will be less adequate for strongly chiral amplitudes $\varepsilon_{c} \gg k_{B}T$. A common choice for $g(r)$ is a short-ranged power law $g(r) = 1/r^{7}$, which is the one we used in our simulations, but  long-ranged forms such as a square-well (SW) potential could be conceivable as well \cite{wensinkjackson}. 
 
 
 \subsection{Effect of depletants and twist penetration length}
@@ -313,7 +317,7 @@ Here, $\Phi$ and $\chi$ denote  two  angles describing the twist along the short
 \begin{align}
 h = \frac{L}{2}   | \bn_{0} \cdot \bn |  =\frac{L}{2} |\cos \chi(y) \cos \Phi(y)| 
 \end{align}
-We now simplify matters by assuming linear twist in both directions so that $\Phi = qy$ and $\chi = q \gamma z$ in terms of a pitch $q$ which does not necessarily coincide with the pitch $q_{0}$ of the 3D bulk cholesteric as we shall see later. Furthermore, $\gamma$ denotes a {\em twist anisotropy} which is unequal to one if the twist along the short and long ribbon axes is not the same. Both $q$ and $\gamma$ will be determined from the minimum conditions for the total free energy of the ribbon. We will ignore any twist anisotropy and simply fix $\gamma =1$  for the moment. Next, assuming weak twist on the scale of the rod diameter $q \ll D^{-1}$ we Taylor expand for $q$ and keep the leading-order term of the  bulk (Frank) elastic energy of the ribbon which turns out to be of quartic order:
+We now simplify matters by assuming linear twist in both directions so that $\Phi = qy$ and $\chi = q \gamma z$ in terms of a pitch $q$ which does not necessarily coincide with the pitch $q_{0}$ defined for the double-twisted membrane as we shall see later. Furthermore, $\gamma$ denotes a {\em twist anisotropy} which is unequal to one if the twist along the short and long ribbon axes is not the same. Both $q$ and $\gamma$ will be determined from the minimum conditions for the total free energy of the ribbon. We will ignore any twist anisotropy and simply fix $\gamma =1$  for the moment. Next, assuming weak twist on the scale of the rod diameter $q \ll D^{-1}$ we Taylor expand for $q$ and keep the leading-order term of the  bulk (Frank) elastic energy of the ribbon which turns out to be of quartic order:
 \beq
 \frac{F_{bulk}}{A} \sim  \frac{1}{24} \left [  K_{3} q^{4}(s_{y}^{2} + s_{z}^{2}) +   K_{2} q_{0} q^{3}(2s_{y}^{2} - s_{z}^{2})  \right ]  + \mathcal{O}(q_{0}^{6})
 \eeq
@@ -361,7 +365,7 @@ w_{4} &=  \frac{1}{1920} (1 - 40 \tau + 10 \tau^{2} + 5 \tau^{4} + \tau^{5})
 \end{align}
 Before proceeding with our analysis we immediately infer a couple of basic facts from inspecting \eq{fribbon}. First, as expected chiral forces between the rods, represented by the term proportional to $2-\tau^{2}$, lower the free energy provided the ribbons are sufficiently elongated ($\tau  >\sqrt{2})$. A further stabilization mechanism occurs through the line tension since the curvature correction $w_{2}$ is negative. This reflects the phenomenon that chiral twist reduces the line tension of the droplet which subsequently powers various morphological changes, in particular the membrane-starfish transition reported in Ref. \cite{Gibaud2014}. 
 
-The relevant constants $\Delta K$ and $\Delta \ell$ can be estimated from the twist penetration length. Taking the reference value $\lambda_{t} = L/2$ quoted for {\em fd} virus rods we find that  $\Delta K \sim (L/2\lambda_{t})^{2} \sim 1 $,  ignoring weak contributions from the bend-to-twist and saddle-splay elasticity. Similarly, we obtain $\Delta \ell \approx 4 $ for a ribbon with a lateral width equal to the rod length $s_{y} = L$. For the pitch we estimate $q_{0} = 2 \pi s_{y} / p_{c} \approx 0.2$ taking a cholesteric pitch  $p_{c} \sim 30L$. 
+The relevant constants $\Delta K$ and $\Delta \ell$ can be estimated from the twist penetration length. Taking the reference value $\lambda_{t} = L/2$ quoted for {\em fd} virus rods we find that  $\Delta K \sim (L/2\lambda_{t})^{2} \sim 1 $,  ignoring weak contributions from the bend-to-twist and saddle-splay elasticity. Similarly, we obtain $\Delta \ell \approx 4 $ for a ribbon with a lateral width equal to the rod length $s_{y} = L$. For the pitch we roughly estimate $q_{0} = 2 \pi s_{y} / p_{c} \approx 0.2$ taking a cholesteric pitch  $p_{c} \sim 30L$. 
 
 The next step is to minimize the free energy \eq{fribbon} with respect to the ribbon pitch $q$ and aspect ratio $\tau$, i.e., $\partial F/\partial q =0$ and $\partial F/\partial \tau =0$ for a given ribbon area $A$. If the line tension is ignored ($\Delta \ell =0$), the extremum condition can be solved analytically and gives an equilibrium ribbon pitch:
 \beq
@@ -371,7 +375,7 @@ where the last contribution is a monotonically increasing function for $\tau^{2}
 \beq
 \frac{F/\tau}{K_{2}}  = -\frac{1}{96} q_{0}  (\tau^{2} -2) q^{3}
 \eeq
-From this we infer that (i) stable ribbons that are not curbed by line tension penalty tend to stretch to very large aspect ratios, and (ii) the limiting pitch at large ribbon aspect ratio is likely smaller than the cholesteric pitch $q_{0}$ given that $q =  3q_{0}/4 \Delta K$ for $\tau \rightarrow \infty $ and $\Delta K \sim 1$.
+From this we infer that (i) stable ribbons that are not curbed by line tension penalty tend to stretch to very large aspect ratios, and (ii) the limiting pitch at large ribbon aspect ratio is likely smaller than the membrane pitch $q_{0}$ given that $q =  3q_{0}/4 \Delta K$ for $\tau \rightarrow \infty $ and $\Delta K \sim 1$.
 
 In practice, conservation of area precludes the ribbons to stretch to infinity while a finite line tension puts a further natural bound to $\tau$. 
 
@@ -382,7 +386,7 @@ In practice, conservation of area precludes the ribbons to stretch to infinity w
 \begin{figure}
 \begin{center}
 \includegraphics[width=  0.5 \columnwidth]{figures/chapter-5/raniso}.
-\caption{ \label{fig3} Twist anisotropic $\gamma$ and pitch $q$ of a twisted ribbon as a function of the ribbon aspect ratio $\tau$. The chiral strength between the rods is given by the cholesteric pitch $q_{0} = 0.2$ (horizontal black line). The twist penetration length is $\lambda_{t} = 0.5 L$.   }
+\caption{ \label{fig3} Twist anisotropic $\gamma$ and pitch $q$ of a twisted ribbon as a function of the ribbon aspect ratio $\tau$. The chiral strength between the rods is given by the membrane pitch $q_{0} = 0.2$ (horizontal black line). The twist penetration length is $\lambda_{t} = 0.5 L$.   }
 \end{center}
 \end{figure}
 
