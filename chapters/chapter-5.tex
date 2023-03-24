@@ -266,6 +266,7 @@ in terms of an integrated chiral amplitude  $\bar{\varepsilon}_{c}$ which is  {\
  which has units energy times volume ($k_{B}T \times D^{3}$). The chiral potential drives the twisting of the membrane and $K_{t}$  provides an explicit link between the effective torque-field and the range and amplitude  of the chiral pair potential between a pair of  rods. We remark that the above mean-field treatment will be less adequate for strongly chiral amplitudes $\varepsilon_{c} \gg k_{B}T$. A common choice for $g(r)$ is a short-ranged power law $g(r) = 1/r^{7}$ but  long-ranged forms such as a square-well (SW) potential could be conceivable as well \cite{wensinkjackson}. Taking the power law featuring in \eq{uchiral} we obtain $\bar{\varepsilon}_{c} = \varepsilon_{c} D^{3}$.  From this we find a {\em microscopic} expression for the typical equilibrium  pitch of the membrane $q_{0} = K_{t}/K_{2}$ that further depends on the in-plane rod density $\rho_{0}$ and rod aspect ratio $\ell = L/D$:
  \beq
  q_{0} \sim \frac{12 \rho_{0} \bar{\varepsilon_{c}}}{ \ell^{2}}
+ \label{qzero}
  \eeq
  While for the singletwisted cholesteric phase the twist angle increases linearly  $\varphi(z) = q_{0} z$ at each position $z$ along the helix axis, the angle will be strongly non-linear with radius $R$ in case of the twisted membrane, in particular if the twist penetration length $\lambda_{t}$ is small \cite{wensink2018elastic}.   
  
@@ -333,14 +334,38 @@ and
       \end{bmatrix}  \nonumber
       \label{rxy}
  \eeq
-Here, $\Phi$ and $\chi$ denote  two  angles describing the twist along the short and long (ribbon) axes that we parameterize via the coordinates $0 < y < s_{y}$ and $0< z <s_{z}$, respectively. The ribbon area $A = s_{y}s_{z}$ is conserved. We further define the local thickness of the ribbon:
+Here, $\Phi$ and $\chi$ denote  two  angles describing the twist along the short and long (ribbon) axes that we parameterize via the coordinates $-s_{y}/2 < y < s_{y}/2$ and $-s_{z}/2< z <s_{z}/2$, respectively. The ribbon area $A = s_{y}s_{z}$ is conserved. We further define the local thickness of the ribbon:
 \begin{align}
 h = \frac{L}{2}   | \bn_{0} \cdot \bn |  =\frac{L}{2} |\cos \chi(y) \cos \Phi(y)| 
 \end{align}
-We now simplify matters by assuming linear twist in both directions so that $\Phi = qy$ and $\chi = q \gamma z$ in terms of a pitch $q$ which does not necessarily coincide with the pitch $q_{0}$ defined for the twisted membrane as we shall see later. Furthermore, $\gamma$ denotes a {\em twist anisotropy} which is unequal to one if the twist along the short and long ribbon axes is not the same. Both $q$ and $\gamma$ will be determined from the minimum conditions for the total free energy of the ribbon. We will ignore any twist anisotropy and simply fix $\gamma =1$  for the moment. Next, assuming weak twist on the scale of the rod diameter $q \ll D^{-1}$ we Taylor expand for $q$ and keep the leading-order term of the  bulk (Frank) elastic energy of the ribbon which turns out to be of quartic order:
+We now simplify matters by assuming linear twist in both directions so that $\chi = q_{1}z$ and $\chi = q_{2}y$ in terms of a longitudinal pitch $q_{1}$ and transverse pitch $q_{2}$ denoting the degree of twist along the long and short ribbon axes, respectively. We remark that these pitches are not necessarily the same. They are also likely to be different from the membrane pitch $q_{0}$ that we defined in \eq{qzero} which quantifies the chiral strength between the rods.
+
+Since the ribbon consists of repetitive units of length $s_{z} = 2\pi/q$ and width $s_{y}$ we focus our attention on the free energy per unit cell. First, the  elastic contributions corresponding to bens, splay and twist read:
 \beq
-\frac{F_{bulk}}{A} \sim  \frac{1}{24} \left [  K_{3} q^{4}(s_{y}^{2} + s_{z}^{2}) +   K_{2} q_{0} q^{3}(2s_{y}^{2} - s_{z}^{2})  \right ]  + \mathcal{O}(q_{0}^{6})
+F_{bend} =K_{3}
+\frac{\pi \left[ 2 q_{1}^3+2 q_{1}^2 \sin q_{1}+q_{1}
+   q_{2}^2-q_{2}^2 \sin q_{1} \cos q_{1} \right ]}{8 q_{1}
+   q_{2}} 
 \eeq
+\beq
+F_{splay} =  K_{1}
+\frac{\pi q_{1}  \left[ q_{1} - \sin q_{1} \right ]  }{4 q_{2}}  
+\eeq
+\beq
+F_{twist} = K_{2} \frac{\pi  \left [ q_{1} \left(8 q_{0}^2-8 q_{0} q_{2}+4 q_{1}^2+3
+   q_{2}^2\right)+q_{2} \sin q_{1} (q_{2} \cos
+   q_{1}+4 q_{2}-8 q_{0})\right ] }{8 q_{1} q_{2}}
+\eeq
+Finally we consider the effect of saddle-splay which is non-zero due to the curvature of the ribbon (it does not play a role for the flat membranes). It can be defined as a the following bulk contribution to the Frank elastic energy: 
+\beq
+F_{se} = -\frac{K_{24}}{2} \int d \bfr   [\nabla \cdot ( \bn \nabla \cdot \bn +  \bn \times \nabla \times \bn )]
+\eeq
+which gives within our approximation:
+\beq
+\frac{F_{se}}{A} \sim -\frac{q^{4}}{24} K_{24}  (s_{y}^{2} + s_{z}^{2}) 
+\eeq
+
+
 The depletion  contribution \eq{fdep1} can be derived in a similar way. 
 Straighforward algebra then gives up to leading order:
 \begin{align}
@@ -352,14 +377,7 @@ Twisting a rectangular slab into a ribbon enhances the contour length of the obj
 \eeq
 The coefficients depend only on the ribbon dimensions and will be specified shortly.
 The leading order contribution of the  does not depend on the degree of twist. 
-Finally we consider the effect of saddle-splay which is non-zero due to the curvature of the ribbon (it does not play a role for the flat membranes). It can be defined as a the following bulk contribution to the Frank elastic energy: 
-\beq
-F_{se} = -\frac{K_{24}}{2} \int d \bfr   [\nabla \cdot ( \bn \nabla \cdot \bn +  \bn \times \nabla \times \bn )]
-\eeq
-which gives within our approximation:
-\beq
-\frac{F_{se}}{A} \sim -\frac{q^{4}}{24} K_{24}  (s_{y}^{2} + s_{z}^{2}) 
-\eeq
+
 Combining terms and reintroducing the twist penetration length $\lambda_{t}$ we arrive at a compact expression for the total free energy of a twisted ribbon:
 \begin{align}
 \frac{F}{AK_{2}} &\sim  \frac{1}{24} \left [ \Delta K q^{4} (s_{y}^{2} + s_{z}^{2}) +  q_{0}q^{3} (2s_{y}^{2} - s_{z}^{2})  \right ] \nonumber \\ 
