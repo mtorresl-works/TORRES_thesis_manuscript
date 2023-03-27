@@ -28,8 +28,7 @@ strongly impinges  onto the self-assembled mesostructure and drives a vast range
 
 
 
-In a recent study Kuhnhold et al. \cite{kuhnhold2022colloidal} have reported an extensive simulation study of the properties of twisted membranes comparing numerical results with theoretical predictions. In order to facilitate the membranes were keeping the rod centres-of-mass were constrained to reside on the smectic plane, thereby suppressing out-of-plane fluctuations. While the constraint should be reasonable harmless for the flat membranes it does preclude the system from engaging in further morphological transitions such as the formation of ribbons and other filamentous structures observed in experiment \cite{Gibaud2014} and conjectured in continuum theory \cite{kaplan2010theory,kang_sm2016}. The aim of this study is re-address the stability and microstructure of membranes by exploring the full degrees of freedom of the rods. To describe rod-polymer mixtures we use large-scale Monte Carlo simulations of the well-known Asukara-Oosawa model comprising hard-spherocylinders mixed with penetrable hard spheres. The latter represent small polymers that are excluded from the sphercocylinder surface but do not feel each other (ideal polymer). This model is at the core of a range of free-volume theories that address the bulk thermodynamic properties and phase behavior of colloidal particles of  various shapes mixed with non-adsorbing polymers \cite{lektuin2011}. The spherocylinder interactions are rendered chiral by means of a simple pseudo-scalar potential that finds widespread sue in computer simulation. Thus, we have a model system where chiral twist competes with short-ranged attractive depletion interactions and surface tension in driving mesoscopic liquid crystalline droplets of various internal structure and shape.  
-
+In a recent study Kuhnhold et al. \cite{kuhnhold2022colloidal} have reported an extensive simulation study of the properties of twisted membranes comparing numerical results with theoretical predictions. In order to facilitate the membranes were keeping the rod centres-of-mass were constrained to reside on the smectic plane, thereby suppressing out-of-plane fluctuations. While the constraint should be reasonable harmless for the flat membranes it does preclude the system from engaging in further morphological transitions such as the formation of ribbons and other filamentous structures observed in experiment \cite{Gibaud2014} and conjectured in continuum theory \cite{kaplan2010theory,kang_sm2016}. The aim of this study is re-address the stability and microstructure of membranes by exploring the full degrees of freedom of the rods. To describe rod-polymer mixtures we use large-scale Monte Carlo simulations of the well-known Asukara-Oosawa model comprising hard-spherocylinders mixed with penetrable hard spheres. The latter represent small polymers that are excluded from the sphercocylinder surface but do not feel each other (ideal polymer). This model is at the core of a range of free-volume theories that address the bulk thermodynamic properties and phase behavior of colloidal particles of  various shapes mixed with non-adsorbing polymers \cite{lektuin2011}. The spherocylinder interactions are rendered chiral by means of a simple pseudo-scalar potential that finds widespread sue in computer simulation. Thus, we have a model system where chiral twist competes with short-ranged attractive depletion interactions and surface tension in driving mesoscopic liquid crystalline droplets of various internal structure and shape.  In our simulations based on the semi-grand ensemble we fix the polymer chemical potential in the hypothetical reservoir containing polymeric spheres at a high enough value to prevent the droplets from dissolving and systematically vary the chiral interactions between the rods. 
 
 Further complexity can be achieved by the presence of strong geometric confinement.  In this study we will consider a slab geometry with width comparable to the rod length. The confinement is expected to generate tactoids with a strongly non-uniform rod density whose morphology is further controlled by a surface tension that strongly depends on the average rod orientation with respect to the surface normal. In fact, the presence of the wall imparts a wall-liquid surface tension which is likely to be different from the liquid-gas surface tension which would dominate in the bulk case. We demonstrate that the presence of walls lead to .....
 
@@ -178,7 +177,7 @@ We plan to focus on two different systems:
 
 \begin{figure}
 \begin{center}
-\includegraphics[width= .8\columnwidth]{figures/chapter-5/analysis}.
+\includegraphics[width= \columnwidth]{figures/chapter-5/analysis}.
 	\caption{Rod number density and twist angle profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=2$ ($\phi_P=1.4$). } % TODO: explain more.
 \end{center}
 \end{figure}
@@ -320,12 +319,12 @@ with $\varphi_{0}$ the twist angle at the membrane edge and $\alpha $ a variatio
 At elevated chiral strength the circular membranes are known to transition into twisted ribbons \cite{Gibaud2014}. These were identified as quasi-1D twisted protrusions growing out of the perimeter of the membrane, through a mechanism termed `starfish' instability. 
 
 
-Lowering the temperature strengthens the chiral forces between  rods which raises the free energy of interior untwisted rods while lowering the free energy of edge-bound twisted rods. This enables chiral control of edge line tension which, when the edge tension approaches zero,  leads to spontaneously transitions of the membrane into an array of 1D twisted ribbons, called a ‘‘starfish’’ \cite{Gibaud2014}. A phenomenological model aimed at capturing the onset of the surface-driven instability was presented in Ref. \cite{kang_sm2016}.
+Lowering the temperature strengthens the chiral forces between the rods, which raises the free energy of the interior untwisted rods while lowering the free energy of edge-bound twisted rods. This enables chiral control of edge line tension which, when the edge tension approaches zero,  leads to spontaneously transitions of the membrane into an array of 1D twisted ribbons, called a ‘‘starfish’’ \cite{Gibaud2014}. A phenomenological model aimed at capturing the onset of the surface-driven instability was presented in Ref. \cite{kang_sm2016}.
 
 
 
 
-We may adopt the same reasoning we applied to the membrane and formulate a free energy for a ribbon, depicted in \fig{ribsnap}. While the membrane exhibits double twist in a circularly symmetric fashion, the rods within the ribbon are twisted in two mutually perpendicular directions along the short and long ribbon axes.  Then, the director field of a twisted ribbon may be constructed from a combination of two rotation matrices, each corresponding to a twist along mutually perpendicular Cartesian axes. Without loss of generality we fix the director field of the untwisted ribbon along the $x$-axis of the frame $\bn_{0}=(1,0,0)$ so that the director field of the ribbon reads: 
+We may adopt the same reasoning we applied to the membrane and formulate a free energy for a ribbon, depicted in \fig{ribsnap}. While the membrane exhibits double twist in a circularly symmetric fashion, the rods within the ribbon are twisted in two mutually perpendicular directions along the short and long axes of the ribbon.  Then, the director field of a twisted ribbon may be constructed from a combination of two rotation matrices, each corresponding to a twist along mutually perpendicular Cartesian axes. Without loss of generality we fix the director field of the untwisted ribbon along the $x$-axis of the frame $\bn_{0}=(1,0,0)$ so that the director field of the ribbon reads: 
 \beq
 \bn_{r}[ \Phi, \chi] = \mathcal{R}_{xz} [\Phi]\cdot \mathcal{R}_{xy}[\chi] \cdot \bn_{0}
 \eeq
@@ -355,7 +354,7 @@ h = \frac{L}{2}   | \bn_{0} \cdot \bn |  =\frac{L}{2} |\cos \chi(y) \cos \Phi(y)
 \end{align}
 We now simplify matters by assuming linear twist in both directions so that $\chi = q_{1}z$ and $\Phi = q_{2}y$ where $q_{1}$ denotes the principal {\em longitudinal pitch}  and $q_{2}$ the secondary {\em transverse pitch} of the ribbon quantifying the degree of twist along the long and short ribbon axes, respectively. We remark that these pitches are not necessarily the same. They are also likely to be different from the membrane pitch $q_{0}$ that we defined in \eq{qzero} which quantifies the chiral strength between the rods. Henceforth, we will use the ribbon width as our length unit and render all pitches dimensionless via $q \rightarrow q s_{y}$. 
 
-Since the ribbon consists of repetitive units of length $s_{z} = 2\pi/q_{1}$ and width $s_{y}$ we focus our attention on the free energy per unit cell. First, the  elastic contributions corresponding to bend, splay and twist per  ribbon unit read:
+Since the ribbon consists of repetitive units of length $s_{z} = 2\pi/q_{1}$ and width $s_{y}$, we focus our attention on the free energy per unit cell. First, the  elastic contributions corresponding to bend, splay and twist per  ribbon unit read:
 \begin{align}
 F_{bend} &=K_{3}
 \frac{\pi \left[ 2 q_{2}^3+2 q_{2}^2 \sin q_{2}+q_{2}
@@ -367,7 +366,7 @@ F_{twist} &= K_{2} \frac{\pi  \left [ q_{2} \left(8 q_{0}^2-8 q_{0} q_{1}+4 q_{2
    q_{1}^2\right)+q_{1} \sin q_{1} (q_{2} \cos
    q_{2}+4 q_{1}-8 q_{0})\right ] }{8 q_{1} q_{2}}
 \end{align}
- We must also consider the effect of saddle-splay which is non-zero due to the curvature of the ribbon (it does not play a role for the flat membranes). It can be defined in terms of the following bulk contribution to the Frank elastic energy: 
+ We must also consider the effect of saddle-splay, which is nonzero due to the curvature of the ribbon (it does not play a role for the flat membranes). It can be defined in terms of the following bulk contribution to the Frank elastic energy: 
 \beq
 F_{saddle} = -\frac{K_{24}}{2} \int d \bfr   [\nabla \cdot ( \bn \nabla \cdot \bn +  \bn \times \nabla \times \bn )]
 \eeq
@@ -375,31 +374,32 @@ which gives:
 \beq
 F_{saddle} = -K_{24} \frac{\pi q_{2}}{2 q_{1}} \sin q_{2}
 \eeq
-The depletion contribution \eq{fdep1} can be derived in a similar way. Ignoring factors independent of the pitch we find:
+The depletion contribution \eq{fdep1} can be derived in a similar way. Ignoring factors independent of the pitch, we find:
 \begin{align}
 F_{dep}  & \sim  2 n_{p} a k_{B}T \left  \{ L^{2} \frac{\pi \left [ q_{2}(q_{2}^{2} + q_{1}^{2}) + (q_{1}^{2} - q_{2}^{2}) \sin q_{2}  \right ]  }{16 q_{1} q_{2}} + \oint d \ell h \right \} 
 \end{align}
-Twisting a rectangular slab into a ribbon enhances the contour length of the object which is reflected in the line integral in \eq{fdep1} that we express as $\oint d {\bf l}h = \sqrt{1+ (q_{1}/2)^{2}}\int_{-\pi/q_{1}}^{\pi/q_{1}} dz h$. With this we find a simple expression:
+Twisting a rectangular slab into a ribbon enhances the contour length of the object, which is reflected in the line integral in \eq{fdep1} that we express as $\oint d {\bf l}h = \sqrt{1+ (q_{1}/2)^{2}}\int_{-\pi/q_{1}}^{\pi/q_{1}} dz h$. With this we find a simple expression:
 \beq
  \oint d {\bf l} h  = \frac{4L}{q_{1}} | \cos  (\tfrac{1}{2} q_{2}) |    \sqrt{1+ \tfrac{1}{4} q_{1}^{2}} 
 \eeq
-which suggests  that the line tension is minimal at maximum tilt at the ribbon edge when $q_{2} = \pi $. The surface tension also penalizes large $q_{1}$ since the perimeter-to-area ratio of the ribbon increases with the degree of longitudinal twist.  
+which suggests  that the line tension is minimal at maximum tilt at the ribbon edge when $q_{2} = \pi $. Surface tension also penalizes large $q_{1}$ as the perimeter-to-area ratio of the ribbon increases with the degree of longitudinal twist.  
 
-Although the expressions obtained are entirely algebraic,  minimization of the total free energy with respect to the longitudinal and transverse pitches, $q_{1}$ and $q_{2}$,  can only be carried out numerically. To make headway, we may {\em assume} both pitches to be identical $q_{1} = q_{2} =q$ and expand the free energy contributions up to leading order in $q$.
-Combining terms and reintroducing the twist penetration length $\lambda_{t}$ we arrive at a compact expression for the total free energy of a weakly twisted ribbon ($q \ll 1/s_{y}$):
+Although the expressions obtained are entirely algebraic,  minimization of the total free energy with respect to the longitudinal and transverse pitches, $q_{1}$ and $q_{2}$,  can only be performed numerically. To make progress, we may {\em assume} that both pitches are identical $q_{1} = q_{2} =q$ and expand the free energy contributions up to leading order in $q$.
+Combining terms and reintroducing the twist penetration length $\lambda_{t}$ we arrive at a compact expression for the total free energy of a weakly twisted ribbon ($q \ll 1/s_{y}$). If we recast the free energy in units of the {\em ribbon length} $\ell_{r} = 2 \pi/q$ and use the rod length as a length unit we find a simple bi-quadratic expression in the pitch $q$ and ribbon width $s_{y}$: 
 \beq
-\frac{F}{K_{2}} \sim   -2 \pi q_{0} + \frac{1}{q} \left (\pi q_{0}^{2} + \frac{4 L }{\lambda_{t}^{2}} \right )  + \left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right ) \pi q 
+\frac{F}{K_{2} \ell_{r}} \sim   -q q_{0}s_{y}^{2} +   \frac{q_{0}^{2}s_{y}^{2}}{2} + \frac{2 L s_{y}}{\pi \lambda_{t}^{2}}   + \frac{1}{2} \left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right ) s_{y}^{2} q^{2} 
 \label{flowq}
 \eeq
-The first terms encode the free energy change due to pure twist combined with the line tension while the last term denotes the effect of the remaining (splay, bend and saddle-splay) elastic moduli along with depletion.  The constant $\Delta K$ represents a combination of the  bend-twist and saddle-twist elastic moduli:
+The first two terms encode the free energy change due to pure twist combined with the line tension while the last term denotes the effect of the remaining (splay, bend and saddle-splay) elastic moduli along with depletion.  The constant $\Delta K$ represents a combination of the  bend-twist and saddle-twist elastic anisotropies:
 \beq
 \Delta K = \frac{K_{3}}{K_{2}} - \frac{K_{24}}{K_{2}} + 3
 \label{dk}
 \eeq
-The  free energy diverges for $q \rightarrow 0$ simply because the length of the ribbon unit, which coincides with the longitudinal pitch,  goes to infinity. Minimizing \eq{flowq}  with $q$ we find an analytical result for the ribbon pitch. Reverting all quantities to bare units we find:
+ The pitch of the ribbon follows from minimizing \eq{flowq} with $q$:
 \beq
-q \sim \left ( \frac{q_{0}^{2}+ \frac{4 L}{\pi \lambda_{t}^{2} s_{y}}}{\frac{\Delta K}{2} + \frac{L^{2}}{8 \lambda_{t}^{2}}}\right )^{1/2} 
+q \sim \frac{q_{0}}{\left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right ) } 
 \eeq
+where  $q \ll q_{0}$ depending on the elastic anisotropy and twist penetration length. We remark that the ribbon pitch does not depend on the line tension (second term in \eq{flowq} which is independent of $q$).  
 
 % Check minimize free energy per pitch versus per unit length = 2pi/qq. Combined minimization wrt qq and sy by reverting free energy to bare units rod length.
 
