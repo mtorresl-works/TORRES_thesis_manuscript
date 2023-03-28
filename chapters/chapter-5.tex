@@ -396,25 +396,27 @@ Twisting a rectangular slab into a ribbon enhances the contour length of the obj
 \eeq
 which suggests  that the  tension contribution is minimal at maximum tilt at the ribbon edge when $q = \pm \pi $. Simultaneously, it penalizes large pitches as the perimeter-to-area ratio of the ribbon increases with the degree of longitudinal twist, although this effect is of minor importance.  
 
-Although the expressions obtained are entirely algebraic,  minimization of the total free energy for $q$  can only be performed numerically. To make progress, we may expand the free energy contributions up to leading order in $q$.
-Combining terms and reintroducing the twist penetration length $\lambda_{t}$ we arrive at a compact expression for the total free energy of a weakly twisted ribbon ($q \ll 1/s_{y}$). If we recast the free energy in units of the {\em ribbon length} $\ell_{r} = 2 \pi/q$ and reverting to the rod length $L$ as a length unit we find a simple bi-quadratic expression in the pitch $q$ and ribbon width $s_{y}$: 
+
+
+Although the expressions obtained are entirely algebraic,  minimization of the total free energy can only be performed numerically. To make progress, we  expand the free energy contributions up to quadratic order in $q$.
+Combining terms and reintroducing the twist penetration length $\lambda_{t}$ we arrive at a compact expression for the total free energy per unit length of a weakly twisted ribbon ($q \ll 1/s_{y}$): 
 \beq
-\frac{F}{K_{2} \ell_{r}} \sim   -q q_{0}s_{y}^{2} +   \frac{q_{0}^{2}s_{y}^{2}}{2} + \frac{2 L s_{y}}{\pi \lambda_{t}^{2}}   + \frac{1}{2} \left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right ) s_{y}^{2} q^{2} 
+\frac{F}{K_{2}} \sim   -q q_{0} +   \frac{q_{0}^{2}}{2}    +  \left ( \frac{\Delta K}{4} + \frac{L^{2}}{16\lambda_{t}^{2}}\right )  q^{2} + \frac{2 L }{\pi \lambda_{t}^{2}}
 \label{flowq}
 \eeq
-The first two terms encode the free energy change due to pure twist combined with the line tension while the last term denotes the effect of the remaining (splay, bend and saddle-splay) elastic moduli along with depletion.  The constant $\Delta K$ represents a combination of the  bend-twist and saddle-twist elastic anisotropies:
+The first two terms encode the free energy change due to (chiral) twist, the third denotes the effect of splay, bend and saddle-splay elasticity along with depletion, whereas the term denotes the line tension which up to leading order does not depend on the pitch.  The constant $\Delta K$ represents a combination of the  bend-twist and saddle-twist elastic anisotropies:
 \beq
 \Delta K = \frac{K_{3}}{K_{2}} - \frac{K_{24}}{K_{2}} + 3
 \label{dk}
 \eeq
-Minimizing \eq{flowq} for the ribbon pitch $q$ and  width $s_{y}$ we find:
-\begin{align}
-q &= \frac{q_{0}}{\left ( \frac{\Delta K}{2} + \frac{1}{8\lambda_{t}^{2}}\right ) } \nonumber \\
-s_{y} & = \frac{2}{\pi \lambda_{t}^{2} q_{0}^{2}} \left (  \frac{8\lambda_{t}^{2}}{1+ 4 \Delta K \lambda_{t}^{2}} -1 \right ) 
-\end{align}
+%Minimizing \eq{flowq} for the ribbon pitch $q$ and  width $s_{y}$ we find:
+%\begin{align}
+%q &= \frac{q_{0}}{\left ( \frac{\Delta K}{2} + \frac{1}{8\lambda_{t}^{2}}\right ) } \nonumber \\
+%s_{y} & = \frac{2}{\pi \lambda_{t}^{2} q_{0}^{2}} \left (  \frac{8\lambda_{t}^{2}}{1+ 4 \Delta K \lambda_{t}^{2}} -1 \right ) 
+%\end{align}
 
 
-where  $q \ll q_{0}$ depending on the elastic anisotropy and twist penetration length. We remark that the ribbon pitch does not depend on the line tension (second term in \eq{flowq} which is independent of $q$).  
+%where  $q \ll q_{0}$ depending on the elastic anisotropy and twist penetration length. We remark that the ribbon pitch does not depend on the line tension (second term in \eq{flowq} which is independent of $q$).  
 
 % Check minimize free energy per pitch versus per unit length = 2pi/qq. Combined minimization wrt qq and sy by reverting free energy to bare units rod length.
 
