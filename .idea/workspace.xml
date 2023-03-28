@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d03f94c-8071-46c9-9dd7-49f45f889f39" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LatexErrorTreeViewConfiguration">
+    <option name="expanded" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KPdtNLHZEeUPyxd3d6HwtbgS7H" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TODO_SCOPE": "All Places",
+    "WebServerToolWindowFactoryState": "false",
+    "full.screen.before.presentation.mode": "false",
+    "last_opened_file_path": "/home/marina/Documents/REPOS/TORRES_thesis_manuscript/figures/chapter-4",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/figures/chapter-4" />
+      <recent name="$PROJECT_DIR$/figures/chapter-5" />
+      <recent name="$PROJECT_DIR$/figures" />
+      <recent name="$PROJECT_DIR$/bib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/figures/chapter-5" />
+      <recent name="$PROJECT_DIR$/figures/chapter-4" />
+      <recent name="$PROJECT_DIR$/figures/chapter-6" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="LaTeX.main">
+    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file>$USER_HOME$</main-file>
+        <aux-dir>$USER_HOME$</aux-dir>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="main bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBTEX</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs>
+          <env name="BIBINPUTS" value="$PROJECT_DIR$" />
+          <env name="BSTINPUTS" value="$PROJECT_DIR$/../TORRES_thesis_manuscript:" />
+        </envs>
+        <main-file>$PROJECT_DIR$/main.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/out</aux-dir>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="TORRES_coverpage" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>NONE</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file>$PROJECT_DIR$/coverpage/TORRES_coverpage.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>EVINCE</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>--shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/main.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>true</has-been-run>
+        <bib-run-config>[BibTeX.main bibliography]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2">
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="TORRES_coverpage" run_configuration_type="LATEX_RUN_CONFIGURATION" />
+        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Copy coverpage" run_configuration_type="ShConfigurationType" />
+      </method>
+    </configuration>
+    <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-makeindex>
+        <program>MAKEINDEX</program>
+        <main-file />
+        <command-line-args />
+        <work-dir />
+      </texify-makeindex>
+      <method v="2" />
+    </configuration>
+    <configuration name="Copy coverpage" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="cp ./out/TORRES_coverpage.pdf ./coverpage/TORRES_coverpage.pdf" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="false" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="BibTeX.main bibliography" />
+      <item itemvalue="LaTeX.main" />
+      <item itemvalue="LaTeX.TORRES_coverpage" />
+      <item itemvalue="Shell Script.Copy coverpage" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d03f94c-8071-46c9-9dd7-49f45f889f39" name="Changes" comment="" />
+      <created>1673880367796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673880367796</updated>
+      <workItem from="1673880370472" duration="197000" />
+      <workItem from="1673880576082" duration="20000" />
+      <workItem from="1673880604750" duration="596000" />
+      <workItem from="1673881308468" duration="11620000" />
+      <workItem from="1673896606715" duration="422000" />
+      <workItem from="1673897218280" duration="498000" />
+      <workItem from="1673897892183" duration="1033000" />
+      <workItem from="1673911503650" duration="1612000" />
+      <workItem from="1673914923685" duration="2360000" />
+      <workItem from="1673971132855" duration="14900000" />
+      <workItem from="1674052533344" duration="1833000" />
+      <workItem from="1674749821043" duration="2814000" />
+      <workItem from="1675336075108" duration="15111000" />
+      <workItem from="1675681148294" duration="2948000" />
+      <workItem from="1675692167962" duration="800000" />
+      <workItem from="1675774786510" duration="969000" />
+      <workItem from="1675804917615" duration="610000" />
+      <workItem from="1675943678059" duration="96000" />
+      <workItem from="1677180358939" duration="12461000" />
+      <workItem from="1677510605792" duration="11278000" />
+      <workItem from="1677596386085" duration="20128000" />
+      <workItem from="1678468921774" duration="113000" />
+      <workItem from="1679258310404" duration="572000" />
+      <workItem from="1679314913307" duration="316000" />
+      <workItem from="1679315800734" duration="8261000" />
+      <workItem from="1679398957539" duration="5153000" />
+      <workItem from="1679495428790" duration="80000" />
+      <workItem from="1679569604224" duration="243000" />
+      <workItem from="1679578764598" duration="1563000" />
+      <workItem from="1679580340497" duration="536000" />
+      <workItem from="1679584049723" duration="1039000" />
+      <workItem from="1679589554210" duration="1677000" />
+      <workItem from="1679675519406" duration="1323000" />
+      <workItem from="1679930770290" duration="834000" />
+      <workItem from="1679937520115" duration="71000" />
+      <workItem from="1679938018091" duration="761000" />
+      <workItem from="1680008607957" duration="7000" />
+      <workItem from="1680009374802" duration="4985000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
