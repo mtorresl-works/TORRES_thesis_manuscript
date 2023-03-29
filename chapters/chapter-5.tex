@@ -401,20 +401,41 @@ which suggests  that the  tension contribution is minimal at maximum tilt at the
 Although the expressions obtained are entirely algebraic,  minimization of the total free energy can only be performed numerically. To make progress, we  expand the free energy contributions up to quadratic order in $q$.
 Combining terms and reintroducing the twist penetration length $\lambda_{t}$ we arrive at a compact expression for the total free energy per unit length of a weakly twisted ribbon ($q \ll 1/s_{y}$): 
 \beq
-\frac{F}{K_{2}} \sim   -q q_{0} +   \frac{q_{0}^{2}}{2}    +  \frac{1}{2}\left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right )  q^{2} + \frac{2 L }{\pi \lambda_{t}^{2}}
+\frac{F}{K_{2}} \sim   -q q_{0}   +  \frac{1}{2}\left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right )  q^{2} + \frac{2 L }{\pi \lambda_{t}^{2}}
 \label{flowq}
 \eeq
-The first two terms encode the free energy change due to (chiral) twist, the third denotes the effect of splay, bend and saddle-splay elasticity along with depletion, whereas the term denotes the line tension which up to leading order does not depend on the pitch.  The constant $\Delta K$ represents a combination of the  bend-twist and saddle-twist elastic anisotropies:
+The first two term encodes the free energy change due to (chiral) twist, the second  the effect of splay, bend and saddle-splay elasticity along with depletion, whereas the last term denotes the line tension which up to leading order does not depend on the pitch.  The constant $\Delta K$ represents a combination of the  bend-twist and saddle-twist elastic anisotropies:
 \beq
 \Delta K = \frac{K_{3}}{K_{2}} - \frac{K_{24}}{K_{2}} + 3
 \label{dk}
 \eeq
-%Minimizing \eq{flowq} for the ribbon pitch $q$ and  width $s_{y}$ we find:
-%\begin{align}
-%q &= \frac{q_{0}}{\left ( \frac{\Delta K}{2} + \frac{1}{8\lambda_{t}^{2}}\right ) } \nonumber \\
-%s_{y} & = \frac{2}{\pi \lambda_{t}^{2} q_{0}^{2}} \left (  \frac{8\lambda_{t}^{2}}{1+ 4 \Delta K \lambda_{t}^{2}} -1 \right ) 
-%\end{align}
+The equilibrium ribbon pitch follows from minimizing \eq{flowq} and is related to $q_{0}$ via:
+\begin{align}
+q & \sim q_{0} \left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right )^{-1}  
+\end{align}
+Inserting this back into the quadratic free energy and reexpressing all variables in bare units we find:
+\beq
+\frac{F}{K_{2}} \sim -\frac{1}{2} \left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right ) (q_{0} s_{y})^{2} + \frac{2 Ls_{y} }{\pi \lambda_{t}^{2}}
+\eeq
+which combines a bulk term proportional to $s_{y}^{2}$ and a surface contribution  linear in $s_{y}$. Minimization yield for the typical ribbon width:
+\beq
+s_{y} \sim \frac{2 L }{ \pi \lambda_{t}^{2} q_{0}^{2} } \left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right ) 
+\eeq
+Finally, we deduce that the ribbon pitch versus width :
+\beq
+\frac{\textrm{ribbon pitch}}{\textrm{ribbon width}} = \frac{2 \pi}{q s_{y}} \sim  \frac{\pi^{2} q_{0} \lambda_{t}^{2} }{L}
+\eeq
+ Typical values  for the case of {\em fd} rods can be obtained by fixing the twist penetration length $\lambda_{t}  = L/2$ \cite{barry_jpcb2009} and taking a typical (cholesteric) pitch $q_{0} = 0.4L^{-1}$. The elastic anisotropy $\Delta K$ is much harder to specify as it depends quite sensitively on the  saddle-splay modulus $K_{24}$ which is unknown for {\em fd} rods. This is illustrated in \fig{fig3}.  In general, we find that the ribbon pitch is larger than  the one characterizing the membrane or cholesteric phase. We further predict that the ribbon width is always just a few times the rod length, suggesting that ribbons are indeed slender, quasi 1D  objects, while the pitch-to-width ratio is of $\mathcal{O}(1)$, in agreement with  experimental observations reported in Ref. \cite{Gibaud2014}. 
 
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=  0.5 \columnwidth]{figures/chapter-5/deltak}.
+\caption{ \label{fig3} Overview of the ribbon width $s_{y}$ and pitch $q$ as a function of the elastic anisotropy $\Delta K$ [\eq{dk}] of the LC material. Parameters $\lambda_{t} = 0.5 L$ and $q_{0} = 0.4 L^{-1}$. }
+\end{center}
+\end{figure}
+
+ 
 
 %where  $q \ll q_{0}$ depending on the elastic anisotropy and twist penetration length. We remark that the ribbon pitch does not depend on the line tension (second term in \eq{flowq} which is independent of $q$).  
 
