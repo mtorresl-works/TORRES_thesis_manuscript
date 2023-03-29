@@ -162,7 +162,7 @@ We plan to focus on two different systems:
 \begin{figure}
 \begin{center}
 \includegraphics[width= .8\columnwidth]{figures/chapter-5/samples}.
-	\caption{Tope and front views of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=2$ ($\phi_P=1.4$)(a) Low chirality regime. (b) High chirality regime.}
+	\caption{Top and front views of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Color indicates the enclosed angle between each individual rod and the average direction of the system, from black $\varphi = 0$ to yellow $\varphi = \frac{\pi}{2}$. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}$).(a) Low chirality regime. (b) High chirality regime.}
 \end{center}
 \end{figure}
 
@@ -170,7 +170,7 @@ We plan to focus on two different systems:
 \begin{figure}
 \begin{center}
 \includegraphics[width= \columnwidth]{figures/chapter-5/crystallinity}.
-	\caption{Crystallinity of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=2$ ($\phi_P=1.4$). } % TODO: explain more.
+	\caption{Crystallinity of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top row: 3D depiction of the system (a) without vertical fluctuations and (b) with vertical fluctuations. Middle and bottom rows: corresponding horizontal sections along the plane generated from a 2D linear regression of the centers of mass of the rods. Upright (untwisted) rods look like disks in this view, while tilted rods appear as ellipses. Color scales indicate: (a)-(c), (f): enclosed angle between the direction of each individual rod and the overall average direction; (d), (g): average distance between each individual rod and its six nearest neighbours; and (e), (h): nearest neighbour distance's standard deviation. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the case where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}$).} 
 \end{center}
 \end{figure}
 
@@ -178,7 +178,7 @@ We plan to focus on two different systems:
 \begin{figure}
 \begin{center}
 \includegraphics[width= .9\columnwidth]{figures/chapter-5/density}.
-	\caption{Rod number density profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=2$ ($\phi_P=1.4$). } % TODO: explain more.
+	\caption{Rod number density profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}). } % TODO: explain more.
 \end{center}
 \end{figure}
 
@@ -186,7 +186,7 @@ We plan to focus on two different systems:
 \begin{figure}
 \begin{center}
 \includegraphics[width= .9\columnwidth]{figures/chapter-5/twistprofile}.
-	\caption{Twist angle profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=2$ ($\phi_P=1.4$). } % TODO: explain more.
+	\caption{Twist angle profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}). } % TODO: explain more.
 \end{center}
 \end{figure}
 
@@ -194,7 +194,7 @@ We plan to focus on two different systems:
 \begin{figure}
 \begin{center}
 \includegraphics[width= \columnwidth]{figures/chapter-5/zstd}.
-	\caption{Vertical fluctuations as a function of the distance to the center of 3D membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=2$ ($\phi_P=1.4$). } % TODO: explain more.
+	\caption{Vertical fluctuations as a function of the distance to the center of 3D membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk, $a = 2D$, $\phi_P=0.25D^{-3}$. } % TODO: explain more.
 \end{center}
 \end{figure}
 
@@ -401,7 +401,7 @@ which suggests  that the  tension contribution is minimal at maximum tilt at the
 Although the expressions obtained are entirely algebraic,  minimization of the total free energy can only be performed numerically. To make progress, we  expand the free energy contributions up to quadratic order in $q$.
 Combining terms and reintroducing the twist penetration length $\lambda_{t}$ we arrive at a compact expression for the total free energy per unit length of a weakly twisted ribbon ($q \ll 1/s_{y}$): 
 \beq
-\frac{F}{K_{2}} \sim   -q q_{0} +   \frac{q_{0}^{2}}{2}    +  \left ( \frac{\Delta K}{4} + \frac{L^{2}}{16\lambda_{t}^{2}}\right )  q^{2} + \frac{2 L }{\pi \lambda_{t}^{2}}
+\frac{F}{K_{2}} \sim   -q q_{0} +   \frac{q_{0}^{2}}{2}    +  \frac{1}{2}\left ( \frac{\Delta K}{2} + \frac{L^{2}}{8\lambda_{t}^{2}}\right )  q^{2} + \frac{2 L }{\pi \lambda_{t}^{2}}
 \label{flowq}
 \eeq
 The first two terms encode the free energy change due to (chiral) twist, the third denotes the effect of splay, bend and saddle-splay elasticity along with depletion, whereas the term denotes the line tension which up to leading order does not depend on the pitch.  The constant $\Delta K$ represents a combination of the  bend-twist and saddle-twist elastic anisotropies:
