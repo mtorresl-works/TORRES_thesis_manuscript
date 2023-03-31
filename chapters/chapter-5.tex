@@ -6,7 +6,8 @@
 
 \begin{abstract}
 
-At the mesoscopic level, rigid rodlike colloids with chiral features such as {\rm fd} virus rods mixed with non-adsorbing polymer form a variety of different liquiod crystalline droplets with varying shape and internal twisted structure. Inspired by recent experiment work on the droplet morphology of these rod-polymer mixtures, we use extensive Monte Carlo simulations supplemented with theory to explore two prominent droplet shapes, namely the twisted membrane and the ribbon. In experiment, the elongated ribbon structure is found to dominate at elevated chiral strength. In our simulations, however, we demonstrate that upon increasing chirality the membranes tend to transition into multi-domain structures consisting of multiple twisted near-circular units separated by $\pi$-walls, while the transition into twisted ribbons appears impeded for reasons unknown. We supplement our simulations with simple microscopic theoretical descriptions for both droplet morphologies which enable us to predict the evolution of the twist angle across the membranes.  We finish by  briefly discussing the role of planar confinement on the droplet morphology in relation to recent experimental work on {\em fd}-polymer mixtures.
+At the mesoscopic level, rigid rodlike colloids with chiral features such as {\rm fd} virus rods mixed with non-adsorbing polymer form a variety of different liquiod crystalline droplets with varying shape and internal twisted structure. Inspired by recent experiment work on the droplet morphology of these rod-polymer mixtures, we use extensive Monte Carlo simulations supplemented with theory to explore two prominent droplet shapes, namely the twisted membrane and the ribbon. In experiment, the elongated ribbon structure is found to dominate at elevated chiral strength. In our simulations, however, we demonstrate that upon increasing chirality the membranes tend to transition into multi-domain structures consisting of multiple twisted near-circular units separated by $\pi$-walls, while the transition into twisted ribbons appears impeded for reasons unknown. We supplement our simulations with simple microscopic theoretical descriptions for both droplet morphologies which enable us to predict the evolution of the twist angle across the membranes. For the ribbons, our simple theory provides generic predictions for the typical ribbon width, internal twist and edge tilt that are in broad agreement with experimental observations of twisted ribbons composed of  {\em fd}
+virus rods. 
 
 \end{abstract}
 
@@ -30,7 +31,7 @@ strongly impinges  onto the self-assembled mesostructure and drives a vast range
 
 In a recent study Kuhnhold et al. \cite{kuhnhold2022colloidal} have reported an extensive simulation study of the properties of twisted membranes comparing numerical results with theoretical predictions. In order to facilitate the membranes were keeping the rod centres-of-mass were constrained to reside on the smectic plane, thereby suppressing out-of-plane fluctuations. While the constraint should be reasonable harmless for the flat membranes it does preclude the system from engaging in further morphological transitions such as the formation of ribbons and other filamentous structures observed in experiment \cite{Gibaud2014} and conjectured in continuum theory \cite{kaplan2010theory,kang_sm2016}. The aim of this study is re-address the stability and microstructure of membranes by exploring the full degrees of freedom of the rods. To describe rod-polymer mixtures we use large-scale Monte Carlo simulations of the well-known Asukara-Oosawa model comprising hard-spherocylinders mixed with penetrable hard spheres. The latter represent small polymers that are excluded from the sphercocylinder surface but do not feel each other (ideal polymer). This model is at the core of a range of free-volume theories that address the bulk thermodynamic properties and phase behavior of colloidal particles of  various shapes mixed with non-adsorbing polymers \cite{LekkerkerkerTuinier2011}. The spherocylinder interactions are rendered chiral by means of a simple pseudo-scalar potential that finds widespread sue in computer simulation. Thus, we have a model system where chiral twist competes with short-ranged attractive depletion interactions and surface tension in driving mesoscopic liquid crystalline droplets of various internal structure and shape.  In our simulations based on the semi-grand ensemble we fix the polymer chemical potential in the hypothetical reservoir containing polymeric spheres at a high enough value to prevent the droplets from dissolving and systematically vary the chiral interactions between the rods.
 
-Further complexity can be achieved by the presence of strong geometric confinement.  In this study we will consider a slab geometry with width comparable to the rod length. The confinement is expected to generate tactoids with a strongly non-uniform rod density whose morphology is further controlled by a surface tension that strongly depends on the average rod orientation with respect to the surface normal. In fact, the presence of the wall imparts a wall-liquid surface tension which is likely to be different from the liquid-gas surface tension which would dominate in the bulk case. We demonstrate that the presence of walls lead to .....
+%Further complexity can be achieved by the presence of strong geometric confinement.  In this study we will consider a slab geometry with width comparable to the rod length. The confinement is expected to generate tactoids with a strongly non-uniform rod density whose morphology is further controlled by a surface tension that strongly depends on the average rod orientation with respect to the surface normal. In fact, the presence of the wall imparts a wall-liquid surface tension which is likely to be different from the liquid-gas surface tension which would dominate in the bulk case. We demonstrate that the presence of walls lead to .....
 
 
 
@@ -45,7 +46,7 @@ The spherocylinders are mixed with non-adsorbing polymers that in our model act 
 
 \begin{figure}
 	\includegraphics[width = \columnwidth]{figures/chapter-5/spheromans}
-	\caption{ Sketch of the simulation model: hard spherocylinders (grey) mixed non-penetrable polymers (blue) with diameter $\sigma = D$ (as depicted here). Overlap of the cores (grey) gives infinite repulsion while overlapping coronae (blurred zones) favors a twisted pair configuration representing the (chiral) electrostatic forces between {\em fd} rods. Two possible setups are considered: (a) The system is in an unconfined environment under periodic boundary conditions. (b) The system is confined in a slab geometry with wall-to-wall distance $h$. \red{HHW: Would be nice to somehow indicate rod chirality/twisting. Perhaps just in words by putting "+ chiral twist". } }
+	\caption{ Sketch of the simulation model: hard spherocylinders (grey) mixed non-penetrable polymers (blue) with diameter $\sigma = D$ (as depicted here). Overlap of the cores (grey) gives infinite repulsion while overlapping coronae (blurred zones) favors a twisted pair configuration representing the (chiral) electrostatic forces between {\em fd} rods. Two possible setups are considered: (a) The system is in an unconfined environment under periodic boundary conditions. (b) The system is confined in a slab geometry with wall-to-wall distance $h$. \red{HHW: Would be nice to somehow indicate rod chirality/twisting. Perhaps just in words by putting "+ chiral twist". Panel (b) can be removed.} }
 	\label{sketch}
 \end{figure}
 
@@ -112,21 +113,21 @@ Each MC cycle consists of $N + N_{P}$ randomly chosen rod translations, rotation
 
 \red{Here we need to specify Glaser's cluster move optimization algorithm that we used \cite{glaser2015parallel}.}
 
-\subsection{Rod-wall interactions}
+%\subsection{Rod-wall interactions}
 
-One possible variation of our model is to confine the rods and polymers in a thin slab of width $h = L$ (see \fig{sketch}). The wall-spherocylinder interactions  are strictly hard, that is, infinite repulsion when the spherocylinder core overlaps with the wall and zero repulsion otherwise. More specifically:
-\beq
-U_{\rm w} (\Delta {\bf r}, \oma) =
-\begin{cases}
-\infty &  | \Delta {\bf r} \cdot {\bf \hat{n}} | < \frac{L}{2}  | \oma \cdot {\bf \hat{n}} | + \tfrac{D}{2} \\
-\infty &   h-  | \Delta {\bf r} \cdot {\bf \hat{n}} | < \frac{L}{2}  | \oma \cdot {\bf \hat{n}} | + \tfrac{D}{2} \\
-0 & \textrm{otherwise}
-\end{cases}
-\label{urodwall}
-\eeq
-with ${\bf \hat{n} }$ denoting the wall normal.
+%One possible variation of our model is to confine the rods and polymers in a thin slab of width $h = L$ (see \fig{sketch}). The wall-spherocylinder interactions  are strictly hard, that is, infinite repulsion when the spherocylinder core overlaps with the wall and zero repulsion otherwise. More specifically:
+%\beq
+%U_{\rm w} (\Delta {\bf r}, \oma) =
+%\begin{cases}
+%\infty &  | \Delta {\bf r} \cdot {\bf \hat{n}} | < \frac{L}{2}  | \oma \cdot {\bf \hat{n}} | + \tfrac{D}{2} \\
+%\infty &   h-  | \Delta {\bf r} \cdot {\bf \hat{n}} | < \frac{L}{2}  | \oma \cdot {\bf \hat{n}} | + \tfrac{D}{2} \\
+%0 & \textrm{otherwise}
+%\end{cases}
+%\label{urodwall}
+%\eeq
+%with ${\bf \hat{n} }$ denoting the wall normal.
 
-Polymers are not allowed to overlap with the wall. However, another parameter of the system is the wall depletion range $\sigma_W$ that will take values typically lower than $\sigma$. This strategy is aimed to tune the amount of wetting felt by the tactoids close to the wall, allowing equilibration of partial wetting scenarios. A physical argument for this reduction of the wall depletion range (that in principle would only depend on the size of the depletants), is the variation of the electrostatic forces affecting superficial charges both around the rods and the wall, that may change the effective size of the depletion regions unfavorable for the non-adsorbing polymers. % TODO: cite, verify!!
+%Polymers are not allowed to overlap with the wall. However, another parameter of the system is the wall depletion range $\sigma_W$ that will take values typically lower than $\sigma$. This strategy is aimed to tune the amount of wetting felt by the tactoids close to the wall, allowing equilibration of partial wetting scenarios. A physical argument for this reduction of the wall depletion range (that in principle would only depend on the size of the depletants), is the variation of the electrostatic forces affecting superficial charges both around the rods and the wall, that may change the effective size of the depletion regions unfavorable for the non-adsorbing polymers. % TODO: cite, verify!!
 %The polymers do not have any interaction with the wall, but their centres-of-mass are constrained  to reside within the slab.
 
 \subsection{Simulation methodology} % TODO: change this title??
@@ -162,7 +163,7 @@ We plan to focus on two different systems:
 \begin{figure}
 \begin{center}
 \includegraphics[width= .8\columnwidth]{figures/chapter-5/samples}.
-	\caption{Top and front views of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Color indicates the enclosed angle between each individual rod and the average direction of the system, from black $\varphi = 0$ to yellow $\varphi = \frac{\pi}{2}$. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}$).(a) Low chirality regime. (b) High chirality regime.}
+	\caption{Top and front views of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Color indicates the enclosed angle between each individual rod and membrane normal, from black $\varphi = 0$ to yellow $\varphi = \frac{\pi}{2}$. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}$).(a) Low chirality regime. (b) High chirality regime.}
 \end{center}
 \end{figure}
 
@@ -336,19 +337,14 @@ with $\varphi_{0}$ the twist angle at the membrane edge and $\alpha $ a variatio
 \begin{figure}
 \begin{center}
 \includegraphics[width= \columnwidth]{figures/chapter-5/ribbon_sketch}.
-\caption{ \label{ribsnap} Schematic structure of of twisted ribbon of width $s_y=2\ell$ composed of strongly chiral spherocylinders with aspect ratio $\ell = 15$ mixed with non-adsorbing polymers (not shown) providing strong depletion attraction between the rods. The rods are color coded by orientation.  }
+\caption{ \label{ribsnap} Schematic structure of of twisted ribbon of width $s_y=2\ell$ composed of strongly chiral spherocylinders with aspect ratio $\ell = 15$ mixed with non-adsorbing polymers (not shown) providing strong depletion attraction between the rods. The rods are color coded by orientation. The typical  ribbon dimensions are indicated by the pitch $q$. \red{Change $2 \pi/\gamma q \rightarrow \pi/q$}. }
 \end{center}
 \end{figure}
 
 At elevated chiral strength the circular membranes are known to transition into twisted ribbons \cite{Gibaud2014}. These were identified as quasi-1D twisted protrusions growing out of the perimeter of the membrane, through a mechanism termed `starfish' instability. 
 
 
-Lowering the temperature strengthens the chiral forces between the rods, which raises the free energy of the interior untwisted rods while lowering the free energy of edge-bound twisted rods. This enables chiral control of edge line tension which, when the edge tension approaches zero,  leads to spontaneously transitions of the membrane into an array of 1D twisted ribbons, called a ‘‘starfish’’ \cite{Gibaud2014}. A phenomenological model aimed at capturing the onset of the surface-driven instability was presented in Ref. \cite{kang_sm2016}.
-
-
-
-
-We may adopt the same reasoning we applied to the membrane and formulate a free energy for a ribbon, depicted in \fig{ribsnap}. While the membrane exhibits double twist in a circularly symmetric fashion, the rods within the ribbon are twisted in two mutually perpendicular directions along the short and long axes of the ribbon.  Then, the director field of a twisted ribbon may be constructed from a combination of two rotation matrices, each corresponding to a twist along mutually perpendicular Cartesian axes. Without loss of generality we fix the director field of the untwisted ribbon along the $x$-axis of the frame $\bn_{0}=(1,0,0)$ so that the director field of the ribbon reads: 
+Lowering the temperature strengthens the chiral forces between the rods, which raises the free energy of the interior untwisted rods while lowering the free energy of edge-bound twisted rods. This enables chiral control of edge line tension which, when the edge tension approaches zero,  leads to spontaneously transitions of the membrane into an array of 1D twisted ribbons, called a ‘‘starfish’’ \cite{Gibaud2014}. A phenomenological model aimed at capturing the onset of the surface-driven instability was presented in Ref. \cite{kang_sm2016}. So far, no minimalist theory along the spirit of the one discussed for the membrane has been contemplated for the ribbon whose intricately twisted structure is  depicted in \fig{ribsnap} based on a nematic  director parameterization we are about to present.  While the membrane exhibits double twist in a circularly symmetric fashion, the rods within the ribbon are twisted in two mutually perpendicular directions along the short and long axes of the ribbon.  Then, the director field of a twisted ribbon may be constructed from a combination of two rotation matrices, each corresponding to a twist along mutually perpendicular Cartesian axes. Without loss of generality we fix the director field of the untwisted ribbon along the $x$-axis of the frame $\bn_{0}=(1,0,0)$ so that the director field of the ribbon reads: 
 \beq
 \bn_{r}[ \Phi, \chi] = \mathcal{R}_{xz} [\Phi]\cdot \mathcal{R}_{xy}[\chi] \cdot \bn_{0}
 \label{nrib}
@@ -377,7 +373,7 @@ Here, $\Phi$ and $\chi$ denote  two  angles describing the twist along the short
 \begin{align}
 h = \frac{L}{2}   | \bn_{0} \cdot \bn |  =\frac{L}{2} |\cos \chi(y) \cos \Phi(y)| 
 \end{align}
-We now simplify matters by assuming linear twist in both directions so that $\chi = qz$ and $\Phi = qy$ where $q$ denotes the principal pitch of the ribbon quantifying the degree of twist along the long and short ribbon axes. We remark that the  ribbon pitch is likely to be different from the value $q_{0}$ that we defined in \eq{qzero} which quantifies the chiral strength between the rods. Henceforth, we will use the ribbon width as our length unit and render all pitches dimensionless via $q \rightarrow q s_{y}$. We assume the ribbon to be long eough so we can ignore surface effects imparted by the short edge of the ribbon. Using the parameterization of the director \eq{nrib} we find that the   contributions corresponding to bend, splay and twist elasticity {\em per unit ribbon length}  reads:
+We now simplify matters by assuming linear twist in both directions so that $\chi = qz$ and $\Phi = qy$ where $q$ denotes the principal pitch of the ribbon quantifying the degree of twist along the long and short ribbon axes. We remark that the  ribbon pitch is likely to be different from the value $q_{0}$ that we defined in \eq{qzero} which quantifies the chiral strength between the rods. Henceforth, we will use the ribbon width as our length unit and render all pitches dimensionless via $q \rightarrow q s_{y}$. We assume the ribbon to be long enough so we can ignore surface effects imparted by the short edge of the ribbon. Using the parameterization of the director \eq{nrib} we find that the   contributions corresponding to bend, splay and twist elasticity {\em per unit ribbon length}  reads:
 \begin{align}
 F_{bend} &=\frac{K_{3}}{16} \left [ 3 q^{2} - q \sin q (\cos q -2)\right ]  \nonumber \\ 
 F_{splay} &=  
@@ -404,6 +400,13 @@ Twisting a rectangular slab into a ribbon enhances the contour length of the obj
 \eeq
 which suggests  that the  tension contribution is minimal at maximum tilt at the ribbon edge when $q = \pm \pi $. Simultaneously, it penalizes large pitches as the perimeter-to-area ratio of the ribbon increases with the degree of longitudinal twist, although this effect is of minor importance.  
 
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=   \columnwidth]{figures/chapter-5/deltak}.
+\caption{ \label{fig3} Overview of the ribbon properties as a function of the elastic anisotropy $\Delta K$ [\eq{dk}] of the LC material. Parameters $\lambda_{t} = 0.5 L$ and $q_{0} = 0.4 L^{-1}$. Shown are (a) the longitudinal and transverse ribbon pitches. (b) The equilibrium ribbon width in units rod length $L$. (c) The typical ribbon aspect ratio in terms of the longitudinal pitch versus ribbon width. (d) The tilt angle at the ribbon edge.   }
+\end{center}
+\end{figure}
 
 
 Although the expressions obtained are entirely algebraic,  minimization of the total free energy can only be performed numerically. To make progress, we  expand the free energy contributions up to quadratic order in $q$.
@@ -435,23 +438,16 @@ Finally, we deduce  the ribbon pitch versus width:
 \eeq
 and the tilt angle at the ribbon edge:
 \beq
-\Phi(s_{y}) = \frac{1}{2} q s_{y} \sim \frac{L}{\pi q_{0} \lambda_{t}^{2}}
+\Phi(y = s_{y}/2) = \frac{1}{2} q s_{y} \sim \frac{L}{\pi q_{0} \lambda_{t}^{2}}
 \eeq
-The predictions above should be qualitatively correct and give valuable insight into how the ribbon properties depend on the intrinsic chirality and elasticity of the LC material.  A potential caveat of the low-$q$ expansion, however, is that ribbons form at elevated chirality where the ribbon pitch $qL$ is not necessarily a small parameter ($qL \ll 1$). Because deviations from the simple quadratic free energy \eq{flowq} are to be expected, we chose to minimize the free energy numerically which is an easy task given that all free energy contributions  are in  algebraic form.
+The predictions above should be qualitatively correct and give valuable insight into how the ribbon properties depend on, for instance, the intrinsic chirality and elasticity of the LC material.  A potential caveat of the low-$q$ expansion, however, is that ribbons form at elevated chirality where the ribbon pitch $qL$ is not necessarily a small parameter ($qL \ll 1$). Because deviations from the simple quadratic free energy \eq{flowq} are to be expected, we chose to minimize the free energy numerically which is an easy task given that all free energy contributions  are in  algebraic form.
 
-In doing so, we  also probe a more general scenario where the twist along the principal ribbon directions is {\em anisotropic}. To this end, we characterize  the twist angles  via $\chi = q_{\parallel} z$ and $\Phi = q_{\perp}y$ in terms of a longitudinal and transverse pitch, $q_{\parallel}$ and $q_{\perp}$, respectively. 
+In doing so, we may also probe a more general scenario where the twist along the principal ribbon directions is {\em anisotropic}. To this end, we characterize  the twist angles  via $\chi = q_{\parallel} z$ and $\Phi = q_{\perp}y$ in terms of a longitudinal and transverse pitch, $q_{\parallel}$ and $q_{\perp}$, respectively. 
  Typical input values  for the case of {\em fd} rods can be obtained by fixing the twist penetration length $\lambda_{t}  = L/2$ \cite{barry_jpcb2009} and taking a typical (cholesteric) pitch $q_{0} = 0.4L^{-1}$. The elastic anisotropy $\Delta K$ is much harder to specify as it depends quite sensitively on the  saddle-splay modulus $K_{24}$ which is unknown for {\em fd} rods. 
+The numerical results are shown in \fig{fig3}. The dependence of the quantities shown in the figure on the elastic anisotropy $\Delta K $ is evident but turns out rather weak, indicating that the predictions should be robust against elastic properties of the LC material.   We further observe that the twist is indeed considerably anisotropic with the transverse ribbon pitch being larger than  the longitudinal pitch, while both are {\em smaller} than the typical cholesteric pitch $q_{0}$ that quantifies the chiral strength at the rod level. We further infer that the ribbon width is always a few times the rod length, suggesting that ribbons are indeed very slender quasi-1D  objects. The ribbon pitch-to-width ratio is predicted to be about 3, which is in agreement with experimental observations reported in Ref. \cite{Gibaud2014}. A typical value of 5 was quoted in Kaplan {\em et al.} \cite{kaplan2010theory}  for ribbons of {\em fd} rods mixed with non-adsorbing polymer.   Finally, the edge tilt angle is virtually insensitive to $\Delta K$ and is predicted to be about $84 ^\circ$, confirming that the rods make a near  $\pi/2$-twist at the ribbon edge.  
 
-The numerical results are shown in \fig{fig3}.  In general, we find that the ribbon pitch is larger than  the pitch $q_{0}$ quantifying the degree of twist the membrane or cholesteric phase. We further predict that the ribbon width is always just a few times the rod length, suggesting that ribbons are indeed very slender quasi 1D  objects, while the pitch-to-width ratio is of $\mathcal{O}(1)$, in agreement with  experimental observations reported in Ref. \cite{Gibaud2014}. 
 
-
-\begin{figure}
-\begin{center}
-\includegraphics[width=   \columnwidth]{figures/chapter-5/deltak}.
-\caption{ \label{fig3} Overview of the ribbon properties as a function of the elastic anisotropy $\Delta K$ [\eq{dk}] of the LC material. Parameters $\lambda_{t} = 0.5 L$ and $q_{0} = 0.4 L^{-1}$. }
-\end{center}
-\end{figure}
-
+The membrane-ribbon transition   could, in principle, be analyzed by comparing the free energies for both twisted morphologies for a given droplet volume. This is however technically very demanding given that the circular symmetry of the membrane, as encoded in the strongly non-linear elastic free energy \eq{fmem},  precludes a tractable analytical solution of the twist angle unlike for the ribbon. 
  
 
 %where  $q \ll q_{0}$ depending on the elastic anisotropy and twist penetration length. We remark that the ribbon pitch does not depend on the line tension (second term in \eq{flowq} which is independent of $q$).  
