@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7d03f94c-8071-46c9-9dd7-49f45f889f39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bib/pub.bib" beforeDir="false" afterPath="$PROJECT_DIR$/bib/pub.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bib/refs.bib" beforeDir="false" afterPath="$PROJECT_DIR$/bib/refs.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapters/chapter-1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-1.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapters/chapter-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-5.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/chapter-5/crystallinity.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/crystallinity_11.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +36,7 @@
     "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "/home/marina/Documents/REPOS/TORRES_thesis_manuscript/figures/chapter-4",
+    "last_opened_file_path": "/home/marina/Documents/REPOS/TORRES_thesis_manuscript/figures/chapter-5",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,8 +47,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/figures/chapter-4" />
       <recent name="$PROJECT_DIR$/figures/chapter-5" />
+      <recent name="$PROJECT_DIR$/figures/chapter-4" />
       <recent name="$PROJECT_DIR$/figures" />
       <recent name="$PROJECT_DIR$/bib" />
     </key>
@@ -229,7 +227,8 @@
       <workItem from="1679937520115" duration="71000" />
       <workItem from="1679938018091" duration="761000" />
       <workItem from="1680008607957" duration="7000" />
-      <workItem from="1680009374802" duration="24350000" />
+      <workItem from="1680009374802" duration="26127000" />
+      <workItem from="1680185219712" duration="1980000" />
     </task>
     <servers />
   </component>
