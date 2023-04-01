@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7d03f94c-8071-46c9-9dd7-49f45f889f39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/chapter-1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-1.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapters/chapter-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-5.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-5/crystallinity.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/crystallinity_11.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,22 +26,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TODO_SCOPE": "All Places",
-    "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "/home/marina/Documents/REPOS/TORRES_thesis_manuscript/figures/chapter-5",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marina/Documents/REPOS/TORRES_thesis_manuscript/figures/chapter-5&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/figures/chapter-5" />
@@ -229,6 +226,9 @@
       <workItem from="1680008607957" duration="7000" />
       <workItem from="1680009374802" duration="26127000" />
       <workItem from="1680185219712" duration="1980000" />
+      <workItem from="1680286656100" duration="44000" />
+      <workItem from="1680344029223" duration="52000" />
+      <workItem from="1680345843164" duration="20000" />
     </task>
     <servers />
   </component>
