@@ -2,9 +2,7 @@
 \chapter{General introduction}
 
 \begin{abstract}
-  \blue{
-  In this Chapter we introduce the concept of lyotropic liquid crystals, both from a practical and statistical mechanical point of view.  We also establish the aim of this thesis in relation to recent experimental work on colloidal mixtures.
-  }
+In this chapter, we introduce the concept of lyotropic liquid crystals from both a practical and statistical mechanical perspective. Additionally, we discuss some topics related to Monte Carlo simulations in the semi-grand-canonical ensemble. We also outline the goal of this thesis in relation to recent experimental research on the self-organization of anisotropic colloidal nanoparticles in complex environments.
 
 \end{abstract}
 
@@ -69,48 +67,28 @@ S = S_{trans} + S_{rot}
 \eeq
 where $S_{trans}$ is the translational entropy, related to accessible arrangements due to translational degrees of freedom and $S_{rot}$ is associated with the ways in which the particles can orient or rotate. The notion that spontaneous ordering of particles corresponds to an increase of the total entropy can be understood under this frame as a competition between these two quantities. When some kind of order emerges, particles lose entropy because the density --in terms of orientations-- is no longer uniform. However, this loss is more than offset by the simultaneous gain of translational entropy, i.e.  the available space per particle increases as the particles align. This argument can be extended to higher density phase transformations where positional order is achieved and the available volume each particle is allowed to explore increases if particles are arranged in a more ordered state instead of keeping a homogeneous positional distribution.
 
-The isotropic-nematic phase transition invoked above occurs through a first order transition, as it was probed theoretically by Onsager. He recognized that the transition from an isotropic to a nematic state in solutions containing sufficiently anisometric particles can be described successfully  within a virial expansion of the free energy truncated after the second virial term, an approach which could not be used to explain the gas-liquid transition for spherical particles. About a decade after Onsager's work, Alder Wainwright and others \cite{ALDER57,WOOD57} first showed by means of computer simulations that a similar disorder-order transition, albeit of the positional degrees of freedom, occurs in a fluid of hard spheres. Much later, computer simulations by Frenkel {\em et al.}  revealed the stability of smectic and columnar liquid crystals which appear upon densifying systems of respectively hard rods \cite{Frenkel88} and hard platelets \cite{FrenkelLiqcryst,Veerman},  without  attractive interactions between the particles. All of them consist of transitions driven entirely by {\em entropic} interactions.
+The isotropic-nematic phase transition invoked above occurs through a first order transition, as it was probed theoretically by Onsager. He recognized that the transition from an isotropic to a nematic state in solutions containing sufficiently anisometric particles can be described successfully  within a virial expansion of the free energy truncated after the second virial term, an approach which could not be used to explain the gas-liquid transition for spherical particles. About a decade after Onsager's work, Alder Wainwright and others \cite{ALDER57,WOOD57} first showed by means of computer simulations that a similar disorder-order transition, albeit of the positional degrees of freedom, occurs in a fluid of hard spheres, where there is a critical packing fraction at which particles will be able to better explore the translational phase space by adopting an (fcc) lattice rather than a disordered arrangement. Much later, computer simulations by Frenkel {\em et al.}  revealed the stability of smectic and columnar liquid crystals which appear upon densifying systems of respectively hard rods \cite{Frenkel88} and hard platelets \cite{FrenkelLiqcryst,Veerman},  without  attractive interactions between the particles. All of them consist of transitions driven entirely by {\em entropic} interactions.
 
 
 
 
 \subsection{Mixtures and the depletion effect}
 
-\blue{
-So far we have implicitly assumed that all particles which build up a gas, liquid (crystal) or solid phase
-are identical. Many systems in nature are however {\em mixtures} containing a number of different types of
-particles or molecules. In this respect we may roughly distinguish
-between mixtures of chemically distinct moieties on the one hand and so-called {\em polydisperse} mixtures on
-the other. Examples of the first are blood
-(containing red and white blood cells, plasma etcetera),
-mayonnaise (a mixture of oil and vinegar) and milk (consisting of dispersed fat globules, casein micelles and
-whey proteins).
-Polydisperse mixtures are characterized by a large (potentially infinite) number of
-species --all belonging to a {\em single} family of particles-- with  continuously varying properties such as particle shape, size or possible surface charge.
-Common examples of these are colloidal model systems , where the particles usually have the same
-basic shape (e.g.  spheres, rods or plates) but  a {\em range} of
-radii, lengths, diameters, etcetera. Of course, in reality many systems
-share characteristics of both classes; they
-may comprise a number of distinct species  each with some degree of polydispersity with respect to
-one or more properties of the particle family.
+So far we have implicitly assumed that all particles which build up a gas, liquid (crystal) or solid phase are identical. Many systems in nature are however {\em mixtures} containing a number of different types of particles or molecules. It is not surprising that the phase behaviour of mixtures is richer than that of pure systems--if only for the additional {\em entropy of mixing}-- and that mixing different species may lead to  phenomena not encountered in one-component systems. An example of a purely entropically-driven self-assembly phenomenon is the ordered arrangement that arises in colloidal mixtures of large particles and smaller particles called depletants, a process known as the depletion effect.
 
-It is not surprising that the phase behaviour of  mixtures is richer than that of pure systems
---if only for the additional {\em entropy of mixing}-- and
-that mixing different species may lead to  phenomena not encountered in one-component systems.
-In particular, depending on the miscibility of the species involved,  mixing
-may sometimes lead to a destabilization of a homogeneous state
-causing a phase separation into two or more phases, each with a different
-density and/or composition. The associated segregation of species among the coexisting phases,
-called  {\em fractionation}, is inherent to mixtures and may sometimes give rise to surprising phenomena,
-as shown in the next Chapter.
-Mixing particles with distinctly different sizes or shapes
-may also cause the formation of ``new" phases whose structures are not observed in pure systems
-of the constituent species. For instance, in a two-component (or binary) mixture
- of rod- and platelike colloids we may encounter the so-called {\em biaxial} nematic
-phase, in which both particles types are aligned
-in mutually perpendicular directions. Similarly, mixing spheres of two (or more) different sizes
-may give rise to the formation of various solid states with intricate
-lattices structure  not encountered in pure solids \cite{Bartlettbinary}.
+\begin{SCfigure}
+\includegraphics[width= 0.4 \columnwidth]{figures/chapter-1/depletion}
+\caption{ \label{introfig2} The presence of non-adsorbing polymers or other depletions agents (whose size is usually smaller than the colloidal nanoparticles) produces an effective attractive potential between the rods according to the depletion scenario --which depends on the rods relative orientation and distance--. If the rods are at close proximity, the polymers are depleted away from the inner space between the rods in dictated by the overlap of the depletion zones (hatched area). This creates an osmotic imbalance around the cylindrical surfaces pushing the rods together.  }
+\end{SCfigure}
+
+This effect takes place typlically when colloidal particles are mixed with non-adsorbing polymers. Fig. \ref{introfig2} highlights the ordering transition in this situation by illustrating the effective attractive interaction between large colloidal rods when polymers are added to the system. Negative adsorption results in a region near the colloidal surface, named {\em depletion layer}, where polymers are less likely to access due to a loss of configurational entropy of the polymer chain. When these regions overlap, there is an increase in the volume available to polymers to explore, thus increasing their entropy and lowering their Helmholtz free energy. Effectively, the addition of depletants to the system generates repulsion between particles of distinct type and, in consequence, attraction between colloidal particles.
+
+These polymers are often modeled as penetrable hard spheres, known as Asakura-Oosawa spheres, in honor of the first theoreticians who proposed a model to describe the depletion effect \cite{ASAKURA54,ASAKURA58,Vrijdepletie}. By replacing the polymers with spheres of the same radius of gyration, we can obtain the same results in an effective manner. Penetrable hard objects do not interact with each other, i.e. no overlap restriction are imposed between them, allowing for an ideal gas statistical mechanical treatment; and at the same time they are not allowed to overlap with colloidal particles, causing the emergence of the depletion effect. To sum up, the main approximations assumed by Asakura and Oosawa are: 1) whereas polymer chains in reality are unlikely found inside the depletion layers, in this model they are strictly prohibited; and 2) polymer chains are assumed to be completely transparent to each other, which is a fair approximation in the low concentration regime.
+
+In this work, depletion-driven demixing caused by strong shape assymetry in colloidal mixtures will be discussed in Chapter \ref{disc_polymer} for a system featuring discs and polymerizing rods. In addition to it, the consequences of using penetrable hard spheres as a driving agent to stabilize liquid crystalline droplets will be deeply explored in Chapter \ref{twistedrods}.
+
+
+\blue{
 
 
 \section{Scope of this thesis}

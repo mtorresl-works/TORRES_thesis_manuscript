@@ -9,13 +9,6 @@
       <change beforePath="$PROJECT_DIR$/chapters/chapter-1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-1.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapters/chapter-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-5.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-1/julia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-1/python-code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-5/impl_depletion_effect.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-5/membranesnapshot.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-5/spheromans.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/spheromans.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-5/spheromans_v2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/spheromans_v2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intro_HDR_WENSINK.tex" beforeDir="false" afterPath="$PROJECT_DIR$/intro_HDR_WENSINK.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
