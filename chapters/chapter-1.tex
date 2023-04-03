@@ -34,7 +34,7 @@ One sub-classification of liquid crystal materials is based on the mechanism by 
 
 First experimental reports of nano-particle based lyotropic liquid crystals go back when liquid crystalline behaviour was described for tobacco and tomato mosaic virus (TMV) \cite{Bawden,Bernal} and vanadium pentoxide (V$_{2}$O$_{5}$) \cite{Zocher} in the early 20th century. In addition to these rod-like particle systems, colloidal plate-like charged particles and clay particles were discovered to report liquid crystalline behaviour \cite{Langmuir}. At present, there are many other examples of lyotropic liquid crystals to be found in a wide variety of dispersions of (mainly rod-like) colloidal particles and solutions of stiff polymers (see e.g. \cite{Dierking2020} for an overview).
 
-This research work focuses on both theoretical and numerical approaches for the exploration of phase behavior in anisotropic colloidal compounds, with a particular interest in the {\em entropic} isotropic-nematic phase transition. This transition is well described by Onsager's theory, proposed in 1949, which assumes a similarity between a gas and a particle solution \cite{onsager1949}; and will be used repeatedly throughout this manuscript (more specifically in Chapters \ref{disc_polymer} and \ref{col_cholesterics}) along with other theoretical and numerical tools to study the liquid-crystalline self-organization of colloidal rods or platelets in complex environments. Through our research, we hope to gain a better understanding of the behavior of this kind of systems and contribute to the broader field of liquid crystal research.
+This research work focuses on both theoretical and numerical approaches for the exploration of phase behavior in anisotropic colloidal compounds, with a particular interest in the {\em entropic} isotropic-nematic phase transition. This transition is well described by Onsager's theory, proposed in 1949, which assumes a similarity between a gas and a particle solution \cite{onsager1949}; and will be used repeatedly throughout this manuscript (more specifically in Chapters \ref{disc_polymer} and \ref{hybridLC2}) along with other theoretical and numerical tools to study the liquid-crystalline self-organization of colloidal rods or platelets in complex environments. Through our research, we hope to gain a better understanding of the behavior of this kind of systems and contribute to the broader field of liquid crystal research.
 
 \subsection{Entropic phase transitions}
 
@@ -81,69 +81,25 @@ So far we have implicitly assumed that all particles which build up a gas, liqui
 \caption{ \label{introfig2} The presence of non-adsorbing polymers or other depletions agents (whose size is usually smaller than the colloidal nanoparticles) produces an effective attractive potential between the rods according to the depletion scenario --which depends on the rods relative orientation and distance--. If the rods are at close proximity, the polymers are depleted away from the inner space between the rods in dictated by the overlap of the depletion zones (hatched area). This creates an osmotic imbalance around the cylindrical surfaces pushing the rods together.  }
 \end{SCfigure}
 
-This effect takes place typlically when colloidal particles are mixed with non-adsorbing polymers. Fig. \ref{introfig2} highlights the ordering transition in this situation by illustrating the effective attractive interaction between large colloidal rods when polymers are added to the system. Negative adsorption results in a region near the colloidal surface, named {\em depletion layer}, where polymers are less likely to access due to a loss of configurational entropy of the polymer chain. When these regions overlap, there is an increase in the volume available to polymers to explore, thus increasing their entropy and lowering their Helmholtz free energy. Effectively, the addition of depletants to the system generates repulsion between particles of distinct type and, in consequence, attraction between colloidal particles.
+This effect takes place typlically when colloidal particles are mixed with non-adsorbing polymers. Fig. \ref{introfig2} highlights the ordering transition in this situation by illustrating the effective attractive interaction between large colloidal rods when polymers are added to the system. Negative adsorption results in a region near the colloidal surface, named {\em depletion layer}, where polymers are less likely to access due to a loss of configurational entropy of the polymer chain. When such regions overlap, there is an increase in the volume available to polymers to explore, thus increasing their entropy and lowering their Helmholtz free energy. Effectively, the addition of depletants to the system generates repulsion between particles of distinct type and, in consequence, attraction between colloidal particles.
 
-These polymers are often modeled as penetrable hard spheres, known as Asakura-Oosawa spheres, in honor of the first theoreticians who proposed a model to describe the depletion effect \cite{ASAKURA54,ASAKURA58,Vrijdepletie}. By replacing the polymers with spheres of the same radius of gyration, we can obtain the same results in an effective manner. Penetrable hard objects do not interact with each other, i.e. no overlap restriction are imposed between them, allowing for an ideal gas statistical mechanical treatment; and at the same time they are not allowed to overlap with colloidal particles, causing the emergence of the depletion effect. To sum up, the main approximations assumed by Asakura and Oosawa are: 1) whereas polymer chains in reality are unlikely found inside the depletion layers, in this model they are strictly prohibited; and 2) polymer chains are assumed to be completely transparent to each other, which is a fair approximation in the low concentration regime.
+These polymers are often modeled as penetrable hard spheres, known as Asakura-Oosawa spheres, in honor of the first theoreticians who proposed a model to describe the depletion effect \cite{ASAKURA54,ASAKURA58,Vrijdepletie}. By replacing the polymers with spheres of the same radius of gyration, we can obtain the same results in an effective manner. Penetrable hard objects do not interact with each other, i.e. no overlap restrictions are imposed between them, allowing for an ideal gas statistical mechanical treatment; and at the same time they are not allowed to overlap with colloidal particles, causing the emergence of the depletion effect. To sum up, the main approximations assumed by Asakura and Oosawa are: 1) whereas polymer chains in reality are unlikely found inside the depletion layers, in this model they are strictly prohibited; and 2) polymer chains are assumed to be completely transparent to each other, which is a fair approximation in the low depletant concentration regime.
 
 In this work, depletion-driven demixing caused by strong shape assymetry in colloidal mixtures will be discussed in Chapter \ref{disc_polymer} for a system featuring discs and polymerizing rods. In addition to it, the consequences of using penetrable hard spheres as a driving agent to stabilize liquid crystalline droplets will be deeply explored in Chapter \ref{twistedrods}.
 
+\section{Scope of this thesis}
+
+
+
+The central aim of this thesis is to theoretically investigate the liquid crystal (LC) self-organization of colloidal particles with different shapes in various contexts. Many of the studies to be described in the remainder of this thesis have been inspired by recent experimental works in systems of colloids with well-controlled shapes and interactions. In particular, we mention the experimental work of Grelet \cite{Grelet2014} and Zavala-Martinez \cite{zaval2022} whose works on phase behavior and functionalization of complex fluids of filamentous bacteriophages (fd and M13) display many interesting phenomena left open for theoretical interpretation; as well as recent experimental findings \cite{senyuk2021nematoelasticity,mundoor2021} on colloidal dispersion of highly anisotropic particles immersed in molecular LC hosts. One of our primary goals in this work is to account for these experimental observations by constructing simple, yet realistic,  models for the colloidal systems under consideration and by scrutinizing relevant aspects of their phase behaviour.
+
+In Chapter \ref{disc_polymer} a simple model is proposed to explore the low-concentration phase behavior of a system consisting of non-covalently bonded, weakly flexible rods treated as living polymers mixed with non-adsorbing rigid colloidal discs. We show that, at large disc mole fractions, the rod nematic phase is disrupted by collective disc alignment in favor of a discotic nematic fluid in which the polymers are dispersed anti-nematically, generating a non-exponential molecular-weight distribution of the resulting polymeric species.
+
+Chapters \ref{hybridLC1} and \ref{hybridLC2} address issues related to hybrid molecular liquid crystal nematics. In this part of the work, we consider a system in which molecular cholesteric LCs are doped with thin colloidal particles with large length-to-width aspect ratios. In Chapter \ref{hybridLC1}, single colloid insertions are considered, and we explore the interplay between weak surface anchoring forces, exerced between the colloidal surface and the molecular field, and elastic distortions around the colloid-molecular field interface. In Chapter \ref{hybridLC2}, we use Onsager's theory to account for collective effects in the hypothetical case where multiple colloidal particles are inserted in the hybrid LC.
+
+Finally, in Chapter  \ref{twistedrods} we introduce a computational model to simulate mesoscopic droplets of colloidal rods stabilized by the presence of non-adsorbing polymers. We aim to gain a deeper understanding of the transition between the so-called twisted membranes and twisted ribbons observed experimentally in systems featuring filamentous fd viral rods \cite{Gibaud2012} by performing Monte Carlo simulations in the semi-grand-canonical ensemble. Although twisted ribbons are not observed in our simulations, a theoretical model is proposed to predict the typical ribon geometric features that can in principle be confirmed through experimental verification.
 
 \blue{
-
-
-\section{Scope of this thesis}
-The central aim of this thesis is to theoretically investigate
-the effects of  {\em mixing}  particles with different shapes
-on their liquid crystal phase behaviour.
-Many of the studies to be described in the remainder of this thesis have been triggered off
-by recent experimental observations in mixtures of colloids with well-controlled shapes
-and interactions.
-In particular, we mention the experimental work of Van der Kooij \cite{felixthesis} who investigated a vast number
-of mixtures which display many interesting phenomena left open for theoretical interpretation.
-One of our primary goals in this work is to account for these
-experimental observations by constructing simple, yet realistic,  models
-for the colloidal systems under consideration
-and by scrutinizing relevant aspects of their phase behaviour.
-
-The first part of this thesis will be devoted to binary mixtures of anisometric particles.
-In Chapter 2 a simple model is proposed that allows to qualitatively explain
-the recently observed isotropic-nematic density inversion in polydisperse systems of colloidal platelets.
-In the next two chapters  we shall be concerned with mixtures of rods and platelets and
-provide a theoretical underpinning for the low-concentration part of the experimental
-phase diagram. We also assess the possible stability of the disputed biaxial nematic phase
-in experimentally realizable mixtures.
-In Chapter 5 we conclude the first part with  an overview on demixing transitions
-within the isotropic and nematic phases of binary mixtures of particles
-whose size differs only in one particle dimension. Previously published results for rodlike particles
-will be combined with new results for platelets to compare phase diagram topologies and
-demixing mechanisms pertaining to the various mixtures.
-
-In the second part of this thesis we address the more challenging issue of calculating
-phase equilibria in polydisperse mixtures of anisometric particles.
-In Chapter 6 we present a study of isotropic-nematic phase coexistence in systems of
-length-polydisperse hard rods, focussing in particular on fractionation effects and
-the possibility of a demixing of the nematic phase.
-Chapter 7 deals with polydisperse systems of thickness-polydisperse
-platelets. The binary model, introduced in Chapter 2, is extended to a polydisperse
-one which allows us to provide a more realistic, albeit still qualitative, description of the experimental observations.
-In Chapter 8 we provide a preliminary
-calculation on the competition
-between smectic and columnar ordering in systems of polydisperse hard rods.  As a first-order
-approximation we consider an artificial model system of {\em perfectly aligned} cylinders. The  possibilities of extending the approach towards a more realistic one will be discussed.
-
-
-The contents of  Chapter 9 of this thesis differ somewhat from the  rest because of the introduction of an  {\em external field}.
-Inspired by recent experimental observations of a significant sedimentation in dispersions of platelets
- we illustrate the drastic effect of gravity
- on the phase behaviour of colloidal mixtures. As an example we consider a system
-of sedimenting platelets mixed with non-sedimenting ideal polymers, as studied
-experimentally by Van der Kooij. Also here,  the results of the calculations
-reveal an improved description of the experimentally observed
-behaviour.
-
-Finally, in Chapter  10  we present a free-volume theory for a columnar state of hard platelets  by combining the traditional cell model with an appropriate fluid description which accounts for the rotational freedom of the particles in the (one-dimensional) direction of the phase. Excellent quantitative agreement is found with recent computer simulation results.
-
-
 
 \section{Statistical mechanical background}
 \noindent In this section we introduce the statistical mechanical framework of  Onsager's second virial theory \cite{onsager1949,Vroege92,Cotter} to describe the thermodynamic properties of a spatially homogeneous fluid of hard colloidal rods or platelets. The theory is then modified to account for higher virial terms by means of a decoupling approximation as devised by Parsons \cite{Parsons}. Finally, we introduce a bifurcation analysis to verify  the stability of the  fluid with respect to the spatially {\em inhomogeneous} liquid crystalline states.
