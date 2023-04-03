@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="7d03f94c-8071-46c9-9dd7-49f45f889f39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/chapter-1/julia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/chapter-1/python-code.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/chapter-5/impl_depletion_effect.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/chapter-5/membranesnapshot.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/chapter-5/spheromans.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/spheromans.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/chapter-5/spheromans_v2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/spheromans_v2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intro_HDR_WENSINK.tex" beforeDir="false" afterPath="$PROJECT_DIR$/intro_HDR_WENSINK.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +60,7 @@
       <recent name="$PROJECT_DIR$/bib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/figures/chapter-1" />
       <recent name="$PROJECT_DIR$/figures/chapter-5" />
       <recent name="$PROJECT_DIR$/figures/chapter-4" />
       <recent name="$PROJECT_DIR$/figures/chapter-6" />
@@ -229,6 +240,9 @@
       <workItem from="1680286656100" duration="44000" />
       <workItem from="1680344029223" duration="52000" />
       <workItem from="1680345843164" duration="20000" />
+      <workItem from="1680369696607" duration="1872000" />
+      <workItem from="1680390378699" duration="99000" />
+      <workItem from="1680511902206" duration="1331000" />
     </task>
     <servers />
   </component>
