@@ -37,6 +37,7 @@ First experimental reports of nano-particle based lyotropic liquid crystals go b
 This research work focuses on both theoretical and numerical approaches for the exploration of phase behavior in anisotropic colloidal compounds, with a particular interest in the {\em entropic} isotropic-nematic phase transition. This transition is well described by Onsager's theory, proposed in 1949, which assumes a similarity between a gas and a particle solution \cite{onsager1949}; and will be used repeatedly throughout this manuscript (more specifically in Chapters \ref{disc_polymer} and \ref{hybridLC2}) along with other theoretical and numerical tools to study the liquid-crystalline self-organization of colloidal rods or platelets in complex environments. Through our research, we hope to gain a better understanding of the behavior of this kind of systems and contribute to the broader field of liquid crystal research.
 
 \subsection{Entropic phase transitions}
+\label{entropy_order}
 
 The thermodynamic equilibrium state of a system tends to minimize its Helmholtz free energy:
 
@@ -98,6 +99,243 @@ In Chapter \ref{disc_polymer} a simple model is proposed to explore the low-conc
 Chapters \ref{hybridLC1} and \ref{hybridLC2} address issues related to hybrid molecular liquid crystal nematics. In this part of the work, we consider a system in which molecular cholesteric LCs are doped with thin colloidal particles with large length-to-width aspect ratios. In Chapter \ref{hybridLC1}, single colloid insertions are considered, and we explore the interplay between weak surface anchoring forces, exerced between the colloidal surface and the molecular field, and elastic distortions around the colloid-molecular field interface. In Chapter \ref{hybridLC2}, we use Onsager's theory to account for collective effects in the hypothetical case where multiple colloidal particles are inserted in the hybrid LC.
 
 Finally, in Chapter  \ref{twistedrods} we introduce a computational model to simulate mesoscopic droplets of colloidal rods stabilized by the presence of non-adsorbing polymers. We aim to gain a deeper understanding of the transition between the so-called twisted membranes and twisted ribbons observed experimentally in systems featuring filamentous fd viral rods \cite{Gibaud2012} by performing Monte Carlo simulations in the semi-grand-canonical ensemble. Although twisted ribbons are not observed in our simulations, a theoretical model is proposed to predict the typical ribon geometric features that can in principle be confirmed through experimental verification.
+
+
+\section{Statistical mechanical background}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width= 0.7 \columnwidth]{digures/chapter-1/exclvol}
+\caption{ \label{introfig3} Illustration of the excluded volume of two spherocyllinders  of length $L$ and diameter $D$ at mutual orientation $\gamma$. Rod alignment leads to a strong reduction of the excluded volume represented by the lozenge-shaped figure.}
+\end{center}
+\end{figure}
+
+In this section we introduce the statistical mechanical framework of  Onsager's second virial theory \cite{onsager1949} to describe the thermodynamic properties of a spatially homogeneous fluid of hard colloidal rods or platelets. Instead of delving into a technical exposition of Onsager's theory (the reader is referred to Onsager's original paper \cite{onsager}, as well as some enlightening reviews \cite{vroege92, allenevans} for more detailed information), we will provide an intuitive overview of its main components. As explained in Section \ref{entropy_order}, the isotropic-nematic phase transformation result from the competition between two principal quantities, related to rotational and translational degrees of freedom. Onsager establishes the formulation of these two quantities and analyzes the transition unsing entropic arguments alone.
+
+Let us assume an ensemble of slender rigid needles in a fluid state of uniform particle density $\rho = N/V$ at a fixed volume $V$ and temperature $T$, and focus on the orientational phase space the rods adopt in a fully isotropic and nematic configuration. If we associate each rod orientation on the unit sphere as a separate state we may associate and orientational entropy defines as the ratio of the number of explorable orientational states:
+\begin{equation}
+\frac{S_{or}}{N} \sim k_{B} \ln ( \mbox{\# {\small orientational states}})
+\label{sor}
+\end{equation}
+
+More specifically, Onsager obtains the following expression for the orientational free energy:
+
+\begin{equation}
+\frac{\beta F_{\text{orient}}}{N}=\int f(\Omega)\ln \left[4\pi f(\Omega)\right]d\Omega.
+\label{0forient}
+\end{equation}
+
+that can be derived by applying the following assumptions:
+
+
+\vspace{0.3cm}
+\begin{enumerate}
+\setlength\itemsep{1em}
+\item Start from the configurational partition function for an imperfect gas where the total potential energy is expressed as a summation over pairs.
+\item 
+\item
+\item
+\item
+\item
+\item
+\end{enumerate}
+\vspace{0.3cm}
+
+
+
+
+
+\subsection{Fluids of hard anisometric particles}
+
+We start from an (imperfect) gas of $N$ identical cylindrically symmetric particles in a volume $V$. Assuming a pairwise additive interaction potential we can express the total potential energy $U_{N}$  as a summation over pairs
+
+\begin{equation}
+U_{N}=\sum_{i<j} u(\bfr_{ij}; \Omega_{i}, \Omega_{j}),
+\end{equation}
+where $\bfr_{ij}=\bfr _{j}- \bfr _{i}$ is the vector connecting the centres of mass of particles $i$ and $j$; $\Omega_{i}$ and $\Omega_{j}$ represent the solid angles describing the orientations of the respective particles with respect to some space-fixed coordinate system. For hard-core interactions the pair potential explicitly reads
+
+\begin{equation}
+u(\bfr_{ij}; \Omega_{i}, \Omega_{j}) =
+\begin{cases}
+\infty  &\text{if $i$ and $j$ overlap;} \\
+0 &\text{otherwise.} \label{0pairpot}
+\end{cases}
+\end{equation}
+
+The  description can be applied analogously to dispersions of colloidal particles but the direct pair potential $u$should then be replaced by the potential of mean force $w(\bfr_{ij};\Omega_{i},\Omega_{j})$ describing the interaction between the  particles $i$ and $j$dispersed in a  solvent with a fixed chemical potential \cite{macmillan,Hill}. This procedure involves a configurational average of the solvent molecules accounting for their mutual interactions and the interactions with the dispersed particles.
+
+The configurational partition function $Q_{N}$ for the system reads
+
+\begin{equation}
+Q_{N}=\frac{1}{\mathcal{V} ^{N} N!}\int d\bfr^{N}\int d\Omega ^{N}\exp\left[-\beta U_{N}(\bfr^{N}; \Omega^{N})\right],
+\label{0qdef}
+\end{equation}
+with $\beta= 1/k_{B}T$ and $\mathcal{V}$ the (de Broglie) thermal volume, arising from integrations over the translational and rotational momenta of the anisometric particles. The positional and orientational degrees of freedom of the particles are collectively denoted by $\{\bfr^{N};\Omega^{N}\}$. If we assume that there are no  {\em a priori} restrictions on the particle orientations we may approximate the  angular integrations  to arbitrary accuracy by dividing the orientational phase space, i.e. the surface of a unit sphere, into $s$arbitrarily small equal sections  with a surface $\Delta \Omega = 4\pi/s$ and summing over all possible orientation distributions $\{N_{1},N_{2}, \ldots, N_{s}\}$, where $N_{k}$ is the number of particles with its solid angle $\Omega$ in the $k$-th section centered about
+$\Omega_{k}$ such that
+
+\begin{equation}
+\sum _{k=1}^{s} N_{k} =N. \label{0behoud}
+\end{equation}
+
+The partition function Eq. (\ref{0qdef}) then becomes
+
+\begin{align}
+Q_{N}=&\frac{1}{\mathcal{V} ^{N} N!}\left(\frac{\Delta \Omega}{4\pi}\right)^{N}
+\sum_{N_{1}=0}^{N}\ldots \sum_{N_{s}=0}^{N}\frac{N!}{\prod_{k=1}^{s}N_{k}!} \nonumber \\
+&\times\int d\bfr^{N}
+\exp\left[-\beta U_{N}(\bfr^{N}; N_{1},N_{2},\ldots,N_{s})\right], \label{0Qalgemeen}
+\end{align}
+where the summations need to be carried out under the condition of Eq. (\ref{0behoud}). For large $N$ it is justified to replace the sum  by its maximum term \cite{Hill}. Denoting the set (i.e. orientation distribution) which maximizes $\ln Q_{N}$ (and hence $Q_{N}$) by$\{\tilde{N}_{1},\tilde{N}_{2},\ldots,\tilde{N}_{s}\}$ we obtain
+\begin{equation}
+Q_{N}\approx \frac{1}{\mathcal{V} ^{N} N!}\left(\frac{\Delta \Omega}{4\pi}\right)^{N}
+\frac{N!}{\prod_{k=1}^{s}\tilde{N}_{k}!}\int d\bfr^{N}
+\exp\left[-\beta U_{N}(\bfr^{N}; \tilde{N}_{1},\tilde{N}_{2},\ldots,\tilde{N}_{s})\right].
+\end{equation}
+
+The partition function can be expressed in a more convenient form after some rearranging. This yields
+
+\begin{equation}
+Q_{N}= \underbrace{\frac{V^{N}}{\mathcal{V} ^{N} N!}}_{Q_{N}^{\text{trans}}}
+\underbrace{\left(\frac{\Delta \Omega}{4\pi}\right)^{N}
+\frac{N!}{\prod_{k=1}^{s}\tilde{N}_{k}!}}_{Q_{N}^{\text{orient}}}
+\underbrace{\left < \exp\left[-\sum_{i<j}\beta w(\bfr_{ij};
+\tilde{N}_{i},\tilde{N}_{j})\right] \right >_{\{\tilde{N}_{1},\tilde{N}_{2},\ldots,\tilde{N}_{s}\}}
+}_{Q_{N}^{\text{int}}},
+\end{equation}
+where the brackets denote a (normalized) configurational average over all positional and orientational coordinates under the condition that the particles obey an orientational distribution according to the set $\{\tilde{N}_{1},\tilde{N}_{2},\ldots,\tilde{N}_{s}\}$. The first terms $Q_{N}^{\text{trans}}$ and $Q_{N}^{\text{orient}}$ are  identified as the translational (ideal gas) and orientational contributions, respectively, whereas the bracketed one accounts for the hard-body interactions between the particles. The Helmholtz free energy is obtained from the standard relation $\beta F= -\ln Q_{N}$. Applying this to $Q_{N}^{\text{trans}}$ gives the common ideal free energy $\beta F_{\text{id}}= N\left[\ln (\rho \mathcal{V})-1\right]$, with $\rho=N/V$ the number density.
+For the orientational part we obtain
+
+\begin{equation}
+\beta F_{\text{orient}}=N\left\{\ln \left[\frac{4\pi}{\Delta \Omega}\right] + \sum_{k=1}^{s}\tilde{n}_{k}\ln \tilde{n}_{k} \right\},
+\label{0fordiscreet}
+\end{equation}
+in terms of the number fractions $\tilde{n}_{k}=\tilde{N}_{k}/N$ with $\sum_{k=1}^{s}\tilde{n}_{k}=1$. Introducing the normalized {\em orientational distribution function} (ODF) $f(\Omega_{k})$ we may write $\tilde{n}_{k}=f(\Omega_{k})\Delta\Omega$. Using this in Eq. (\ref{0fordiscreet}) and taking the  limit $\Delta \Omega \rightarrow 0$ for a {\em continuous} distribution in $\Omega$ we obtain the following expression for the orientational free energy
+
+The configurational partition function  $Q_{N}^{\text{int}}$ can be approximated systematically by a {\em virial expansion} in terms of the density variable $\rho$ \cite{hansenmacdonald}. At low densities it is justified to make a second virial approximation   by taking each of the $N(N-1)/2$ pair interactions independent from all others so that
+
+\begin{align}
+Q_{N}^{\text{int}}&= \left \langle \prod _{i<j}
+\exp\left[-\beta w(\bfr _{ij}; \Omega_{i}, \Omega_{j})\right]  \right \rangle _{f}
+\approx \prod _{i<j}
+\left < \exp\left[-\beta w(\bfr _{ij}; \Omega_{i}, \Omega_{j})\right]  \right>_{f} \nonumber \\
+&\approx\left<1+\Phi_{12}\right>_{f} ^{N(N-1)/2}. \label{0secondvir}
+\end{align}
+
+The subscript $f$ indicates the condition that the orientational distribution is given by $f(\Omega)$. Furthermore, $\Phi_{12}$ is the Mayer function, defined as
+
+\begin{equation}
+\Phi_{12}\equiv \exp\left[-\beta w(\bfr _{12}; \Omega_{1}, \Omega_{2})\right]-1.
+\end{equation}
+
+Applying the hard-core pair potential Eq. (\ref{0pairpot}) we see that this function is equal to -1  if two particles $1$ and $2$ overlap and zero otherwise. Spatially integrating the Mayer function yields the so-called pair cluster integral $\beta _{1}$:
+
+\begin{equation}
+\beta_{1}(\Omega_{1},\Omega_{2})\equiv \frac{1}{V} \int d\bfr_{1}d \bfr_{2} \Phi(\bfr _{12}; \Omega_{1}, \Omega_{2})=-v_{\text{excl}}(\Omega_{1},\Omega_{2}),
+\label{0cluster}
+\end{equation}
+which is equal to minus the {\em excluded volume} $v_{\text{excl}}$ of two anisometric particles at fixed solid angles $\Omega_{1}$ and $\Omega_{2}$. Using this in Eq. (\ref{0secondvir}) yields
+
+\begin{align}
+Q_{N}^{\text{int}}&\approx \left[1-\frac{1}{V} \iint d\Omega_{1} d\Omega_{2}
+f(\Omega_{1})f(\Omega_{2})v_{\text{excl}}(\Omega_{1},\Omega_{2})\right]^{N(N-1)/2} \nonumber \\
+&\approx \exp\left[-N \frac{\rho}{2}  \iint d\Omega_{1} d\Omega_{2}
+f(\Omega_{1})f(\Omega_{2})v_{\text{excl}}(\Omega_{1},\Omega_{2})  \right].
+\end{align}
+
+Collecting results we obtain the following expression for the free energy of a fluid of hard anisometric particles in the second virial approximation:
+
+\begin{align}
+\frac{\beta F}{N} =& \beta \mu_{0}+\ln\left[\mathcal{V}\rho\right]-1+
+\int f(\Omega)\ln \left[4\pi f(\Omega)\right]d\Omega \nonumber \\
+&+\frac{\rho}{2} \iint d\Omega d\Omega^{\prime}
+f(\Omega)f(\Omega^{\prime})v_{\text{excl}}(\Omega,\Omega^{\prime}). \label{0freetot}
+\end{align}
+with $\mu_{0}$ a reference chemical potential of the dispersed particles depending only on the solvent conditions. Higher order contributions in the virial expansion of the free energy --involving clusters of three, four, etcetera particles-- can be derived using similar arguments as in Eq. (\ref{0secondvir}) \cite{vankampen}. In the {\em third virial} approximation for example we encounter the triplet cluster integral $\beta_{2}(\Omega_{1},\Omega_{2},\Omega_{3})$
+
+\begin{equation}
+\beta_{2}(\Omega_{1},\Omega_{2},\Omega_{3})\equiv \frac{2}{V}\iiint
+d\bfr_{1}d\bfr_{2}d\bfr_{3} \Phi_{12}\Phi_{13}\Phi_{23}, \label{0beta2}
+\end{equation}
+which is nonzero only if three particles overlap simultaneously. Eq. (\ref{0beta2}) and higher order cluster integrals are notoriously difficult to calculate because this requires knowledge of the excluded volume of a multi-particle cluster as a function of the orientations of all particles involved. In practice, other methods are adopted to include higher virial terms, albeit approximately, such as `scaled particle' \cite{Cotterspt,Cotter} and density functional theories (see \cite{Vroege92,DFTspecialJPCM} for a review). In this thesis, due to the low density regime regarded in all the analytical works, it is reasonable to stick to the second virial approximation.
+
+The next step is to minimize the free energy, at a given density $\rho$, with respect to the non-conserved orientational degrees of freedom. In practice, there are two different ways to find this minimum; a formal approach and a trial function method which we both shall discuss briefly here. The formal way  is to apply a functional differentiation of the free energy with respect to the ODF $f(\Omega)$. This yields the stationarity condition:
+
+\begin{equation}
+\frac{\delta}{\delta f(\Omega)} \left[\frac{\beta F}{N}-\lambda^{\prime} \int f(\Omega)d \Omega \right]=0,
+\label{0statcond}
+\end{equation}
+where $\lambda^{\prime}$ is a Lagrange multiplier to be determined from the normalization condition for the ODF:
+
+\begin{equation}
+\int f(\Omega)d\Omega =1.
+\end{equation}
+
+Inserting the free energy Eq. (\ref{0freetot}) gives a nonlinear integral equation
+
+\begin{equation}
+\ln[4\pi f(\Omega)]=\lambda - \rho \int f(\Omega^{\prime})v_{\text{excl}}(\Omega,\Omega^{\prime})
+d\Omega^{\prime}, \label{0inteq}
+\end{equation}
+
+with $\lambda=\lambda^{\prime}-1$. A trivial solution to Eq. (\ref{0inteq}) is the constant $f(\Omega)=1/4\pi$ describing an {\em isotropic} fluid in which all particle orientations are equally probable. The thermodynamic equilibrium ODF for a {\em nematic} state --which will be a peaked function--can however only be obtained numerically e.g. in terms of a series expansion in Legendre polynomials \cite{kayser,lasher,lakatos} or by means of a discretization scheme \cite{herzfeldgrid}. It is important to realize that for  {\em uniaxial} particles the ODF satisfies both azimuthal symmetry around the nematic director and inversion symmetry. The former implies that the ODF depends only on the  polar angle $\theta$ between the particle orientation vector and the nematic director\footnote{An exception to this case is a mixture of uniaxial rods and plates,
+where the ODF may depend on the azimuthal angle as well
+due to a possible {\em biaxial} symmetry of the nematic phase.
+This will become clear in Chapter 4.}, so that $f(\Omega)=f(\theta)$. The latter  implies the angles $\theta$ and $\pi-\theta$ being equivalent, thus $f(\theta)=f(\pi-\theta)$.
+
+To avoid the necessity of solving the nonlinear integral equation Eq. (\ref{0inteq}) one may choose the trial function approach instead. The ODF $f(\Omega)$ in Eq. (\ref{0freetot}) is then replaced by a {\em fixed functional form} depending on one or more variational parameters and the free energy is subsequently minimized with respect to these parameters. This approach was first employed by Onsager  in his original paper \cite{onsager1949} where he used the following trial form:
+
+\begin{equation}
+f_{O}(\cos \theta) =\frac{\alpha \cosh (\alpha \cos\theta)}{4\pi\sinh \alpha},
+\end{equation}
+in terms of the variational parameter $\alpha$. Although this trial function gives reasonable results for the isotropic-nematic phase transition the analysis involved is
+quite complicated. Another option is to use the simpler Gaussian trial ODF, introduced by Odijk \cite{OdijkLekkerkerker}:
+
+\begin{equation}
+f_{G}(\theta ) \cong   \left\{
+\begin{tabular}{lll}
+$Z\exp [-\frac{1}{2}\alpha\theta ^{2}]$ & if & $%
+0\leq \theta \leq \frac{\pi }{2}$ \\
+&  &  \\
+$Z\exp [-\frac{1}{2}\alpha (\pi -\theta )^{2}]$
+& if & $\frac{\pi}{2}\leq \theta \leq \pi $%
+\end{tabular}
+\right.  \label{0ODF}
+\end{equation}
+
+The normalization constant $Z=Z(\alpha)$ can be calculated analytically by means of an asymptotic expansion for large $\alpha$. Noting that $f_{G}(\theta)$ is then a rapidly decaying function we may expand as follows
+
+\begin{align}
+Z&=\left[\int_{0}^{2\pi} d \phi \int _{0}^{\pi} \exp \left[-\frac{1}{2}\alpha\theta ^{2}\right] \sin\theta d\theta\right]^{-1}
+\sim \left[ 4\pi \int _{0}^{\infty} \exp \left[-\frac{1}{2}\alpha\theta ^{2}\right]\left\{ \theta - \frac{1}{6} \theta ^{3}+\ldots \right \}
+ d\theta  \right]^{-1} \nonumber \\
+&\sim \frac{\alpha}{4\pi}\left(1+\frac{1}{3\alpha}+\ldots \right), \label{0norma}
+\end{align}
+where the error introduced by extending  the $\theta$-integration  to infinity is $\mathcal{O}(\text{e}^{-\alpha})$. Retaining the leading order term in Eq. (\ref{0norma}) we see that the Gaussian ODF, unlike $f_{O}(\cos\theta)$, does {\em not} give the correct isotropic ODF $1/4\pi$ in the limit $\alpha \rightarrow 0$, since $f_{G}(\theta)$ vanishes in this limit. Using the Gaussian ODFs we can calculate the {\em typical} or root-mean-square polar angle, which is related to the variational parameter via $\langle\theta^{2}\rangle^{1/2}\propto  \alpha^{-1/2}$, showing that it will be small for large $\alpha$.
+
+As is clear from Eq. (\ref{0cluster}) the key ingredient in the Onsager theory is the excluded volume of two particles which depends essentially on the shape of the particles under consideration. In this thesis we shall model the particles as cylinders with length $L$ and $D$; slender rods are then characterized by  $L/D\gg 1$ whereas thin platelets have $L/D\ll 1$. Henceforth, we will use the ratio of the largest to the shortest dimension of the particle, the {\em aspect ratio}, to quantify the anisometry of the particle. The general expression for the excluded volume of two different cylinders with lengths $L_{1}$ and $L_{2}$ and diameters $D_{1}$ and $D_{2}$ at mutual angle $\gamma$ has been derived in closed form by Onsager in a remarkable appendix to his paper \cite{onsager1949}. The result is
+
+\begin{align}
+v_{\text{excl}}(L_{1},D_{1};L_{2},D_{2};\gamma)=& \frac{\pi}{4}D_{1}D_{2}(D_{1}+D_{2})\left|\sin\gamma\right| +L_{1}L_{2}(D_{1}+D_{2})
+\left|\sin\gamma\right| \nonumber  \\
+&+L_{2}\left[\frac{\pi}{4}D_{2}^{2}+D_{1}D_{2}E(\sin\gamma)+\frac{\pi}{4}D_{1}^{2} \left|\cos\gamma \right| \right] \nonumber \\
+&+L_{1}\left[\frac{\pi}{4}D_{1}^{2}+D_{1}D_{2}E(\sin\gamma)+\frac{\pi}{4}D_{2}^{2} \left|\cos\gamma \right| \right],
+\label{0evonsager}
+\end{align}
+with $E(x)$ the complete elliptic integral of the second kind. For sufficiently anisometric particles characterized by a  large aspect ratio, we may neglect the $\mathcal{O}(LD^{2})$-contributions arising from the particles' finite thicknesses\footnote{Strictly,
+this is only justified if the orientational order in the nematic state is such that the  typical mutual angles $ \langle\langle\gamma \rangle\rangle $ are large compared
+to $D/L$ (rods) or $L/D$ (platelets).} and  retain only the leading order contribution, given by the first term (in case of thin platelets) or the second one (for slender rods). To assess the influence of  multi-particle correlations Onsager gave some geometric arguments to estimate the following scaling behaviour of the triplet cluster integral Eq. (\ref{0beta2}) for {\em isotropically oriented} thin rods
+
+\begin{equation}
+\frac{\beta_{2}}{\beta_{1}^{2}}\sim \mathcal{O}\left(\frac{D}{L}\ln\frac{L}{D}\right),
+\end{equation}
+which clearly vanishes for $L/D \rightarrow \infty $. The decrease  has been  verified by means of Monte-Carlo simulations on hard spherocylinders by Frenkel \cite{Frenkel87,Frenkel87err} showing that higher order virial coefficients can be neglected only if $L/D\gg 100$. The situation is much different for thin platelets for which Onsager estimated
+
+\begin{equation}
+\frac{\beta_{2}}{\beta_{1}^{2}}\sim \mathcal{O}(1), \label{0clusterplate}
+\end{equation}
+which is also true for spheres. This important result shows that the third and higher virial terms cannot be neglected for thin platelets (not even in the limit $L/D\rightarrow 0$) \cite{Veerman}.
+
+In the concentrated {\em nematic} state the interactions between the aligned particles are much stronger due to steric hindering. For slender rods Onsager showed that the third virial coefficient in the aligned state remains vanishingly small  only if the typical angle between the particles $\langle\langle \gamma \rangle\rangle $ is much larger than the so-called {\em internal} angle $\gamma_{\text{int}}\sim D/L$ of the rod. If $\langle\langle \gamma \rangle\rangle$ is of the order $D/L$ the rods are nearly parallel and the triplet cluster is always finite, as in Eq. (\ref{0clusterplate}), irrespective of $L/D$. However, it turns out that the latter situation is not encountered for thin rods since the ratio of the typical and internal angles $\langle\langle \gamma \rangle\rangle /\gamma_{\text{int}}$  can be shown to scale as $\sim L/D$, indicating that higher virial terms vanish in the nematic phase  for $L/D\rightarrow \infty$ \cite{Vroege92}. We can therefore conclude that  Onsager's  second virial theory for the isotropic-nematic transition is an {\em exact} theory for rods in the limit $L/D \rightarrow \infty$ whereas  only qualitative results can be expected for short rods (say $L/D\ll 100$) and  platelike particles.
 
 \blue{
 
