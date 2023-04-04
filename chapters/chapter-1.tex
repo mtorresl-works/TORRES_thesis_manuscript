@@ -1,5 +1,6 @@
 
 \chapter{General introduction}
+\label{introduction}
 
 \begin{abstract}
 In this chapter, we introduce the concept of lyotropic liquid crystals from both a practical and statistical mechanical perspective. Additionally, we discuss some topics related to Monte Carlo simulations in the semi-grand-canonical ensemble. We also outline the goal of this thesis in relation to recent experimental research on the self-organization of anisotropic colloidal nanoparticles in complex environments.
@@ -92,6 +93,8 @@ In this work, depletion-driven demixing caused by strong shape assymetry in coll
 
 The central aim of this thesis is to theoretically investigate the liquid crystal (LC) self-organization of colloidal particles with different shapes in various contexts. Many of the studies to be described in the remainder of this thesis have been inspired by recent experimental works in systems of colloids with well-controlled shapes and interactions. In particular, we mention the experimental work of Grelet \cite{Grelet2014} and Zavala-Martinez \cite{zaval2022} whose works on phase behavior and functionalization of complex fluids of filamentous bacteriophages (fd and M13) display many interesting phenomena left open for theoretical interpretation; as well as recent experimental findings \cite{senyuk2021nematoelasticity,mundoor2021} on colloidal dispersion of highly anisotropic particles immersed in molecular LC hosts. One of our primary goals in this work is to account for these experimental observations by constructing simple, yet realistic,  models for the colloidal systems under consideration and by scrutinizing relevant aspects of their phase behaviour.
 
+Chapter \ref{introduction} of this thesis provides an introduction to the background and scope of the research presented. It covers the statistical mechanical background, specifically for fluids of hard anisometric particles. We then discuss the use of hard particle Monte Carlo simulations of colloidal nematics, including some particularities of such simulations for the case of anisometric particles. Overall, the chapter serves as a foundation for the rest of the thesis, laying out the relevant concepts and methods for the research presented in subsequent chapters.
+
 In Chapter \ref{disc_polymer} a simple model is proposed to explore the low-concentration phase behavior of a system consisting of non-covalently bonded, weakly flexible rods treated as living polymers mixed with non-adsorbing rigid colloidal discs. We show that, at large disc mole fractions, the rod nematic phase is disrupted by collective disc alignment in favor of a discotic nematic fluid in which the polymers are dispersed anti-nematically, generating a non-exponential molecular-weight distribution of the resulting polymeric species.
 
 Chapters \ref{hybridLC1} and \ref{hybridLC2} address issues related to hybrid molecular liquid crystal nematics. In this part of the work, we consider a system in which molecular cholesteric LCs are doped with thin colloidal particles with large length-to-width aspect ratios. In Chapter \ref{hybridLC1}, single colloid insertions are considered, and we explore the interplay between weak surface anchoring forces, exerced between the colloidal surface and the molecular field, and elastic distortions around the colloid-molecular field interface. In Chapter \ref{hybridLC2}, we use Onsager's theory to account for collective effects in the hypothetical case where multiple colloidal particles are inserted in the hybrid LC.
@@ -161,7 +164,7 @@ B_2 = -\frac{1}{2V} \int \int \Phi_{12} d {\bf r}_1 d {\bf r}_2
 \begin{equation}
 B_3 = -\frac{1}{3V} \int \int \int \Phi_{12} \Phi_{13} \Phi_{23} d {\bf r}_1 d {\bf r}_2 d {\bf r}_3
 \end{equation}
-where $\Phi_{ij} = \exp(-u_{ij}/k_BT)-1$ are the so-called Mayer functions. Onsager stated by geometrical arguments that the following scaling relation for $B_2$ and $B_3$ is faire for long thin rods:
+where $\Phi_{ij} = \exp(-u_{ij}/k_BT)-1$ are the so-called Mayer functions. Onsager stated by geometrical arguments that the following scaling relation for $B_2$ and $B_3$ is fair for long thin rods:
 \begin{equation}
 \frac{B_3}{(B_2)^2} \sim \frac{D}{L}\left ( \ln \frac{L}{D} + cst. \right )
 \end{equation}
@@ -170,11 +173,9 @@ which vanish in the limit of infinitely thin needles. The decrease  has been  ve
 \begin{equation}
 \frac{\beta_{2}}{\beta_{1}^{2}}\sim \mathcal{O}(1), \label{0clusterplate}
 \end{equation}
-which is also true for spheres. Therefore, virial contributions of order higher than two can be neglected in this regime, which allows for a simplified analytical treatment of the problem unlike in the case of non-elongated particles.
+which is also true for spheres. Therefore, virial contributions of order higher than two can be neglected for thin needles, which allows for a simplified analytical treatment of the problem in contrast to the case of non-elongated particles where higher orders must be considered. These higher order contributions in the virial expansion --involving clusters of three, four, etcetera particles-- can be derived using other methods, albeit approximately, such as `scaled particle' \cite{Cotterspt,Cotter} and density functional theories (see \cite{Vroege92,DFTspecialJPCM} for a review). In this thesis, due to the low density regime regarded in all the analytical works, it is reasonable to stick to the second virial approximation.
 
- Higher order contributions in the virial expansion of the free energy --involving clusters of three, four, etcetera particles-- can be derived using similar arguments as in Eq. (\ref{0secondvir}) \cite{vankampen}. In this thesis, due to the low density regime regarded in all the analytical works, it is reasonable to stick to the second virial approximation.
-
-What remains now is to integrate the second virial coefficient. For the system presented here, the pairwise interaction between particles $u_{ij}$ is strictly hard and depends on the relative orientation between needles, and thus we can deduce
+What remains now is to integrate the second virial coefficient. For the system presented here, the pairwise interaction between particles $u_{ij}$ is strictly hard and depends on the relative orientation between needles; we can thus deduce
 \begin{equation}
 \Phi_{ij}=\Phi(\Omega_1,\Omega_2)=
 \begin{cases}
@@ -183,7 +184,7 @@ What remains now is to integrate the second virial coefficient. For the system p
 \end{cases}
 \end{equation}
 
-Therefore, the interaction between two particles only contributes to the integral in Eq. \ref{B2} if particles are close enough to overlap, i. e. if they are both contained inside the {\em excluded volume} generated from their relative orientations:
+The interaction between two particles only contributes to the integral in Eq. \ref{B2} if particles are close enough to overlap, i. e. if they are both contained inside the {\em excluded volume} generated from their relative orientations:
 
 \begin{equation}
 B_2 = \frac{1}{2} \int \int v_{excl}(\Omega_1,\Omega_2) f(\Omega_1) f(\Omega_2)\frac{d\Omega_1}{4\pi}  \frac{d\Omega_2}{4\pi}
@@ -201,73 +202,98 @@ The meaning of the excluded volume is clarified in Fig. \ref{introfig3}. Conside
 
 Lastly, we recall the free energy formulation of an imperfect gas approximated by the second virial correction:
 \begin{align}
-\frac{\beta F}{N} =& \beta \mu_{0}+\ln\left[\mathcal{V}\rho\right]-1+ B_2 \rho
+\frac{\beta F}{N} =& \beta \mu_{0}+\ln\left[\Lambda\rho\right]-1+ B_2 \rho
 \end{align}
-with $\mu_{0}$ a reference chemical potential of the dispersed particles depending only on the solvent conditions. The last term is what corresponds to the translational entropy according to the Onsager formalism, since for hard core interactions it does not depend on temperature, but only on the average over all possible configurations. Collecting the previous results we obtain the following expression:
+with $\mu_{0}$ a reference chemical potential of the dispersed particles depending only on the solvent conditions, and $\Lambda$ the (de Broglie) thermal volume, arising from
+integrations over the translational and rotational momenta of the anisometric particles. The last term corresponds to the translational {\em entropy} according to the Onsager formalism, since for hard core interactions it does not depend on temperature, but only on the average over all possible configurations. Collecting the previous results from Eqs. \ref{0forient} and \ref{B2_exclv} we obtain the following expression:
 \begin{align}
-\frac{\beta F}{N} =& \beta \mu_{0}+\ln\left[\mathcal{V}\rho\right]-1+
+\frac{\beta F}{N} =& \beta \mu_{0}+\ln\left[\Lambda\rho\right]-1+
 \int f(\Omega)\ln \left[4\pi f(\Omega)\right]d\Omega \nonumber \\
 &+\frac{\rho}{2} \iint d\Omega d\Omega^{\prime}
 f(\Omega)f(\Omega^{\prime})v_{\text{excl}}(\Omega,\Omega^{\prime}). \label{0freetot}
 \end{align}
 
-This is the final recipe to model the phase behavior of an ideal mixture of hard rods, where the most probable orientational state is given by the function $f(\Omega)$ that minimizes the Helmholtz free energy. The isotropic-nematic transition comes from a competition between the before-last and last terms, which correspond to the orientational and translational entropy respectively. For low concentrations, the orientational entropy dominates and is maximized by an isotropic distribution, whereas for high concentrations the second virial term becomes more important, which favors a nematic distribution at the expense of losing orientational entropy. The critical packing fraction at wich an isotropic-nematic ordering occurs roughly corresponds to the situation when the bare particle volume is of the same order of magnitude as its average excluded volume:
+This is the final recipe to model the phase behavior of an ideal mixture of hard rods, where the most probable orientational state is given by the function $f(\Omega)$ that better minimizes the Helmholtz free energy. The isotropic-nematic transition comes from a competition between the before-last and last terms, which correspond to the orientational and translational entropy respectively. For low concentrations, the orientational entropy dominates and is maximized by an isotropic distribution, whereas for high concentrations the second virial term becomes more important, which favors a nematic distribution at the expense of losing orientational entropy. The critical packing fraction at wich an isotropic-nematic ordering occurs roughly corresponds to the situation when the bare particle volume is of the same order of magnitude as its average excluded volume:
 
 \begin{equation}
 \phi_{IN} \propto \frac{\mbox{{\small volume per particle}}}{\mbox{{\small average excluded volume per particle}}}
 \end{equation}
 
-\blue{
-
-As is clear from Eq. (\ref{0cluster}) the key ingredient in the Onsager theory is the excluded volume of two particles which depends essentially on the shape of the particles under consideration. In this thesis we shall model the particles as cylinders with length $L$ and $D$; slender rods are then characterized by  $L/D\gg 1$ whereas thin platelets have $L/D\ll 1$. Henceforth, we will use the ratio of the largest to the shortest dimension of the particle, the {\em aspect ratio}, to quantify the anisometry of the particle. The general expression for the excluded volume of two different cylinders with lengths $L_{1}$ and $L_{2}$ and diameters $D_{1}$ and $D_{2}$ at mutual angle $\gamma$ has been derived in closed form by Onsager in a remarkable appendix to his paper \cite{onsager1949}. The result is
-
-\begin{align}
-v_{\text{excl}}(L_{1},D_{1};L_{2},D_{2};\gamma)=& \frac{\pi}{4}D_{1}D_{2}(D_{1}+D_{2})\left|\sin\gamma\right| +L_{1}L_{2}(D_{1}+D_{2})
-\left|\sin\gamma\right| \nonumber  \\
-&+L_{2}\left[\frac{\pi}{4}D_{2}^{2}+D_{1}D_{2}E(\sin\gamma)+\frac{\pi}{4}D_{1}^{2} \left|\cos\gamma \right| \right] \nonumber \\
-&+L_{1}\left[\frac{\pi}{4}D_{1}^{2}+D_{1}D_{2}E(\sin\gamma)+\frac{\pi}{4}D_{2}^{2} \left|\cos\gamma \right| \right],
-\label{0evonsager}
-\end{align}
-with $E(x)$ the complete elliptic integral of the second kind. For sufficiently anisometric particles characterized by a  large aspect ratio, we may neglect the $\mathcal{O}(LD^{2})$-contributions arising from the particles' finite thicknesses\footnote{Strictly,
-this is only justified if the orientational order in the nematic state is such that the  typical mutual angles $ \langle\langle\gamma \rangle\rangle $ are large compared
-to $D/L$ (rods) or $L/D$ (platelets).} and  retain only the leading order contribution, given by the first term (in case of thin platelets) or the second one (for slender rods). To assess the influence of  multi-particle correlations Onsager gave some geometric arguments to estimate the following scaling behaviour of the triplet cluster integral Eq. (\ref{0beta2}) for {\em isotropically oriented} thin rods
+The excluded volume for a pair of spherocylinders as sketched in Fig. \ref{introfig3} reads
 
 \begin{equation}
-\frac{\beta_{2}}{\beta_{1}^{2}}\sim \mathcal{O}\left(\frac{D}{L}\ln\frac{L}{D}\right),
+v_{excl}(\Omega_1,\Omega_2) = 2L^2D |\sin\gamma|+2\pi D^2 L + \frac{4}{3}\pi D^3
 \end{equation}
-which clearly vanishes for $L/D \rightarrow \infty $.  This important result shows that the third and higher virial terms cannot be neglected for thin platelets (not even in the limit $L/D\rightarrow 0$) \cite{Veerman}.
 
-In the concentrated {\em nematic} state the interactions between the aligned particles are much stronger due to steric hindering. For slender rods Onsager showed that the third virial coefficient in the aligned state remains vanishingly small  only if the typical angle between the particles $\langle\langle \gamma \rangle\rangle $ is much larger than the so-called {\em internal} angle $\gamma_{\text{int}}\sim D/L$ of the rod. If $\langle\langle \gamma \rangle\rangle$ is of the order $D/L$ the rods are nearly parallel and the triplet cluster is always finite, as in Eq. (\ref{0clusterplate}), irrespective of $L/D$. However, it turns out that the latter situation is not encountered for thin rods since the ratio of the typical and internal angles $\langle\langle \gamma \rangle\rangle /\gamma_{\text{int}}$  can be shown to scale as $\sim L/D$, indicating that higher virial terms vanish in the nematic phase  for $L/D\rightarrow \infty$ \cite{Vroege92}. We can therefore conclude that  Onsager's  second virial theory for the isotropic-nematic transition is an {\em exact} theory for rods in the limit $L/D \rightarrow \infty$ whereas  only qualitative results can be expected for short rods (say $L/D\ll 100$) and  platelike particles.
+An analogous expression was obtained by Onsager for two cylinders with different arbitrary lengths, diameters and mutual orientation \cite{onsager1949}. Simple scaling considerations for thin cylinders then prompt us to infer that, whereas the volume per particle scales as $\propto L D^2$, the excuded volume typically goes as $\propto D L^2$. In consequence,
 
 
-\section{Statistical mechanical background}
+\begin{equation}
+\phi_{IN} \propto \frac{D}{L}
+\end{equation}
 
+Clearly, the more slender the rods (large $L/D$) the lower the critical packing fraction at which the I-N phase transformation can be expected. Strictly, in the Onsager limit $L/D \rightarrow \infty$ the transition occurs in the ultra-dilute regime where a pair-interaction-only approximation is entirely justified.
 
 \subsubsection{Mixtures}
 
-In Chapter \ref{disc_polymer} we shall be concerned with mixtures of anisometric particles comprising multiple distinctly different species (mixtures of discs and polymers with multiple aggregation numbers). Introducing  mole fractions $x_{j}=N_{j}/N$ of species $j$,  the free energy of a mixture is given by a simple generalization of Eq. (\ref{0freetot}):
+Chapter \ref{disc_polymer} will focus on mixtures of anisometric particles consisting of multiple distinct species (e.g., mixtures of discs and polymers with multiple aggregation numbers). Introducing mole fractions $x_{j}=N_{j}/N$ for each species $j$, the free energy of the mixture can be expressed as a straightforward generalization of Eq. (\ref{0freetot}):
 
 \begin{align}
-\frac{\beta F}{N} &\sim \ln [\rho \mathcal{\bar{V}}]-1 + \sum_{j} x_{j} \ln x_{j} +
+\frac{\beta F}{N} &\sim \ln [\rho \bar{\Lambda}]-1 + \sum_{j} x_{j} \ln x_{j} +
 \sum_{j} x_{j} \int f_{j}(\Omega)\ln \left[ 4 \pi f_{j}(\Omega) \right] d \Omega \nonumber \\
 &+\frac{\rho}{2}\sum_{j}\sum_{k}x_{j}x_{k} \iint  d \Omega d\Omega^{\prime}
 f_{j}(\Omega)f_{k}(\Omega^{\prime})
 v_{\text{excl}}^{jk}(\Omega,\Omega^{\prime}),  \label{0freetotmulti}
 \end{align}
-with $\mathcal{\bar{V}}=\prod_{j}\mathcal{V}_{j}^{x_{j}}$. The contribution following the ideal entropy is an {\em entropy of mixing} due to the fact that we are dealing with different species. Although the free energy for mixtures is easily established,  the implications of Eq. (\ref{0freetotmulti}) are quite drastic. In particular, each species $j$ now has its own ODF which must be normalized according to $\int f_{j}(d\Omega)d\Omega \equiv 1$. Formally minimizing the free energy with respect to all ODFs then gives a {\em coupled} set of nonlinear equations:
-
-\begin{equation}
-\ln[4\pi f_{j}(\Omega)]=\lambda_{j} - \rho \sum_{k} x_{k} \int f_{k}(\Omega^{\prime})v_{\text{excl}}^{jk}(\Omega,\Omega^{\prime})
-d\Omega^{\prime}, \label{0inteqmulti}
-\end{equation}
-which  is  progressively difficult to solve if the number of components increases. A similar set of coupled equations, albeit not in integral form, can be obtained from the Gaussian trial function approximation by inserting $f_{G}(\alpha_{j};\theta)$ from Eq. (\ref{0ODF}) and minimizing with respect to all $\alpha_{j}$. Moreover, in case of a phase coexistence between e.g. an isotropic ($I$) and a nematic ($N$) phase, the conditions for mechanical and chemical equilibria require equal osmotic pressure $\Pi$ and chemical potentials $\mu_{j}$ for {\em all} species involved. Hence, the coexistence equations are
+with $\bar{\Lambda}=\prod_{j}\Lambda_{j}^{x_{j}}$. The contribution $\sum_{j} x_{j} \ln x_{j}$ represents the {\em entropy of mixing} due to the fact that we are dealing with different species. Although the free energy for mixtures can be easily established,  the implications of Eq. (\ref{0freetotmulti}) are quite significant. In particular, each species $j$ now has its own ODF which must be normalized according to $\int f_{j}(d\Omega)d\Omega \equiv 1$. Moreover, in the case of phase coexistence between an isotropic ($I$) and a nematic ($N$) phase, the conditions for mechanical and chemical equilibrium require equal osmotic pressure $\Pi$ and chemical potentials $\mu_{j}$ for {\em all} species involved. Thus, the coexistence equations read:
 
 \begin{align}
 \Pi^{I}&=\Pi^{N} \nonumber \\
 \mu^{I}_{j}&=\mu^{N}_{j} \qquad\qquad \text{for {\em all} $j$},
 \end{align}
-where we must realise that the composition $\{x_{j}\}$ may be different in each phase due to fractionation effects. These considerations indicate that the calculation of phase transition in mixtures is, in general, a difficult task. Specific approximations or numerical techniques shall be used depending on each physical situation. More details on the particular approaches aborded in this research work can be found in Chapter \ref{disc_polymer}.
+
+where we must take into account that the composition ${x_{j}}$ may differ in each phase due to fractionation effects. These considerations indicate that the calculation of phase transitions in mixtures is generally a challenging task, requiring specific approximations or numerical techniques depending on the physical situation. More details on the particular approaches addressed in this research work can be found in Chapter \ref{disc_polymer}.
+
+\subsection{Facing reality}
+
+Going back to the experimental systems of nanorods and platelets mentioned at the beginning of this chapter it is clear that a simple hard-particle model is often too simple to arrive at a satisfactory description of a typical experimental setup. A number of extensions and modifications of Onsager's theory are then necessary. Some of them involve attempts to account for:
+
+\begin{enumerate}
+\item Multicomponent mixtures of rod, disks, or living polymers
+\item Effect of external aligning fields
+\item Semi-flexibility
+\item Long-ranged ``soft" interactions (e.g. depletion attraction)
+\item Chirality
+\item Non-uniform systems (smectic membranes, interfaces, effect of solid substrates)
+\end{enumerate}
+
+In the main body of this work we will illustrate the rich phenomenology brought about by the topics listed above, most of the time as perturbations to the main entropic hard-core contribution, discussed previously in the context of Onsager's theory. We hope that these examples will convince the reader of the predictive power and versatility of Onsager's second-virial theory even when applied beyond the strict bounds of applicability as formulated in his original paper. In what follows, topics 4 and 5, albeit already introduced, are now very briefly discussed from a more quantitative perspective.
+
+\subsubsection{Depletion}
+
+Similar to a Yukawa potential, while the depletion interaction remains relatively tractable for simple spherical particles, the quantity becomes highly non-trivial for more complex colloidal shapes. This is due to the intrinsic orientation-dependence of the depletion zones and their overlap conditions when generalized to suspensions involving rod or disk-shaped nanoparticles, and also to the non-additive nature of the depletion potential when the size of the depletants is comparable to the width of the colloids. The depletion attraction between non-isotropic particles could be formally expressed as a mean-field correction term:
+
+
+ \begin{equation}
+U \sim  -\frac{1}{2} \frac{N^{2}}{V} \Pi_{dep} \left \langle \int_{
+\substack{
+\mbox{\tiny no core overlap,} \\
+\mbox{\tiny depletion zone overlap}
 }
+} d {\bf r}_{ij}   v^{dep}_{ij}({\bf r}_{ij})  \right \rangle_{\mbox{\tiny orientational states of rods i and j}}
+\label{degen}
+\end{equation}
+where $\Pi_{dep}$ is the osmotic pressure of the depletants. In arriving at this expression, the depletion agents have been considered to be mutually non-interacting and the effective attraction ptential between the nanoparticles is proportional to the overlap volume $v^{dep}_{ij}$ of the depletion zones of particles $i$ and $j$ (see Fig. \ref{introfig2}) \cite{LekkerkerkerTuinier2011}.
+
+\subsubsection{Chirality}
+
+The presence of surface charges (or {\em soft patches}) residing on the colloid surface in a distinctly {\em helical} distribution can impart a distinctly chiral signature on to the effective interactions between the nanoparticles. In this case, there is a supplementary soft interaction coupling to the rod orientation vector $\bhu$ of each rod $i$ and $j$ (see Fig. \ref{introfig1} (e) and (f)) and their centre-of-mass distance vector $\bf r$ through the following pseudo-scalar expression \cite{goossens1971}:
+\beq
+u_{ij} \sim  \varepsilon_{c} g( r)({\bf \hat{u}}_{i} \cdot {\bf \hat{u}}_{j}) ( {\bf \hat{u}}_{i} \times {\bf \hat{u}}_{j} \cdot {\bf r} )
+\label{chirality}
+\eeq
+
+In Chapter \ref{twistedrods}, we will analyze in detail the implications of this interaction for the chiral features of colloidal mesoscopic compounds, whose microscopic details can be encapsulated into the effective chiral amplitude $\varepsilon_c$ and decay function $g(r)$, which express the typical range over which chiral forces are transmitted. The effective potential is distinctly chiral and lacks inversion symmetry, meaning that it changes under a transformation ${\bf r}_{ij} \rightarrow -{\bf r}_{ij} $, while preserving basic head-tail symmetry $u_{ij}({\bf \hat{u}}_{i/j}) = u_{ij}(-{\bf \hat{u}}_{i/j}) $.
 
 \section[HPMC simulations of colloidal nematics]{Hard-particle Monte Carlo simulations of colloidal nematics: some optimization strategies}
 
