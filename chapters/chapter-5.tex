@@ -164,7 +164,8 @@ We plan to focus on two different systems:
 \begin{figure}
 \begin{center}
 \includegraphics[width= .8\columnwidth]{figures/chapter-5/samples}.
-	\caption{Top and front views of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Color indicates the enclosed angle between each individual rod and membrane normal, from black $\varphi = 0$ to yellow $\varphi = \frac{\pi}{2}$. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}$).(a) Low chirality regime. (b) High chirality regime.}
+	\caption{Top and front views of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Color indicates the enclosed angle between each individual rod and membrane normal, from black $\varphi = 0$ to yellow $\varphi = \frac{\pi}{2}$. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}$).(a) Low chirality regime. (b) Strong chirality regime showing a cascade of multi-core membranes.}
+ \label{multidomain}
 \end{center}
 \end{figure}
 
@@ -447,17 +448,33 @@ In doing so, we may also probe a more general scenario where the twist along the
  Typical input values  for the case of {\em fd} rods can be obtained by fixing the twist penetration length $\lambda_{t}  = L/2$ \cite{barry_jpcb2009} and taking a typical (cholesteric) pitch $q_{0} = 0.4L^{-1}$. The elastic anisotropy $\Delta K$ is much harder to specify as it depends quite sensitively on the  saddle-splay modulus $K_{24}$ which is unknown for {\em fd} rods. 
 The numerical results are shown in \fig{fig3}. The dependence of the quantities shown in the figure on the elastic anisotropy $\Delta K $ is evident but turns out rather weak, indicating that the predictions should be robust against elastic properties of the LC material.   We further observe that the twist is indeed considerably anisotropic with the transverse ribbon pitch being larger than  the longitudinal pitch, while both are {\em smaller} than the typical cholesteric pitch $q_{0}$ that quantifies the chiral strength at the rod level. We further infer that the ribbon width is always a few times the rod length, suggesting that ribbons are indeed very slender quasi-1D  objects. The ribbon pitch-to-width ratio is predicted to be about 3, which is in agreement with experimental observations reported in Ref. \cite{Gibaud2012}. A typical value of 5 was quoted in Kaplan {\em et al.} \cite{kaplan2010theory}  for ribbons of {\em fd} rods mixed with non-adsorbing polymer.   Finally, the edge tilt angle is virtually insensitive to $\Delta K$ and is predicted to be about $84 ^\circ$, confirming that the rods make a near  $\pi/2$-twist at the ribbon edge.
 
-
-The membrane-ribbon transition   could, in principle, be analyzed by comparing the free energies for both twisted morphologies for a given droplet volume. This is however technically very demanding given that the circular symmetry of the membrane, as encoded in the strongly non-linear elastic free energy \eq{fmem},  precludes a tractable analytical solution of the twist angle unlike for the ribbon. 
+The membrane-ribbon transition   could, in principle, be analyzed by comparing the free energies for both twisted morphologies for a given droplet volume. This is however technically very demanding given that the circular symmetry of the membrane, as encoded in the strongly non-linear elastic free energy \eq{fmem},  precludes a tractable analytical solution of the twist angle unlike for the ribbon. Below, we resort to a hand-waving argument as to why the transition should or should not take place. 
  
-\section{Stability of the different droplet shapes}
+\section{Membrane or ribbon ? }
 
 Having established a minimal theoretical description for the membranes and twisted ribbons we wish to explore under which conditions the various droplet morphologies are favored. It is instructive to consider the main energetic effects involved in shaping the droplets, namely a surface energy and a (bulk) chiral energy tat is contained in the twisting of the rods within the droplet. The preference for one state or the other can be argued as resulting from a trade-off between these two energies. On the one hand, for any finite membrane volume (or area) flat circular membranes have a minimal surface free energy but are able to accommodate only a limited amount of twist as the result of twist being expelled from the core and confined into a narrow zone of length $\lambda_{t}$ near the membrane edges. Twisted ribbons, in view of their elongated shape, have an unfavorable perimeter-to-area ratio but are much more efficient at accommodating chirality because the twist is {\em uniform} throughout the main section of the object. Using these arguments, a membrane-to-ribbon transition can  be understood as a natural consequence of a controlled experiment in which enforced chirality driven by cooling the system (a mixture of {\em fd} rods with dextran) was found to lead to a simultaneous reduction of the line tension of the membrane \cite{Gibaud2012}.
 
-We now propose a simple heuristic argument for the stability of the membrane  by balancing the bulk chiral and interfacial energetic contributions. First,  the chiral  
+We now propose a simple heuristic argument for the stability of the membrane  by balancing the bulk chiral and interfacial energetic contributions. First, the chiral free energy contained in the twisted rim of the membrane can be estimated from: 
 \beq
-\frac{F}{K_{2}} \sim 2 \pi \int_{R_{m} - \lambda_{t}}^{R_{m}} d R \left [ (\partial \varphi(R))^{2} + q_{0} \partial_{R} \varphi (R) \right ] 
+\frac{F_{\rm chiral}}{K_{2}} \sim 2 \pi \int_{R_{m} - \lambda_{t}}^{R_{m}} d R R \left [ (\partial_{R} \varphi(R))^{2} + q_{0} \partial_{R} \varphi (R) \right ] 
 \eeq
+ignoring depletion and curvature contributions for large membranes ($R_{m} \rightarrow \infty $).  Minimization of the free energy yields an analytical solution for the twist angle versus radius,  $\varphi(R) = -\frac{q_{0}}{2}R + C_{1} \ln R + C_{2}$. The constants $C_{1}$ and $C_{2}$ can be specified from the following boundary conditions:
+\begin{align}
+\varphi(R_{m} - \lambda_{t}) &= 0 \nonumber \\ 
+\lambda_{t} ^{2}\partial_{R} \varphi(R_{m}) &= \frac{L}{2} \sin \varphi(R_{m}) 
+\end{align}
+The first refers to the untwisted core at $R < R_{m} - \lambda_{t}$ while the second follows from the interfacial tension at the membrane edge at $R = R_{m}$.  To simplify matters further we fix the twist penetration length at half the rod length $\lambda_{t} =L/2$ \cite{barry_jpcb2009} and linearize the boundary condition via $ \sin \varphi(R_{m})  \approx \varphi(R_{m}) $. The chiral free energy stored in the membrane rim then reads: 
+\beq
+\frac{F_{\rm  chiral}}{K_{2}} \sim \frac{\pi}{16} (q_{0}L)^{2} \left ( 1 - \frac{4 R_{m}}{L} \right ) 
+\eeq
+which is negative for large membranes. This free energy must be balanced against the interfacial contribution which in our minimalist approach reads:
+\beq
+\frac{F_{\rm  interface}}{K_{2}} \sim \frac{4 \pi R_{m}}{L} \cos \varphi(R_{m})
+\eeq
+Equating the two expressions and taking an infinitely large membrane $R_{m} \rightarrow \infty$ we find a critical pitch of $q_{0}^{\ast} L = 3.296$.  This means that below this value the interfacial energy outweighs the gain in chiral energy ($F_{\rm interface} + F_{\rm chiral} >0$) and the membrane is stable. At strong chirality, $q_{0} > q_{0}^{\ast}$ the rim contribution dominates and transitions towards elongated twisted structures such as the ribbon can be expected.  The critical pitch increases for finite sized membranes given that smaller membranes have a relatively larger rim to surface proportion. We remark that quantitative predictions from the current expressions have to be taken with care in view of our simplistic description of the membrane surface tension which does not account for the effect of chirality and does not include curvature corrections that will play a more prominent for small droplets \cite{malijevsky2012perspective}. 
+
+In view of the unknown curvature-induced surface tension the relatively small membranes simulated in our study are likely to experience a considerable surface tension that constrains the droplets to remain more or less circular. An alternative strategy to cope with high levels of chirality is then to increase the perimeter of twisted zones at the interior of the membranes by splitting into multiple cores with shared interfaces, reminiscent of domains walls.  Within the interfacial zones between the cores the rods display a $\pi/2$ twist from the local core (see \fig{multidomain}).    
+
 
 
 
