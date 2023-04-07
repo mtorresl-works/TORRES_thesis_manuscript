@@ -21,7 +21,7 @@ The key difference between a liquid crystal and the commonly observed gas, liqui
 \begin{figure}
 \begin{center}
 \includegraphics[width= \columnwidth]{figures/chapter-1/phases}
-\caption{ \label{introfig1} (a)-(d) Examples of basic liquid crystals formed by rod-like molecules or nanoparticles. (e) Most molecular chiral features in elongated nano-particles  could be described on a coarse-grained level using a rod with an effective chiral electrostatic ``patchiness"  in terms of a molecular pitch length and handedness (left or right); (e) these particles generate a particular type of nematic phase: the chiral nematic. The implications of molecular chirality on the helical mesostructure (in particular, the mesoscopic pitch) of chiral nematic phases remains a challenging issue.}
+\caption{ \label{introfig1} (a)-(d) Examples of basic liquid crystals formed by rod-like molecules or nanoparticles. (e) Most molecular chiral features in elongated nano-particles  could be described on a coarse-grained level using a rod with an effective chiral electrostatic ``patchiness"  in terms of a molecular pitch length and handedness (left or right); (f) these particles generate a particular type of nematic phase: the chiral nematic. The implications of molecular chirality on the helical mesostructure (in particular, the mesoscopic pitch) of chiral nematic phases remains a challenging issue.}
 \end{center}
 \end{figure}
 
@@ -83,11 +83,11 @@ So far we have implicitly assumed that all particles which build up a gas, liqui
 \caption{ \label{introfig2} The presence of non-adsorbing polymers or other depletions agents (whose size is usually smaller than the colloidal nanoparticles) produces an effective attractive potential between the rods according to the depletion scenario --which depends on the rods relative orientation and distance--. If the rods are at close proximity, the polymers are depleted away from the inner space between the rods in dictated by the overlap of the depletion zones (hatched area). This creates an osmotic imbalance around the cylindrical surfaces pushing the rods together.  }
 \end{SCfigure}
 
-This effect takes place typlically when colloidal particles are mixed with non-adsorbing polymers. \fig{introfig2} highlights the ordering transition in this situation by illustrating the effective attractive interaction between large colloidal rods when polymers are added to the system. Negative adsorption results in a region near the colloidal surface, named {\em depletion layer}, where polymers are less likely to access due to a loss of configurational entropy of the polymer chain. When such regions overlap, there is an increase in the volume available to polymers to explore, thus increasing their entropy and lowering their Helmholtz free energy. Effectively, the addition of depletants to the system generates repulsion between particles of distinct type and, in consequence, attraction between colloidal particles.
+This effect takes place typlically when colloidal particles are mixed with non-adsorbing polymers. \fig{introfig2} highlights the ordering transition in this situation by illustrating the effective attractive interaction between large colloidal rods when polymers are added to the system. Negative adsorption results in a region near the colloidal surface, named {\em depletion layer}, where polymers are less likely to access due to a loss of configurational entropy of the polymer chain. When such regions overlap, there is an increase in the volume available to polymers to explore, thus increasing their entropy and lowering their Helmholtz free energy. Effectively, the addition of depletants to the system generates repulsion between particles of distinct type and, in consequence, attraction between similarly-shaped colloidal particles.
 
 These polymers are often modeled as penetrable hard spheres, known as Asakura-Oosawa spheres, in honor of the first theoreticians who proposed a model to describe the depletion effect \cite{ASAKURA54,ASAKURA58,Vrijdepletie}. By replacing the polymers with spheres of the same radius of gyration, we can obtain the same results in an effective manner. Penetrable hard objects do not interact with each other, i.e. no overlap restrictions are imposed between them, allowing for an ideal gas statistical mechanical treatment; and at the same time they are not allowed to overlap with colloidal particles, causing the emergence of the depletion effect. To sum up, the main approximations assumed by Asakura and Oosawa are: 1) whereas polymer chains in reality are unlikely found inside the depletion layers, in this model they are strictly prohibited; and 2) polymer chains are assumed to be completely transparent to each other, which is a fair approximation in the low depletant concentration regime.
 
-In this work, depletion-driven demixing caused by strong shape assymetry in colloidal mixtures will be discussed in Chapter \ref{disc_polymer} for a system featuring discs and polymerizing rods. In addition to it, the consequences of using penetrable hard spheres as a driving agent to stabilize liquid crystalline droplets will be deeply explored in Chapter \ref{twistedrods}.
+In this work, depletion-driven demixing caused by strong shape assymetry in colloidal mixtures emerges in a natural way in Chapter \ref{disc_polymer} for a system featuring discs and polymerizing rods. In addition to it, the consequences of using penetrable hard spheres as a driving agent to stabilize liquid crystalline droplets will be deeply explored in Chapter \ref{twistedrods}.
 
 \section{Scope of this thesis}
 
@@ -138,7 +138,7 @@ where $f(\Omega)$ is the normalized {\em orientational distribution function} (O
 \beta F_{\text{or}}=N\left\{\ln \left[\frac{4\pi}{\Delta \Omega}\right] + \sum_{k=1}^{s}\frac{\tilde{N}_{k}}{N}\ln \frac{\tilde{N}_{k}}{N} \right\},
 \label{0fordiscreet}
 \end{equation}
-where $\Delta \Omega = 4\pi/s$ is the chosen size of the angular bins.
+where $\beta=1/k_BT$ $\Delta \Omega = 4\pi/s$ is the chosen size of the angular bins.
 
 \item Taking the limit $\Delta \Omega \rightarrow 0$ for a {\em continuous} distribution in $\Omega$ we directly obtain \eq{0forient}.
 \end{enumerate}
@@ -314,17 +314,18 @@ A possible way to evaluate \eq{observable} is through the Metropolis Monte Carlo
 \begin{algorithm}[h]
     \SetAlgoLined
 
-    Start from an initial configuration\;
+    Start from an initial configuration of $N$ particles\;
     \For{$k = 0,\dots,N-1$}{
         Choose a random particle $i$\;
         Give the particle a random transformation (translation or rotation)\;
+        Check for overlaps\;
         \eIf{new configuration generates an overlap}{
             Reject: roll back to old configuration\;
         }{
             Accept: update the configuration\;
         }
     }
-    \caption{Metropolis Monte Carlo algorithm for hard--core potentials in the canonical ensemble}
+    \caption{Metropolis Monte Carlo algorithm for hard--core potentials in the canonical ensemble.}
     \label{algo:MHPMC}
 \end{algorithm}
 
@@ -335,7 +336,7 @@ In this section we aim to give an overview of the technical peculiarities of Har
 
 As shown in Algorithm~\ref{algo:MHPMC}, in HPMC a move is accepted if there is no overlap between two particles. Hence an efficient overlap test is key in this technique. In the case of spherical objects the overlap test is very simple: it is enough to compute the distance between the center of the two spheres $r_{ij}$ and verify that it is less than the sum of their radii: $r_{ij} \leqslant R_i + R_j$ or, in a computationally cheaper form, $r_{ij}^2 \leqslant (R_i + R_j)^2$. It is possible to model elongated hard rods that use this simple overlap condition by building particles composed of spherical objects attached in a linear chain. In this case, the overlap test simply consists on evaluating pairs of spherical objects associated to distinct rods. However, the computational expense of this strategy is enormous as it involves the order of $N_b^2$ operations at each MC move where $N_b$ is the number of spherical beads in one rod.
 
-This problem is overcome if each colloidal rod is considered to be a spherocylinder, for which a more efficient overlap test is proposed by Allen et al. \cite{allenevans93}. The key steps are outlined below.
+This problem is overcome if each colloidal rod is considered to be a spherocylinder, for which a more efficient overlap test is proposed by Allen {\em et al.} \cite{allenevans93}. The key steps are outlined below.
 
 A spherocylinder $i$ is defined by its cylindrical surface length $L$, the diameter $D$ of its cylindrical surface and its two hemispheres, the coordinates $\bfr_i$ of its center of mass and the unit vector $\bhu_i$ indicating its orientation. We want to determine the minimum distance between the cores of two spherocylinders $i$ and $j$ with equal lengths and diameters. We can describe any point of the line segment core of $i$ and $j$ parametrically as
 
@@ -348,7 +349,7 @@ In order to calculate the minimum distance between two arbitrarily oriented line
 \beq
 \bfr_{ij}^{min}(\lambda_0,\mu_0)=\bfr_{j}(\mu_0)-\bfr_{i}(\lambda_0),
 \eeq
-must be perpendicular to both $\bhu_i$ and $\bhu_j$. Assuming $\bfr_{ij}^{min}(\lambda_0,\mu_0) \cdot \bhu_i = 0$ and $\bfr_{ij}^{min}(\lambda_0,\mu_0) \cdot \bhu_j = 0$ we obtain a system of equations that we can solve to get the minimizing values of $\lambda_0$ and $\mu_0$:
+must be perpendicular to both $\bhu_i$ and $\bhu_j$. Assuming $\bfr_{ij}^{min}(\lambda_0,\mu_0) \cdot \bhu_i = 0$ and $\bfr_{ij}^{min}(\lambda_0,\mu_0) \cdot \bhu_j = 0$ we obtain a system of equations that we can solve to get the minimizing values $\lambda_0$ and $\mu_0$:
 \beq
 \begin{pmatrix}
 \lambda_0 \\
@@ -378,7 +379,78 @@ where $i,j=$ 1 or 2 if the spherocylinders belong to the first or second species
 
 \subsection{Semi-grand canonical ensemble}
 
-Several theories have been developed that enable calculations of phase transitions in systems with depletion interactions. The free volume theory (FVT) by Lekkerkerker et al. \cite{sphere+polymer} for the phase behavior of dispersions of colloids and non-adsorbing polymer was the first one to account for depletant partitioning over the coexisting phases. This theory is based on the osmotic equilibrium between a hypothetical depletant reservoir and the colloid $+$ depletant system. Because of its affordability in terms of complexity and yet a phenomenologically accurate description of the problem, this theory serves as a standard reference today, both for theoretical and computational models. The starting point is the {\em semi-grand} potential density of a system of colloids and polymer in equilibrium with a reservoir containing only the polymer. This grand potential is separated into a hard colloid contribution and a polymer contribution. The colloid part may be described by known expressions for the colloidal fluid and crystalline phases in the canonical ensemble (fixed volume, temperature and number of colloidal particles $\{N,V,T\}$). The polymer contribution is found from a build-up principle: starting from a system without polymer, chains are added to the system until the final concentration is reached, and the polymer contribution is calculated by integrating along this path. This is the reason why the polymer part is treated in a more natural way by using the grand canonical formalism (fixed volume, temperature and polymer chemical potential $\{\mu_p,V,T\}$).
+Several theories have been developed that enable calculations of phase transitions in systems with depletion interactions. The free volume theory (FVT) by Lekkerkerker {\em et al.} \cite{sphere+polymer} for the phase behavior of dispersions of colloids and non-adsorbing polymer was the first one to account for depletant partitioning over the coexisting phases. This theory is based on the osmotic equilibrium between two systems: a hypothetical depletant reservoir and a mixed colloid $+$ depletant system. Because of its affordability in terms of complexity and yet a phenomenologically accurate description of the problem, this theory serves as a standard reference today, both for theoretical and computational models.
+
+The starting point is the {\em semi--grand} potential density of a system of colloids and polymer in equilibrium with a reservoir containing only the polymer. This semi--grand potential is separated into a hard colloid contribution and a polymer contribution. The colloid part may be described by known expressions for the colloidal fluid and crystalline phases in the canonical ensemble (fixed volume, temperature and number of colloidal particles $\{N,V,T\}$). The polymer contribution is found from a build-up principle: starting from a system without polymer, chains are added to the system until the final concentration is reached, and the polymer contribution is calculated by integrating along this path. This is the reason why the polymer part is treated in a more natural way by using the grand canonical formalism (fixed volume, temperature and polymer chemical potential $\{\mu_p,V,T\}$). The key assumption of this theory is that thermodynamic quantities can be calculated for both colloids and depletants from their independent ensembles, correlated only by means of an ensemble--averaged free volume for the depletants in the mixed system $\langle V_{free} \rangle$. As a result, we can define
+
+\beq
+\Omega(N,V,T,\mu_p) = F_0(N,V,T) - \Pi^R\langle V_{free} \rangle
+\eeq
+where $F_0$ is the free energy of the colloidal particle system without added depletant, $\mu_p$ represents the chemical potential of the polymer depletant and $\langle V_{free} \rangle$ is the available volume for the depletants, i.e. the total volume in the mixed system outside the depletion layers, and it is approximated by the free volume in the pure hard colloid dispersion $\langle V_{free} \rangle_0$. This approximation is valid in the limit of low depletant activity, and starts losing accuracy when increasing it. $\Pi^R$ is the osmotic pressure in the reservoir, and it can be easily calculated by considering the depletants as penetrable hard spheres, which allows for a real gas formulation and thus
+
+\beq
+\Pi^R=n_pk_BT
+\eeq
+where $n_p$ is the number density of the depletants in the reservoir. We can also write down the chemical potential:
+
+\beq
+\mu_p = \textrm{const} + k_BT\ln n_p
+\eeq
+
+In order to equate the depletant chemical potentials in both systems, we infer that the average number of depletants in the mixed system $N_p$ must fulfill
+\beq
+N_p= n_p\langle V_{free} \rangle
+\eeq
+
+In what matters to our simulations presented in Chapter \ref{twistedrods}, the total number of particles in a semi-grand MC scheme is no longer constant, but rather fluctuating towards an optimal value given by $N + N_p$. This allows us to stabilize mesoscopic colloidal compounds while maintaining a constant depletion pressure. Algorithm \ref{algo:MHPMC} is then rewritten as:
+
+\begin{algorithm}[h]
+    \SetAlgoLined
+
+    Start from an initial configuration of $N$ colloids and $N_p$ depletants\;
+    \For{$k = 0,\dots,N + N_p -1$}{
+    Choose a random particle type\;
+        \If{type is colloid}{
+            Choose a random particle $i$\;
+            Give the particle a random transformation (translation or rotation)\;
+            Check for overlaps\;
+            \eIf{new configuration generates an overlap}{
+                Reject: roll back to old configuration\;
+            }{
+                Accept: update configuration\;
+            }
+        }
+        \If{type is depletant}{
+            Choose a random transformation (insertion or deletion)\;
+            \If{insertion}{
+                Generate random coordinates\;
+                Check for overlaps\;
+            \eIf{new configuration generates an overlap}{
+                Reject: roll back to old configuration\;
+            }{
+                Insert with probability
+                \beq
+                    \sim \frac{V}{\Lambda(N_p+1)}e^{\beta\mu_p}\; \nonumber
+                \eeq
+            }
+
+            }
+            \If{deletion}{
+                Choose a random particle $i$\;
+                Delete with probability
+            \beq
+                \sim \frac{\Lambda N_p}{V}e^{-\beta\mu_p}\; \nonumber
+            \eeq
+            }
+            Update $N_p$ if necessary\;
+        }
+    }
+    \caption{Semi--grand canonical Monte Carlo scheme for mixtures of $N$ colloids $+$ depletants at constant chemical potential $\mu_p$. }
+    \label{algo:semiHPMC}
+\end{algorithm}
+
+
+
 
 \subsection{Implicit depletants algorithm}
 
