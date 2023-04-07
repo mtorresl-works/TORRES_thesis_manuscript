@@ -32,7 +32,7 @@ strongly impinges  onto the self-assembled mesostructure and drives a vast range
 
 In a recent study Kuhnhold et al. \cite{kuhnhold2022colloidal} have reported an extensive simulation study of the properties of twisted membranes comparing numerical results with theoretical predictions. In order to facilitate the membranes were keeping the rod centres-of-mass were constrained to reside on the smectic plane, thereby suppressing out-of-plane fluctuations. While the constraint should be reasonable harmless for the flat membranes it does preclude the system from engaging in further morphological transitions such as the formation of ribbons and other filamentous structures observed in experiment \cite{Gibaud2012} and conjectured in continuum theory \cite{kaplan2010theory,kang_sm2016}. The aim of this study is re-address the stability and microstructure of membranes by exploring the full degrees of freedom of the rods. To describe rod-polymer mixtures we use large-scale Monte Carlo simulations of the well-known Asukara-Oosawa model comprising hard-spherocylinders mixed with penetrable hard spheres. The latter represent small polymers that are excluded from the sphercocylinder surface but do not feel each other (ideal polymer). This model is at the core of a range of free-volume theories that address the bulk thermodynamic properties and phase behavior of colloidal particles of  various shapes mixed with non-adsorbing polymers \cite{LekkerkerkerTuinier2011}. The spherocylinder interactions are rendered chiral by means of a simple pseudo-scalar potential that finds widespread sue in computer simulation. Thus, we have a model system where chiral twist competes with short-ranged attractive depletion interactions and surface tension in driving mesoscopic liquid crystalline droplets of various internal structure and shape.  In our simulations based on the semi-grand ensemble we fix the polymer chemical potential in the hypothetical reservoir containing polymeric spheres at a high enough value to prevent the droplets from dissolving and systematically vary the chiral interactions between the rods.
 
-We supplement the simulation with a minimalist theory for the membranes and ribbon based on the Frank elastic energy combined with contributions that incorporate the effect ofpolymer depletion on local director distortions as well as the surface tension the droplets experience with the surrounding polymer fluid.  
+We supplement our simulations with a minimalist theory for the membranes and ribbon based on the Frank elastic energy combined with contributions that incorporate the effect of polymer depletion on local director distortions as well as the surface tension the droplets experience with the surrounding polymer fluid. Whereas our membrane theory is inspired by a previous model by Kang et al. \cite{kang_sm201} we develop a similar approach for the ribbons which enables predictions for the longitudinal and transverse pitch as well as the typical edge width of the ribbon. We also propose a tentative state diagram outlining the different membrane morphologies encountered in our simulations.
 
 %Further complexity can be achieved by the presence of strong geometric confinement.  In this study we will consider a slab geometry with width comparable to the rod length. The confinement is expected to generate tactoids with a strongly non-uniform rod density whose morphology is further controlled by a surface tension that strongly depends on the average rod orientation with respect to the surface normal. In fact, the presence of the wall imparts a wall-liquid surface tension which is likely to be different from the liquid-gas surface tension which would dominate in the bulk case. We demonstrate that the presence of walls lead to .....
 
@@ -192,6 +192,7 @@ We plan to focus on two different systems:
 \begin{center}
 \includegraphics[width= .9\columnwidth]{figures/chapter-5/density}.
 	\caption{Rod number density profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}$). } % TODO: explain more.
+ \label{density}
 \end{center}
 \end{figure}
 
@@ -464,6 +465,7 @@ ignoring the depletion and curvature contributions for large membranes ($R_{m} \
 \begin{align}
 \varphi(R_{m} - \lambda_{t}) &= 0 \nonumber \\ 
 \lambda_{t} ^{2}\partial_{R} \varphi(R_{m}) &= \frac{L}{2} \sin \varphi(R_{m}) 
+\label{bc}
 \end{align}
 The first refers to the untwisted core at $R < R_{m} - \lambda_{t}$ while the second follows from the interfacial tension at the membrane edge at $R = R_{m}$.  To simplify matters further we fix the twist penetration length at half the rod length $\lambda_{t} =L/2$ \cite{barry_jpcb2009} and linearize the boundary condition via $ \sin \varphi(R_{m})  \approx \varphi(R_{m}) $. The chiral free energy stored in the membrane rim then reads: 
 \beq
@@ -479,8 +481,6 @@ with the edge tilt angle being proportional to the chiral strength via $\varphi(
 \eeq
 in terms of the Tolman length $\delta$, which could be positive or negative, and a chirality-dependent correction as conjectured in Ref. \cite{Gibaud2012} for the case of {\em fd}. However, both contributions are unknown for our particular simulation model. It is probable that the chirality contribution is very distinct from the one proposed for the experimental case such that the surface tension is little sensitive or even  decreases with  chirality.  Also, the Tolman length could be negative resulting in $\sigma$ rising  for smaller membrane radii.   We may therefore assert that the  small membranes simulated in our study are likely to experience a considerable surface tension that constrains the droplets to remain more or less circular. An alternative strategy to cope with high levels of chirality is then to increase the perimeter of twisted zones at the interior of the membranes by splitting into multiple cores with shared interfaces, reminiscent of domains walls.  Within the interfacial zones between the cores the rods display a $\pi/2$ twist from the local core (see \fig{multidomain}). This enables adjacent cores to share an interface with no incommensurability in the edge twist. The interfacial cost imparted by  the domain walls is likely to be much smaller than that of the membrane and its surrounding polymer fluid.  
 
- A naive estimate of the transition from the single-core to a multi-core membrane can be estimated by comparing the chiral energy of th 
-
 
 \begin{figure}
 \begin{center}
@@ -488,6 +488,14 @@ in terms of the Tolman length $\delta$, which could be positive or negative, and
 \caption{ \label{emergent} Overview of the various membrane morphologies predicted for chiral colloidal rods mixed with non-adsorbing polymer as a function of the membrane radius $R_{m}$  and pitch $q_{0}$ (both expressed in units of the rod length $L$). Depending on the membrane radius,  weakly chiral rods tend to self-assemble into single-core twisted membranes but may transition into elongated twisted ribbons beyond a critical chiral strength. Small droplets tend to be curbed by surface tension and are precluded from forming ribbons,  developing into multi-core membranes instead (see also \fig{multidomain}).   }
 \end{center}
 \end{figure}
+
+
+ A naive estimate of the transition from the single to a multi-core membrane can be established by comparing the chiral energy of the two states. Let us focus on the simplest case, namely the one composed of three cores [\fig{multidomain}(b) for $\varepsilon_{c}=12$] and denote the radius of each core by $R_{s} = R_{m}/\sqrt{3}$ which guarantees conservation of the total membrane area. Furthermore, we assume that the twist angle at the subcore edge is $\pi/2$ so that the second boundary condition in \eq{bc} should be replaced by $\varphi(R_{s}) = \pi/2 $. Then, the chiral energy contained in each subcore rim reads:
+ \beq
+ \frac{F_{\rm  chiral}^{(s)}}{K_{2}}  \sim \frac{\pi}{4} q_{0}^{2} \left ( \lambda_{t}^{2} - 2 \lambda_{t} R_{s} \right ) + 2(\pi + \lambda_{t} q_{0} )^{2} \ln \left ( \frac{R_{s} - \lambda_{t}}{R_{s}} \right ) 
+ \eeq
+Balancing this against the single-core free energy $F_{\rm chiral} = 3 F_{\rm chiral}^{(s)}$ and assuming the interfacial contribution to be the same for both states we find a simple criterion for the onset of multi-domain order.  Combined with the prediction for the (single core) membrane-ribbon transition we construct a tentative state diagram stipulating the conditions for the different morphologies as shown in \fig{emergent}. The key conclusion to be drawn  from the diagram is that ribbons are more likely to appear from large membranes (say $R_{m}  > 50 L$) than from small ones. Taking a typical membrane density of $0.5 D^{-2}$ [cf. \fig{density}] we find that the required system size far exceeds the ones probed in our study,  $N > 25 \pi (L/D)^{2} \sim 8000$ for $L/D = 10$.  This clearly poses a significant challenge for future simulation efforts that should be directed towards modelling rod-polymer mixtures using high-performance Molecular Dynamics computations capable of handling system sizes of about an order of magnitude larger than ours. 
+
 
 
 
