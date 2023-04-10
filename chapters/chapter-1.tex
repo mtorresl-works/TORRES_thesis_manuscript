@@ -391,7 +391,7 @@ where $F_0$ is the free energy of the colloidal particle system without added de
 \beq
 \Pi^R=n_pk_BT
 \eeq
-where $n_p$ is the number density of the depletants in the reservoir. We can also write down the chemical potential:
+where $n_p$ is the number density of the depletants in the reservoir. We can also write the chemical potential:
 
 \beq
 \mu_p = \textrm{const} + k_BT\ln n_p
@@ -453,31 +453,44 @@ Similar schemes have been performed by Bolhuis and Frenkel \cite{Bolhuis1994} an
 
 \subsection{Implicit depletants algorithm}
 
-In the previous approach, simulation performance can become compromised due to the need to explicitly track all the depletant particles. This is particularly evident in our simulations where a large region of the system volume needs to be kept empty around the mesoscopic colloidal droplets to prevent artifacts induced by system boundaries. As a result, a significant portion of the total volume is completely filled with depletant particles, which need to be stored and updated during the simulation and yet are not relevant for subsequent statistical analysis.
+In the previous approach, simulation performance can become compromised due to the need to explicitly track all the depletant particles. This is particularly evident in our simulations where a large region of the system volume needs to be kept empty around the mesoscopic colloidal droplets to prevent artifacts induced by system boundaries. As a result, a significant portion of the total volume is completely filled with depletants, which need to be stored and updated during the simulation and yet are not relevant for subsequent statistical analysis.
 
 Some approaches that aim to overcome this issue (\cite{bolhuis_jcp1997,PhysRevE.73.041404,Henzie2011} to name a few) are based on a effective depletion potential approach, integrated over all the depletant degrees of freedom. However, achieving sufficient accuracy in the pairwise effective potential also comes at the expense of computation time, whereas an overly simplified interaction may hinder the study of arbitrary shapes and size ratios.
-
-Glaser {\em et al.} \cite{glaser2015parallel} propose a scheme where many--body depletion interactions are treated in an implicit way, avoiding the consideration of an unnecessarily large number of simulated particles, while maintaining a particle--based approach instead of a more complicated effective pairwise potential. The basic idea is that, as depletants are treated as an ideal gas, i. e. assumed to be statistically independent, they can be randomly inserted on--the--go into the excluded volume surrounding a single translated or rotated colloid. The algorithm obeys detailed balance and can accept further multi--core parallel implementations.
-
-In short words, the algorithm is implemented as follows:
 
 
 \begin{algorithm}[h]
     \SetAlgoLined
 
-    Start from an initial configuration of $N$ particles\;
+    Start from an initial configuration $M$ of $N$ colloidal particles\;
     \For{$k = 0,\dots,N-1$}{
         Choose a random particle $i$\;
-        Give the particle a random transformation (translation or rotation)\;
+        Give the particle a random transformation (translation or rotation). Let $M^\prime$ be the new system configuration\;
         Check for overlaps\;
-        \eIf{new configuration generates an overlap}{
-            Reject: roll back to old configuration\;
+        \eIf{overlap in $M^\prime$}{
+            Reject: roll back to $M$\;
         }{
-            Accept: update the configuration\;
+            According to the Poisson probability distribution
+            \beq
+            \sim \text{Poisson}(\frac{V_{free}}{\Lambda}e^{-\beta\mu_p}) \nonumber
+            \eeq
+            of mean and variance $\frac{V_{free}}{\Lambda}e^{-\beta\mu_p}$, choose a number of depletants $N_p$ that will be generated\;
+            Generate $N_p$ random depletant positions in $V_{free}$ the free volume of $M$\;
+            Check for overlaps between $M^\prime$ and the generated depletant positions\;
+            \eIf{overlap}{
+                Reject: roll back to $M$\;
+            }{
+                Accept: update to $M^\prime$\;
+            }
         }
     }
-    \caption{Metropolis Monte Carlo algorithm for hard--core potentials in the canonical ensemble.}
+    \caption{General implicit depletant algorithm proposed by \cite{glaser2015parallel}.}
     \label{algo:implicit}
 \end{algorithm}
+
+Glaser {\em et al.} \cite{glaser2015parallel} proposed a scheme to handle many-body depletion interactions implicitly, avoiding the need to simulate a large number of particles, while maintaining a particle-based approach instead of a more complex effective pairwise potential. The fundamental idea behind this scheme is that depletants can be treated as an ideal gas, assumed to be statistically independent, and therefore, they can be randomly inserted into the excluded volume surrounding a single translated or rotated colloid for each MC step. These depletants are then discarded and re-generated at the following step. The algorithm is particularly efficient for dilute systems of colloids and a large expected number of depletants. It obeys detailed balance and can accept further multi--core parallel implementations.
+
+In a nutshell, Algorithm \ref{algo:implicit} conveys the basic idea of this scheme in its most general form. However, this version is computationally impractical since it requires integration of the free volume $V_{free}$ in the entire simulation box for every single colloid move. In the original article \cite{glaser2015parallel} several alternative volume choices are considered, and proved to obey detailed balance. It is possible to choose a smaller region $V_0 \subset V$ of the entire volume, containing only the region where modifications are being applied. For simplicity, this volume can also contain regions in principle unaccessible to depletants, i. e. $V_0 \setminus (V_0 \cap V_{free}) \neq \emptyset$; it suffices to ignore the colloid-polymer overlaps occuring in these regions.
+
+
 
 \clearpage
