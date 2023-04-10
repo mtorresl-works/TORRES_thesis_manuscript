@@ -56,7 +56,7 @@ and depends on the total number of states that are accessible to the system unde
 However, we can have many ‘ordering’ transitions that are {\em entropic}. Taking \eq{genhelmholtz} one may consider systems in which the internal energy is a function of temperature alone, $S$ being the only quantity affected by any change in the system at constant temperature. If this is the case, it will be possible to find phase transformations determined exclusively by a change in the entropy. Usually, atomic systems do not fulfill this condition because of the existence of attractive or repulsive interactions $u_{ij}$ whose strength depends on the relative inter-particle distance, an thus, the number density of particles $\rho$ when considering the thermodynamic limit. Temperature is then key to determine the accessibility of an ordered state, following the Boltzmann probability of finding a particle configuration of energy U, $\exp( -U/k_{B}T)$. Nevertheless, if we limit our attention to hard-core potentials:
 
 \beq
-V(r)=
+u_{ij}(r)=
 \begin{cases}
 \infty & r<D \textrm{ (if cores overlap)}\\
 0 & r>D \textrm{ (if cores do not overlap)}
@@ -449,9 +449,35 @@ In what matters to our simulations presented in Chapter \ref{twistedrods}, the t
     \label{algo:semiHPMC}
 \end{algorithm}
 
-
-
+Similar schemes have been performed by Bolhuis and Frenkel \cite{Bolhuis1994} and Vink and Horbach \cite{Vink2004}. Both of these works employ cluster moves as a strategy to increase the acceptance ratio of these MC simulations, which is otherwise significantly low since trial depletant insertion moves have a high probability of overlapping with the volume occupied by the colloids.
 
 \subsection{Implicit depletants algorithm}
+
+In the previous approach, simulation performance can become compromised due to the need to explicitly track all the depletant particles. This is particularly evident in our simulations where a large region of the system volume needs to be kept empty around the mesoscopic colloidal droplets to prevent artifacts induced by system boundaries. As a result, a significant portion of the total volume is completely filled with depletant particles, which need to be stored and updated during the simulation and yet are not relevant for subsequent statistical analysis.
+
+Some approaches that aim to overcome this issue (\cite{bolhuis_jcp1997,PhysRevE.73.041404,Henzie2011} to name a few) are based on a effective depletion potential approach, integrated over all the depletant degrees of freedom. However, achieving sufficient accuracy in the pairwise effective potential also comes at the expense of computation time, whereas an overly simplified interaction may hinder the study of arbitrary shapes and size ratios.
+
+Glaser {\em et al.} \cite{glaser2015parallel} propose a scheme where many--body depletion interactions are treated in an implicit way, avoiding the consideration of an unnecessarily large number of simulated particles, while maintaining a particle--based approach instead of a more complicated effective pairwise potential. The basic idea is that, as depletants are treated as an ideal gas, i. e. assumed to be statistically independent, they can be randomly inserted on--the--go into the excluded volume surrounding a single translated or rotated colloid. The algorithm obeys detailed balance and can accept further multi--core parallel implementations.
+
+In short words, the algorithm is implemented as follows:
+
+
+\begin{algorithm}[h]
+    \SetAlgoLined
+
+    Start from an initial configuration of $N$ particles\;
+    \For{$k = 0,\dots,N-1$}{
+        Choose a random particle $i$\;
+        Give the particle a random transformation (translation or rotation)\;
+        Check for overlaps\;
+        \eIf{new configuration generates an overlap}{
+            Reject: roll back to old configuration\;
+        }{
+            Accept: update the configuration\;
+        }
+    }
+    \caption{Metropolis Monte Carlo algorithm for hard--core potentials in the canonical ensemble.}
+    \label{algo:implicit}
+\end{algorithm}
 
 \clearpage
