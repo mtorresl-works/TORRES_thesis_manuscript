@@ -40,23 +40,36 @@ We supplement our simulations with a minimalist theory for the membranes and rib
 
 \section{Model and simulations}
 
-We consider a system of $N$ rigid spherocylinders of length $L$, thickness $D$ and aspect ratio \red{$L/D = 10$ or $20$}. The spherocylinders are a simplified representation of {\em fd} rods that are much thinner ($L/D > 100$) and carry a small degree of backbone flexibility with persistence length $\ell_{p} \gg L$. Since the large particle aspect ratio in combination with backbone flexibility poses considerable limitations on the numerical efficiency of our simulations  we  only consider rigid rods with a relatively short length assuming that the key features of the mesoscopic structures evaluated in this work do not  critically depend on the rod aspect ratio or flexibility. We study these systems (both in bulk and under narrow confinement) by means of Monte Carlo simulations in the semi-grand canonical ensemble ($N,V,\mu_{p},T$) consisting of a system of $N$ rods in a volume $V$ at constant temperature $T$ in osmotic equilibrium with a polymer reservoir at constant chemical potential $\mu_{p}$. The number of polymers  $N_{p}$ in the system is then a fluctuating quantity with the average polymer concentration controlled by $\mu_{p}$.
-
-
-The spherocylinders are mixed with non-adsorbing polymers that in our model act as non-penetrable hard spheres with diameter $\sigma$ equalling once or twice that of the spherocylinder ($\sigma = D$ or $2D$). Polymer-polymer interactions are zero, while the interaction between a polymer and a spherocylinder are treated as being strictly hard;  the potential energy is infinitely large when a sphere and spherocylinder overlap and zero otherwise.
-
-
-
 \begin{SCfigure}
 	\includegraphics[width = 0.6\columnwidth]{figures/chapter-5/spheromans}
-	\caption{ Sketch of the simulation model: hard spherocylinders (grey) mixed non-penetrable polymers (blue) with diameter $\sigma = D$ (as depicted here). Overlap of the cores (grey) gives infinite repulsion while overlapping coronae (blurred zones) favors a twisted pair configuration representing the (chiral) electrostatic forces between {\em fd} rods. The system has a fixed volume $V$ with periodic boundary conditions and connected to a polymer reservoir at constant chemical potential $\mu_p$. }
+	\caption{ Sketch of the simulation model: hard spherocylinders (grey) mixed with non-adsorbing polymers modeled as penetrable hard spheres (blue) with diameter $a = 2D$ (as depicted here). Overlap of the cores (grey) gives infinite repulsion while overlapping coronae (red zones) favors a twisted pair configuration representing the (chiral) electrostatic forces between {\em fd} rods. The system has a fixed volume $V$ with periodic boundary conditions and connected to a polymer reservoir at constant chemical potential $\mu_p$. }
 	\label{sketch}
 \end{SCfigure}
 
 
+We consider a system of $N$ hard-core rigid spherocylinders of length $L$, thickness $D$ and aspect ratio $L/D = 10$. The spherocylinders are a simplified representation of {\em fd} rods that are much thinner ($L/D > 100$) and carry a small degree of backbone flexibility with persistence length $\ell_{p} \gg L$. Since the large particle aspect ratio in combination with backbone flexibility poses considerable limitations on the numerical efficiency of our simulations  we  only consider rigid rods with a relatively short length assuming that the key features of the mesoscopic structures evaluated in this work do not  critically depend on the rod aspect ratio or flexibility. We study these systems (both in bulk and under narrow confinement) by means of Monte Carlo simulations in the semi-grand canonical ensemble ($N,V,\mu_{p},T$) consisting of a system of $N$ rods in a volume $V$ at constant temperature $T$ in osmotic equilibrium with a polymer reservoir at constant chemical potential $\mu_{p}$. The number of polymers  in the system is then a fluctuating quantity with the average polymer concentration controlled by $\mu_{p}$.
+
+\subsection{Depletion interactions}
+
+The spherocylinders are mixed with non-adsorbing polymers that in our model act as penetrable hard spheres. Polymer-polymer interactions are neglected, while the interactions between polymers and spherocylinders are treated as being strictly hard;  the potential energy is infinitely large when a sphere and spherocylinder overlap and zero otherwise. The polymer diameter $a$ is chosen to equal twice that of the spherocylinder ($a = 2D$) because, in that regime, depletants are small enough to realisticly reproduce the depletion effect and big enough to generate long--ranged attraction interactions between the spherocylidners and thus be able to observe intra--lamellar liquid--like order in the resulting smectic compounds. Depletants are treated in an implicit way by means of the algorithm proposed by Glaser {\em et al.} \cite{glaser2015parallel}. More details on the implementation of this algorithm are developed in Section \ref{sec:implicit}.
+
+The simulation box is assigned a fixed volume $V$ and is subjected to periodic boundary conditions (PBC). However, the effective volume of the simulation box is not a critical parameter due to the application of the implicit depletant algorithm, which renders the volume irrelevant as long as it is sufficiently large to avoid any boundary effects affecting the mesogen edges. In practical terms, the depletants are characterized, rather than by their chemical potential $\mu_p$,  by their average packing fraction $\phi_p$; which is defined as the volume fraction in the reservoir fully occupied by spheres. The chemical potential is trivially connected to the polymer packing fraction via:
+\beq
+\phi_{P} = \frac{\pi D^{3}}{ 6 \Lambda_{p} } e^{\beta \mu_{P}}
+\eeq
+where $\Lambda_{P}$ denotes the thermal (de Broglie) volume.
+
+ The typical attraction energy between two rods due to polymer depletion can be estimated from free-volume theory \cite{LekkerkerkerTuinier2011} and reads:
+ \beq
+ U_{\rm r,dep} \sim -\Pi_{P} V_{\rm r, ov}
+ \eeq
+with $ \Pi_{P} = k_{B} T N_{P}/V$ the (van't Hoff) osmotic pressure of the polymer reservoir and $V_{\rm r, ov}$ the overlap volume  of the depletion layers surrounding each rod which depends on the orientation of each rod.
+
+
+
 \subsection{Chiral interactions}
 
-The pair interaction $U_{r}$ between two spherocylinders with solid angles $\oma$ and $\omb$ and centre-of-mass distance $\Delta \bfr$ follows from a combination of short-range steric forces (treated as strictly hard) and electrostatic forces at larger distance. The  interaction potential between a pair rods depends on centre-of-mass distance vector $\Delta {\bf r}$ and orientation vector $\oma$ of both rods. In our model, the interactions are encapsulated in the following core-shell potential:
+In order to account for both entropical ordering and chiral features, the pair interaction $U_{r}$ between two spherocylinders with solid angles $\oma$ and $\omb$ and centre-of-mass distance $\Delta \bfr$ follows from a combination of short-range steric forces (treated as strictly hard) and electrostatic forces at larger distance. The  interaction potential between a pair of rods depends on centre-of-mass distance vector $\Delta {\bf r}$ and orientation vector $\oma$ of both rods. In our model, the interactions are encapsulated in the following core-shell potential:
 \beq
 U_{\rm r} (\Delta {\bf r}, \oma, \omb) =
 \begin{cases}
@@ -65,56 +78,39 @@ U_{\rm twist} & \textrm{otherwise} \\
 \end{cases}
 \label{urod}
 \eeq
-The electrostatic interactions between {\em fd} rods gives rise to so-called electrostatic twist which is intimately linked to the chirality surface architecture of {\em fd} virus rods. The chiral  potential is commonly expressed in terms of a pseudoscalar form initially put forward by Goossens \cite{goossens}:
+The electrostatic interactions between {\em fd} rods give rise to so-called electrostatic twist which is intimately linked to the chirality surface architecture of {\em fd} virus rods. The chiral  potential is commonly expressed in terms of a pseudoscalar form initially put forward by Goossens \cite{goossens}:
 \beq
 U_{\rm twist} (\Delta {\bf r}, \oma , \omb )=
 -\varepsilon_{c} \left ( \frac{D}{\Delta r} \right )^{7}(\oma \cdot \omb)(\oma \times \omb \cdot \Delta \hat{\bf r})
 \label{uchiral}
 \eeq
 where  $\Delta \hat{\bf r} $ denotes a unit vector for the centre-of-mass distance.
- The sign of $\varepsilon_{c}$ defines the microscopic handedness of the rods. Without loss of generality we take $\varepsilon_{c} > 0$ reflecting the right-handedness of {\em fd} rods. The chiral symmetry of the potential is expressed by the pseudoscalar that imparts a sign change upon  inversion $\Delta \hat{\bf r} \rightarrow - \Delta \hat{\bf r}$. In view of its rapid decay with $\Delta r$ the potential is very short-ranged and the rods need to be very close together in order to feel the chiral twist.
+ The sign of $\varepsilon_{c}$ defines the microscopic handedness of the rods. Without loss of generality we take $\varepsilon_{c} > 0$ reflecting the right-handedness of {\em fd} rods. The chiral symmetry of the potential is expressed by the pseudoscalar that imparts a sign change upon  inversion $\Delta \hat{\bf r} \rightarrow - \Delta \hat{\bf r}$. In view of its rapid decay with $\Delta r$ the potential is very short-ranged and the rods need to be very close together in order to feel the chiral twist. Thanks to this fast decay, we are able to truncate the interaction range in order to avoid chiral potential calculations between rods that are very far away from each other without affecting the total energy felt by the simulated rods. This truncated range is defined by $d$ in \fig{sketch}. We choose $d=D$ so that the neglected contributions do not possibly exceed $\sim 0.05\varepsilon_c$.
 
  %For simplicity, we assume that the twisting forces are sufficiently short-ranged (which should be the case at sufficient ionic strength) and do not  continuously vary with the centre-of-mass distance between the spherocylinders, but are only operative if the coronae between the rods overlap (see \fig{sketch}).
 
 
-\subsection{Estimation of the depletion strength for two parallel spherocylinders}
-
- The typical attraction energy between two rods due to polymer depletion can be estimated from free-volume theory \cite{LekkerkerkerTuinier2011} and reads:
- \beq
- U_{\rm r,dep} \sim -\Pi_{P} V_{\rm r, ov}
- \eeq
-with $ \Pi_{P} = k_{B} T N_{P}/V$ the (van't Hoff) osmotic pressure of the polymer reservoir and $V_{\rm r, ov}$ the overlap volume  of the depletion layers surrounding each rod which depends on the orientation of each rod. In case the rods are perfectly parallel and at hard-core contact we find a simple analytical result. Ignoring  finite rod size effects we have:
-\beq
-V_{\rm r, ov} = LD^{2} \left [  2 r^{2} \cos^{-1} \left ( \tfrac{1}{2r} \right )  - \tfrac{1}{2} \sqrt{4 r^{2} -1}  \right ]
-\eeq
-with $r = \tfrac{1}{2}(1 + \tfrac{\sigma}{D})$. Rescaling in terms of the polymer packing fraction in the reservoir we find that the maximum depletion strength per rod pair  reads:
-\beq
-  U_{\rm r,dep} \sim - k_{B}T \phi_{P}  \frac{L}{D} \left ( \frac{D}{\sigma} \right )^{3} \left [  2 r^{2} \cos^{-1} \left ( \tfrac{1}{2r} \right )  - \tfrac{1}{2} \sqrt{4 r^{2} -1} \right ]
- \eeq
-For a typical set-up ($\phi_{P} =3$, $\sigma = 2D$ and $L/D=10$) this gives about 15 $k_{B}T$ \red{Please verify this}.
+%\subsection{Estimation of the depletion strength for two parallel spherocylinders}
+%
+% The typical attraction energy between two rods due to polymer depletion can be estimated from free-volume theory \cite{LekkerkerkerTuinier2011} and reads:
+% \beq
+% U_{\rm r,dep} \sim -\Pi_{P} V_{\rm r, ov}
+% \eeq
+%with $ \Pi_{P} = k_{B} T N_{P}/V$ the (van't Hoff) osmotic pressure of the polymer reservoir and $V_{\rm r, ov}$ the overlap volume  of the depletion layers surrounding each rod which depends on the orientation of each rod. In case the rods are perfectly parallel and at hard-core contact we find a simple analytical result. Ignoring  finite rod size effects we have:
+%\beq
+%V_{\rm r, ov} = LD^{2} \left [  2 r^{2} \cos^{-1} \left ( \tfrac{1}{2r} \right )  - \tfrac{1}{2} \sqrt{4 r^{2} -1}  \right ]
+%\eeq
+%with $r = \tfrac{1}{2}(1 + \tfrac{\sigma}{D})$. Rescaling in terms of the polymer packing fraction in the reservoir we find that the maximum depletion strength per rod pair  reads:
+%\beq
+%  U_{\rm r,dep} \sim - k_{B}T \phi_{P}  \frac{L}{D} \left ( \frac{D}{\sigma} \right )^{3} \left [  2 r^{2} \cos^{-1} \left ( \tfrac{1}{2r} \right )  - \tfrac{1}{2} \sqrt{4 r^{2} -1} \right ]
+% \eeq
+%For a typical set-up ($\phi_{P} =3$, $\sigma = 2D$ and $L/D=10$) this gives about 15 $k_{B}T$ \red{Please verify this}.
 
 A key parameter in this system is the relative strength of chiral twist versus depletion attraction. These can be combined into a dimensionless parameter $\chi_{T}$ balancing the energy scales associated with twist and depletion as previously discussed:
 \beq
 \chi_{T} = \frac{\varepsilon_{c}}{U_{\rm r, dep}} \ll 1
 \eeq
 so that twist becomes more prevalent for larger $\chi_{T}$. It is important to keep in mind that the typical energy due to chiral twist should be small ($ | \varepsilon_{c} | \ll U_{\rm r,dep} $) in order to ensure that the cohesive forces among the rods residing in a droplet are dominated by polymer depletion, with chiral twist playing only a perturbative role.
-
-\subsection{Semi-grand canonical Monte Carlo simulation}
-% TODO: change this section to add Glaser's Algorithm
-
-The simulations are carried out in the semi-grand ensemble, with a fixed number of rods but the polymer content in the system fluctuating against a virtual reservoir consisting of an ideal gas of polymer spheres with a prescribed chemical potential  $\mu_{p}$ which is trivially connected to the polymer packing fraction via:
-\beq
-\phi_{P} = \frac{\pi D^{3}}{ 6 \Lambda_{p}^{3} } e^{\beta \mu_{P}}
-\eeq
-where $\Lambda_{P}$ denotes the thermal (de Broglie) wavelength.
-
-\subsubsection{Version I: Explicit depletants}
-
-Each MC cycle consists of $N + N_{P}$ randomly chosen rod translations, rotations, polymer insertions or removals.
-
-\subsubsection{Version II: Implicit depletants}
-
-\red{Here we need to specify Glaser's cluster move optimization algorithm that we used \cite{glaser2015parallel}.}
 
 %\subsection{Rod-wall interactions}
 
@@ -133,14 +129,15 @@ Each MC cycle consists of $N + N_{P}$ randomly chosen rod translations, rotation
 %Polymers are not allowed to overlap with the wall. However, another parameter of the system is the wall depletion range $\sigma_W$ that will take values typically lower than $\sigma$. This strategy is aimed to tune the amount of wetting felt by the tactoids close to the wall, allowing equilibration of partial wetting scenarios. A physical argument for this reduction of the wall depletion range (that in principle would only depend on the size of the depletants), is the variation of the electrostatic forces affecting superficial charges both around the rods and the wall, that may change the effective size of the depletion regions unfavorable for the non-adsorbing polymers.
 %The polymers do not have any interaction with the wall, but their centres-of-mass are constrained  to reside within the slab.
 
-\subsection{Simulation methodology} % TODO: change this title??
+\subsection{Simulation details}
+Monte Carlo steps conceived from the specifications of the previous sections are performed as follows:
 
-Monte Carlo simulations are performed for different scenarios conceived from the specifications of the previous sections.
+In the initial setup, all rods point along the $z$ direction, their centres of mass are fixed to the XY plane centered in height ($z=L_z/2$) and they are arranged on a hexagonal lattice inside a circular domain. During the relaxation from the initial configuration, we randomly apply single--particle moves: translations within the volume and rotations around arbitrary axes. To decide if a trial move is accepted, we first check for overlaps with other colloids and with depletants. If no overlap takes place, the variation in the chiral energy is computed and the Metropolis acceptance criterion is used to decide whether the move is energetically favorable. If the move induces a loss in energy, it is accepted; otherwise it will be accepted with probability $\sim\exp{\left[-\beta(U_{new}-U_{old})\right]}$
 
-The step size for the spherocylinder translations and rotations are chosen adaptively such as to maintain an average acceptance ratio of about 30 \%. The MC code is optimized using cell-linked list routines that significantly reduce the number of overlap checks between rod-rod and rod-polymer pairs involved in  each MC step. We keep a rectangular box shape with $L_{x} = L_{y}$ and $L_{z} = h = L$ and periodic boundary conditions (PBC) in both lateral directions.
+The step size for the spherocylinder translations and rotations are chosen adaptively such as to maintain an average acceptance ratio of about 30 \%. The MC code is optimized using cell-linked list routines that significantly reduce the number of overlap checks between rod-rod and rod-polymer pairs involved in each MC step. We keep a rectangular box shape with $L_{x} = L_{y} =L_{z}$ and periodic boundary conditions (PBC) in all directions.
 
 %Depending on the polymer size and concentration the system will either evolve into a liquid drop ("tactoid") or  will retain its crystalline inner structure (expected for `sticky' depletion forces induced by small polymers, $\sigma = D$).
-We monitor the total overlap volume of the depletion layers $V_{\rm T, ov}$ and the total twist energy $\mathcal{U}  = \sum_{i}\sum_{j<i}U_{\rm twist}$ to gauge whether the drop has reached its equilibrium state.
+We monitor the total overlap volume of the depletion layers $V_{\rm ov}$ and the total twist energy $\mathcal{U}  = \sum_{i}\sum_{j<i}U_{\rm twist}$ to gauge whether the drop has reached its equilibrium state.
 
 We plan to focus on two different systems:
 
