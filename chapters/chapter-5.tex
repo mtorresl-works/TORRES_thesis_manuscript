@@ -32,7 +32,7 @@ strongly impinges  onto the self-assembled mesostructure and drives a vast range
 
 In a recent study Kuhnhold et al. \cite{kuhnhold2022colloidal} have reported an extensive simulation study of the properties of twisted membranes comparing numerical results with theoretical predictions. In order to facilitate the membranes were keeping the rod centres-of-mass were constrained to reside on the smectic plane, thereby suppressing out-of-plane fluctuations. While the constraint should be reasonable harmless for the flat membranes it does preclude the system from engaging in further morphological transitions such as the formation of ribbons and other filamentous structures observed in experiment \cite{Gibaud2012} and conjectured in continuum theory \cite{kaplan2010theory,kang_sm2016}. The aim of this study is re-address the stability and microstructure of membranes by exploring the full degrees of freedom of the rods. To describe rod-polymer mixtures we use large-scale Monte Carlo simulations of the well-known Asukara-Oosawa model comprising hard-spherocylinders mixed with penetrable hard spheres. The latter represent small polymers that are excluded from the sphercocylinder surface but do not feel each other (ideal polymer). This model is at the core of a range of free-volume theories that address the bulk thermodynamic properties and phase behavior of colloidal particles of  various shapes mixed with non-adsorbing polymers \cite{LekkerkerkerTuinier2011}. The spherocylinder interactions are rendered chiral by means of a simple pseudo-scalar potential that finds widespread sue in computer simulation. Thus, we have a model system where chiral twist competes with short-ranged attractive depletion interactions and surface tension in driving mesoscopic liquid crystalline droplets of various internal structure and shape.  In our simulations based on the semi-grand ensemble we fix the polymer chemical potential in the hypothetical reservoir containing polymeric spheres at a high enough value to prevent the droplets from dissolving and systematically vary the chiral interactions between the rods.
 
-We supplement our simulations with a minimalist theory for the membranes and ribbon based on the Frank elastic energy combined with contributions that incorporate the effect of polymer depletion on local director distortions as well as the surface tension the droplets experience with the surrounding polymer fluid. Whereas our membrane theory is inspired by a previous model by Kang et al. \cite{kang_sm2016} we develop a similar approach for the ribbons which enables predictions for the longitudinal and transverse pitch as well as the typical edge width of the ribbon. We also propose a tentative state diagram outlining the different membrane morphologies and their conditions for stability.
+We supplement our simulations with a minimalist theory for the membranes and ribbon based on the Frank elastic energy combined with contributions that incorporate the effect of polymer depletion on local director distortions as well as the surface tension the droplets experience with the surrounding polymer fluid. Whereas our membrane theory is inspired by a previous model by Kang et al. \cite{kang_sm2016,kang2017chiral} we develop a similar nemato-elasticity-based  approach for the ribbons which enables predictions for the longitudinal and transverse pitch as well as the typical edge width of the ribbon. We also propose a tentative state diagram outlining the different membrane morphologies and their conditions for stability.
 
 %Further complexity can be achieved by the presence of strong geometric confinement.  In this study we will consider a slab geometry with width comparable to the rod length. The confinement is expected to generate tactoids with a strongly non-uniform rod density whose morphology is further controlled by a surface tension that strongly depends on the average rod orientation with respect to the surface normal. In fact, the presence of the wall imparts a wall-liquid surface tension which is likely to be different from the liquid-gas surface tension which would dominate in the bulk case. We demonstrate that the presence of walls lead to .....
 
@@ -201,6 +201,7 @@ We plan to focus on two different systems:
 \begin{center}
 \includegraphics[width= .9\columnwidth]{figures/chapter-5/twistprofile}.
 	\caption{Twist angle profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_P=0.25D^{-3}$ ($\phi_P=0.175D^{-3}$). } % TODO: explain more.
+ \label{twangle}
 \end{center}
 \end{figure}
 
@@ -304,7 +305,7 @@ in terms of an integrated chiral amplitude  $\bar{\varepsilon}_{c}$ which is  {\
  q_{0} \sim \frac{12 \rho_{0} \bar{\varepsilon_{c}}}{ \ell^{2}}
  \label{qzero}
  \eeq
- While for the singletwisted cholesteric phase the twist angle increases linearly  $\varphi(z) = q_{0} z$ at each position $z$ along the helix axis, the angle will be strongly non-linear with radius $R$ in case of the twisted membrane, in particular if the twist penetration length $\lambda_{t}$ is small \cite{wensink2018elastic}.   
+ While for the single-twisted cholesteric phase the twist angle increases linearly  $\varphi(z) = q_{0} z$ at each position $z$ along the helix axis, the angle will be strongly non-linear with radius $R$ in case of the twisted membrane, in particular if the twist penetration length $\lambda_{t}$ is small \cite{wensink2018elastic}.   
  
 
 
@@ -327,7 +328,7 @@ The twist penetration length is given by $\lambda_{t} = \sqrt{K_{2}/2  n_{p} a k
 \beq
 \frac{\lambda_{t}}{D} = \sqrt{\frac{\rho_{0} \ell^{2} }{24  (n_{p} a^{3}) (D/a)^{2} }}
 \eeq
-Taking typical numbers from our simulation ($\ell \sim 10$, $\rho_{0} \sim 0.5$, $D/a=2$ and $n_{p}a^{3} \sim 0.2$) we find that that the twist penetration length is only a few times the rod diameter, i.e. $\lambda_{t} \sim 2 D$. 
+Taking typical numbers from our simulation ($\ell \sim 10$, $\rho_{0} \sim 0.5$, $D/a=2$ and $n_{p}a^{3} \sim 0.2$) we find that that the twist penetration length is only a few times the rod diameter, i.e. $\lambda_{t} \sim 2 D$. This is broadly in line with the twist angle profiles  in \fig{twangle} where the twist expulsion at the edge was found to extend over a typical distance  of about $\sim 5D$.  
 For {\em fd} rods a much larger value is found primarily because they are longer than our rods ($\ell \sim 130$). The predicted value $\lambda_{t} \sim 20 D$ is roughly line with the experimentally measured value of about half a rod length   depending on the polymer concentration that was used to stabilize the membranes \cite{barry_jpcb2009}.
 
 In Ref. \cite{kuhnhold2022colloidal} a simple trial form was used to fit the simulation data:
