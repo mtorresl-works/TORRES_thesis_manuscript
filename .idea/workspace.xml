@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/figures/chapter-5/density.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/density.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/figures/chapter-5/twistprofile.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/twistprofile.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-5/zstd.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/zstd.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +241,8 @@
       <workItem from="1680722152253" duration="1670000" />
       <workItem from="1680740604708" duration="606000" />
       <workItem from="1680778048013" duration="50886000" />
-      <workItem from="1681290584046" duration="24223000" />
+      <workItem from="1681290584046" duration="26007000" />
+      <workItem from="1681339943186" duration="3829000" />
     </task>
     <servers />
   </component>

@@ -158,7 +158,7 @@ At intervals of 1000 MC cycles, we monitor two quantities, namely the total over
 
 \section{Results}
 
-We conducted a series of simulation runs for different values of the number of rods $N = {500, 1000}$ and the chiral strength $\varepsilon_c={0,1,2,\ldots,20}$. Furthermore, simulations were carried out for analogous parameter sets but avoiding displacements along the $z$--axis i. e. without vertical fluctuations, thereby allowing a comparison to the findings of \cite{kuhnhold2022colloidal} and facilitating an examination of the impact of vertical fluctuations on the observed structures. The value of the polymer packing fraction $\phi_p$ is equal for all simulation runs of the same type (with and without vertical fluctuations), and it is slightly lower for the case without vertical fluctuations. The reason for this is that, due to the loss of degrees of freedom, the depletion pressure needed to stabilize the droplets in the latter case is lower, and high depletant concentrations can promote the appearence of intra--lamellar crystalline order more easily. We then lower the depletant concentration in order to find a better qualitative consistency between the two scenarios. However, we have not conducted a comprehensive study to determine the optimal value for achieving the best correspondence, and the selected values ($\phi_p=0.25$ for the case with vertical fluctuations and $\phi_p=0.175$ for the case without vertical fluctuations) should be considered qualitatively.
+We conducted a series of simulation runs for different values of the number of rods $N = {500, 1000}$ and the chiral strength $\varepsilon_c={0,1,2,\ldots,20}$. Furthermore, simulations were carried out for analogous parameter sets but avoiding displacements along the $z$--axis i. e. without vertical fluctuations, thereby allowing a comparison to the findings of \cite{kuhnhold2022colloidal}, where rods are pinned to a horizontal plane, and facilitating an examination of the impact of vertical fluctuations on the observed structures. The value of the polymer packing fraction $\phi_p$ is equal for all simulation runs of the same type (with and without vertical fluctuations), and it is slightly lower for the case without vertical fluctuations. The reason for this is that, due to the loss of degrees of freedom, the depletion pressure needed to stabilize the droplets in the latter case is lower, and high depletant concentrations can promote the appearence of intra--lamellar crystalline order more easily. We then lower the depletant concentration in order to find a better qualitative consistency between the two scenarios. However, we have not conducted a comprehensive study to determine the optimal value for achieving the best correspondence, and the selected values ($\phi_p=0.25$ for the case with vertical fluctuations and $\phi_p=0.175$ for the case without vertical fluctuations) should be considered qualitatively.
 
 
 \begin{figure}
@@ -170,7 +170,7 @@ We conducted a series of simulation runs for different values of the number of r
 \end{figure}
 
 
-Membrane morphologies for different values of $\varepsilon_c$ are shown in \fig{multidomain} for systems with $N=500$. For comparison, we show each snapshot along with its equivalent in the case without vertical fluctuations. Chirality affects the shape of the membrane in different ways depending on whether the system is confined or not. In the confined case, where the rods are confined within a plane, the membrane shape tends to present a circular shape with slightly fluctuating boudaries. As for the unconfined case, rods are allowed to escape the horizontal plane, and thus can be found with a higher probability in the isotropic phase or adsorbed onto the membrane surface; and membranes tend to present a more elongated shape, rather than circular. These elongated structures, although they do not give way to elongated twisted ribbons, may sometimes show indications of a ribbon instability, e. g. for $\varepsilon_c=4$ in the unconfined case in \fig{multidomain}, and these instabilities are never observed in the confined case. One significant difference between the two cases is that multi-domain membranes appear at stronger chiral forces in the confined case ($\varepsilon_c=16$) than in the unconfined case ($\varepsilon_c=12$), which lead us to think that vertical ordering hinders the apparition of multi--domain structures in favor of single domain membranes with stronger twist at the edges.
+Membrane morphologies for different values of $\varepsilon_c$ are shown in \fig{multidomain} for systems with $N=500$. For comparison, we show each snapshot along with its equivalent in the case without vertical fluctuations. Chirality affects the shape of the membrane in different ways depending on whether the rods are pinned to the horizontal plane or not. In the pinned case, where the rods centers of mass are confined within a plane, the membrane shape tends to present a circular shape with slightly fluctuating boudaries. As for the unpinned case, rods are allowed to escape the horizontal plane, and thus can be found with a higher probability in the isotropic phase or adsorbed onto the membrane surface; and membranes tend to present a more elongated shape, rather than circular. These elongated structures, although they do not give way to elongated twisted ribbons, may sometimes show indications of a ribbon instability, e. g. for $\varepsilon_c=4$ in the unpinned case in \fig{multidomain}, and these instabilities are never observed in the pinned case. One significant difference between the two cases is that multi-domain membranes appear at stronger chiral forces in the pinned case ($\varepsilon_c=16$) than in the unpinned case ($\varepsilon_c=12$), which lead us to think that vertical positional order hinders the apparition of multi--domain structures in favor of single domain membranes with stronger twist at the edges. We note, however, that this critical value of $\varepsilon_c$ also depends on the size of the system: it increases for the unpinned case when $N=1000$ (in this case, the smectic membrane configuration becomes unstable at $\varepsilon_c=15$, not shown).
 
 \begin{figure}
 \begin{center}
@@ -179,7 +179,7 @@ Membrane morphologies for different values of $\varepsilon_c$ are shown in \fig{
 \end{center}
 \end{figure}
 
-To gain further insight into the influence of vertical fluctuations on membrane shape, we computed various quantities related to the internal structure of the membranes. These quantities are intended to provide the reader with an intuitive overview of local density and crystallinity in both the confined and unconfined cases. \fig{crystal11} (intermediate chirality regime) and \fig{crystal16} (strong chirality regime) display the relative orientation, average nearest neighbor distance (which is related to the local density), and standard deviation of the nearest neighbor distance for each individual rod (as a direct but simplistic way of showing the local crystallinity). Rather than using 3D rendering, additional spatial information can be extracted by plotting horizontal sections along the central plane of the membrane. By doing so, out--of--plane noise can be reduced, and the relative distances between rods can be better observed. In the case without vertical fluctuations, the horizontal section is straightforward: we cut the system through the plane that contains the centers of mass of the rods. However, in the case with vertical fluctuations, we need to adopt a procedure to select the best fitting cut. We chose to generate a plane from a 2D linear regression of the centers of mass of the rods. Since mesogens are allowed to rotate, this plane may not be entirely horizontal with respect to the system coordinates. After the plane is selected, we project the rod position into it. Because the center of mass of the rod may be out of plane, we need to determine the intersection between the rod axis and the plane. The intersection point is then the center of an ellipse, and its edges define the horizontal section of the rod. Thus, upright (untwisted) rods appear as disks in this view, while tilted rods appear as ellipses.
+To gain further insight into the influence of vertical fluctuations on membrane shape, we computed various quantities related to the internal structure of the membranes. These quantities are intended to provide the reader with an intuitive overview of local density and crystallinity in both the pinned and unpinned cases. \fig{crystal11} (intermediate chirality regime) and \fig{crystal16} (strong chirality regime) display the relative orientation, average nearest neighbor distance (which is related to the local density), and standard deviation of the nearest neighbor distance for each individual rod (as a direct but simplistic way of showing the local crystallinity). Rather than using 3D rendering, additional spatial information can be extracted by plotting horizontal sections along the central plane of the membrane. By doing so, out--of--plane noise can be reduced, and the relative distances between rods can be better observed. In the case without vertical fluctuations, the horizontal section is straightforward: we cut the system through the plane that contains the centers of mass of the rods. However, in the case with vertical fluctuations, we need to adopt a procedure to select the best fitting cut. We chose to generate a plane from a 2D linear regression of the centers of mass of the rods. Since mesogens are allowed to rotate, this plane may not be entirely horizontal with respect to the system coordinates. After the plane is selected, we project the rod position into it. Because the center of mass of the rod may be out of plane, we need to determine the intersection between the rod axis and the plane. The intersection point is then the center of an ellipse, and its edges define the horizontal section of the rod. Thus, upright (untwisted) rods appear as disks in this view, while tilted rods appear as ellipses.
 
 \begin{figure}
 \begin{center}
@@ -188,51 +188,46 @@ To gain further insight into the influence of vertical fluctuations on membrane 
 \end{center}
 \end{figure}
 
-In \fig{crystal11}, we observe stabilized twisted membranes in the intermediate chirality regime. We see that ellipses are more separated from each other in the case without vertical fluctuations, whereas in the unconfined case rods tend to occupy a smaller surface and remain closer to their neighbours. The higher local density in the unconfined case induces a higher level of crystalline order as can be observed by comparing subpanels (e) and (h); yellow regions in these panels present smaller fluctuations in the relative distance between rods. In contrast, rods in the confined case present a more liquid--like ordering. This effect may be due to the difference in the depletant concentration wich, as explained previously, is different for each case. However, for lower depletant concentrations, a smectic droplet is hard to stabilize in the unconfined case, and thus we state that a more liquid--like internal ordering is unlikely to be found in membranes of these characteristics.
+In \fig{crystal11}, we observe stabilized twisted membranes in the intermediate chirality regime. We see that ellipses are more separated from each other in the case without vertical fluctuations, whereas in the unpinned case rods tend to occupy a smaller surface and remain closer to their neighbours. The higher local density in the unpinned case induces a higher level of crystalline order as can be observed by comparing subpanels (e) and (h); yellow regions in these panels present smaller fluctuations in the relative distance between rods. In contrast, rods in the pinned case present a more liquid--like ordering. This effect may be due to the difference in the depletant concentration wich, as explained previously, is different for each case. However, for lower depletant concentrations, a smectic droplet is hard to stabilize in the unpinned case, and thus we state that a more liquid--like internal ordering is unlikely to be found in membranes of these characteristics.
+
+
+\begin{figure}
+\includegraphics[width= .8\columnwidth]{figures/chapter-5/density}
+	\caption{Rod number density profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). } % TODO: explain more.
+ \label{density}
+\end{figure}
 
 \fig{crystal16} shows multi--domain structures that have formed in the strong chirality regime. An observation from this figure is that the distance between rods located at the edges of these domains is considerably bigger compared to the distance between rods located inside the domains. Despite the apparent large distance between adjacent membranes, the polymers remain adhered to one another. This phenomenon can be attributed to a decrease in chiral energy when adjacent rods are not aligned in the same direction, which would ultimately lead to a reduction in surface tension between domains in contrast to the high surface tension that exists between the edges of domains and the polymer gas.
 
-
-\begin{SCfigure}
-\includegraphics[width= .7\columnwidth]{figures/chapter-5/density}
-	\caption{Rod number density profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). } % TODO: explain more.
- \label{density}
-\end{SCfigure}
-
 Another important quantity to measure is the radial density profile. This is done for both cases by taking the projected rod positions in the horizontal plane (as shown in middle and bottom rows of \fig{crystal11} and \fig{crystal16}) in order to obtain the two--dimensional coordinates at the horizontal section. We compute the distance between each rod and the center of mass of the system and we numerically integrate the profile by binning the space in concentric cylindrical rings with radii $r_b$ and width $\Delta r_b=D$. Finally, we count the number of rods residing in each bin and plot $N_r(r_b)/A_r(r_b)$, where $N_r(r_b)$ is the reduced number of rods with distance in $[r_b - \Delta r_b/2,r_b + \Delta r_b/2)$ and $A_r(r_b)$ is the area of the cylindrical bin.
 
-Results are shown in \fig{density} for the confined and unconfined case, for the two values of $N$ and several values of $\varepsilon_c$ that cover the whole low to intermediate chirality regime (where multi--domain membranes are not found for any of the simulations). Results are averaged over 100 configurations at different MC cycles of the same equilibrated simulation job.
 
-
-\begin{SCfigure}
-\includegraphics[width= .7\columnwidth]{figures/chapter-5/twistprofile}
+\begin{figure}
+\includegraphics[width= .8\columnwidth]{figures/chapter-5/twistprofile}
 	\caption{Twist angle profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). } % TODO: explain more.
  \label{twangle}
-\end{SCfigure}
+\end{figure}
+
+Results are shown in \fig{density} for the pinned and unpinned case, for the two values of $N$ and several values of $\varepsilon_c$ that cover the whole low to intermediate chirality regime (where multi--domain membranes are not found for any of the simulations). Results are averaged over 100 configurations at different MC cycles of the same equilibrated simulation job.
 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width= .9\columnwidth]{figures/chapter-5/zstd}
+\includegraphics[width= .8\columnwidth]{figures/chapter-5/zstd}
 	\caption{Vertical fluctuations as a function of the distance to the center of 3D membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk, $a = 2D$, $\phi_p=0.25$. } % TODO: explain more.
+ \label{zstd}
 \end{center}
 \end{figure}
+
+The twist angle profile can be obtained in an analogous way, by averaging the enclosed angle between each rod and the main system director, and numerically integrating by bins defined as for the density profile. Computed profiles are shown in \fig{twangle} for the two cases considered in simulations. \red{add theoretical lines for comparison}
+
+Finally, we show fluctuations along the $z$ direction for the unpinned case in \fig{zstd}. It can be seen that vertical fluctuations are constant along the membrane profile; they do not depend on the distance to the center. They do not strongly depend on the membrane size either, although they seem slightly smaller for $\varepsilon_c=10$ and $N=500$. As discussed above, in this case the system is very close to the strong chirality regime where multi--domains start to appear, which may affect the amount of out--of--plane fluctuations that are mostly dominated by entropic depletion forces in all the other cases.
 
 
 
 
 
 \section{Theory for twisted membranes}
-
-
-
-
-\begin{SCfigure}
-\includegraphics[width= 0.4 \columnwidth]{figures/chapter-5/membrane_sketch}.
-\caption{ \label{memsnap} Schematic structure (top and front view) of a twisted smectic membrane of radius $R_{m}$ composed of strongly chiral spherocylinders with aspect ratio $\ell = 10$ mixed with non-adsorbing polymers (not shown) providing strong side-to-side depletion attraction between the rods.  The top graph depict the top view, the lower one a side view of the membrane. The director twist, expressed by the twist angle $\varphi$, is zero at  the membrane  core $\bn _{\rm core} = \bz$ and increases concentrically with radius $R$.}
-\end{SCfigure}
-
-
 
 
  To complement our simulations results we now develop a theory for twisted membranes by focussing on two distinct morphologies that have been observed in experiment, namely half-skyrmion-type membranes and twisted ribbons. In both cases, the twisting of the rods occurs in both principal directions of the membrane (double twist), whereas the cholesteric phase exhibits unidirectional twist. Somewhat confusingly, double twist may also refer to the case of {\em chiral ribbons} in which the membrane itself is wrapped 
@@ -243,7 +238,7 @@ in a helical fashion thus exhibiting non-zero mean curvature \cite{green1936equi
 \begin{align} 
 F = & \frac{1}{2} \int d \bfr \left [ K_{1} (\nabla \cdot \bn)^{2}  + K_{2} (\bn \cdot \nabla \times \bn + q_{0})^{2}  +   K_{3} (\bn \times \nabla \times \bn)^{2} \right ]  
 \end{align}
-with $K_{1}$, $K_{2}$ and $K_{3}$ respectively denoting the splay, twist and bend elastic moduli.   The inverse  pitch  $q_{0}$ quantifies the chiral strength of the particles in the liquid crystal. 
+with $K_{1}$, $K_{2}$ and $K_{3}$ respectively denoting the splay, twist and bend elastic moduli.   The inverse  pitch  $q_{0}$ quantifies the chiral strength of the particles in the liquid crystal.
 
 
  For the specific case of a cylindrically symmetric, twisted membrane depicted in\fig{memsnap}
@@ -258,7 +253,12 @@ in terms of a twist angle  $ \varphi $ denoting a twist deflection of the rods w
 \label{fmem}
 \end{align}
 with $\int d {\bf R} = 2 \pi \int_{0}^{R_{m}} R dR $ in circular coordinates for a membrane with radius $R_{m}$.
- The  elastic moduli for the membrane are distinctly different from those of a ulk liquid crystal and will be specified in the next section. We remark that these elastic moduli are strictly 2D quantities with dimension energy.  
+ The  elastic moduli for the membrane are distinctly different from those of a ulk liquid crystal and will be specified in the next section. We remark that these elastic moduli are strictly 2D quantities with dimension energy.
+
+\begin{SCfigure}
+\includegraphics[width= 0.4 \columnwidth]{figures/chapter-5/membrane_sketch}.
+\caption{ \label{memsnap} Schematic structure (top and front view) of a twisted smectic membrane of radius $R_{m}$ composed of strongly chiral spherocylinders with aspect ratio $\ell = 10$ mixed with non-adsorbing polymers (not shown) providing strong side-to-side depletion attraction between the rods.  The top graph depict the top view, the lower one a side view of the membrane. The director twist, expressed by the twist angle $\varphi$, is zero at  the membrane  core $\bn _{\rm core} = \bz$ and increases concentrically with radius $R$.}
+\end{SCfigure}
 
 
 In an earlier version of our theory \cite{wensink2018elastic} the effect of depletion attraction due to the non-adsorbing polymer can be described in terms of a simple free energy 
