@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="7d03f94c-8071-46c9-9dd7-49f45f889f39" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bib/pub.bib" beforeDir="false" afterPath="$PROJECT_DIR$/bib/pub.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-4.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapters/chapter-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-5.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-5/density.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/density.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/figures/chapter-5/twistprofile.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/twistprofile.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/chapter-5/emergent.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/figures/chapter-5/emergent.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +39,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;ToolWindowEndpoints.ShowToolbar&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/marina/Documents/REPOS/TORRES_thesis_manuscript/figures/chapter-5&quot;,
@@ -42,7 +47,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -129,7 +134,7 @@
       </texify>
       <method v="2" />
     </configuration>
-    <configuration name="main" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+    <configuration name="fast main" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify>
         <compiler>PDFLATEX</compiler>
         <compiler-path />
@@ -145,12 +150,33 @@
         <output-format>PDF</output-format>
         <latex-distribution>TEXLIVE</latex-distribution>
         <has-been-run>true</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>BUILT-IN-PDF-VIEWER</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments>--shell-escape</compiler-arguments>
+        <envs />
+        <main-file>$PROJECT_DIR$/main.tex</main-file>
+        <output-path>$PROJECT_DIR$/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>true</has-been-run>
         <bib-run-config>[BibTeX.main bibliography]</bib-run-config>
         <makeindex-run-config>[]</makeindex-run-config>
       </texify>
       <method v="2">
         <option name="RunConfigurationTask" enabled="true" run_configuration_name="TORRES_coverpage" run_configuration_type="LATEX_RUN_CONFIGURATION" />
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Copy coverpage" run_configuration_type="ShConfigurationType" />
+        <option name="RunConfigurationTask" enabled="false" run_configuration_name="Copy coverpage" run_configuration_type="ShConfigurationType" />
       </method>
     </configuration>
     <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
@@ -177,11 +203,28 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="Remove bib and toc" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="rm **/*.aux **/*.idx  **/*.lof **/*.log **/*.gz **/*.toc" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="false" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="BibTeX.main bibliography" />
       <item itemvalue="LaTeX.main" />
+      <item itemvalue="LaTeX.fast main" />
       <item itemvalue="LaTeX.TORRES_coverpage" />
       <item itemvalue="Shell Script.Copy coverpage" />
+      <item itemvalue="Shell Script.Remove bib and toc" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -243,6 +286,7 @@
       <workItem from="1680778048013" duration="50886000" />
       <workItem from="1681290584046" duration="26007000" />
       <workItem from="1681339943186" duration="3829000" />
+      <workItem from="1681397054754" duration="9874000" />
     </task>
     <servers />
   </component>

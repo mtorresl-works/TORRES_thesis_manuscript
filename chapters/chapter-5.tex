@@ -41,7 +41,7 @@ We supplement our simulations with a minimalist theory for the membranes and rib
 
 \begin{SCfigure}
 	\includegraphics[width = 0.6\columnwidth]{figures/chapter-5/spheromans}
-	\caption{ Sketch of the simulation model: hard spherocylinders (grey) mixed with non-adsorbing polymers modeled as penetrable hard spheres (blue) with diameter $a = 2D$ (as depicted here). Overlap of the cores (grey) gives infinite repulsion while overlapping coronae (red zones) favors a twisted pair configuration representing the (chiral) electrostatic forces between {\em fd} rods. The system has a fixed volume $V$ with periodic boundary conditions and connected to a polymer reservoir at constant chemical potential $\mu_p$. }
+	\caption[Sketch of the simulation model]{ Sketch of the simulation model: hard spherocylinders (grey) mixed with non-adsorbing polymers modeled as penetrable hard spheres (blue) with diameter $a = 2D$ (as depicted here). Overlap of the cores (grey) gives infinite repulsion while overlapping coronae (red zones) favors a twisted pair configuration representing the (chiral) electrostatic forces between {\em fd} rods. The system has a fixed volume $V$ with periodic boundary conditions and connected to a polymer reservoir at constant chemical potential $\mu_p$. }
 	\label{sketch}
 \end{SCfigure}
 
@@ -129,6 +129,7 @@ so that twist becomes more prevalent for larger $\chi_{T}$. It is important to k
 %The polymers do not have any interaction with the wall, but their centres-of-mass are constrained  to reside within the slab.
 
 \subsection{Simulation details}
+\label{simdetails}
 Monte Carlo steps conceived from the specifications of the previous sections are performed as follows:
 
 In the initial setup, all rods point along the $z$ direction, their centres of mass are fixed to the XY plane centered in height ($z=L_z/2$) and they are arranged on a hexagonal lattice in a circular domain. During the relaxation from the initial configuration, we randomly apply single--particle moves: translations within the volume and rotations around arbitrary axes. To decide if a trial move is accepted, we first check for overlaps with other colloids and with depletants. If no overlap takes place, the variation in the chiral energy is computed and the Metropolis acceptance criterion is used to decide whether the move is energetically favorable. If the move induces a loss in energy, it is accepted; otherwise it will be accepted with probability $\sim\exp{\left[-\beta(U_{new}-U_{old})\right]}$.
@@ -164,7 +165,7 @@ We conducted a series of simulation runs for different values of the number of r
 \begin{figure}
 \begin{center}
 \includegraphics[width= .8\columnwidth]{figures/chapter-5/samples}
-	\caption{Top and front views of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Color indicates the enclosed angle between each individual rod and membrane normal, from black $\varphi = 0$ to yellow $\varphi = \frac{\pi}{2}$. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$).(a) Low chirality regime. (b) Strong chirality regime showing a cascade of multi-core membranes.}
+	\caption[Top and front views of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer]{Top and front views of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer. Color indicates the enclosed angle between each individual rod and membrane normal, from black $\varphi = 0$ to yellow $\varphi = \frac{\pi}{2}$. Shared parameters are $a = 2D$, $\ell = 10$ and $N = 500$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$).(a) Low chirality regime. (b) Strong chirality regime showing a cascade of multi-core membranes.}
  \label{multidomain}
 \end{center}
 \end{figure}
@@ -193,7 +194,7 @@ In \fig{crystal11}, we observe stabilized twisted membranes in the intermediate 
 
 \begin{figure}
 \includegraphics[width= .9\columnwidth]{figures/chapter-5/density}
-	\caption{Rod number density profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). } % TODO: explain more.
+	\caption[Rod number density profile]{Rod number density profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). } % TODO: explain more.
  \label{density}
 \end{figure}
 
@@ -204,7 +205,7 @@ Another important quantity to measure is the radial density profile. This is don
 
 \begin{figure}
 \includegraphics[width= .9\columnwidth]{figures/chapter-5/twistprofile}
-	\caption{Twist angle profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). } % TODO: explain more.
+	\caption[Twist angle profile]{Twist angle profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). } % TODO: explain more.
  \label{twangle}
 \end{figure}
 
@@ -214,7 +215,7 @@ Results are shown in \fig{density} for the pinned and unpinned case, for the two
 \begin{figure}
 \begin{center}
 \includegraphics[width= .8\columnwidth]{figures/chapter-5/zstd}
-	\caption{Vertical fluctuations as a function of the distance to the center of 3D membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk, $a = 2D$, $\phi_p=0.25$. } % TODO: explain more.
+	\caption[Vertical fluctuations]{Vertical fluctuations as a function of the distance to the center of 3D membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk, $a = 2D$, $\phi_p=0.25$. } % TODO: explain more.
  \label{zstd}
 \end{center}
 \end{figure}
@@ -257,7 +258,7 @@ with $\int d {\bf R} = 2 \pi \int_{0}^{R_{m}} R dR $ in circular coordinates for
 
 \begin{SCfigure}
 \includegraphics[width= 0.4 \columnwidth]{figures/chapter-5/membrane_sketch}.
-\caption{ \label{memsnap} Schematic structure (top and front view) of a twisted smectic membrane of radius $R_{m}$ composed of strongly chiral spherocylinders with aspect ratio $\ell = 10$ mixed with non-adsorbing polymers (not shown) providing strong side-to-side depletion attraction between the rods.  The top graph depict the top view, the lower one a side view of the membrane. The director twist, expressed by the twist angle $\varphi$, is zero at  the membrane  core $\bn _{\rm core} = \bz$ and increases concentrically with radius $R$.}
+\caption[Schematic structure (top and front view) of a twisted smectic membrane]{ \label{memsnap} Schematic structure (top and front view) of a twisted smectic membrane of radius $R_{m}$ composed of strongly chiral spherocylinders with aspect ratio $\ell = 10$ mixed with non-adsorbing polymers (not shown) providing strong side-to-side depletion attraction between the rods.  The top graph depict the top view, the lower one a side view of the membrane. The director twist, expressed by the twist angle $\varphi$, is zero at  the membrane  core $\bn _{\rm core} = \bz$ and increases concentrically with radius $R$.}
 \end{SCfigure}
 
 
@@ -348,7 +349,7 @@ with $\varphi_{0}$ the twist angle at the membrane edge and $\alpha $ a variatio
 \begin{figure}
 \begin{center}
 \includegraphics[width= \columnwidth]{figures/chapter-5/ribbon_sketch}.
-\caption{ \label{ribsnap} Schematic structure of of twisted ribbon of width $s_y=2\ell$ composed of strongly chiral spherocylinders with aspect ratio $\ell = 15$ mixed with non-adsorbing polymers (not shown) providing strong depletion attraction between the rods. The rods are color coded by orientation. The typical  ribbon dimensions are indicated by the pitch $q$ with $\pi/q$ corresponding to a half pitch length.  }
+\caption[Schematic structure of of twisted ribbon]{ \label{ribsnap} Schematic structure of of twisted ribbon of width $s_y=2\ell$ composed of strongly chiral spherocylinders with aspect ratio $\ell = 15$ mixed with non-adsorbing polymers (not shown) providing strong depletion attraction between the rods. The rods are color coded by orientation. The typical  ribbon dimensions are indicated by the pitch $q$ with $\pi/q$ corresponding to a half pitch length.  }
 \end{center}
 \end{figure}
 
@@ -415,7 +416,7 @@ which suggests  that the  tension contribution is minimal at maximum tilt at the
 \begin{figure}
 \begin{center}
 \includegraphics[width=   \columnwidth]{figures/chapter-5/deltak}.
-\caption{ \label{ribbontheory} Overview of the ribbon properties as a function of the elastic anisotropy $\Delta K$ [\eq{dk}] of the LC material. Parameters $\lambda_{t} = 0.5 L$ and $q_{0} = 0.4 L^{-1}$. Shown are (a) the longitudinal and transverse ribbon pitches. (b) The equilibrium ribbon width in units rod length $L$. (c) The typical ribbon aspect ratio in terms of the longitudinal pitch versus ribbon width. (d) The tilt angle at the ribbon edge.   }
+\caption[Overview of the ribbon properties as a function of the elastic anisotropy]{ \label{ribbontheory} Overview of the ribbon properties as a function of the elastic anisotropy $\Delta K$ [\eq{dk}] of the LC material. Parameters $\lambda_{t} = 0.5 L$ and $q_{0} = 0.4 L^{-1}$. Shown are (a) the longitudinal and transverse ribbon pitches. (b) The equilibrium ribbon width in units rod length $L$. (c) The typical ribbon aspect ratio in terms of the longitudinal pitch versus ribbon width. (d) The tilt angle at the ribbon edge.   }
 \end{center}
 \end{figure}
 
@@ -490,8 +491,8 @@ in terms of the Tolman length $\delta$, which could be positive or negative, and
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=  0.8 \columnwidth]{figures/chapter-5/emergent}.
-\caption{ \label{emergent} Overview of the various membrane morphologies predicted for chiral colloidal rods mixed with non-adsorbing polymer as a function of the membrane radius $R_{m}$  and pitch $q_{0}$ (both expressed in units of the rod length $L$). Depending on the membrane radius,  weakly chiral rods tend to self-assemble into single-core twisted membranes but may transition into elongated twisted ribbons beyond a critical chiral strength. Small droplets tend to be curbed by surface tension and are precluded from forming ribbons,  developing into multi-core membranes instead (see also \fig{multidomain}).   }
+\includegraphics[width=  0.7 \columnwidth]{figures/chapter-5/emergent}.
+\caption[Overview of the various membrane morphologies predicted for chiral colloidal rods mixed with non-adsorbing polymer]{ \label{emergent} Overview of the various membrane morphologies predicted for chiral colloidal rods mixed with non-adsorbing polymer as a function of the membrane radius $R_{m}$  and pitch $q_{0}$ (both expressed in units of the rod length $L$). Depending on the membrane radius,  weakly chiral rods tend to self-assemble into single-core twisted membranes but may transition into elongated twisted ribbons beyond a critical chiral strength. Small droplets tend to be curbed by surface tension and are precluded from forming ribbons,  developing into multi-core membranes instead (see also \fig{multidomain}).   }
 \end{center}
 \end{figure}
 
@@ -579,6 +580,49 @@ Future studies could be aimed at numerically exploring much larger membrane size
 
 
 
+
+
+\begin{subappendices}
+
+
+\section[Square well potential]{Preliminary results using a square--well chiral potential}
+
+The system presented in this chapter accepts further modifications that can help us explore a variety of possibilities. One possible direction is to consider chiral interactions with larger ranges. At the time of publication of this thesis, simulations have been performed for the following modification of the chiral square--well (SW) potential:
+
+\beq
+U_{\rm r} (\Delta {\bf r}, \oma, \omb) =
+\begin{cases}
+0 & \textrm{if } \Delta {\bf r} \geq L+D\\
+-\varepsilon_{c} (\oma \cdot \omb)(\oma \times \omb \cdot \Delta \hat{\bf r}) & \textrm{if } \Delta {\bf r} < L+D \textrm{ and no overlap} \\
+\infty & \textrm{if overlap}
+\label{usw}
+\end{cases}
+\eeq
+in the spirit of the theory proposed by \cite{Wensink2009}. This potential, applied to spherocyllinders, is long--ranged since its range scales with the total spherocylinder length $L+D$ and may be used to encapsulate chiral forces transmitted through long--ranged electrostatic interactions, in contrast to the original Goossens potential used in the main text which is designed to address chiral forces arising from short-range phenomena such as chiral decorations present on the surface of the rods or mesogens possessing chiral shapes.
+
+
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width= .8 \columnwidth]{figures/chapter-5/squarewellmem}.
+\caption[Snapshots obtained from simulations using the SW potential, circular initial conditions]{ \label{meminitcond} (a)-(d) Snapshots obtained from simulations using the SW potential described by \eq{usw} for $N=500$ and $N=1000$ and for $\varepsilon_c=0.01$ and $\varepsilon_c=0.01$. Initial conditions were chosen as in the main text (described in Section \ref{simdetails}). (e) Depletion potential as a function of MC time estimated by integrating the total overlap volume between depletion layers. (f) Computed chiral energy as a function of MC time. Shared parameters are $a = 2D$, $\ell = 10$ and $\phi_p=0.25$. }
+\end{center}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width= .8 \columnwidth]{figures/chapter-5/squarewellrib}.
+\caption[Snapshots obtained from simulations using the SW potential, rectangular initial conditions]{ \label{ribinitcond} (a)-(d) Snapshots obtained from simulations using the SW potential described by \eq{usw} for $N=500$ and $N=1000$ and for $\varepsilon_c=0.01$ and $\varepsilon_c=0.01$. Initial conditions consist on a rectangular slab where rods were oriented towards the $y$ axis and arranged in a hexagonal lattice. (e) Depletion potential as a function of MC time estimated by integrating the total overlap volume between depletion layers. (f) Computed chiral energy as a function of MC time. Shared parameters are $a = 2D$, $\ell = 10$ and $\phi_p=0.25$.   }
+\end{center}
+\end{figure}
+
+The preliminary snapshots displayed in \fig{meminitcond} are formed from the same initial conditions as those employed in the main text. The figure indicates that double twisted membranes can also be stabilized using this SW potential. However, when using an elongated slab configuration, there are strong indications of the emergence of twisted ribbons. The resulting configurations for such initial conditions are presented in \fig{ribinitcond}, though subpanels (e) and (f) demonstrate that these configurations may not be at equilibrium yet. Nevertheless, using this approach, the stabilization of twisted ribbons appears to be more promising than for the original Goossens potential employed in the main text, in which case the elongated slab configuration was also tested, and resulted in either the rearrangement of the slab into a membrane or the fractionation into smaller domains.
+
+
+
+\end{subappendices}
 
 
 
