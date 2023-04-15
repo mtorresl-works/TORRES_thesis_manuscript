@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d03f94c-8071-46c9-9dd7-49f45f889f39" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/bib/refs.bib" beforeDir="false" afterPath="$PROJECT_DIR$/bib/refs.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bib/pub.bib" beforeDir="false" afterPath="$PROJECT_DIR$/bib/pub.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-4.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chapters/chapter-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +284,7 @@
       <workItem from="1680778048013" duration="50886000" />
       <workItem from="1681290584046" duration="26007000" />
       <workItem from="1681339943186" duration="3829000" />
-      <workItem from="1681397054754" duration="10882000" />
+      <workItem from="1681397054754" duration="18502000" />
     </task>
     <servers />
   </component>

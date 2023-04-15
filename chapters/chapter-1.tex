@@ -95,16 +95,16 @@ The central aim of this thesis is to theoretically investigate the liquid crysta
 
 Chapter \ref{introduction} of this thesis provides an introduction to the background and scope of the research presented. It covers the statistical mechanical background, specifically for fluids of hard anisometric particles. We then discuss the use of hard particle Monte Carlo simulations of colloidal nematics, including some particularities of such simulations for the case of anisometric particles. Overall, the chapter serves as a foundation for the rest of the thesis, laying out the relevant concepts and methods for the research presented in subsequent chapters.
 
-In Chapter \ref{disc_polymer} a simple model is proposed to explore the low-concentration phase behavior of a system consisting of non-covalently bonded, weakly flexible rods treated as living polymers mixed with non-adsorbing rigid colloidal discs. We show that, at large disc mole fractions, the rod nematic phase is disrupted by collective disc alignment in favor of a discotic nematic fluid in which the polymers are dispersed anti-nematically, generating a non-exponential molecular-weight distribution of the resulting polymeric species.
+In Chapter \ref{disc_polymer} a theoretical model is proposed to explore the low-concentration phase behavior of a system consisting of non-covalently bonded, weakly flexible rods treated as living polymers mixed with non-adsorbing rigid colloidal discs. We show that, at large disc mole fractions, the rod nematic phase is disrupted by collective disc alignment in favor of a discotic nematic fluid in which the polymers are dispersed anti-nematically, generating a non-exponential molecular-weight distribution of the resulting polymeric species.
 
 Chapters \ref{hybridLC1} and \ref{hybridLC2} address issues related to hybrid molecular liquid crystal nematics. In this part of the work, we consider a system in which molecular cholesteric LCs are doped with thin colloidal particles with large length-to-width aspect ratios. In Chapter \ref{hybridLC1}, single colloid insertions are considered, and we explore the interplay between weak surface anchoring forces, exerced between the colloidal surface and the molecular field, and elastic distortions around the colloid-molecular field interface. In Chapter \ref{hybridLC2}, we use Onsager's theory to account for collective effects in the hypothetical case where multiple colloidal particles are inserted in the hybrid LC.
 
-Finally, in Chapter  \ref{twistedrods} we introduce a computational model to simulate mesoscopic droplets of colloidal rods stabilized by the presence of non-adsorbing polymers. We aim to gain a deeper understanding of the transition between the so-called twisted membranes and twisted ribbons observed experimentally in systems featuring filamentous fd viral rods \cite{Gibaud2012} by performing Monte Carlo simulations in the semi-grand-canonical ensemble. Although twisted ribbons are not observed in our simulations, a theoretical model is proposed to predict the typical ribon geometric features that can in principle be confirmed through experimental verification.
+Finally, in Chapter  \ref{twistedrods} we introduce a computational model to study the formation of mesoscopic droplets of colloidal rods stabilized by the presence of non-adsorbing polymers. We aim to gain a deeper understanding of the transition between the so-called twisted membranes and twisted ribbons observed experimentally in systems featuring filamentous fd viral rods \cite{Gibaud2012} by performing extensive Monte Carlo simulations in the semi-grand-canonical ensemble. Although twisted ribbons are not observed in our simulations, theoretical descriptions are proposed to predict the typical geometric features for both droplet morphologies that can in principle be confirmed through experimental verification.
 
 
 \section{Statistical mechanical background}
 
-In this section we introduce the statistical mechanical framework of  Onsager's second virial theory to describe the thermodynamic properties of a spatially homogeneous fluid of hard colloidal rods or platelets. Instead of delving into a technical exposition of Onsager's theory (the reader is referred to Onsager's original paper \cite{onsager1949}, as well as some enlightening reviews \cite{Vroege92, allenevans} for more detailed information), we will provide an intuitive overview of its main components. As explained in Section \ref{entropy_order}, the isotropic-nematic phase transformation result from the competition between two principal quantities, related to rotational and translational degrees of freedom. Onsager establishes the formulation of these two quantities and analyzes the transition unsing entropic arguments alone.
+In this section we introduce the statistical mechanical framework of  Onsager's second virial theory to describe the thermodynamic properties of a spatially homogeneous fluid of hard colloidal rods or platelets. Instead of delving into a technical exposition of Onsager's theory (the reader is referred to Onsager's original paper \cite{onsager1949}, as well as some enlightening reviews \cite{Vroege92, allenevans} for more detailed information), we will provide an intuitive overview of its main components. As explained in Section \ref{entropy_order}, the isotropic-nematic phase transformation result from the competition between two principal quantities, related to rotational and translational degrees of freedom. Onsager establishes the formulation of these two quantities and analyzes the transition unsing entropic arguments alone. We also introduce further modifications that can be applied to the Onsager formalism to account for more complex phenomena.
 
 \subsection{Fluids of hard anisometric particles}
 
@@ -264,10 +264,10 @@ Going back to the experimental systems of nanorods and platelets mentioned at th
 \item Semi-flexibility
 \item Long-ranged ``soft" interactions (e.g. depletion attraction)
 \item Chirality
-\item Non-uniform systems (smectic membranes, interfaces, effect of solid substrates)
+\item Non-uniform systems (interfaces, effect of solid substrates)
 \end{enumerate}
 
-In the main body of this work we will illustrate the rich phenomenology brought about by the topics listed above, most of the time as perturbations to the main entropic hard-core contribution, discussed previously in the context of Onsager's theory. We hope that these examples will convince the reader of the predictive power and versatility of Onsager's second-virial theory even when applied beyond the strict bounds of applicability as formulated in his original paper. In what follows, topics 4 and 5, albeit already introduced, are now very briefly discussed from a more quantitative perspective.
+In the main body of this work we will illustrate the rich phenomenology brought about by the topics listed above, most of the time as perturbations to the main entropic hard-core contribution, discussed previously in the context of Onsager's theory. We hope that these examples will convince the reader of the predictive power and versatility of Onsager's second-virial theory even when applied beyond the strict bounds of applicability as formulated in his original paper. In what follows, topics 4 and 5, albeit already introduced, are now very briefly discussed from a more quantitative perspective. Additionaly, the effect of non-uniformity in LC systems (topic 6) is aborded in Section \ref{nemelasticity}
 
 \subsubsection{Depletion}
 
@@ -294,6 +294,13 @@ u_{ij} \sim  \varepsilon_{c} g( r)({\bf \hat{u}}_{i} \cdot {\bf \hat{u}}_{j}) ( 
 \eeq
 
 In Chapter \ref{twistedrods}, we will analyze in detail the implications of this interaction for the chiral features of colloidal mesoscopic compounds, whose microscopic details can be encapsulated into the effective chiral amplitude $\varepsilon_c$ and decay function $g(r)$, which express the typical range over which chiral forces are transmitted. The effective potential is distinctly chiral and lacks inversion symmetry, meaning that it changes under a transformation ${\bf r}_{ij} \rightarrow -{\bf r}_{ij} $, while preserving basic head-tail symmetry $u_{ij}({\bf \hat{u}}_{i/j}) = u_{ij}(-{\bf \hat{u}}_{i/j}) $.
+
+\subsection{Non-uniformity in nematic LCs: nemato--elasticity and surface anchoring}
+\label{nemelasticity}
+
+
+
+
 
 \section[HPMC simulations of colloidal nematics]{Hard-particle Monte Carlo simulations of colloidal nematics: some technical details}
 

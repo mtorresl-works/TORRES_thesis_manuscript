@@ -175,7 +175,7 @@ Membrane morphologies for different values of $\varepsilon_c$ are shown in \fig{
 
 \begin{figure}
 \begin{center}
-\includegraphics[width= .9\columnwidth]{figures/chapter-5/crystallinity_11}
+\includegraphics[width= \columnwidth]{figures/chapter-5/crystallinity_11}
 	\caption[Crystallinity of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk $\varepsilon_c=11$.]{ \label{crystal11} Crystallinity of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top row: rendered snapshots (a) without vertical fluctuations and (b) with vertical fluctuations. Middle and bottom rows: cuts through the plane generated from a 2D linear regression of the centers of mass of the rods, so that tilted rods appear as ellipses. Color scales indicate: (a)-(c), (f): enclosed angle between the each rod's direction and the global nematic director; (d), (g): average distance between each rod and its six nearest neighbours; and (e), (h): nearest neighbour distance's standard deviation. Shared parameters are $a = 2D$, $\ell = 10$, $N = 500$ and $\varepsilon_c=11$. For the case where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$).}
 \end{center}
 \end{figure}
@@ -184,7 +184,7 @@ To gain further insight into the influence of vertical fluctuations on membrane 
 
 \begin{figure}
 \begin{center}
-\includegraphics[width= .9\columnwidth]{figures/chapter-5/crystallinity_16}
+\includegraphics[width= \columnwidth]{figures/chapter-5/crystallinity_16}
 	\caption[Crystallinity of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk $\varepsilon_c=16$.]{ \label{crystal16} Crystallinity of multi-domain membrane-shaped tactoids of strongly chiral rods mixed with non-adsorbing polymer formed in bulk. (a),(c-e) without vertical fluctuations and (b),(f-h) with vertical fluctuations. What is illustrated in this figure is equivalent to \fig{crystal11} except for the chosen chirality regime ($\varepsilon_c=11$ in \fig{crystal11}, $\varepsilon_c=16$ in this figure).}
 \end{center}
 \end{figure}
@@ -198,9 +198,7 @@ In \fig{crystal11}, we observe stabilized twisted membranes in the intermediate 
  \label{density}
 \end{figure}
 
-\fig{crystal16} shows multi--domain structures that have formed in the strong chirality regime. An observation from this figure is that the distance between rods located at the edges of these domains is considerably bigger compared to the distance between rods located inside the domains. {\em Despite the apparent large distance between adjacent membranes, the polymers remain adhered to one another.  This phenomenon can be attributed to a decrease in chiral energy when adjacent rods are not aligned in the same direction, which would ultimately lead to a reduction in surface tension between domains in contrast to the high surface tension that exists between the edges of domains and the polymer gas.}
-
-\red{Perhaps we should clarify this statement (in italics). Are we saying that polymers accumulate in the domain walls between the subcores ? This would makes sense given that there is more free volume in the domain walls. I do not understand the connection with chiral energy and surface tension though. I guess this comment just needs to be rephrased.  }
+\red{\fig{crystal16} shows multi--domain structures that have formed in the strong chirality regime. It is observed from the horizontal section depictions that the distance between rods located at the edges of these domains is considerably bigger compared to the distance between rods located inside the domains. This is due to the highly non optimal collective arangement (from a free volume perspective) rods adopt at the edges. Despite the apparent large distance between adjacent domains --that may allow polymers to accumulate-- they remain adhered to one another presumably due to a significant decrease in chiral energy when adjacent rods are close together and forming an optimal angle. }
 
 
 Another important quantity to measure is the radial density profile. This is done for both cases by taking the projected rod positions in the horizontal plane (as shown in middle and bottom rows of \fig{crystal11} and \fig{crystal16}) in order to obtain the two--dimensional coordinates at the horizontal section. We compute the distance between each rod and the center of mass of the system and we numerically integrate the profile by binning the space in concentric cylindrical rings with radii $r_b$ and width $\Delta r_b=D$. Finally, we count the number of rods residing in each bin and plot $N_r(r_b)/A_r(r_b)$, where $N_r(r_b)$ is the reduced number of rods with distance in $[r_b - \Delta r_b/2,r_b + \Delta r_b/2)$ and $A_r(r_b)$ is the area of the cylindrical bin.
