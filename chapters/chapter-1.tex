@@ -213,7 +213,9 @@ integrations over the translational and rotational momenta of the anisometric pa
 f(\Omega)f(\Omega^{\prime})v_{\text{excl}}(\Omega,\Omega^{\prime}). \label{0freetot}
 \end{align}
 
-This is the final recipe to model the phase behavior of an ideal mixture of hard rods, where the most probable orientational state is given by the function $f(\Omega)$ that better minimizes the Helmholtz free energy. The isotropic-nematic transition comes from a competition between the before-last and last terms, which correspond to the orientational and translational entropy respectively. For low concentrations, the orientational entropy dominates and is maximized by an isotropic distribution, whereas for high concentrations the second virial term becomes more important, which favors a nematic distribution at the expense of losing orientational entropy. The critical packing fraction at wich an isotropic-nematic ordering occurs roughly corresponds to the situation when the bare particle volume is of the same order of magnitude as its average excluded volume:
+This is the final recipe to model the phase behavior of an ideal mixture of hard rods, where the most probable orientational state is given by the function $f(\Omega)$ that better minimizes the Helmholtz free energy. The isotropic-nematic transition comes from a competition between the before-last and last terms, which correspond to the orientational and translational entropy respectively. For low concentrations, the orientational entropy dominates and is maximized by an isotropic distribution, whereas for high concentrations the second virial term becomes more important, which favors a nematic distribution at the expense of losing orientational entropy.
+
+The critical packing fraction at wich an isotropic-nematic ordering occurs roughly corresponds to the situation when the bare particle volume is of the same order of magnitude as its average excluded volume:
 
 \begin{equation}
 \phi_{IN} \propto \frac{\mbox{{\small volume per particle}}}{\mbox{{\small average excluded volume per particle}}}
@@ -233,6 +235,15 @@ An analogous expression was obtained by Onsager for two cylinders with different
 \end{equation}
 
 Clearly, the more slender the rods (large $L/D$) the lower the critical packing fraction at which the I-N phase transformation can be expected. Strictly, in the Onsager limit $L/D \rightarrow \infty$ the transition occurs in the ultra-dilute regime where a pair-interaction-only approximation is entirely justified.
+
+For uniaxial isolated colloidal particles, the nematic phase is axially symmetric about $\bn$, $f(\Omega)=f(\theta)$ where $\theta$ denote the angular deviation of the particle along the polar direction with respect to the global nematic director. The sharpness of this ODF depends on the concentration of the system, and thus we can find different levels of orientational order. The level of order of a nematic phase can be quantified by means of the {\em uniaxial order parameter} $S$, defined as follows:
+
+\beq
+S = \langle P_2(\cos\theta)\rangle =  \frac{1}{2}(3\langle\cos^2\theta\rangle-1)
+\label{nemdirector}
+\eeq
+in terms of the second Legendre polynomial. The uniaxial order parameter then lies within the interval $-1/2 \leq S \leq 1$, where $S=1$ indicates perfect ordering (all molecules along $\bn$) and $S=0$ indicates maximum disorder, intrinsic to the isotropic phase. The negative limit, $S=-1/2$, signifies the theoretical ordered state along a plane perpendicular to the director (the {\em anti--nematic} state).
+
 
 \subsubsection{Mixtures}
 
@@ -298,9 +309,49 @@ In Chapter \ref{twistedrods}, we will analyze in detail the implications of this
 \subsection{Non-uniformity in nematic LCs: nemato--elasticity and surface anchoring}
 \label{nemelasticity}
 
+In this section, we discuss how the presence of confining boundaries can significantly alter the overall free energy of the system. First, we focus on the elastic free energy originated from deformations in the bulk director field, described in the Frank-Oseen form. Next, a surface term to the free energy is presented that accounts for the order induced by the presence of an interface, an effect commonly known as {\em surface anchoring}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[width= .9\columnwidth]{figures/chapter-1/elasticmodes}
+\caption[Elastic deformations and surface anchoring types]{ \label{elasticmodes} Top row: elastic deformations in nematic liquid crystal: (a) splay, (b) twist and (c) bend. Bottom row: surface anchoring situations of a nematic liquid crystal on a surface: (d) uniform planar anchoring, (e) homeotropic anchoring, (f) degenerate planar anchoring and (g) tilted anchoring.}
+\end{center}
+\end{figure}
+
+\subsubsection{\em {Nemato--elasticity}}
+
+In general, the ordering effect of an external interaction applied to the bulk nematic phase leads to specific elastic deformations in the nematic director. This external influence can be, for example, the presence of an interface with a solid, a liquid or a gas near the bulk nematic phase (as discussed in Chapters \ref{hybridLC1} and \ref{twistedrods}) or the interaction between the nematic phase and some external field (e. g. in Chapter \ref{hybridLC2} we study the inmersion of a colloidal nematic into a twist--inducing molecular cholesteric field). The resulting deformations of the nematic director can be described by one or a combination of any of the basic elastic modes: splay, twist and bend. These modes are sketched in \fig{elasticmodes} (a), (b) and (c), and are often expressed in terms of the director $\bn$ by means of the Frank-Oseen free energy for the case of weak deformations \cite{gennes-prost}:
+
+\begin{align}
+F = & \frac{1}{2} \int d \bfr \left [ K_{1} (\nabla \cdot \bn)^{2}  + K_{2} (\bn \cdot \nabla \times \bn + q_{0})^{2}  +   K_{3} (\bn \times \nabla \times \bn)^{2} \right ]
+    \label{frankoseen}
+\end{align}
+
+The expressions $K_i$ inherently take into account the order parameter ($S$, defined in \eq{nemdirector}) dependence of the nematic director deformation. The splay, twist and bend modes are addressed through the constants $K_1$, $K_2$ and $K_3$ respectively. The constant $q_0$ appearing in the twist deformation term is relevant only in chiral phases, and accounts for the inverse cholesteric pitch. Further extensions can be incorporated in the Frank--Oseen free energy that are primarily restricted to the surface of the nematic liquid crystals:
 
 
+\begin{align}
+F_{13} = K_{13} & \int d \bfr  \nabla \cdot \left[\bn(\nabla \cdot \bn)\right] \\
+F_{24} = -K_{24} & \int d \bfr \nabla \cdot \left[\bn(\nabla \cdot \bn) + \bn \times (\nabla \times \bn)\right]
+\end{align}
+$K_{13}$ and $K_{24}$ are known as the {\em splay--bend} and the {\em saddle--splay} mixed constants respectively.
 
+The Frank elastic energy is often simplified by assuming the {\em one constant approximation}: $K_1=K_2=K_3$, in which case \eq{frankoseen} reduces to:
+
+\begin{align}
+F = & \frac{1}{2} K \int d \bfr \left [ (\nabla \cdot \bn)^{2}  + (\nabla \times \bn)^{2} \right ]
+\end{align}
+
+In the systems evaluated in this thesis, however, this approximation is applied carefully (in Chapter \ref{hybridLC1}) or not possible to apply (in Chapter \ref{twistedrods}) in order to account for the complex deformations these particular systems are experiencing.
+
+\subsubsection{Surface anchoring}
+
+The presence of a solid, liquid or gas interface in the viccinity of the nematic liquid crystal phase can affect the inherent ordering, leading to a modified equilibrium state. Particles next to the interface tend to follow a surface--induced axis. In general, the director alignment along this axis is determined by the interaction between the liquid crytal and the aligning surface. The particle orientation near the surface is characterized by the azimuthal and polar angles $\phi, \theta$ with respect to the surface normal. Different anchoring scenarios are shown in \fig{elasticmodes} (d) ($\theta=\pi/2$ and $\phi=$constant), (e) ($\theta=0$), (f) ($\theta=\pi/2$ and $\phi=$arbitrary) and (g) ($0\leq\theta\leq\pi/2$ and $\phi=$constant). For uniaxial nematics, the surface contribution to the free energy reads:
+
+\beq
+F_{s} = -\frac{1}{2} W_{0} \oint d{\mathcal S}  (\bn_{s} \cdot \bn_{0}({\mathcal S}))^{2}
+\eeq
+where $W_0$ represents the strength of anchoring and $\bn_{0}$ is the surface--induced nematic director at the surface $\mathcal S$. This is known as the Rapini--Papoular surface anchoring \cite{rapini1969} and assumes that the actual level of order near the surface is equal to the order induced by the surface, which may not always be a fair approximation from a practical point of view.
 
 \section[HPMC simulations of colloidal nematics]{Hard-particle Monte Carlo simulations of colloidal nematics: some technical details}
 
