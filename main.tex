@@ -38,8 +38,6 @@
 \tableofcontents
 
 
-% TODO: add list of symbols
-%\addcontentsline{toc}{chapter}{List of Symbols}
 
 
 
@@ -67,16 +65,18 @@
 \backmatter
 \cleardoublepage
 
-% TODO: remove unused references
-\bibliography{bib/pub,bib/refs,bib/rik}
+% TODO: re-check format
+%\nocite{*}
+%\bibliography{bib/pub,bib/refs,bib/rik}
+\printbibliography
+
 \addcontentsline{toc}{chapter}{Bibliography}
 
-% TODO: shorten captions at the list of figures
 \listoffigures
 \addcontentsline{toc}{chapter}{List of Figures}
 
 \input{chapters/summary-FR}
-\input{chapters/summary-EN}
+%\input{chapters/summary-EN}
 
 
 \clearpage

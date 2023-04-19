@@ -39,8 +39,16 @@
 \usepackage{mdframed}
 \usepackage{bm}
 
-\usepackage{natbib}
-\bibliographystyle{unsrt} %  abbrv
+%\usepackage{natbib}
+%\bibliographystyle{unsrt} %  abbrv
+
+
+\usepackage[autostyle]{csquotes}
+\usepackage[style=alphabetic,citestyle=alphabetic,sortcites=true, autopunct=true,autolang=hyphen,hyperref=true,abbreviate=true,backref=false, backend=biber,defernumbers=true, doi=false, url=false, giveninits=true]{biblatex}
+\addbibresource{bib/pub.bib}
+\addbibresource{bib/refs.bib}
+\addbibresource{bib/rik.bib}
+
 \usepackage[toc,page,title,titletoc]{appendix} % appendix
 
 \usepackage{bookmark}

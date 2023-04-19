@@ -25,7 +25,7 @@ Mixing rodlike colloids with non-adsorbing polymers or other small depletant par
  
 
 
- The size and concentration of the added polymer can be exploited to  tune the morphology and internal structure of the droplets. Tactoids with nematic-type order have been observed experimentally in mixtures of rods and big depletants (typically bigger than the diameter of the colloidal rods), as well as smectic-like single layer droplets, named colloidal membranes, when significantly increasing polymer concentration. The morphology of these membranes is further controlled by strong electrostatic and chiral twist interactions between the individual rods. Though these interactions are not well understood yet, it has been empirically observed that, in close contact with one another, {\em fd} rods tend to twist preferentially clockwise, instead of arrange following a global nematic direction. When both depletion effect and chirality are strong, twisted colloidal membranes tend to destabilize to give way to twisted ribbons. The additional effect of intrinsic particle chirality strongly impinges  onto the self-assembled mesostructure and drives a vast range of different twisted or chiral structures ranging from smectic membranes to chiral ribbons  \cite{Gibaud2012} and hexagonal nanocrystals displaying screw-dislocations \cite{grelet1}. These twisted structures have been observed experimentally, but reproducing the various mesophases with distincltly different twisted morphologies in computer simulation has been elusive so far.  Modelling efforts have focused almost exclusively on twisted membranes \cite{kang_sm2016,wensink2018elastic,kuhnhold2022colloidal} or conventional LC tactoids exhibiting full three-dimensional fluidity \cite{prinsen2003shape,prinsen2004parity,kuhnhold2022structure}. Resembling the local fluid structure of a smectic monolayer these membranes  provide a convenient platform  to address the typical length scale, called penetration length, over which twist is expelled from the edges of a colloidal smectic phase \cite{barry2009direct}. The concept of twist-expulsion was introduced by De Gennes in the 1970s who established an analogy between the smectic A phase and superconductors. It follows that smectic layers expel twist deformations in the same way that superconductors expel magnetic field \cite{gennes-prost}.
+ The size and concentration of the added polymer can be exploited to  tune the morphology and internal structure of the droplets. Tactoids with nematic-type order have been observed experimentally in mixtures of rods and big depletants (typically bigger than the diameter of the colloidal rods), as well as smectic-like single layer droplets, named colloidal membranes, when significantly increasing polymer concentration. The morphology of these membranes is further controlled by strong electrostatic and chiral twist interactions between the individual rods. Though these interactions are not well understood yet, it has been empirically observed that, in close contact with one another, {\em fd} rods tend to twist preferentially clockwise, instead of arrange following a global nematic direction. When both depletion effect and chirality are strong, twisted colloidal membranes tend to destabilize to give way to twisted ribbons. The additional effect of intrinsic particle chirality strongly impinges  onto the self-assembled mesostructure and drives a vast range of different twisted or chiral structures ranging from smectic membranes to chiral ribbons  \cite{Gibaud2012} and hexagonal nanocrystals displaying screw-dislocations \cite{grelet1}. These twisted structures have been observed experimentally, but reproducing the various mesophases with distincltly different twisted morphologies in computer simulation has been elusive so far.  Modelling efforts have focused almost exclusively on twisted membranes \cite{kang_sm2016,wensink2018elastic,kuhnhold2022colloidal} or conventional LC tactoids exhibiting full three-dimensional fluidity \cite{prinsen2003shape,prinsen2004parity,kuhnhold2022structure}. Resembling the local fluid structure of a smectic monolayer these membranes  provide a convenient platform  to address the typical length scale, called penetration length, over which twist is expelled from the edges of a colloidal smectic phase \cite{barry_jpcb2009}. The concept of twist-expulsion was introduced by De Gennes in the 1970s who established an analogy between the smectic A phase and superconductors. It follows that smectic layers expel twist deformations in the same way that superconductors expel magnetic field \cite{gennes-prost}.
 
 
 
@@ -77,7 +77,7 @@ U_{\rm twist} & \textrm{otherwise} \\
 \end{cases}
 \label{urod}
 \eeq
-The electrostatic interactions between {\em fd} rods give rise to so-called electrostatic twist which is intimately linked to the chirality surface architecture of {\em fd} virus rods. The chiral  potential is commonly expressed in terms of a pseudoscalar form initially put forward by Goossens \cite{goossens}:
+The electrostatic interactions between {\em fd} rods give rise to so-called electrostatic twist which is intimately linked to the chirality surface architecture of {\em fd} virus rods. The chiral  potential is commonly expressed in terms of a pseudoscalar form initially put forward by Goossens \cite{goossens71}:
 \beq
 U_{\rm twist} (\Delta {\bf r}, \oma , \omb )=
 -\varepsilon_{c} \left ( \frac{D}{\Delta r} \right )^{7}(\oma \cdot \omb)(\oma \times \omb \cdot \Delta \hat{\bf r})
@@ -196,11 +196,11 @@ In \fig{crystal11}, we observe stabilized twisted membranes in the intermediate 
 
 \begin{figure}
 \includegraphics[width= .9\columnwidth]{figures/chapter-5/density}
-	\caption[Rod number density profile]{Rod number density profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). } % TODO: explain more.
+	\caption[Rod number density profile]{Rod number density profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). }
  \label{density}
 \end{figure}
 
-\red{\fig{crystal16} shows multi--domain structures that have formed in the strong chirality regime. It is observed from the horizontal section depictions that the distance between rods located at the edges of these domains is considerably bigger compared to the distance between rods located inside the domains. This is due to the highly non optimal collective arangement (from a free volume perspective) rods adopt at the edges. Despite the apparent large distance between adjacent domains --that may allow polymers to accumulate-- they remain adhered to one another presumably due to a significant decrease in chiral energy when adjacent rods are close together and forming an optimal angle. }
+\fig{crystal16} shows multi--domain structures that have formed in the strong chirality regime. It is observed from the horizontal section depictions that the distance between rods located at the edges of these domains is considerably bigger compared to the distance between rods located inside the domains. This is due to the highly non optimal collective arangement (from a free volume perspective) rods adopt at the edges. Despite the apparent large distance between adjacent domains --that may allow polymers to accumulate-- they remain adhered to one another presumably due to a significant decrease in chiral energy when adjacent rods are close together and forming an optimal angle.
 
 
 Another important quantity to measure is the radial density profile. This is done for both cases by taking the projected rod positions in the horizontal plane (as shown in middle and bottom rows of \fig{crystal11} and \fig{crystal16}) in order to obtain the two--dimensional coordinates at the horizontal section. We compute the distance between each rod and the center of mass of the system and we numerically integrate the profile by binning the space in concentric cylindrical rings with radii $r_b$ and width $\Delta r_b=D$. Finally, we count the number of rods residing in each bin and plot $N_r(r_b)/A_r(r_b)$, where $N_r(r_b)$ is the reduced number of rods with distance in $[r_b - \Delta r_b/2,r_b + \Delta r_b/2)$ and $A_r(r_b)$ is the area of the cylindrical bin.
@@ -210,7 +210,7 @@ We clearly observe a significant drop of the local density near the membrane edg
 
 \begin{figure}
 \includegraphics[width= .9\columnwidth]{figures/chapter-5/twistprofile}
-	\caption[Twist angle profile]{Twist angle profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). } % TODO: explain more.
+	\caption[Twist angle profile]{Twist angle profile of membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk. Top: without vertical fluctuations. Bottom: with vertical fluctuations. For all cases, $a = 2D$. For the cases where vertical fluctuations are (not) allowed, $\phi_p=0.25$ ($\phi_p=0.175$). }
  \label{twangle}
 \end{figure}
 
@@ -220,7 +220,7 @@ We clearly observe a significant drop of the local density near the membrane edg
 \begin{figure}
 \begin{center}
 \includegraphics[width= .8\columnwidth]{figures/chapter-5/zstd}
-	\caption[Vertical fluctuations]{Vertical fluctuations as a function of the distance to the center of 3D membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk, $a = 2D$, $\phi_p=0.25$. } % TODO: explain more.
+	\caption[Vertical fluctuations]{Vertical fluctuations as a function of the distance to the center of 3D membrane-shaped tactoids of chiral rods mixed with non-adsorbing polymer formed in bulk, $a = 2D$, $\phi_p=0.25$. }
  \label{zstd}
 \end{center}
 \end{figure}
@@ -300,7 +300,7 @@ Note that the membrane moduli have unity ${\rm N \cdot m}$ (the 3D moduli would 
 
 \subsection{Chiral twist }
 
-The pitch $q_{0}$ of a twisted membrane can be estimated by considering a weakly chiral pair potential $U_{c}$ described by some arbitrary but short-ranged spatial decay function $g(r)$ describing the range over which chiral forces interact and chiral amplitude $\varepsilon_{c} $ much smaller than the thermal energy. This potential takes the following generic form \cite{goossens1971}:
+The pitch $q_{0}$ of a twisted membrane can be estimated by considering a weakly chiral pair potential $U_{c}$ described by some arbitrary but short-ranged spatial decay function $g(r)$ describing the range over which chiral forces interact and chiral amplitude $\varepsilon_{c} $ much smaller than the thermal energy. This potential takes the following generic form \cite{goossens71}:
 \beq
 U_{c} \sim  \varepsilon_{c} g( r)(\bwa \times \bwb \cdot   \bx) (\bwa \cdot \bwb)
 \label{uchi}
@@ -313,7 +313,7 @@ in terms of an integrated chiral amplitude  $\bar{\varepsilon}_{c}$ which is  {\
 \beq
  \bar{\varepsilon}_{c}  =  \varepsilon_{c} \int d \bdr | \bdr \cdot \bx |    g( r)
  \eeq
- which has units energy times volume ($k_{B}T \times D^{3}$). The chiral potential drives the twisting of the membrane and $K_{t}$  provides an explicit link between the effective torque-field and the range and amplitude  of the chiral pair potential between a pair of  rods. We remark that the above mean-field treatment will be less adequate for strongly chiral amplitudes $\varepsilon_{c} \gg k_{B}T$. A common choice for $g(r)$ is a short-ranged power law $g(r) = 1/r^{7}$ but  long-ranged forms such as a square-well (SW) potential could be conceivable as well \cite{wensinkjackson}. Taking the power law featuring in \eq{uchiral} we obtain $\bar{\varepsilon}_{c} = \varepsilon_{c} D^{3}$.  From this we find a {\em microscopic} expression for the typical equilibrium  pitch of the membrane $q_{0} = K_{t}/K_{2}$ that further depends on the in-plane rod density $\rho_{0}$ and rod aspect ratio $\ell = L/D$:
+ which has units energy times volume ($k_{B}T \times D^{3}$). The chiral potential drives the twisting of the membrane and $K_{t}$  provides an explicit link between the effective torque-field and the range and amplitude  of the chiral pair potential between a pair of  rods. We remark that the above mean-field treatment will be less adequate for strongly chiral amplitudes $\varepsilon_{c} \gg k_{B}T$. A common choice for $g(r)$ is a short-ranged power law $g(r) = 1/r^{7}$ but  long-ranged forms such as a square-well (SW) potential could be conceivable as well \cite{Wensink2009}. Taking the power law featuring in \eq{uchiral} we obtain $\bar{\varepsilon}_{c} = \varepsilon_{c} D^{3}$.  From this we find a {\em microscopic} expression for the typical equilibrium  pitch of the membrane $q_{0} = K_{t}/K_{2}$ that further depends on the in-plane rod density $\rho_{0}$ and rod aspect ratio $\ell = L/D$:
  \beq
  q_{0} \sim \frac{12 \rho_{0} \bar{\varepsilon_{c}}}{ \ell^{2}}
  \label{qzero}
