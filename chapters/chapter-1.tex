@@ -515,6 +515,13 @@ Similar schemes have been performed by Bolhuis and Frenkel \cite{Bolhuis1994} an
 \subsection{Implicit depletants algorithm}
 \label{sec:implicit}
 
+\begin{figure}
+\begin{center}
+\includegraphics[width= .8\columnwidth]{figures/chapter-1/implicit_depletants}
+\caption[Depletant positions (spheres) considered for rejection of a colloid move (orange spherocyllinders)]{ \label{implicit} Depletant positions (spheres) considered for rejection of a colloid move (orange spherocyllinders). When updating the configuration, depletants are randomly inserted into the cylinder (black rectangle) containing the excluded volume between the colloid and the depletants. Overlapping depletants (black spheres) lead to rejection of the trial move. Depletants that overlap with the old position $M$ or with surrounding colloids (blue) are not considered.}
+\end{center}
+\end{figure}
+
 In the previous approach, simulation performance can become compromised due to the need to explicitly track all the depletant particles. This is particularly evident in our simulations where a large region of the system volume needs to be kept empty around the mesoscopic colloidal droplets to prevent artifacts induced by system boundaries. As a result, a significant portion of the total volume is completely filled with depletants, which need to be stored and updated during the simulation and yet are not relevant for subsequent statistical analysis.
 
 Some approaches that aim to overcome this issue (\cite{bolhuis_jcp1997,PhysRevE.73.041404,Henzie2011} to name a few) are based on a effective depletion potential approach, integrated over all the depletant degrees of freedom. However, achieving sufficient accuracy in the pairwise effective potential also comes at the expense of computation time, whereas an overly simplified interaction may hinder the study of arbitrary shapes and size ratios.
@@ -554,12 +561,5 @@ Glaser {\em et al.} \cite{glaser2015parallel} proposed a scheme to handle many-b
 In a nutshell, Algorithm \ref{algo:implicit} conveys the basic idea of this scheme in its most general form. However, this version is computationally impractical since it requires integration of the free volume $V_{free}$ in the entire simulation box for every single colloid move. In the original article \cite{glaser2015parallel} several alternative volume choices are considered, and proved to obey detailed balance. It is possible to choose a smaller region $V_0 \subset V$ of the entire volume, containing only the region where modifications are being applied. For simplicity, this volume can also contain regions in principle unaccessible to depletants, i. e. $V_0 \setminus (V_0 \cap V_{free}) \neq \emptyset$; it suffices to ignore the colloid-polymer overlaps occuring in these regions.
 
 For anisotropic colloids with aspect ratios $\sim 1$, \cite{glaser2015parallel} proposes to choose $V_0$ as the circumsphere of diameter $D_{colloid} + D_{depletant}$ around the colloid in the new configuration $M^\prime$, ignoring depletants that overlap with the colloid in the old configuration $M$. In our case, due to the large aspect ratios that we will be dealing with, we shall rather define $V_0$ more conveniently as a cylinder at the center of mass of the moved colloid $i^\prime$, with diameter $D + a$, length $L + D + a$ (with $a$ being the depletant diameter) and orientation $\bhu_i^\prime$. See \fig{implicit} for a depiction of our approach.
-
-\begin{figure}
-\begin{center}
-\includegraphics[width= .8\columnwidth]{figures/chapter-1/implicit_depletants}
-\caption[Depletant positions (spheres) considered for rejection of a colloid move (orange spherocyllinders)]{ \label{implicit} Depletant positions (spheres) considered for rejection of a colloid move (orange spherocyllinders). When updating the configuration, depletants are randomly inserted into the cylinder (black rectangle) containing the excluded volume between the colloid and the depletants. Overlapping depletants (black spheres) lead to rejection of the trial move. Depletants that overlap with the old position $M$ or with surrounding colloids (blue) are not considered.}
-\end{center}
-\end{figure}
 
 \clearpage

@@ -44,10 +44,11 @@
 
 
 \usepackage[autostyle]{csquotes}
-\usepackage[style=alphabetic,citestyle=alphabetic,sortcites=true, autopunct=true,autolang=hyphen,hyperref=true,abbreviate=true,backref=false, backend=biber,defernumbers=true, doi=false, url=false, giveninits=true]{biblatex}
+\usepackage[style=numeric,citestyle=numeric,sortcites=none, sorting=none, autopunct=true,autolang=hyphen,hyperref=true,abbreviate=true,backref=false, backend=biber,defernumbers=true, doi=false, url=false, giveninits=true]{biblatex}
 \addbibresource{bib/pub.bib}
 \addbibresource{bib/refs.bib}
 \addbibresource{bib/rik.bib}
+\AtEveryBibitem{\clearfield{title}} %remove title from references
 
 \usepackage[toc,page,title,titletoc]{appendix} % appendix
 
