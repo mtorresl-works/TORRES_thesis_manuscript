@@ -344,17 +344,16 @@ F = & \frac{1}{2} K \int d \bfr \left [ (\nabla \cdot \bn)^{2}  + (\nabla \times
 
 In the systems evaluated in this thesis, however, this approximation is applied carefully (in Chapter \ref{hybridLC1}) or not possible to apply (in Chapter \ref{twistedrods}) in order to account for the complex deformations these particular systems are experiencing.
 
+Following \eq{frankoseen}, the bulk nematic order parameter $S$ is uniform throughout the system volume, a consideration that we consistently apply in our analytical work in chapters \ref{hybridLC1,hybridLC2,twistedrods}. This is a particular case of a more complete LC continuum theory that accounts for changes in the bulk nematic order, known as the Landau--de Gennes theory (we refer the reader to \cite{gennes-prost} for more details on this theory).
+
 \subsubsection{Surface anchoring}
 
-The presence of a solid, liquid or gas interface in the vicinity of the nematic liquid crystal phase can affect the inherent ordering, leading to a modified equilibrium state. Particles next to the interface tend to follow a surface--induced axis. In general, the director alignment along this axis is determined by the interaction between the liquid crystal and the aligning surface. The particle orientation near the surface is characterized by the azimuthal and polar angles $\phi, \theta$ with respect to the surface normal. Different anchoring scenarios are shown in \fig{elasticmodes} (d) ($\theta=\pi/2$ and $\phi=$ constant), (e) ($\theta=0$), (f) ($\theta=\pi/2$ and $\phi=$ arbitrary) and (g) ($0\leq\theta\leq\pi/2$ and $\phi=$ constant). \red{These angles need to be indicated in Fig. 1.4, or just be left out of the text} For uniaxial nematics, the surface contribution to the free energy reads:
+The presence of a solid, liquid or gas interface in the vicinity of the nematic liquid crystal phase can affect the inherent ordering, leading to a modified equilibrium state. Particles next to the interface tend to follow a surface--induced axis. In general, the director alignment along this axis is determined by the interaction between the liquid crystal and the aligning surface, giving way to a variety of anchoring geometries. Some of them are shown in \fig{elasticmodes} .For uniaxial nematics, the surface contribution to the free energy reads:
 
 \beq
 F_{s} = -\frac{1}{2} W_{0} \oint d{\mathcal S}  (\bn_s \cdot \bn_{0}({\mathcal S}))^{2}
 \eeq
-where $W_0$ represents the strength of anchoring, $\bn_{0}$ is the surface--induced nematic director and $\bn_s$ is the actual nematic director at the surface $\mathcal S$. This is known as the Rapini--Papoular surface anchoring \cite{rapini1969} and assumes that the actual level of order near the surface is equal to the order induced by the surface, which may not always be a fair approximation from a practical point of view. 
-
-
-\red{Here I would briefly mention that a more complete LC continuum theory, the famous Landau De Gennes or Q-tensor theory (we may refer to book of De Gennes and Prost for details),  in principle does account for changes in the bulk nematic order, but that we do not use this framework in our thesis. Again, this is basically Jason's numerical simulations in Chapter 3. In our analytical work in Chapter. 3-5 we apply nemato-elastic theory assuming that the bulk nematic order is uniform (as in thew bulk) and not affected by spatial variations of the director field. This often makes theory analytically tractable. Note that we also apply Eq. 1.27 for our ribbon and membrane theories !  } 
+where $W_0$ represents the strength of anchoring, $\bn_{0}$ is the surface--induced nematic director and $\bn_s$ is the actual nematic director at the surface $\mathcal S$. This is known as the Rapini--Papoular surface anchoring \cite{rapini1969} and assumes that the actual level of order near the surface is equal to the order induced by the surface, which may not always be a fair approximation from a practical point of view.
 
 \section[HPMC simulations of colloidal nematics]{Hard-particle Monte Carlo simulations of colloidal nematics: some technical details}
 
