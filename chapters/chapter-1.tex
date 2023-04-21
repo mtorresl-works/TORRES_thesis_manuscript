@@ -368,7 +368,7 @@ One of the advantages of MC over MD is that it permits to study systems characte
 \label{observable}
 \eeq
 
-A possible way to evaluate \eq{observable} is through the Metropolis Monte Carlo algorithm \cite{Metropolis1953}, which becomes much simpler for hard core systems due to the fact that, in this case, the Boltzmann factor can only be worth 0 or 1. The basic form of a MC cycle then becomes:
+A possible way to evaluate \eq{observable} is through the Metropolis Monte Carlo algorithm \cite{Metropolis1953}, which becomes much simpler for hard core systems due to the fact that, in this case, the Boltzmann factor can only be worth 0 or 1. The basic form of a MC cycle takes then the form of Algorithm \ref{algo:MHPMC}
 
 
 \begin{algorithm}[h]
@@ -462,7 +462,7 @@ In order to equate the depletant chemical potentials in both systems, we infer t
 N_p= n_p\langle V_{free} \rangle
 \eeq
 
-In what matters to our simulations presented in Chapter \ref{twistedrods}, the total number of particles in a semi-grand MC scheme is no longer constant, but rather fluctuating towards an optimal value given by $N + N_p$. This allows us to stabilize mesoscopic colloidal compounds while maintaining a constant depletion pressure. Algorithm \ref{algo:MHPMC} is then rewritten as:
+In what matters to our simulations presented in Chapter \ref{twistedrods}, the total number of particles in a semi-grand MC scheme is no longer constant, but rather fluctuating towards an optimal value given by $N + N_p$. This allows us to stabilize mesoscopic colloidal compounds while maintaining a constant depletion pressure. Algorithm \ref{algo:semiHPMC} describes a modification of Algorithm \ref{algo:MHPMC} that accounts for depletants in the semi--grand canonical ensemble.
 
 \begin{algorithm}[h]
     \SetAlgoLined
