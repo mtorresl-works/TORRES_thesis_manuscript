@@ -27,7 +27,7 @@ The key difference between a liquid crystal and the commonly observed gas, liqui
 
 Among the numerous liquid crystalline phases, different degrees of order can be found, evidenced for instance by diffraction of X-rays and light. Measurements of this kind provide a frame to classify these systems by its similarity to either the gas or the solid phase. Let us consider, among others, the following liquid crystalline phases, depicted in \fig{introfig1}:
 
-The {\em isotropic} (I) fluid phase is very similar to the gas and liquid phases for spherical particles and is characterized by a complete absence of positional and orientational order. At the inmediately next stage, we find the {\em nematic} (N) phase, in which particles are homogeneously distributed without positional order as in a liquid phase, but are ordered in their orientation following an average direction: the {\em nematic director} $\bn$. As it will be repeatedly discussed throughout this thesis, in nature one can find particles that, in addition to being anisotropic, present chiral features. This can be due to the arrangement of atoms in a molecular compound, to a (helicoidal) particle shape in some colloidal systems or to a chiral distribution of charges at the surface of the particles, observed for instance in {\em fd} filamentous bacteriophages viral rods \cite{Gibaud_2017}. When chiral particles are in nematic phase, they arrange themselves into a strongly twisted structure. This special case of a nematic phase is often called {\em cholesteric}.
+The {\em isotropic} (I) fluid phase is very similar to the gas and liquid phases for spherical particles and is characterized by a complete absence of positional and orientational order. At the inmediately next stage, we find the {\em nematic} (N) phase, in which particles are homogeneously distributed without positional order as in a liquid phase, but are ordered in their orientation following an average direction: the {\em nematic director} $\bn$. As it will be repeatedly discussed throughout this thesis, in nature one can find particles that, in addition to being anisotropic, present chiral features. This can be due to the arrangement of atoms in a molecular compound, to a (helicoidal) particle shape in some colloidal systems or to a chiral distribution of charges at the surface of the particles, observed for instance in {\em fd} filamentous bacteriophages viral rods \cite{Gibaud_2017}. When chiral particles are in a nematic phase, they arrange themselves into a strongly twisted structure. This special case of a nematic phase is often called {\em cholesteric}.
 
 The {\em smectic} (Sm) phase is closer to the solid phase. In smectic liquid crystals, particles are ordered in layers and cannot move freely between them. The smectic phase is, in turn, divided into several sub-phases with slightly different properties. Examples are the smectic A phase (SmA), where particles can move freely inside the layers as in a two-dimensional liquid; or the smectic B phase (SmB), where there is long-ranged positional order: at higher concentrations or lower temperatures, molecules tend to arrange themselves into something more similar to a crystalline lattice.
 
@@ -54,7 +54,6 @@ S = k_B\log(\mbox{\# {\small accessible states}})
 and depends on the total number of states that are accessible to the system under these conditions. Usually, $S$ is interpreted as a measure for the ‘disorder’ in that system. The natural consequence of this interpretation would be that ordering phase transitions can only take place if the loss in entropy is compensated by the decrease in internal energy. These kind of phase transitions are known as {\em energetic} phase transitions and describe the reality, for example, of the spontaneous phase transition from the regular fluid to the solid crystalline state. In this case, the transition takes place if the freezing lowers the internal energy of the system sufficiently to offset the decrease in the number of accessible configurations and thus the loss in entropy.
 
 However, we can have many ‘ordering’ transitions that are {\em entropic}. Taking \eq{genhelmholtz} one may consider systems in which the internal energy is a function of temperature alone, $S$ being the only quantity affected by any change in the system at constant temperature. If this is the case, it will be possible to find phase transformations determined exclusively by a change in the entropy. Usually, atomic systems do not fulfill this condition because of the existence of attractive or repulsive interactions $u_{ij}$ whose strength depends on the relative inter-particle distance, an thus, the number density of particles $\rho$ when considering the thermodynamic limit. Temperature is then key to determine the accessibility of an ordered state, following the Boltzmann probability of finding a particle configuration of energy $U$, $\exp( -U/k_{B}T)$. Nevertheless, if we limit our attention to hard-core potentials:
-
 \beq
 u_{ij}(r)=
 \begin{cases}
@@ -62,7 +61,7 @@ u_{ij}(r)=
 0 & r>D\textrm{ (if cores do not overlap)}
 \end{cases}
 \eeq
-where $D$ is the diameter of the hard-core shell (which becomes an orientation-dependent quantity for anisotropic particles) and $r$ is the distance between centres of mass, then all the allowed (non-overlapping) configurations at constant temperature will possess the same level of internal energy $U=0$. Interestingly, $T$ then becomes completely irrelevant and any variation in the Helmholtz free energy will be attributed to changes in entropy, that will be maximized at equilibrium. Ordering phase transitions may occur in systems of this kind, e.g. in systems formed by rod-like particles, considering that entropy in these systems can be partitioned into two different components:
+where $D$ is the diameter of the hard-core shell (which becomes an orientation-dependent quantity for a pair of anisotropic particles) and $r$ is the distance between their centres of mass, then all the allowed (non-overlapping) configurations at constant temperature will possess the same level of internal energy $U=0$. Interestingly, $T$ then becomes completely irrelevant and any variation in the Helmholtz free energy will be attributed to changes in entropy, that will be maximized at equilibrium. Ordering phase transitions may occur in systems of this kind, e.g. in systems formed by rod-like particles, considering that entropy in these systems can be partitioned into two different components:
 
 \beq
 S = S_{trans} + S_{rot}
@@ -80,14 +79,14 @@ So far we have implicitly assumed that all particles which build up a gas, liqui
 
 \begin{SCfigure}
 \includegraphics[width= 0.4 \columnwidth]{figures/chapter-1/depletion}
-\caption[The presence of non-adsorbing polymers or other depletions agents (whose size is usually smaller than the colloidal nanoparticles)]{ \label{introfig2} The presence of non-adsorbing polymers or other depletions agents (whose size is usually smaller than the colloidal nanoparticles) produces an effective attractive potential between the rods according to the depletion scenario --which depends on the rods relative orientation and distance--. If the rods are at close proximity, the polymers are depleted away from the inner space between the rods in dictated by the overlap of the depletion zones (hatched area). This creates an osmotic imbalance around the cylindrical surfaces pushing the rods together.  }
+\caption[The presence of non-adsorbing polymers or other depletion agents (whose size is usually smaller than the colloidal nanoparticles)]{ \label{introfig2} The presence of non-adsorbing polymers or other depletions agents (whose size is usually smaller than the colloidal nanoparticles) produces an effective attractive potential between the rods according to the depletion scenario --which depends on the rods relative orientation and distance--. If the rods are at close proximity, the polymers are depleted away from the inner space between the rods in dictated by the overlap of the depletion zones (hatched area). This creates an osmotic imbalance around the cylindrical surfaces pushing the rods together.  }
 \end{SCfigure}
 
-This effect takes place typlically when colloidal particles are mixed with non-adsorbing polymers. \fig{introfig2} highlights the ordering transition in this situation by illustrating the effective attractive interaction between large colloidal rods when polymers are added to the system. Negative adsorption results in a region near the colloidal surface, named {\em depletion layer}, where polymers are less likely to access due to a loss of configurational entropy of the polymer chain. When such regions overlap, there is an increase in the volume available to polymers to explore, thus increasing their entropy and lowering their Helmholtz free energy. Effectively, the addition of depletants to the system generates repulsion between particles of distinct type and, in consequence, attraction between similarly-shaped colloidal particles.
+This effect takes place typically when colloidal particles are mixed with non-adsorbing polymers. \fig{introfig2} highlights the ordering transition in this situation by illustrating the effective attractive interaction between large colloidal rods when polymers are added to the system. Negative adsorption results in a region near the colloidal surface, named {\em depletion layer}, where polymers are less likely to access due to a loss of configurational entropy of the polymer chain. When such regions overlap, there is an increase in the volume available to polymers to explore, thus increasing their entropy and lowering their Helmholtz free energy. Effectively, the addition of depletants to the system generates repulsion between particles of distinct type and, in consequence, attraction between similarly-shaped colloidal particles.
 
-These polymers are often modeled as penetrable hard spheres \cite{GARCIA201816}, known as Asakura-Oosawa spheres, in honor of the first theoreticians who proposed a model to describe the depletion effect \cite{ASAKURA54,ASAKURA58,Vrijdepletie}. By replacing the polymers with spheres of the same radius of gyration, we can obtain the same results in an effective manner. Penetrable hard objects do not interact with each other, i.e. no overlap restrictions are imposed between them, allowing for an ideal gas statistical mechanical treatment; and at the same time they are not allowed to overlap with colloidal particles, causing the emergence of the depletion effect. To sum up, the main approximations assumed by Asakura and Oosawa are: 1) whereas polymer chains in reality are unlikely found inside the depletion layers, in this model they are strictly prohibited; and 2) polymer chains are assumed to be completely transparent to each other, which is a fair approximation in the low depletant concentration regime.
+These polymers are often modeled as penetrable hard spheres \cite{GARCIA201816}, known as Asakura-Oosawa spheres, in honor of the first theoreticians who proposed a model to describe the depletion effect \cite{ASAKURA54,ASAKURA58,Vrijdepletie}. By replacing the polymers with spheres of the same radius of gyration, we can obtain the same results in an effective manner. Penetrable hard objects do not interact with each other, i.e. no overlap restrictions are imposed between them, allowing for an ideal gas statistical mechanical treatment; and at the same time they are not allowed to overlap with colloidal particles, causing the emergence of the depletion effect. To sum up, the main approximations assumed by Asakura and Oosawa are: 1) whereas in reality parts of the polymer chain  are unlikely to reside within the depletion layers, in this model polymer access to the depletion zones is strictly prohibited; and 2) polymer chains are assumed not to interact with each other, which is a fair approximation in the regime where the  depletant concentration is low.
 
-In this work, depletion-driven demixing caused by strong shape assymetry in colloidal mixtures emerges in a natural way in Chapter \ref{disc_polymer} for a system featuring discs and polymerizing rods. In addition to it, the consequences of using penetrable hard spheres as a driving agent to stabilize liquid crystalline droplets will be deeply explored in Chapter \ref{twistedrods}.
+In this work, depletion-driven demixing caused by strong shape assymetry in colloidal mixtures emerges in a natural way in Chapter \ref{disc_polymer} for a system featuring discs and polymerizing rods. In addition, the consequences of using penetrable hard spheres as a driving agent to stabilize liquid crystalline droplets will be deeply explored in Chapter \ref{twistedrods}.
 
 \section{Scope of this thesis}
 
@@ -168,8 +167,7 @@ where $\Phi_{ij} = \exp(-u_{ij}/k_BT)-1$ are the so-called Mayer functions. Onsa
 \begin{equation}
 \frac{B_3}{(B_2)^2} \sim \frac{D}{L}\left ( \ln \frac{L}{D} + cst. \right )
 \end{equation}
-which vanish in the limit of infinitely thin needles. The decrease  has been  verified by means of Monte-Carlo simulations on hard spherocylinders by Frenkel \cite{Frenkel87,Frenkel87err} showing that higher order virial coefficients can be neglected only if $L/D\gg 100$. The situation is much different for thin platelets for which Onsager estimated
-
+which vanishes in the limit of infinitely thin needles. The decrease  has been  verified by means of Monte-Carlo simulations on hard spherocylinders by Frenkel \cite{Frenkel87,Frenkel87err} showing that higher order virial coefficients can be neglected only if $L/D\gg 100$. The situation is much different for thin platelets for which Onsager estimated
 \begin{equation}
 \frac{\beta_{2}}{\beta_{1}^{2}}\sim \mathcal{O}(1), \label{0clusterplate}
 \end{equation}
@@ -183,9 +181,7 @@ What remains now is to integrate the second virial coefficient. For the system p
 0 & \textrm{otherwise}
 \end{cases}
 \end{equation}
-
 The interaction between two particles only contributes to the integral in \eq{B2} if particles are close enough to overlap, i. e. if they are both contained inside the {\em excluded volume} generated from their relative orientations:
-
 \begin{equation}
 B_2 = \frac{1}{2} \int \int v_{excl}(\Omega_1,\Omega_2) f(\Omega_1) f(\Omega_2)\frac{d\Omega_1}{4\pi}  \frac{d\Omega_2}{4\pi}
  \label{B2_exclv}
@@ -193,7 +189,7 @@ B_2 = \frac{1}{2} \int \int v_{excl}(\Omega_1,\Omega_2) f(\Omega_1) f(\Omega_2)\
 
 \begin{SCfigure}
 \includegraphics[width= 0.4 \columnwidth]{figures/chapter-1/exclvol}
-\caption[Illustration of the excluded volume of two spherocyllinders  of length $L$ and diameter $D$ at mutual orientation $\gamma$]{ \label{introfig3} Illustration of the excluded volume of two spherocyllinders  of length $L$ and diameter $D$ at mutual orientation $\gamma$. Rod alignment leads to a strong reduction of the excluded volume represented by the lozenge-shaped figure.}
+\caption[Illustration of the excluded volume of two spherocylinders  of length $L$ and diameter $D$ at mutual orientation $\gamma$]{ \label{introfig3} Illustration of the excluded volume of two spherocylinders  of length $L$ and diameter $D$ at mutual orientation $\gamma$. Rod alignment leads to a strong reduction of the excluded volume represented by the lozenge-shaped figure.}
 \end{SCfigure}
 
 Since we are accounting for possible inhomogeneous angular configurations, the previous reformulation of the integral must be weighted by the ODF $f(\Omega)$.
@@ -212,43 +208,33 @@ integrations over the translational and rotational momenta of the anisometric pa
 &+\frac{\rho}{2} \iint d\Omega d\Omega^{\prime}
 f(\Omega)f(\Omega^{\prime})v_{\text{excl}}(\Omega,\Omega^{\prime}). \label{0freetot}
 \end{align}
-
 This is the final recipe to model the phase behavior of an ideal mixture of hard rods, where the most probable orientational state is given by the function $f(\Omega)$ that better minimizes the Helmholtz free energy. The isotropic-nematic transition comes from a competition between the before-last and last terms, which correspond to the orientational and translational entropy respectively. For low concentrations, the orientational entropy dominates and is maximized by an isotropic distribution, whereas for high concentrations the second virial term becomes more important, which favors a nematic distribution at the expense of losing orientational entropy.
 
 The critical packing fraction at wich an isotropic-nematic ordering occurs roughly corresponds to the situation when the bare particle volume is of the same order of magnitude as its average excluded volume:
-
 \begin{equation}
 \phi_{IN} \propto \frac{\mbox{{\small volume per particle}}}{\mbox{{\small average excluded volume per particle}}}
 \end{equation}
-
 The excluded volume for a pair of spherocylinders as sketched in \fig{introfig3} reads
-
 \begin{equation}
 v_{excl}(\Omega_1,\Omega_2) = 2L^2D |\sin\gamma|+2\pi D^2 L + \frac{4}{3}\pi D^3
 \end{equation}
-
-An analogous expression was obtained by Onsager for two cylinders with different arbitrary lengths, diameters and mutual orientation \cite{onsager1949}. Simple scaling considerations for thin cylinders then prompt us to infer that, whereas the volume per particle scales as $\propto L D^2$, the excuded volume typically goes as $\propto D L^2$. In consequence,
-
-
+An analogous expression was obtained by Onsager for two cylinders with different arbitrary lengths, diameters and mutual orientation \cite{onsager1949}. Simple scaling considerations for thin cylinders then prompt us to infer that, whereas the volume per particle scales as $\propto L D^2$, the excluded volume typically goes as $\propto D L^2$. In consequence,
 \begin{equation}
 \phi_{IN} \propto \frac{D}{L}
 \end{equation}
-
 Clearly, the more slender the rods (large $L/D$) the lower the critical packing fraction at which the I-N phase transformation can be expected. Strictly, in the Onsager limit $L/D \rightarrow \infty$ the transition occurs in the ultra-dilute regime where a pair-interaction-only approximation is entirely justified.
 
 For uniaxial isolated colloidal particles, the nematic phase is axially symmetric about $\bn$, $f(\Omega)=f(\theta)$ where $\theta$ denote the angular deviation of the particle along the polar direction with respect to the global nematic director. The sharpness of this ODF depends on the concentration of the system, and thus we can find different levels of orientational order. The level of order of a nematic phase can be quantified by means of the {\em uniaxial order parameter} $S$, defined as follows:
-
 \beq
 S = \langle P_2(\cos\theta)\rangle =  \frac{1}{2}(3\langle\cos^2\theta\rangle-1)
 \label{nemdirector}
 \eeq
-in terms of the second Legendre polynomial. The uniaxial order parameter then lies within the interval $-1/2 \leq S \leq 1$, where $S=1$ indicates perfect ordering (all molecules along $\bn$) and $S=0$ indicates maximum disorder, intrinsic to the isotropic phase. The negative limit, $S=-1/2$, signifies the theoretical ordered state along a plane perpendicular to the director (the {\em anti--nematic} state).
+in terms of the second Legendre polynomial. The uniaxial order parameter then lies within the interval $-1/2 \leq S \leq 1$, where $S=1$ indicates perfect ordering (all molecules along $\bn$) and $S=0$ indicates maximum disorder, intrinsic to the isotropic phase. The negative limit, $S=-1/2$, signifies the theoretical ordered state along a plane perpendicular to the director (the {\em anti--nematic} state). An example of the latter type of organization will be discussed in \ref{disc_polymer}.
 
 
 \subsubsection{Mixtures}
 
 Chapter \ref{disc_polymer} will focus on mixtures of anisometric particles consisting of multiple distinct species (e.g., mixtures of discs and polymers with multiple aggregation numbers). Introducing mole fractions $x_{j}=N_{j}/N$ for each species $j$, the free energy of the mixture can be expressed as a straightforward generalization of \eq{0freetot}:
-
 \begin{align}
 \frac{\beta F}{N} &\sim \ln [\rho \bar{\Lambda}]-1 + \sum_{j} x_{j} \ln x_{j} +
 \sum_{j} x_{j} \int f_{j}(\Omega)\ln \left[ 4 \pi f_{j}(\Omega) \right] d \Omega \nonumber \\
@@ -257,13 +243,11 @@ f_{j}(\Omega)f_{k}(\Omega^{\prime})
 v_{\text{excl}}^{jk}(\Omega,\Omega^{\prime}),  \label{0freetotmulti}
 \end{align}
 with $\bar{\Lambda}=\prod_{j}\Lambda_{j}^{x_{j}}$. The contribution $\sum_{j} x_{j} \ln x_{j}$ represents the {\em entropy of mixing} due to the fact that we are dealing with different species. Although the free energy for mixtures can be easily established,  the implications of \eq{0freetotmulti} are quite significant. In particular, each species $j$ now has its own ODF which must be normalized according to $\int f_{j}(d\Omega)d\Omega \equiv 1$. Moreover, in the case of phase coexistence between an isotropic ($I$) and a nematic ($N$) phase, the conditions for mechanical and chemical equilibrium require equal osmotic pressure $\Pi$ and chemical potentials $\mu_{j}$ for {\em all} species involved. Thus, the coexistence equations read:
-
 \begin{align}
 \Pi^{I}&=\Pi^{N} \nonumber \\
 \mu^{I}_{j}&=\mu^{N}_{j} \qquad\qquad \text{for {\em all} $j$},
 \end{align}
-
-where we must take into account that the composition ${x_{j}}$ may differ in each phase due to fractionation effects. These considerations indicate that the calculation of phase transitions in mixtures is generally a challenging task, requiring specific approximations or numerical techniques depending on the physical situation. More details on the particular approaches addressed in this research work can be found in Chapter \ref{disc_polymer} in which we discuss the case of reversibly polymerizing rods.
+where we must take into account that the composition ${x_{j}}$ may differ in each phase due to fractionation effects. These considerations indicate that the calculation of phase transitions in mixtures is generally a challenging task, requiring specific approximations or numerical techniques depending on the physical situation. More details on the particular approaches addressed in this research work can be found in Chapter \ref{disc_polymer} in which we discuss the case of reversibly polymerizing rods mixed with discs.
 
 \subsection{Facing reality}
 
@@ -271,22 +255,19 @@ Going back to the experimental systems of nanorods and platelets mentioned at th
 
 \begin{enumerate}
 \item Multicomponent mixtures of rod, disks, or living polymers
-\item Effect of external aligning fields
-\item Semi-flexibility
+\item Effect of external aligning fields (e.g. shear and electromagnetic fields)
+\item Rod (semi-)flexibility 
 \item Long-ranged ``soft" interactions (e.g. depletion attraction)
 \item Chirality
 \item Non-uniform systems (interfaces, effect of solid substrates)
 \end{enumerate}
-
-In the main body of this work we will illustrate the rich phenomenology brought about by the topics listed above, most of the time as perturbations to the main entropic hard-core contribution, discussed previously in the context of Onsager's theory. We hope that these examples will convince the reader of the predictive power and versatility of Onsager's second-virial theory even when applied beyond the strict bounds of applicability as formulated in his original paper. In what follows, topics 4 and 5, albeit already introduced, are now very briefly discussed from a more quantitative perspective. Additionaly, the effect of non-uniformity in LC systems (topic 6) is aborded in Section \ref{nemelasticity}
+In the main body of this work we will illustrate the rich phenomenology brought about by the topics listed above, most of the time as perturbations to the main entropic hard-core contribution, discussed previously in the context of Onsager's theory. We hope that these examples will convince the reader of the predictive power and versatility of Onsager's second-virial theory even when applied beyond the strict bounds of applicability as formulated in his original paper. In what follows, topics 4 and 5, albeit already introduced, are now very briefly discussed from a more quantitative perspective. Additionaly, the effect of non-uniformity in LC systems (topic 6) is discussed in Section \ref{nemelasticity}
 
 \subsubsection{Depletion}
 
-Similar to a Yukawa potential, while the depletion interaction remains relatively tractable for simple spherical particles, the quantity becomes highly non-trivial for more complex colloidal shapes. This is due to the intrinsic orientation-dependence of the depletion zones and their overlap conditions when generalized to suspensions involving rod or disk-shaped nanoparticles, and also to the non-additive nature of the depletion potential when the size of the depletants is comparable to the width of the colloids. The depletion attraction between non-isotropic particles could be formally expressed as a mean-field correction term:
-
-
+While the effective potential induced by (polymer) depletion  remains relatively tractable for simple spherical particles, the quantity becomes highly non-trivial for more complex colloidal shapes. This is due to the intrinsic orientation-dependence of the depletion zones and their overlap conditions when generalized to suspensions involving rod or disk-shaped nanoparticles, and also to the non-additive nature of the depletion potential when the size of the depletants is comparable to the width of the colloids. The depletion attraction between non-isotropic particles could be formally expressed as a mean-field correction term:
  \begin{equation}
-U \sim  -\frac{1}{2} \frac{N^{2}}{V} \Pi_{dep} \left \langle \int_{
+U_{dep} \sim  -\frac{1}{2} \frac{N^{2}}{V} \Pi_{dep} \left \langle \int_{
 \substack{
 \mbox{\tiny no core overlap,} \\
 \mbox{\tiny depletion zone overlap}
@@ -294,7 +275,7 @@ U \sim  -\frac{1}{2} \frac{N^{2}}{V} \Pi_{dep} \left \langle \int_{
 } d {\bf r}_{ij}   v^{dep}_{ij}({\bf r}_{ij})  \right \rangle_{\mbox{\tiny orientational states of rods i and j}}
 \label{degen}
 \end{equation}
-where $\Pi_{dep}$ is the osmotic pressure of the depletants. In arriving at this expression, the depletion agents have been considered to be mutually non-interacting and the effective attraction ptential between the nanoparticles is proportional to the overlap volume $v^{dep}_{ij}$ of the depletion zones of particles $i$ and $j$ (see \fig{introfig2}) \cite{LekkerkerkerTuinier2011}.
+where $\Pi_{dep}$ is the osmotic pressure exerted by the depletants. In arriving at this expression, the depletion agents have been considered to be mutually non-interacting and the effective attraction ptential between the nanoparticles is proportional to the overlap volume $v^{dep}_{ij}$ of the depletion zones of particles $i$ and $j$ (see \fig{introfig2}) \cite{LekkerkerkerTuinier2011}.
 
 \subsubsection{Chirality}
 
@@ -303,13 +284,12 @@ The presence of surface charges (or {\em soft patches}) residing on the colloid 
 u_{ij} \sim  \varepsilon_{c} g( r)({\bf \hat{u}}_{i} \cdot {\bf \hat{u}}_{j}) ( {\bf \hat{u}}_{i} \times {\bf \hat{u}}_{j} \cdot {\bf r} )
 \label{chirality}
 \eeq
-
-In Chapter \ref{twistedrods}, we will analyze in detail the implications of this interaction for the chiral features of colloidal mesoscopic compounds, whose microscopic details can be encapsulated into the effective chiral amplitude $\varepsilon_c$ and decay function $g(r)$, which express the typical range over which chiral forces are transmitted. The effective potential is distinctly chiral and lacks inversion symmetry, meaning that it changes under a transformation ${\bf r}_{ij} \rightarrow -{\bf r}_{ij} $, while preserving basic head-tail symmetry $u_{ij}({\bf \hat{u}}_{i/j}) = u_{ij}(-{\bf \hat{u}}_{i/j}) $.
+In Chapter \ref{twistedrods}, we will analyze in detail the implications of this interaction for the chiral features of colloidal mesoscopic compounds, whose microscopic details can be encapsulated into the effective chiral amplitude $\varepsilon_c$ and decay function $g(r)$, which expresses the typical range over which chiral forces are transmitted. The effective potential is distinctly chiral and lacks inversion symmetry, meaning that it changes under a parity transformation ${\bf r}_{ij} \rightarrow -{\bf r}_{ij} $, while preserving basic head-tail symmetry $u_{ij}({\bf \hat{u}}_{i/j}) = u_{ij}(-{\bf \hat{u}}_{i/j}) $.
 
 \subsection{Non-uniformity in nematic LCs: nemato--elasticity and surface anchoring}
 \label{nemelasticity}
 
-In this section, we discuss how the presence of confining boundaries can significantly alter the overall free energy of the system. First, we focus on the elastic free energy originated from deformations in the bulk director field, described in the Frank-Oseen form. Next, a surface term to the free energy is presented that accounts for the order induced by the presence of an interface, an effect commonly known as {\em surface anchoring}.
+In this section, we discuss how the presence of confining boundaries can significantly alter the overall free energy of the system. This situation arises, for instance, when colloidal particles are immersed in a thermotropic liquid crystal and defects emerge around the colloidal surface, as discussed in Chapter \ref{hybridLC1} and \ref{hybridLC2} or when dealing with liquid crystalline droplets such as tactoids and smectic membranes surrounded by an isotropic environment  (Chapter \ref{twistedrods}). First, we focus on the elastic free energy originated from deformations in the bulk director field, described in the Frank-Oseen form. Next, a surface term to the free energy is presented that accounts for the order induced by the presence of an interface, an effect commonly known as {\em surface anchoring}.
 
 \begin{figure}
 \begin{center}
@@ -320,57 +300,46 @@ In this section, we discuss how the presence of confining boundaries can signifi
 
 \subsubsection{\em {Nemato--elasticity}}
 
-In general, the ordering effect of an external interaction applied to the bulk nematic phase leads to specific elastic deformations in the nematic director. This external influence can be, for example, the presence of an interface with a solid, a liquid or a gas near the bulk nematic phase (as discussed in Chapters \ref{hybridLC1} and \ref{twistedrods}) or the interaction between the nematic phase and some external field (e. g. in Chapter \ref{hybridLC2} we study the inmersion of a colloidal nematic into a twist--inducing molecular cholesteric field). The resulting deformations of the nematic director can be described by one or a combination of any of the basic elastic modes: splay, twist and bend. These modes are sketched in \fig{elasticmodes} (a), (b) and (c), and are often expressed in terms of spatial variations of the nematic director $\bn$ expressed by the Frank-Oseen free energy for the case of weak deformations \cite{gennes-prost}:
-
+In general, the ordering effect of an external interaction applied to the bulk nematic phase leads to specific elastic deformations in the nematic director. This external influence can be, for example, the presence of an interface with a solid, a liquid or a gas near the bulk nematic phase (as discussed in Chapters \ref{hybridLC1} and \ref{twistedrods}) or the interaction between the nematic phase and some external field (e.g. in Chapter \ref{hybridLC2} we study the immersion of a colloidal nematic into a twist--inducing molecular cholesteric field). The resulting deformations of the nematic director can be described by one or a combination of any of the basic elastic modes: splay, twist and bend. These modes are sketched in \fig{elasticmodes} (a), (b) and (c), and are often expressed in terms of spatial variations of the nematic director $\bn$ expressed by the Frank-Oseen free energy for the case of weak deformations \cite{gennes-prost}:
 \begin{align}
 F = & \frac{1}{2} \int d \bfr \left [ K_{1} (\nabla \cdot \bn)^{2}  + K_{2} (\bn \cdot \nabla \times \bn + q_{0})^{2}  +   K_{3} (\bn \times \nabla \times \bn)^{2} \right ]
     \label{frankoseen}
 \end{align}
-
-The constants $K_i$ inherently take into account the order parameter ($S$, defined in \eq{nemdirector}) dependence of the nematic director deformation. The splay, twist and bend modes are addressed through the constants $K_1$, $K_2$ and $K_3$ respectively. The constant $q_0$ appearing in the twist deformation term is relevant only in chiral phases, and accounts for the inverse cholesteric pitch. Further extensions can be incorporated in the Frank--Oseen free energy that are primarily restricted to the surface of the nematic liquid crystals:
-
-
+The elastic constants $K_i$ inherently depend on the nematic order parameter ($S$, defined in \eq{nemdirector}). The splay, twist and bend modes are addressed through the constants $K_1$, $K_2$ and $K_3$ respectively. The constant $q_0$ appearing in the twist deformation term is relevant only in chiral phases, and accounts for the inverse cholesteric pitch. Further extensions can be incorporated in the Frank--Oseen free energy that are primarily restricted to the surface of the nematic liquid crystals:
 \begin{align}
 F_{13} = K_{13} & \int d \bfr  \nabla \cdot \left[\bn(\nabla \cdot \bn)\right] \\
 F_{24} = -K_{24} & \int d \bfr \nabla \cdot \left[\bn(\nabla \cdot \bn) + \bn \times (\nabla \times \bn)\right]
 \end{align}
-$K_{13}$ and $K_{24}$ are known as the {\em splay--bend} and the {\em saddle--splay} mixed constants respectively.
+$K_{13}$ and $K_{24}$ are known as the {\em splay--bend} and the {\em saddle--splay} mixed constants respectively. In Chapter 5 we demonstrate that saddle-splay elasticity plays an important role in stabilizing chiral tactoids such as double-twisted ribbons observed in mixtures of colloidal rods and non-adsorbing polymer \cite{Gibaud2012}.
 
 The Frank elastic energy is often simplified by assuming the {\em one constant approximation}: $K =K_1=K_2=K_3$, in which case \eq{frankoseen} reduces to:
-
 \begin{align}
 F = & \frac{1}{2} K \int d \bfr \left [ (\nabla \cdot \bn)^{2}  + (\nabla \times \bn)^{2} \right ]
 \end{align}
+While this approximation is commonly applied in most LC modelling studies we demonstrate in Chapters \ref{hybridLC1} and  \ref{twistedrods}) that it may lead to qualitative discrepancies with experimentally observed behavior for complex director deformations such as chiral defects and twisted ribbons we respectively consider in those chapters.
 
-In the systems evaluated in this thesis, however, this approximation is applied carefully (in Chapter \ref{hybridLC1}) or not possible to apply (in Chapter \ref{twistedrods}) in order to account for the complex deformations these particular systems are experiencing.
-
-Following \eq{frankoseen}, the bulk nematic order parameter $S$ is uniform throughout the system volume, a consideration that we consistently apply in our analytical work in chapters \ref{hybridLC1,hybridLC2,twistedrods}. This is a particular case of a more complete LC continuum theory that accounts for changes in the bulk nematic order, known as the Landau--de Gennes theory (we refer the reader to \cite{gennes-prost} for more details on this theory).
+Following \eq{frankoseen}, the bulk nematic order parameter $S$ is often assumed to uniform throughout the system volume, a consideration that we consistently apply in our analytical work in Chapters 3, 4 on colloids immersed in thermotropic LCs. This assumption is justified if the surface anchoring forces are weak and director distortions around the surface are only weakly developed. For the mesoscopic LC membranes discussed in Chapter 5 the assumption of constant bulk nematic order works well as long as the local colloid density is uniform throughout the membrane. We wish to emphasize that the Frank--Oseen theory  is a particular case of a more complete LC continuum theory that accounts for changes in the bulk nematic order, known as the Landau--de Gennes theory that we do not use here. We refer the reader to De Gennes' book \cite{gennes-prost} for more details on this theory.
 
 \subsubsection{Surface anchoring}
 
-The presence of a solid, liquid or gas interface in the vicinity of the nematic liquid crystal phase can affect the inherent ordering, leading to a modified equilibrium state. Particles next to the interface tend to follow a surface--induced axis. In general, the director alignment along this axis is determined by the interaction between the liquid crystal and the aligning surface, giving way to a variety of anchoring geometries. Some of them are shown in \fig{elasticmodes} .For uniaxial nematics, the surface contribution to the free energy reads:
-
+The presence of a solid, liquid or gas interface in the vicinity of the nematic liquid crystal phase can affect the inherent ordering, leading to a modified equilibrium state. Particles next to the interface tend to follow a surface--induced axis. In general, the director alignment along this axis is determined by the interaction between the liquid crystal and the aligning surface, giving way to a variety of anchoring geometries. Some of them are shown in \fig{elasticmodes}. For uniaxial nematics, the surface contribution to the free energy reads:
 \beq
 F_{s} = -\frac{1}{2} W_{0} \oint d{\mathcal S}  (\bn_s \cdot \bn_{0}({\mathcal S}))^{2}
 \eeq
-where $W_0$ represents the strength of anchoring, $\bn_{0}$ is the surface--induced nematic director and $\bn_s$ is the actual nematic director at the surface $\mathcal S$. This is known as the Rapini--Papoular surface anchoring \cite{rapini1969} and assumes that the actual level of order near the surface is equal to the order induced by the surface, which may not always be a fair approximation from a practical point of view.
+where $W_0$ represents the strength of anchoring, $\bn_{0}$ is the preferred ``easy" direction of nematic order at the surface denoted by $\mathcal S$ and $\bn_s$ is the actual nematic director. This contribution is known as the Rapini--Papoular surface anchoring free energy \cite{rapini1969} and is a reliable choice to account for anchoring forces between a liquid crystal and a substrate \cite{barbero1986validity}.
 
-\section[HPMC simulations of colloidal nematics]{Hard-particle Monte Carlo simulations of colloidal nematics: some technical details}
+\section[HPMC simulations of colloidal nematics]{Hard-particle Monte Carlo (HPMC) simulations of colloidal nematics: some technical details}
 
 In the last half century, the use of molecular simulations has become increasingly widespread across a multitude of scientific disciplines, representing an essential tool in the realm of colloidal and soft matter science. The initial success of these simulations can be traced back to their ability to predict the transition between the liquid and solid phases in a system of hard spheres \cite{ALDER57,WOOD57}. Since then, molecular simulations have become a pillar in soft matter research, allowing for the exploration of complex systems at the molecular level with remarkable accuracy and versatility.
 
 Molecular simulations are classified into two principal categories: Molecular Dynamics (MD) and Monte Carlo (MC) simulations. The fundamental aim of both techniques is to acquire macroscopic observables from microscopic properties of the system. While MD simulations focus on time averages, MC simulations rely on ensemble averages. In the thermodynamic limit, these two types of averages become equivalent, according to the ergodic hypothesis, which postulates that a system traverses all possible states in its phase space over a long enough time scale \cite{dfrenkel96:mc}. As a result, the use of molecular simulations has led to significant advances in a variety of fields, ranging from materials science to biophysics and beyond, making them an indispensable tool for contemporary scientific research.
 
-One of the advantages of MC over MD is that it permits to study systems characterized by non-analytical interaction potentials e. g. the hard core interaction invoked in this work. Using Monte Carlo simulations to explore the configurational space of a system at certain conditions, an observable $A$ can be calculated as an average over a big number of accessible configurations. In the canonical ensemble (systems at constant $\{N,V,T\}$) this can be integrated using the Boltzmann probability of finding a particle configuration of energy U, $\exp( -U/k_{B}T)$:
-
+One of the advantages of MC over MD is that it permits to study systems characterized by non-analytical interaction potentials e. g. the hard core interaction invoked in this work. Using Monte Carlo simulations to explore the configurational space of a system at certain conditions, an observable $A$ can be calculated as an average over a big number of accessible configurations. In the canonical ensemble (systems at constant $\{N,V,T\}$) this can be integrated using the Boltzmann probability $\exp( -U/k_{B}T)$ of finding a particle configuration of energy $U$:
 \beq
 \langle  A \rangle = \frac{\int d \bfr^NA(\bfr^N)\exp(-\beta U)}{\int d \bfr^N\exp(-\beta U)}
 \label{observable}
 \eeq
-
 A possible way to evaluate \eq{observable} is through the Metropolis Monte Carlo algorithm \cite{Metropolis1953}, which becomes much simpler for hard core systems due to the fact that, in this case, the Boltzmann factor can only be worth 0 or 1. The basic form of a MC cycle takes then the form of Algorithm \ref{algo:MHPMC}
-
-
 \begin{algorithm}[h]
     \SetAlgoLined
 
@@ -388,23 +357,18 @@ A possible way to evaluate \eq{observable} is through the Metropolis Monte Carlo
     \caption{Metropolis Monte Carlo algorithm for hard--core potentials in the canonical ensemble.}
     \label{algo:MHPMC}
 \end{algorithm}
-
-
 In this section we aim to give an overview of the technical peculiarities of Hard Particle Monte Carlo (HPMC) simulations of anisotropic particles, in particular mixtures of elongated rods and depletants, that are used in the computational model studied in Chapter \ref{twistedrods}.
 
 \subsection{Overlap conditions for hard spherocyllinders}
 
 As shown in Algorithm~\ref{algo:MHPMC}, in HPMC a move is accepted if there is no overlap between two particles. Hence an efficient overlap test is key in this technique. In the case of spherical objects the overlap test is very simple: it is enough to compute the distance between the center of the two spheres $r_{ij}$ and verify that it is less than the sum of their radii: $r_{ij} \leqslant R_i + R_j$ or, in a computationally cheaper form, $r_{ij}^2 \leqslant (R_i + R_j)^2$. It is possible to model elongated hard rods that use this simple overlap condition by building particles composed of spherical objects attached in a linear chain. In this case, the overlap test simply consists on evaluating pairs of spherical objects associated to distinct rods. However, the computational expense of this strategy is enormous as it involves the order of $N_b^2$ operations at each MC move where $N_b$ is the number of spherical beads in one rod.
-
 This problem is overcome if each colloidal rod is considered to be a spherocylinder, for which a more efficient overlap test is proposed by Allen {\em et al.} \cite{allenevans}. The key steps are outlined below.
 
 A spherocylinder $i$ is defined by its cylindrical surface length $L$, the diameter $D$ of its cylindrical surface and its two hemispheres, the coordinates $\bfr_i$ of its center of mass and the unit vector $\bhu_i$ indicating its orientation. We want to determine the minimum distance between the cores of two spherocylinders $i$ and $j$ with equal lengths and diameters. We can describe any point of the line segment core of $i$ and $j$ parametrically as
-
 \begin{align}
 \bfr_i(\lambda) &= \bfr_i + \lambda \bhu_i \nonumber \\
 \bfr_j(\mu) &= \bfr_j + \mu \bhu_j
 \end{align}
-
 In order to calculate the minimum distance between two arbitrarily oriented lines we can take advantage of the fact that the shortest distance vector,
 \beq
 \bfr_{ij}^{min}(\lambda_0,\mu_0)=\bfr_{j}(\mu_0)-\bfr_{i}(\lambda_0),
@@ -441,29 +405,23 @@ where $i,j=$ 1 or 2 if the spherocylinders belong to the first or second species
 
 Several theories have been developed that enable calculations of phase transitions in systems with depletion interactions. The free volume theory (FVT) by Lekkerkerker {\em et al.} \cite{sphere+polymer} for the phase behavior of dispersions of colloids and non-adsorbing polymer was the first one to account for depletant partitioning over the coexisting phases. This theory is based on the osmotic equilibrium between two systems: a hypothetical depletant reservoir and a mixed colloid $+$ depletant system. Because of its affordability in terms of complexity and yet a phenomenologically accurate description of the problem, this theory serves as a standard reference today, both for theoretical and computational models.
 
-The starting point is the {\em semi--grand} potential density of a system of colloids and polymer in equilibrium with a reservoir containing only the polymer. This semi--grand potential is separated into a hard colloid contribution and a polymer contribution. The colloid part may be described by known expressions for the colloidal fluid and crystalline phases in the canonical ensemble (fixed volume, temperature and number of colloidal particles $\{N,V,T\}$). The polymer contribution is found from a build-up principle: starting from a system without polymer, chains are added to the system until the final concentration is reached, and the polymer contribution is calculated by integrating along this path. This is the reason why the polymer part is treated in a more natural way by using the grand canonical formalism (fixed volume, temperature and polymer chemical potential $\{\mu_p,V,T\}$). The key assumption of this theory is that thermodynamic quantities can be calculated for both colloids and depletants from their independent ensembles, correlated only by means of an ensemble--averaged free volume for the depletants in the mixed system $\langle V_{free} \rangle$. As a result, we can define
-
+The starting point is the {\em semi--grand} potential density of a system of colloids and polymer in equilibrium with a reservoir containing only the polymer. This semi--grand potential is separated into a hard colloid contribution and a polymer contribution. The colloid part may be described by known expressions for the colloidal fluid and crystalline phases in the canonical ensemble (fixed volume, temperature and number of colloidal particles $\{N,V,T\}$). The polymer contribution is found from a build-up principle: starting from a system without polymer, chains are added to the system until the final concentration is reached, and the polymer contribution is calculated by integrating along this path. This is the reason why the polymer part is treated in a more natural way by using the grand canonical formalism (fixed volume, temperature and polymer chemical potential $\{\mu_p,V,T\}$). The key assumption of this theory is that thermodynamic quantities can be calculated for both colloids and depletants from their independent ensembles, correlated only by means of an ensemble--averaged free volume for the depletants in the mixed system $\langle V_{free} \rangle$. As a result, we can define the semi-grand canonical potential
 \beq
 \Omega(N,V,T,\mu_p) = F_0(N,V,T) - \Pi^R\langle V_{free} \rangle
 \eeq
-where $F_0$ is the free energy of the colloidal particle system without added depletant, $\mu_p$ represents the chemical potential of the polymer depletant and $\langle V_{free} \rangle$ is the available volume for the depletants, i.e. the total volume in the mixed system outside the depletion layers, and it is approximated by the free volume in the pure hard colloid dispersion $\langle V_{free} \rangle_0$. This approximation is valid in the limit of low depletant activity, and starts losing accuracy when increasing it. $\Pi^R$ is the osmotic pressure in the reservoir, and it can be easily calculated by considering the depletants as penetrable hard spheres, which allows for a real gas formulation and thus
-
+where $F_0$ is the free energy of the colloidal particle system without added depletant, $\mu_p$ represents the chemical potential of the polymer depletant and $\langle V_{free} \rangle$ is the available volume for the depletants, i.e. the total volume in the mixed system outside the depletion layers, and it is approximated by the free volume in the pure hard colloid dispersion $\langle V_{free} \rangle_0$. This approximation is valid in the limit of low depletant activity, and starts losing accuracy when increasing it. $\Pi^R$ is the osmotic pressure in the reservoir, and it can be easily calculated by considering the depletants as penetrable hard spheres, which allows for a ideal gas formulation  in terms of van 't Hoff's law
 \beq
 \Pi^R=n_pk_BT
 \eeq
 where $n_p$ is the number density of the depletants in the reservoir. We can also write the chemical potential:
-
 \beq
 \mu_p = \textrm{const} + k_BT\ln n_p
 \eeq
-
 In order to equate the depletant chemical potentials in both systems, we infer that the average number of depletants in the mixed system $N_p$ must fulfill
 \beq
 N_p= n_p\langle V_{free} \rangle
 \eeq
-
-In what matters to our simulations presented in Chapter \ref{twistedrods}, the total number of particles in a semi-grand MC scheme is no longer constant, but rather fluctuating towards an optimal value given by $N + N_p$. This allows us to stabilize mesoscopic colloidal compounds while maintaining a constant depletion pressure. Algorithm \ref{algo:semiHPMC} describes a modification of Algorithm \ref{algo:MHPMC} that accounts for depletants in the semi--grand canonical ensemble.
-
+In what matters to our simulations presented in Chapter \ref{twistedrods}, the total number of particles in a semi-grand MC scheme is no longer constant, but rather fluctuating towards an optimal value given by $N + N_p$. This allows us to stabilize mesoscopic colloidal systems such as tactoids and colloidal membranes while maintaining a constant depletion pressure. Algorithm \ref{algo:semiHPMC} describes a modification of Algorithm \ref{algo:MHPMC} that accounts for depletants in the semi--grand canonical ensemble.
 \begin{algorithm}[h]
     \SetAlgoLined
 
@@ -508,7 +466,6 @@ In what matters to our simulations presented in Chapter \ref{twistedrods}, the t
     \caption{Semi--grand canonical Monte Carlo scheme for mixtures of $N$ colloids $+$ depletants at constant chemical potential $\mu_p$. }
     \label{algo:semiHPMC}
 \end{algorithm}
-
 Similar schemes have been performed by Bolhuis and Frenkel \cite{Bolhuis1994} and Vink and Horbach \cite{Vink2004}. Both of these works employ cluster moves as a strategy to increase the acceptance ratio of these MC simulations, which is otherwise significantly low since trial depletant insertion moves have a high probability of overlapping with the volume occupied by the colloids.
 
 \subsection{Implicit depletants algorithm}
@@ -555,7 +512,7 @@ Some approaches that aim to overcome this issue (\cite{bolhuis_jcp1997,PhysRevE.
     \label{algo:implicit}
 \end{algorithm}
 
-Glaser {\em et al.} \cite{glaser2015parallel} proposed a scheme to handle many-body depletion interactions implicitly, avoiding the need to simulate a large number of particles, while maintaining a particle-based approach instead of a more complex effective pairwise potential. The fundamental idea behind this scheme is that depletants can be treated as an ideal gas, assumed to be statistically independent, and therefore, they can be randomly inserted into the excluded volume surrounding a single translated or rotated colloid for each MC step. These depletants are then discarded and re-generated at the following step. The algorithm is particularly efficient for dilute systems of colloids and a large expected number of depletants. It obeys detailed balance and can accept further multi--core parallel implementations.
+Glaser {\em et al.} \cite{glaser2015parallel} proposed a scheme to handle many-body depletion interactions implicitly, avoiding the need to simulate a large number of particles, while maintaining a particle-based approach instead of a more complex effective pairwise potential. The fundamental idea behind this scheme is that depletants can be treated as an ideal gas, assumed to be statistically independent, and therefore, they can be randomly inserted into the excluded volume surrounding a single translated or rotated colloid for each MC step. These depletants are then discarded and re-generated at the following step. The algorithm is particularly efficient for dilute systems of colloids and a large expected number of depletants. It obeys detailed balance and is suitable for multi--core parallel implementations.
 
 In a nutshell, Algorithm \ref{algo:implicit} conveys the basic idea of this scheme in its most general form. However, this version is computationally impractical since it requires integration of the free volume $V_{free}$ in the entire simulation box for every single colloid move. In the original article \cite{glaser2015parallel} several alternative volume choices are considered, and proved to obey detailed balance. It is possible to choose a smaller region $V_0 \subset V$ of the entire volume, containing only the region where modifications are being applied. For simplicity, this volume can also contain regions in principle unaccessible to depletants, i. e. $V_0 \setminus (V_0 \cap V_{free}) \neq \emptyset$; it suffices to ignore the colloid-polymer overlaps occuring in these regions.
 
