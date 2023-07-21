@@ -27,7 +27,7 @@ The key difference between a liquid crystal and the commonly observed gas, liqui
 
 Among the numerous liquid crystalline phases, different degrees of order can be found, evidenced for instance by diffraction of X-rays and light. Measurements of this kind provide a frame to classify these systems by its similarity to either the gas or the solid phase. Let us consider, among others, the following liquid crystalline phases, depicted in \fig{introfig1}:
 
-The {\em isotropic} (I) fluid phase is very similar to the gas and liquid phases for spherical particles and is characterized by a complete absence of positional and orientational order. At the inmediately next stage, we find the {\em nematic} (N) phase, in which particles are homogeneously distributed without positional order as in a liquid phase, but are ordered in their orientation following an average direction: the {\em nematic director} $\bn$. As it will be repeatedly discussed throughout this thesis, in nature one can find particles that, in addition to being anisotropic, present chiral features. This can be due to the arrangement of atoms in a molecular compound, to a (helicoidal) particle shape in some colloidal systems or to a chiral distribution of charges at the surface of the particles, observed for instance in {\em fd} filamentous bacteriophages viral rods \cite{Gibaud_2017}. When chiral particles are in a nematic phase, they arrange themselves into a strongly twisted structure. This special case of a nematic phase is often called {\em cholesteric}.
+The {\em isotropic} (I) fluid phase is very similar to the gas and liquid phases for spherical particles and is characterized by a complete absence of positional and orientational order. At the immediately next stage, we find the {\em nematic} (N) phase, in which particles are homogeneously distributed without positional order as in a liquid phase, but are ordered in their orientation following an average direction: the {\em nematic director} $\bn$. As it will be repeatedly discussed throughout this thesis, in nature one can find particles that, in addition to being anisotropic, present chiral features. This can be due to the arrangement of atoms in a molecular compound, to a (helicoidal) particle shape in some colloidal systems or to a chiral distribution of charges at the surface of the particles, observed for instance in {\em fd} filamentous bacteriophages viral rods \cite{Gibaud_2017}. When chiral particles are in a nematic phase, they arrange themselves into a strongly twisted structure. This special case of a chiral nematic phase is often called {\em cholesteric}.
 
 The {\em smectic} (Sm) phase is closer to the solid phase. In smectic liquid crystals, particles are ordered in layers and cannot move freely between them. The smectic phase is, in turn, divided into several sub-phases with slightly different properties. Examples are the smectic A phase (SmA), where particles can move freely inside the layers as in a two-dimensional liquid; or the smectic B phase (SmB), where there is long-ranged positional order: at higher concentrations or lower temperatures, molecules tend to arrange themselves into something more similar to a crystalline lattice.
 
@@ -61,14 +61,14 @@ u_{ij}(r)=
 0 & r>D\textrm{ (if cores do not overlap)}
 \end{cases}
 \eeq
-where $D$ is the diameter of the hard-core shell (which becomes an orientation-dependent quantity for a pair of anisotropic particles) and $r$ is the distance between their centres of mass, then all the allowed (non-overlapping) configurations at constant temperature will possess the same level of internal energy $U=0$. Interestingly, $T$ then becomes completely irrelevant and any variation in the Helmholtz free energy will be attributed to changes in entropy, that will be maximized at equilibrium. Ordering phase transitions may occur in systems of this kind, e.g. in systems formed by elongated uniaxial particles such as rods or platelets, considering that entropy in these systems can be partitioned into two different components:
+where $D$ is the diameter of the hard-core shell (which becomes an orientation-dependent quantity for a pair of anisotropic particles) and $r$ is the distance between their centres of mass, then all the allowed (non-overlapping) configurations at constant temperature will possess the same level of internal energy $U=0$. Interestingly, $T$ then becomes completely irrelevant and any variation in the Helmholtz free energy will be attributed to changes in entropy, that will be maximized at equilibrium. Ordering phase transitions may occur in systems of this kind considering that different entropic contributions may be competing. In the case of systems formed by elongated uniaxial particles such as rods or platelets, such competition takes place between the following components:
 
 \beq
-S = S_{trans} + S_{rot}
+S = S_{or} + S_{ex}
 \eeq
-where $S_{trans}$ is the translational entropy, related to accessible arrangements due to translational degrees of freedom and $S_{rot}$ is associated with the ways in which the particles can orient or rotate. The notion that spontaneous ordering of particles corresponds to an increase of the total entropy can be understood under this frame as a competition between these two quantities. When some kind of order emerges, particles lose entropy because the density --in terms of orientations-- is no longer uniform. However, this loss is more than offset by the simultaneous gain of translational entropy, i.e.  the available space per particle increases as the particles align. This argument can be extended to higher density phase transformations where positional order is achieved and the available volume each particle is allowed to explore increases if particles are arranged in a more ordered state instead of keeping a homogeneous positional distribution.
+where $S_{or}$ is the {\em ideal} orientational entropy, associated with the ways in which non--interacting particles can orient or rotate and $S_{ex}$ accounts for the available configurational space for particles interacting through {\em excluded volume} contributions. The notion that spontaneous ordering of particles corresponds to an increase of the total entropy can be understood under this frame as a competition between these two quantities. When some kind of order emerges, particles lose entropy because the density --in terms of orientations-- is no longer uniform. However, this loss is more than offset by the simultaneous gain of available volume, i.e.  the number of allowed configurations per particle increases as the particles align. This argument can be extended to higher density phase transformations where positional order is achieved and the available volume each particle is allowed to explore increases if particles are arranged in a more ordered state instead of keeping a homogeneous positional distribution.
 
-The isotropic-nematic phase transition invoked above occurs through a first order transition, as it was probed theoretically by Onsager. He recognized that the transition from an isotropic to a nematic state in solutions containing sufficiently anisometric particles can be described successfully  within a virial expansion of the free energy truncated after the second virial term, an approach which could not be used to explain the gas-liquid transition for spherical particles. About a decade after Onsager's work, Alder Wainwright and others \cite{ALDER57,WOOD57} first showed by means of computer simulations that a similar disorder-order transition, albeit of the positional degrees of freedom, occurs in a fluid of hard spheres, where there is a critical packing fraction at which particles will be able to better explore the translational phase space by adopting an (fcc) lattice rather than a disordered arrangement. Much later, computer simulations by Frenkel {\em et al.}  revealed the stability of smectic and columnar liquid crystals which appear upon densifying systems of respectively hard rods \cite{Frenkel88} and hard platelets \cite{frenkelcol1989,Veerman},  without  attractive interactions between the particles. All of them consist of transitions driven entirely by {\em entropic} interactions.
+The isotropic--nematic phase transition invoked above occurs through a first order transition, as it was probed theoretically by Onsager. He recognized that the transition from an isotropic to a nematic state in solutions containing sufficiently anisometric particles can be described successfully  within a virial expansion of the free energy truncated after the second virial term, an approach which could not be used to explain the gas-liquid transition for spherical particles. About a decade after Onsager's work, Alder Wainwright and others \cite{ALDER57,WOOD57} first showed by means of computer simulations that a similar disorder-order transition, albeit of the positional degrees of freedom, occurs in a fluid of hard spheres, where there is a critical packing fraction at which particles will be able to better explore the translational phase space by adopting an (fcc) lattice rather than a disordered arrangement. Much later, computer simulations by Frenkel {\em et al.}  revealed the stability of smectic and columnar liquid crystals which appear upon densifying systems of respectively hard rods \cite{Frenkel88} and hard platelets \cite{frenkelcol1989,Veerman},  without  attractive interactions between the particles. All of them consist of transitions driven entirely by {\em entropic} interactions.
 
 
 
@@ -103,7 +103,7 @@ Finally, in Chapter  \ref{twistedrods} we introduce a computational model to stu
 
 \section{Statistical mechanical background}
 
-In this section we introduce the statistical mechanical framework of  Onsager's second virial theory to describe the thermodynamic properties of a spatially homogeneous fluid of hard colloidal rods or platelets. Instead of delving into a technical exposition of Onsager's theory (the reader is referred to Onsager's original paper \cite{onsager1949}, as well as some enlightening reviews \cite{Vroege92, allenevans} for more detailed information), we will provide an intuitive overview of its main components. As explained in Section \ref{entropy_order}, the isotropic-nematic phase transformation result from the competition between two principal quantities, related to rotational and translational degrees of freedom. Onsager establishes the formulation of these two quantities and analyzes the transition unsing entropic arguments alone. We also introduce further modifications that can be applied to the Onsager formalism to account for more complex phenomena.
+In this section we introduce the statistical mechanical framework of  Onsager's second virial theory to describe the thermodynamic properties of a spatially homogeneous fluid of hard colloidal rods or platelets. Instead of delving into a technical exposition of Onsager's theory (the reader is referred to Onsager's original paper \cite{onsager1949}, as well as some enlightening reviews \cite{Vroege92, allenevans} for more detailed information), we will provide an intuitive overview of its main components. As explained in Section \ref{entropy_order}, the isotropic-nematic phase transformation results from the competition between two principal quantities, related to orientational and excess contributions. Onsager establishes the formulation of these two quantities and analyzes the transition using entropic arguments alone. We also introduce further modifications that can be applied to the Onsager formalism to account for more complex phenomena.
 
 \subsection{Fluids of hard anisometric particles}
 
@@ -113,7 +113,7 @@ Let us assume an ensemble of slender rigid needles in a fluid state of uniform p
 \label{sor}
 \end{equation}
 
-More specifically, the following expression for the orientational free energy can be obtained:
+More specifically, the following expression for the ideal orientational free energy can be obtained:
 
 \begin{equation}
 \frac{S_{\text{or}}}{N}=-k_B\int f(\Omega)\ln \left[4\pi f(\Omega)\right]d\Omega.
@@ -137,15 +137,15 @@ where $f(\Omega)$ is the normalized {\em orientational distribution function} (O
 \beta F_{\text{or}}=N\left\{\ln \left[\frac{4\pi}{\Delta \Omega}\right] + \sum_{k=1}^{s}\frac{\tilde{N}_{k}}{N}\ln \frac{\tilde{N}_{k}}{N} \right\},
 \label{0fordiscreet}
 \end{equation}
-where $\beta=1/k_BT$ $\Delta \Omega = 4\pi/s$ is the chosen size of the angular bins.
+where $\beta=1/k_BT$, $\Delta \Omega = 4\pi/s$ is the chosen size of the angular bins.
 
 \item Taking the limit $\Delta \Omega \rightarrow 0$ for a {\em continuous} distribution in $\Omega$ we directly obtain \eq{0forient}.
 \end{enumerate}
 \vspace{0.3cm}
 
-It is clear, following \eq{0forient}, that the orientational entropy is maximized when the ODF is isotropic. In consequence, and since in a nematic phase the needles are strongly aligned along either poles of the unit sphere, we infer that the orientational entropy of a nematic phase is always smaller than that of an insotropic fluid at comparable particle orientation.
+It is clear, following \eq{0forient}, that the orientational entropy is maximized when the ODF is isotropic. In consequence, and since in a nematic phase the needles are strongly aligned along either poles of the unit sphere, we infer that the orientational entropy of a nematic phase is always smaller than that of an isotropic fluid at comparable particle orientation.
 
-Let us focus now on the other competing part of the entropy in this system. The translational free energy of an ensemble of slender rigid needles can be approximated systematically by a virial expansion in terms of the density $\rho=N/V$ \cite{hansenmacdonald}. Starting from the law of ideal gases applied to a colloidal solution:
+Let us focus now on the other competing part of the entropy in this system. The excluded volume free energy of an ensemble of slender rigid needles can be approximated systematically by a virial expansion in terms of the density $\rho=N/V$ \cite{hansenmacdonald}. Starting from the law of ideal gases applied to a colloidal solution:
 
 \begin{equation}
 \Pi V = N k_B T
@@ -154,7 +154,7 @@ where $\Pi$ is the osmotic pressure of the system, the virial correction can be 
 \begin{equation}
 \beta \Pi = \rho + B_2\rho^2 + B_3\rho^3 + \ldots
 \end{equation}
-where $B_2$ and $B_3$ are the second and third virial coefficients, and are calculated by integrating simultaneous interactions between two and three particles respectively:
+where $B_2$ and $B_3$ are the second and third virial coefficients, and are calculated by integrating simultaneous interactions between two and three particles respectively\footnote{Note that, for non--spherical particles, $B_2$ and $B_3$ also need to be integrated through the orientational degrees of freedom, which is not explicitly indicated in \eq{B2} and \eq{B3} for simplicity.}:
 
 \begin{equation}
 B_2 = -\frac{1}{2V} \int \int \Phi_{12} d {\bf r}_1 d {\bf r}_2
@@ -162,6 +162,7 @@ B_2 = -\frac{1}{2V} \int \int \Phi_{12} d {\bf r}_1 d {\bf r}_2
 \end{equation}
 \begin{equation}
 B_3 = -\frac{1}{3V} \int \int \int \Phi_{12} \Phi_{13} \Phi_{23} d {\bf r}_1 d {\bf r}_2 d {\bf r}_3
+ \label{B3}
 \end{equation}
 where $\Phi_{ij} = \exp(-u_{ij}/k_BT)-1$ are the so-called Mayer functions. Onsager stated by geometrical arguments that the following scaling relation for $B_2$ and $B_3$ is fair for long thin rods:
 \begin{equation}
@@ -169,13 +170,13 @@ where $\Phi_{ij} = \exp(-u_{ij}/k_BT)-1$ are the so-called Mayer functions. Onsa
 \end{equation}
 which vanishes in the limit of infinitely thin needles. The decrease  has been  verified by means of Monte-Carlo simulations on hard spherocylinders by Frenkel \cite{Frenkel87,Frenkel87err} showing that higher order virial coefficients can be neglected only if $L/D\gg 100$. The situation is much different for thin platelets for which Onsager estimated
 \begin{equation}
-\frac{\beta_{2}}{\beta_{1}^{2}}\sim \mathcal{O}(1), \label{0clusterplate}
+\frac{B_3}{(B_2)^2} \sim \mathcal{O}(1), \label{0clusterplate}
 \end{equation}
 which is also true for spheres. Therefore, virial contributions of order higher than two can be neglected for thin needles, which allows for a simplified analytical treatment of the problem in contrast to the case of non-elongated particles where higher orders must be considered. These higher order contributions in the virial expansion --involving clusters of three, four, etcetera particles-- can be derived using other methods, albeit approximately, such as `scaled particle' \cite{Cotterspt,Cotter} and density functional theories (see \cite{Vroege92,DFTspecialJPCM} for a review). In this thesis, due to the low density regime regarded in all the analytical works, it is reasonable to stick to the second virial approximation.
 
 What remains now is to integrate the second virial coefficient. For the system presented here, the pairwise interaction between particles $u_{ij}$ is strictly hard and depends on the relative orientation between needles; we can thus deduce
 \begin{equation}
-\Phi_{ij}=\Phi(\Omega_1,\Omega_2)=
+\Phi_{ij}=\Phi({\bf r}_{ij},\Omega_i,\Omega_j)=
 \begin{cases}
 -1 & \textrm{if overlap}\\
 0 & \textrm{otherwise}
@@ -183,7 +184,7 @@ What remains now is to integrate the second virial coefficient. For the system p
 \end{equation}
 The interaction between two particles only contributes to the integral in \eq{B2} if particles are close enough to overlap, i. e. if they are both contained inside the {\em excluded volume} generated from their relative orientations:
 \begin{equation}
-B_2 = \frac{1}{2} \int \int v_{excl}(\Omega_1,\Omega_2) f(\Omega_1) f(\Omega_2)\frac{d\Omega_1}{4\pi}  \frac{d\Omega_2}{4\pi}
+B_2 = \frac{1}{2} \int \int v_{excl}(\Omega_1,\Omega_2) f(\Omega_1) f(\Omega_2)d\Omega_1 d\Omega_2
  \label{B2_exclv}
 \end{equation}
 
@@ -201,14 +202,14 @@ Lastly, we recall the free energy formulation of an imperfect gas approximated b
 \frac{\beta F}{N} =& \beta \mu_{0}+\ln\left[\Lambda\rho\right]-1+ B_2 \rho
 \end{align}
 with $\mu_{0}$ a reference chemical potential of the dispersed particles depending only on the solvent conditions, and $\Lambda$ the (de Broglie) thermal volume, arising from
-integrations over the translational and rotational momenta of the anisometric particles. The last term corresponds to the translational {\em entropy} in the context of Onsager's formalism, since for hard core interactions it does not depend on temperature, but only on the average over all possible configurations. Collecting the previous results from \eq{0forient} and \eq{B2_exclv} we obtain the following expression:
+integrations over the translational and rotational momenta of the anisometric particles. The last term corresponds to the free volume {\em entropy} in the context of Onsager's formalism, since for hard core interactions it does not depend on temperature, but only on the average over all possible configurations. Collecting the previous results from \eq{0forient} and \eq{B2_exclv} we obtain the following expression:
 \begin{align}
 \frac{\beta F}{N} =& \beta \mu_{0}+\ln\left[\Lambda\rho\right]-1+
 \int f(\Omega)\ln \left[4\pi f(\Omega)\right]d\Omega \nonumber \\
 &+\frac{\rho}{2} \iint d\Omega d\Omega^{\prime}
 f(\Omega)f(\Omega^{\prime})v_{\text{excl}}(\Omega,\Omega^{\prime}). \label{0freetot}
 \end{align}
-This is the final recipe to model the phase behavior of an ideal mixture of hard rods, where the most probable orientational state is given by the function $f(\Omega)$ that better minimizes the Helmholtz free energy. The isotropic-nematic transition comes from a competition between the before-last and last terms, which correspond to the orientational and translational entropy respectively. For low concentrations, the orientational entropy dominates and is maximized by an isotropic distribution, whereas for high concentrations the second virial term becomes more important, which favors a nematic distribution at the expense of losing orientational entropy.
+This is the final recipe to model the phase behavior of a mixture of hard rods, where the most probable orientational state is given by the function $f(\Omega)$ that better minimizes the Helmholtz free energy. The isotropic-nematic transition comes from a competition between the before-last and last terms, which correspond to the orientational and excess entropy respectively. For low concentrations, the orientational entropy dominates and is maximized by an isotropic distribution, whereas for high concentrations the second virial term becomes more important, which favors a nematic distribution at the expense of losing orientational entropy.
 
 The critical packing fraction at wich an isotropic-nematic ordering occurs roughly corresponds to the situation when the bare particle volume is of the same order of magnitude as its average excluded volume:
 \begin{equation}
@@ -242,7 +243,7 @@ Chapter \ref{disc_polymer} will focus on mixtures of anisometric particles consi
 f_{j}(\Omega)f_{k}(\Omega^{\prime})
 v_{\text{excl}}^{jk}(\Omega,\Omega^{\prime}),  \label{0freetotmulti}
 \end{align}
-with $\bar{\Lambda}=\prod_{j}\Lambda_{j}^{x_{j}}$. The contribution $\sum_{j} x_{j} \ln x_{j}$ represents the {\em entropy of mixing} due to the fact that we are dealing with different species. Although the free energy for mixtures can be easily established,  the implications of \eq{0freetotmulti} are quite significant. In particular, each species $j$ now has its own ODF which must be normalized according to $\int f_{j}(d\Omega)d\Omega \equiv 1$. Moreover, in the case of phase coexistence between an isotropic ($I$) and a nematic ($N$) phase, the conditions for mechanical and chemical equilibrium require equal osmotic pressure $\Pi$ and chemical potentials $\mu_{j}$ for {\em all} species involved. Thus, the coexistence equations read:
+with $\bar{\Lambda}=\prod_{j}\Lambda_{j}^{x_{j}}$. The contribution $\sum_{j} x_{j} \ln x_{j}$ represents the {\em entropy of mixing} due to the fact that we are dealing with different species. Although the free energy for mixtures can be easily established,  the implications of \eq{0freetotmulti} are quite significant. In particular, each species $j$ now has its own ODF which must be normalized according to $\int f_{j}(\Omega)d\Omega \equiv 1$. Moreover, in the case of phase coexistence between an isotropic ($I$) and a nematic ($N$) phase, the conditions for mechanical and chemical equilibrium require equal osmotic pressure $\Pi$ and chemical potentials $\mu_{j}$ for {\em all} species involved. Thus, the coexistence equations read:
 \begin{align}
 \Pi^{I}&=\Pi^{N} \nonumber \\
 \mu^{I}_{j}&=\mu^{N}_{j} \qquad\qquad \text{for {\em all} $j$},
@@ -257,7 +258,7 @@ Going back to the experimental systems of nanorods and platelets mentioned at th
 \item Multicomponent mixtures of rod, disks, or living polymers
 \item Effect of external aligning fields (e.g. shear and electromagnetic fields)
 \item Rod (semi-)flexibility 
-\item Long-ranged ``soft" interactions (e.g. depletion attraction)
+\item ``Soft" interactions (e.g. depletion attraction)
 \item Chirality
 \item Non-uniform systems (interfaces, effect of solid substrates)
 \end{enumerate}
@@ -275,7 +276,7 @@ U_{dep} \sim  -\frac{1}{2} \frac{N^{2}}{V} \Pi_{dep} \left \langle \int_{
 } d {\bf r}_{ij}   v^{dep}_{ij}({\bf r}_{ij})  \right \rangle_{\mbox{\tiny orientational states of rods i and j}}
 \label{degen}
 \end{equation}
-where $\Pi_{dep}$ is the osmotic pressure exerted by the depletants. In arriving at this expression, the depletion agents have been considered to be mutually non-interacting and the effective attraction ptential between the nanoparticles is proportional to the overlap volume $v^{dep}_{ij}$ of the depletion zones of particles $i$ and $j$ (see \fig{introfig2}) \cite{LekkerkerkerTuinier2011}.
+where $\Pi_{dep}$ is the osmotic pressure exerted by the depletants. In arriving at this expression, the depletion agents have been considered to be mutually non-interacting and the effective attraction potential between the nanoparticles is proportional to the overlap volume $v^{dep}_{ij}$ of the depletion zones of particles $i$ and $j$ (see \fig{introfig2}) \cite{LekkerkerkerTuinier2011}.
 
 \subsubsection{Chirality}
 
@@ -318,7 +319,7 @@ F = & \frac{1}{2} K \int d \bfr \left [ (\nabla \cdot \bn)^{2}  + (\nabla \times
 \end{align}
 While this approximation is commonly applied in most LC modelling studies we demonstrate in Chapters \ref{hybridLC1} and  \ref{twistedrods}) that it may lead to qualitative discrepancies with experimentally observed behavior for complex director deformations such as chiral defects and twisted ribbons we respectively consider in those chapters.
 
-Following \eq{frankoseen}, the bulk nematic order parameter $S$ is often assumed to uniform throughout the system volume, a consideration that we consistently apply in our analytical work in Chapters \ref{hybridLC1} and \ref{hybridLC2} on colloids immersed in thermotropic LCs. This assumption is justified if the surface anchoring forces are weak and director distortions around the surface are only weakly developed. For the mesoscopic LC membranes discussed in Chapter \ref{twistedrods} the assumption of constant bulk nematic order works well as long as the local colloid density is uniform throughout the membrane. We wish to emphasize that the Frank--Oseen theory  is a particular case of a more complete LC continuum theory that accounts for changes in the bulk nematic order, known as the Landau--de Gennes theory that we do not use here. We refer the reader to De Gennes' book \cite{gennes-prost} for more details on this theory.
+Following \eq{frankoseen}, the bulk nematic order parameter $S$ is often assumed to be uniform throughout the system volume, a consideration that we consistently apply in our analytical work in Chapters \ref{hybridLC1} and \ref{hybridLC2} on colloids immersed in thermotropic LCs. This assumption is justified if the surface anchoring forces are weak and director distortions around the surface are only weakly developed. For the mesoscopic LC membranes discussed in Chapter \ref{twistedrods} the assumption of constant bulk nematic order works well as long as the local colloid density is uniform throughout the membrane. We wish to emphasize that the Frank--Oseen theory  is a particular case of a more complete LC continuum theory that accounts for changes in the bulk nematic order, known as the Landau--de Gennes theory that we do not use here. We refer the reader to De Gennes' book \cite{gennes-prost} for more details on this theory.
 
 \subsubsection{Surface anchoring}
 
@@ -330,7 +331,7 @@ where $W_0$ represents the strength of anchoring, $\bn_{0}$ is the preferred ``e
 
 \section[HPMC simulations of colloidal nematics]{Hard-particle Monte Carlo (HPMC) simulations of colloidal nematics: some technical details}
 
-In the last half century, the use of molecular simulations has become increasingly widespread across a multitude of scientific disciplines, representing an essential tool in the realm of colloidal and soft matter science. The initial success of these simulations can be traced back to their ability to predict the transition between the liquid and solid phases in a system of hard spheres \cite{ALDER57,WOOD57}. Since then, molecular simulations have become a pillar in soft matter research, allowing for the exploration of complex systems at the molecular level with remarkable accuracy and versatility.
+In the last half century, the use of molecular simulations has become increasingly widespread across a multitude of scientific disciplines, representing an essential tool in the realm of colloidal and soft matter science. The initial success of these simulations can be traced back to their ability to predict the transition between the fluid and solid phases in a system of hard spheres \cite{ALDER57,WOOD57}. Since then, molecular simulations have become a pillar in soft matter research, allowing for the exploration of complex systems at the molecular level with remarkable accuracy and versatility.
 
 Molecular simulations are classified into two principal categories: Molecular Dynamics (MD) and Monte Carlo (MC) simulations. The fundamental aim of both techniques is to acquire macroscopic observables from microscopic properties of the system. While MD simulations focus on time averages, MC simulations rely on ensemble averages. In the thermodynamic limit, these two types of averages become equivalent, according to the ergodic hypothesis, which postulates that a system traverses all possible states in its phase space over a long enough time scale \cite{dfrenkel96:mc}. As a result, the use of molecular simulations has led to significant advances in a variety of fields, ranging from materials science to biophysics and beyond, making them an indispensable tool for contemporary scientific research.
 
@@ -359,7 +360,7 @@ A possible way to evaluate \eq{observable} is through the Metropolis Monte Carlo
 \end{algorithm}
 In this section we aim to give an overview of the technical peculiarities of Hard Particle Monte Carlo (HPMC) simulations of anisotropic particles, in particular mixtures of elongated rods and depletants, that are used in the computational model studied in Chapter \ref{twistedrods}.
 
-\subsection{Overlap conditions for hard spherocyllinders}
+\subsection{Overlap conditions for hard spherocylinders}
 
 As shown in Algorithm~\ref{algo:MHPMC}, in HPMC a move is accepted if there is no overlap between two particles. Hence an efficient overlap test is key in this technique. In the case of spherical objects the overlap test is very simple: it is enough to compute the distance between the center of the two spheres $r_{ij}$ and verify that it is less than the sum of their radii: $r_{ij} \leqslant R_i + R_j$ or, in a computationally cheaper form, $r_{ij}^2 \leqslant (R_i + R_j)^2$. It is possible to model elongated hard rods that use this simple overlap condition by building particles composed of spherical objects attached in a linear chain. In this case, the overlap test simply consists on evaluating pairs of spherical objects associated to distinct rods. However, the computational expense of this strategy is enormous as it involves the order of $N_b^2$ operations at each MC move where $N_b$ is the number of spherical beads in one rod.
 This problem is overcome if each colloidal rod is considered to be a spherocylinder, for which a more efficient overlap test is proposed by Allen {\em et al.} \cite{allenevans}. The key steps are outlined below.
@@ -391,7 +392,7 @@ where $\bfr_{ij} = \bfr_{j} - \bfr_{i}$ is the distance between centers of mass.
 (\bfr_{ij}^{min})^2(\lambda_0,\mu_0) = \bfr_{ij}^2& + \lambda_0^2 + \mu_0^2 - 2\lambda_0\bhu_i \cdot \bfr_{ij} \nonumber \\
     & + 2\mu_0\bhu_j \cdot \bfr_{ij}  - 2\lambda_0\mu_0\bhu_i \cdot \bhu_j
 \end{align}
-from quantities already calculated. All the above scheme works unless shperocylinders are completely parallel to each other, in which case \eq{overlapeq} is not well defined. We can add a condition to account for this particular case, where the minimal distance would be simply calculated as the distance between two parallel lines.
+from quantities already calculated. All the above scheme works unless spherocylinders are completely parallel to each other, in which case \eq{overlapeq} is not well defined. We can add a condition to account for this particular case, where the minimal distance would be simply calculated as the distance between two parallel lines.
 
 There is an overlap between the two spherocylinders if $(\bfr_{ij}^{min})^2 \leqslant D^2$. A generalization of this idea can be done for mixtures of two different species of spherocylinders of lengths $L_{1,2}$ and diameters $D_{1,2}$ by simply rewriting
 \begin{align}
@@ -474,13 +475,13 @@ Similar schemes have been performed by Bolhuis and Frenkel \cite{Bolhuis1994} an
 \begin{figure}
 \begin{center}
 \includegraphics[width= .8\columnwidth]{figures/chapter-1/implicit_depletants}
-\caption[Depletant positions (spheres) considered for rejection of a colloid move (orange spherocyllinders)]{ \label{implicit} Depletant positions (spheres) considered for rejection of a colloid move (orange spherocyllinders). When updating the configuration, depletants are randomly inserted into the cylinder (black rectangle) containing the excluded volume between the colloid and the depletants. Overlapping depletants (black spheres) lead to rejection of the trial move. Depletants that overlap with the old position $M$ or with surrounding colloids (blue) are not considered.}
+\caption[Depletant positions (spheres) considered for rejection of a colloid move (orange spherocylinders)]{ \label{implicit} Depletant positions (spheres) considered for rejection of a colloid move (orange spherocylinders). When updating the configuration, depletants are randomly inserted into the cylinder (black rectangle) containing the excluded volume between the colloid and the depletants. Overlapping depletants (black spheres) lead to rejection of the trial move. Depletants that overlap with the old position $M$ or with surrounding colloids (blue) are not considered.}
 \end{center}
 \end{figure}
 
 In the previous approach, simulation performance can become compromised due to the need to explicitly track all the depletant particles. This is particularly evident in our simulations where a large region of the system volume needs to be kept empty around the mesoscopic colloidal droplets to prevent artifacts induced by system boundaries. As a result, a significant portion of the total volume is completely filled with depletants, which need to be stored and updated during the simulation and yet are not relevant for subsequent statistical analysis.
 
-Some approaches that aim to overcome this issue (\cite{bolhuis_jcp1997,PhysRevE.73.041404,Henzie2011} to name a few) are based on a effective depletion potential approach, integrated over all the depletant degrees of freedom. However, achieving sufficient accuracy in the pairwise effective potential also comes at the expense of computation time, whereas an overly simplified interaction may hinder the study of arbitrary shapes and size ratios.
+Some approaches that aim to overcome this issue (\cite{bolhuis_jcp1997,PhysRevE.73.041404,Henzie2011} to name a few) are based on an effective depletion potential approach, integrated over all the depletant degrees of freedom. However, achieving sufficient accuracy in the pairwise effective potential also comes at the expense of computation time, whereas an overly simplified interaction may hinder the study of arbitrary shapes and size ratios.
 
 
 \begin{algorithm}[h]

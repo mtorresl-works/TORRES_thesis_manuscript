@@ -5,6 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d03f94c-8071-46c9-9dd7-49f45f889f39" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/chapter-5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/chapter-6.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/misc/acknowledgments.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/misc/acknowledgments.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/misc/dedication.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/misc/dedication.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/summary-EN.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapters/summary-FR.tex" beforeDir="false" afterPath="$PROJECT_DIR$/chapters/summary-FR.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/coverpage/TORRES_coverpage.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coverpage/TORRES_coverpage.tex" beforeDir="false" afterPath="$PROJECT_DIR$/coverpage/TORRES_coverpage.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.tex" beforeDir="false" afterPath="$PROJECT_DIR$/main.tex" afterDir="false" />
@@ -36,7 +47,7 @@
     &quot;ToolWindowEndpoints.ShowToolbar&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/marina/Downloads/2112&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/marina/Documents/REPOS/TORRES_thesis_manuscript&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -300,7 +311,19 @@
       <workItem from="1681939990926" duration="13051000" />
       <workItem from="1682244502145" duration="4287000" />
       <workItem from="1683641962412" duration="2526000" />
-      <workItem from="1686667655631" duration="435000" />
+      <workItem from="1686667655631" duration="1095000" />
+      <workItem from="1686822357282" duration="212000" />
+      <workItem from="1686823324457" duration="643000" />
+      <workItem from="1686919082250" duration="2159000" />
+      <workItem from="1687378736809" duration="3190000" />
+      <workItem from="1687739005048" duration="3708000" />
+      <workItem from="1688309110221" duration="36000" />
+      <workItem from="1688309159475" duration="657000" />
+      <workItem from="1689592007591" duration="5787000" />
+      <workItem from="1689758830402" duration="5221000" />
+      <workItem from="1689767656635" duration="14847000" />
+      <workItem from="1689857901110" duration="1725000" />
+      <workItem from="1689884490316" duration="9824000" />
     </task>
     <servers />
   </component>
